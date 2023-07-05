@@ -9,11 +9,8 @@
 - **APIDays YouTube Channel** [Here](https://www.youtube.com/@apidays/playlists)
 - **APIDays Slideshare Channel** [Here](https://www.slideshare.net/APIdays_official/presentations)
 
-![APIDays Ads Social Media Card](https://github.com/GangGreenTemperTatum/speaking/assets/104169244/27a4cfce-75ab-45ad-9d10-0b56930b3f6f)
+![APIDays Ads Social Media Card](https://github.com/GangGreenTemperTatum/speaking/assets/104169244/e91e53fa-d2d8-4d56-91d5-fda170b16fe1)
 
-<img width="1682" alt="image" src="https://github.com/GangGreenTemperTatum/speaking/assets/104169244/8080a0b1-bba2-49ad-8f3e-a6a10bbc5ae9">
+![image](https://github.com/GangGreenTemperTatum/speaking/assets/104169244/731283a7-c006-43d8-94d3-85e29cd08fd5)
 
-<img width="1846" alt="image" src="https://github.com/GangGreenTemperTatum/speaking/assets/104169244/c29a20c2-55b9-4697-a96b-ffb3af7e0118">
-
-<img width="1846" alt="image" src="https://github.com/GangGreenTemperTatum/speaking/assets/104169244/7d219398-68ad-4825-9052-cc91f1797d5f">
-
+![image](https://github.com/GangGreenTemperTatum/speaking/assets/104169244/6c610773-b0e6-4037-b7de-923e02e61f7b)
