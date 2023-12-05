@@ -15,6 +15,6 @@
   - Learn how to evaluate AI security solutions.
 
 - 🍿 **YouTube Recording** [TBC]()
-- 🗣️ **Social links:** [TBC]()
+- 🗣️ **Social links:** [LinkedIn](https://www.linkedin.com/posts/lakeraai_lakera-ai-how-to-secure-ai-applications-activity-7137842458175979520-Wb9C)
 
 ------------------------------
