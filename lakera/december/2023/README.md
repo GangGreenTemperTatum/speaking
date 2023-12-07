@@ -15,6 +15,6 @@
   - Learn how to evaluate AI security solutions.
 
 - 🍿 **YouTube Recording** [TBC]()
-- 🗣️ **Social links:** [LinkedIn](https://www.linkedin.com/posts/lakeraai_lakera-ai-how-to-secure-ai-applications-activity-7137842458175979520-Wb9C)
+- 🗣️ **Social links:** [LinkedIn](https://www.linkedin.com/posts/lakeraai_lakera-ai-how-to-secure-ai-applications-activity-7137842458175979520-Wb9C) | [Here](https://www.linkedin.com/posts/owasp-top-10-for-large-language-model-applications_lakera-ai-how-to-secure-ai-applications-activity-7138577195542736898-4shA?utm_source=share&utm_medium=member_android)
 
 ------------------------------
