@@ -14,7 +14,7 @@
   - Understand how you should think about AI/LLM security for your organization.
   - Learn how to evaluate AI security solutions.
 
-- 🍿 **YouTube Recording** [TBC]()
+- 🍿 **YouTube Recording** [Lakera AI - How Enterprises Can Secure AI Applications: Lessons from OWASP's Top 10 for LLMs](https://www.youtube.com/watch?v=oWbub4WevzU)
 - 🗣️ **Social links:** [LinkedIn](https://www.linkedin.com/posts/lakeraai_lakera-ai-how-to-secure-ai-applications-activity-7137842458175979520-Wb9C) | [Here](https://www.linkedin.com/posts/owasp-top-10-for-large-language-model-applications_lakera-ai-how-to-secure-ai-applications-activity-7138577195542736898-4shA?utm_source=share&utm_medium=member_android)
 
 ------------------------------
