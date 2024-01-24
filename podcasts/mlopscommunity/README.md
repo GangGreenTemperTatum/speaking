@@ -11,3 +11,15 @@
 - 📣 **Podcast Recording (Listen)** [Here](https://open.spotify.com/episode/7MeWfnNGZXiRT3OF76GB1o?si=2a5ab37f5605496a)
 
 ----------------------------------------
+
+# [MLOpsCommunity](https://mlops.community/)
+## [LIVESTREAM - AI in Production](https://home.mlops.community/public/events/ai-in-production-2024-02-15)
+
+- **Talk title:** "AI in Production"
+  - Posted Nov 13, 2023
+- **Abstract:**
+   _- Large Language Models have taken the world by storm. But what are the real use cases? What are the challenges in productionizing them? In this event, you will hear from practitioners about how they are dealing with things such as cost optimization, latency requirements, trust of output and debugging. You will also get the opportunity to join workshops that will teach you how to set up your use cases and skip over all the headaches._
+- 🗞️ **Social Event Posts - LinkedIn** [here](https://www.linkedin.com/events/7155994854496374784/comments/)
+- 🍿 **YouTube Recording** [TBC]()
+- 📣 **Podcast Recording (Watch)** [TBC]()
+- 📣 **Podcast Recording (Listen)** [TBC]()
