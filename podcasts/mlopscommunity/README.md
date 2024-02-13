@@ -10,6 +10,10 @@
 - 📣 **Podcast Recording (Watch)** [Here](https://home.mlops.community/public/videos/guarding-llm-and-nlp-apis-a-trailblazing-odyssey-for-enhanced-security)
 - 📣 **Podcast Recording (Listen)** [Here](https://open.spotify.com/episode/7MeWfnNGZXiRT3OF76GB1o?si=2a5ab37f5605496a)
 
+![image](https://github.com/GangGreenTemperTatum/speaking/assets/104169244/26cb6fee-6937-44ee-9bee-f003b1f93c69)
+![image](https://github.com/GangGreenTemperTatum/speaking/assets/104169244/3401a4c2-922f-4b26-bc6f-f4a6454e8d2d)
+![image](https://github.com/GangGreenTemperTatum/speaking/assets/104169244/bdb11cd4-901d-4c8b-851f-541f74b748b7)
+
 ----------------------------------------
 
 # [MLOpsCommunity](https://mlops.community/)
@@ -23,3 +27,6 @@
 - 🍿 **YouTube Recording** [TBC]()
 - 📣 **Podcast Recording (Watch)** [TBC]()
 - 📣 **Podcast Recording (Listen)** [TBC]()
+
+![signal-2024-02-12-154110_003](https://github.com/GangGreenTemperTatum/speaking/assets/104169244/18ba9b5a-4116-46c7-8f76-135e651cc400)
+![signal-2024-02-12-154110_002](https://github.com/GangGreenTemperTatum/speaking/assets/104169244/1709bd39-c2fc-4dd9-869c-8a9018e73da2)
