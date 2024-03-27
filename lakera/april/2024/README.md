@@ -19,6 +19,6 @@
   - Learn how to evaluate AI security solutions.
 
 - 🍿 **YouTube Recording** [TBC](TBC)
-- 🗣️ **Social links:** [LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7178331003063595008/)
+- 🗣️ **Social links:** [LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7178331003063595008/) | [OWASP Top 10 For Large Language Model Applications on LinkedIn: #llm #security](https://www.linkedin.com/posts/owasp-top-10-for-large-language-model-applications_webinar-aisecurity-activity-7178558785198706688-XJwi?utm_source=share&utm_medium=member_android)
 
 ------------------------------
