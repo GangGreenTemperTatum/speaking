@@ -7,5 +7,7 @@
 - 🍿 **YouTube Recording** NA
 - 📣 **Speaker card:** [Here](https://docsend.com/view/emkvn4j4mcvkm3af)
 - 🗣️ **Social links:** [Here](https://www.linkedin.com/posts/owasp_meet-owasp-top-10-for-llm-apps-at-rsa-conference-activity-7184211101595705344-Cwei?utm_source=share&utm_medium=member_desktop)
-                              
+
+[RSA OWASP Securing Generative AI Summit Brief.pdf](https://github.com/GangGreenTemperTatum/speaking/files/15182623/RSA.OWASP.Securing.Generative.AI.Summit.Brief.pdf)
+
 ------------------------------
