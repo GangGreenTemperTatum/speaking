@@ -9,5 +9,7 @@
 - 🗣️ **Social links:** [Here](https://www.linkedin.com/posts/owasp_meet-owasp-top-10-for-llm-apps-at-rsa-conference-activity-7184211101595705344-Cwei?utm_source=share&utm_medium=member_desktop)
 
 [RSA OWASP Securing Generative AI Summit Brief.pdf](https://github.com/GangGreenTemperTatum/speaking/files/15182623/RSA.OWASP.Securing.Generative.AI.Summit.Brief.pdf)
+![image](https://github.com/GangGreenTemperTatum/speaking/assets/104169244/4d759543-6086-47f2-81d6-cad6c41c3280)
+
 
 ------------------------------
