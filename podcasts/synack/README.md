@@ -13,5 +13,5 @@ How the infosec community can contribute to OWASP frameworks
    
 - 🎧 **Spotify Episode (Listen)** [here](https://open.spotify.com/episode/3aUS7z52FMQAlckFP5pkCO?si=YqFbX7p2TwWBm3seJMIKcQ) | [here](https://open.spotify.com/episode/3aUS7z52FMQAlckFP5pkCO)
 - 📣 **Podcast Recording (Listen)** [WE'RE IN! Synack Podcast](https://www.synack.com/were-in-podcast/)
-- 🗞️ **Social Post** [TBC](TBC)
+- 🗞️ **Social Post** [LinkedIn SYNACK](https://www.linkedin.com/posts/synack-inc-_cybersecurity-infosec-ai-activity-7212092971322667010-6cpv) | [LinkedIn (Blake)](https://www.linkedin.com/posts/synack-inc-_cybersecurity-infosec-ai-activity-7212092971322667010-6cpv)
 ----------------------------------------
