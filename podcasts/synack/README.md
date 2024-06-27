@@ -1,5 +1,5 @@
 # [SYNACK WE'RE IN!](https://www.synack.com/were-in-podcast/)
-## Ads Dawson on developing the OWASP Top 10 for Large Language Models | [Episode Link](tbc)
+## Ads Dawson on developing the OWASP Top 10 for Large Language Models | [Episode Link](https://www.synack.com/podcast/ads-dawson-on-developing-the-owasp-top-10-for-large-language-models/)
 
 - **Talk title:** "Ads Dawson on developing the OWASP Top 10 for Large Language Models"
 - **Abstract:**
