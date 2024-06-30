@@ -1,5 +1,5 @@
 # [RSAConference24](https://www.rsaconference.com/usa)
-## [OWASP AI Security Summit: Safeguarding AI with OWASP Top 10 for LLMs & Gen AI](https://learn.apisecuniversity.com/ref/0qXX59ejzjXEB4oH)
+## [OWASP AI Security Summit: Safeguarding AI with OWASP Top 10 for LLMs & Gen AI](https://www.rsaconference.com/Library/presentation/usa/2024/owasp%20ai%20security%20summit%20safeguarding%20ai%20with%20our%20top%2010%20for%20llms%20%20gen%20ai)
 
 - **Talk title:** "OWASP AI Security Summit: Safeguarding AI with OWASP Top 10 for LLMs & Gen AI"
   - Thursday, May 9, 2024 8:30 AM - 1:30 PM PT (LIVE)
