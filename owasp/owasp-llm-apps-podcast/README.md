@@ -15,4 +15,22 @@ https://genai.owasp.org/
 
 <img width="533" alt="image" src="https://github.com/user-attachments/assets/158804eb-7466-47b9-867e-d3b081479b63" />
 
+🚀 New Podcast Episode Alert! 🚀
+
+We're excited to share the latest episode of our Generative AI Security podcast!
+
+In this episode, Aubrey King has an insightful conversation with Ads Dawson, a seasoned AI security researcher from Dreadnode. Ads shares his fascinating journey from network engineering to AI security, providing valuable insights into the latest trends in AI red teaming and offensive agents.
+
+🔍 Key Highlights:
+- The evolution of AI security and its significance
+- Real-world examples of AI vulnerabilities
+- Innovative tools like RoboPages and Burpference
+- Practical tips for navigating the AI security landscape
+
+Whether you're a security professional or just curious about AI, this episode is packed with actionable insights and engaging discussions that you won't want to miss! (This paragraph helps you know GPT wrote it.)
+
+🎧 Tune in now: https://lnkd.in/gpRBg5Ky
+
+hashtag#AI hashtag#Security hashtag#CyberSecurity hashtag#AIResearch hashtag#AIredteaming hashtag#GenerativeAI hashtag#OWASP hashtag#Dreadnode hashtag#Podcast #AIsecurity#AI hashtag#Security hashtag#CyberSecurity hashtag#AIResearch hashtag#AIredteaming hashtag#GenerativeAI hashtag#OWASP hashtag#Dreadnode hashtag#Podcast hashtag#AIsecurity
+
 ----------------------------
