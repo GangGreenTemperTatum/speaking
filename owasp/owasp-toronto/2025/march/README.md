@@ -7,6 +7,8 @@
   -
   -   Join us for an interactive demo of AI red team tools, Burp Suite extensions, as well as tools that assist you in building and deploying your own offensive AI agents (see: `dyana`, `robopages`, `rigging`). Plus, get a live walkthrough of a challenge in `Crucible`, Dreadnode’s CTF environment where you can practice and learn to exploit vulnerabilities in AI systems—then try it yourself!
 
+![image](https://github.com/user-attachments/assets/30b43ba4-f942-444e-87fc-2ccfb69e8f31)
+
 - 🍿 **YouTube Recording** [OWASP Toronto | ads dawson | March 2025 - How to Utilize AI in Offensive Security—An Intro to Offensive AI Tooling](https://www.youtube.com/watch?v=ycuIrgkWTuU)
 - 📣 **Speaker card:** 
 - 🗣️ **Social links:** [TBC](TBC)
@@ -16,7 +18,5 @@
 
 ![ads-dreadnode-staff-employee-intro-photo](https://github.com/user-attachments/assets/2794f2ee-8666-4233-9a2b-c4c68c57186a)
 ![image](https://github.com/GangGreenTemperTatum/speaking/assets/104169244/f79bd9e6-f378-4449-a820-6194f8c3e5e9)
-
-
 
 ----------------------------
