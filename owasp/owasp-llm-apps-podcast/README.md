@@ -10,6 +10,7 @@ https://genai.owasp.org/
         > Explore the fascinating world of AI security with real-world examples, the importance of agentic AI, and how innovative tools like RoboPages and Burpference are shaping the future. Whether you're a security enthusiast or a professional in the field, this episode is packed with valuable information and engaging discussions. Don't miss out on the latest advancements and practical tips for navigating the Generative AI security landscape!
 - 🍿 **YouTube Recording** [Here](TBC)
   - 🍿 **[YouTube @LLMTop10]([https://www.youtube.com/@LLMTop10/featured](https://www.youtube.com/watch?v=f3VYZ-6iylM))**
+- 🎧 **Spotify Link** [Here](https://open.spotify.com/episode/6qBwmKiuCgVLVJEeoeDWqM?si=KOw0XgJwTUWpO3pLV0Lt8Q&nd=1&dlsi=bc781a7684ce4724)
 - 🗣️ **Social links:** [Here](https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7282936170445946880/)
   - 🗣️ **[LinkedIn @ OWASP Top 10 For Large Language Model Applications & Generative AI](https://www.linkedin.com/company/owasp-top-10-for-large-language-model-applications/posts/?feedView=all)**
 
