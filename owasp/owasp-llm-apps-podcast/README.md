@@ -37,6 +37,7 @@ hashtag#AI hashtag#Security hashtag#CyberSecurity hashtag#AIResearch hashtag#AIr
 
 ----------------------------
 
+## [OWASP Top 10 For Large Language Model Applications & Generative AI](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
 
 - **Talk title:** "Sandboxing AI Models with Dyana & OWASP Top 10 for LLM Apps - Ep.4"
   - March 6 2025
