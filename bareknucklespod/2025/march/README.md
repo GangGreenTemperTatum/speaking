@@ -10,4 +10,6 @@
 - **YouTube Channel** [Here](TBC)
 - **Spotify** [Here](TBC)
 
+![Brass Tacks and Bare Knucles Podcast Speaker Card 0332 123 Ads Dawson SOCIAL](https://github.com/user-attachments/assets/bbd49037-93f1-4f6c-aa18-fb2d173472cd)
+
 ![ads dawson - bareknucklespod - upcoming episode](https://github.com/user-attachments/assets/5dd7c1e9-4d3e-4070-bb52-4c15a7834c8c)
