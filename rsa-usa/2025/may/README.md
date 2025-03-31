@@ -43,8 +43,7 @@ https://lnkd.in/gmfafFbh
 https://genai.owasp.org
 
 - 🍿 **YouTube Recording** [Here](TBC)
-- 📣 **Speaker card:** [Here](TBC)
-- 🗣️ **Social links:** [Here](TBC)
+- 🗣️ **Social links:** [Here](https://www.linkedin.com/posts/owasp-top-10-for-large-language-model-applications_rsac2025-owasp-agenticai-activity-7312462455845097472-VhFs?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA1p028B5AHnJgHCbLKDdcDTNnvyDWkUwzE)
 
 Join us at RSAConference 2025:
 - https://www.rsaconference.com/usa?utm_source=assoc-OWASP&utm_medium=referral&utm_campaign=textad-us2025
