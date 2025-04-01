@@ -15,8 +15,10 @@ Whether you're a CISO trying to navigate securing AI implementations or an infos
     
 - 🎧 **Spotify** [Here](https://open.spotify.com/episode/1vOzi9p4YB2eMMwuUbW1dm?si=ba955ed3c1274b8c)
 - 🗣️ **Social links:** [Here](https://www.linkedin.com/posts/bare-knuckles-brass-tacks_ai-redteaming-ai-activity-7312458690668683264-HTxU?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA1p028B5AHnJgHCbLKDdcDTNnvyDWkUwzE)
-- 💥 **Website link** [Here](tbc)
+- 💥 **Website link** [Here](https://www.bareknucklespod.com/pages3)
 
 ![Brass Tacks and Bare Knucles Podcast Speaker Card 0332 123 Ads Dawson SOCIAL](https://github.com/user-attachments/assets/bbd49037-93f1-4f6c-aa18-fb2d173472cd)
 
 ![ads dawson - bareknucklespod - upcoming episode](https://github.com/user-attachments/assets/5dd7c1e9-4d3e-4070-bb52-4c15a7834c8c)
+
+<img width="1366" alt="Screenshot 2025-04-01 at 08 01 50" src="https://github.com/user-attachments/assets/a9334d6e-183c-48ae-a1e3-5eb027a7effe" />
