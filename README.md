@@ -22,3 +22,4 @@ BugCrowd Blogs:
    1. [YouTube Recording](https://www.youtube.com/watch?v=kWJyrbWsRNk)
    2. [X Post](https://x.com/TradeTalks/status/1910011018417152209)
    3. [NASDAQ Site Archive](https://www.nasdaq.com/tradetalks)
+   4. [Newsletter](https://nd.nasdaq.com/index.php/email/emailWebview?email=MzAzLVFLTS00NjMAAAGZvtyL08Ia-vzz6UkWW2Cy1pxd4KKA_IB971Vv4isec8ZPn9Yn4zf6SN6GDxFLlqHXhOeIcraIZ1_20-X0JHaPFQJAiOmMFrvSAw)
