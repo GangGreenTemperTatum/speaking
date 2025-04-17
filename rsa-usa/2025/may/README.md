@@ -37,7 +37,7 @@ Join our expert panel to discover best practices and ethical considerations from
 Whether you're building autonomous AI agents, securing LLM applications, or trying to understand the practical risks of today’s GenAI deployments, this summit is your front-row seat to the future of AI security.
 
 🔗 Full agenda & session info here, and will continue to be updated:
-https://lnkd.in/gmfafFbh
+https://path.rsaconference.com/flow/rsac/us25/FullAgenda/page/catalog/session/1739219303602001y6Tw
  
 🔗 As always, check out what is new on our website:
 https://genai.owasp.org
