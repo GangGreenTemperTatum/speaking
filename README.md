@@ -13,6 +13,7 @@ Visit the [GitHub Pages site](https://ganggreentempertatum.github.io/speaking/) 
     - [Adding a Television Appearance](#adding-a-television-appearance)
   - [Development](#development)
     - [Local Development](#local-development)
+    - [Testing Locally](#testing-locally)
   - [License](#license)
 
 ## Contents
@@ -116,6 +117,14 @@ Visit the [GitHub Pages site](https://ganggreentempertatum.github.io/speaking/) 
 3. Build the content JSON: `npm run build`
 4. Start the local server: `npm start`
 5. Open your browser to http://localhost:8080
+
+### Testing Locally
+
+```bash
+npm install -g serve
+cd docs
+serve
+```
 
 ## License
 

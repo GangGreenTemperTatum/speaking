@@ -29,13 +29,13 @@ document.addEventListener('DOMContentLoaded', function() {
                         <h3>For best experience</h3>
                         <p>You can also view all ${target} directly on a dedicated page:</p>
                         <div class="pub-meta">
-                            <a href="/${target}/index.html" class="btn-read">View All ${target.charAt(0).toUpperCase() + target.slice(1)}</a>
+                            <a href="./${target}/index.html" class="btn-read">View All ${target.charAt(0).toUpperCase() + target.slice(1)}</a>
                         </div>
                     </div>
                 `;
 
                 // Append message if not already present
-                const msgExists = document.querySelector(`#${target} .comic-panel a[href="/${target}/index.html"]`);
+                const msgExists = document.querySelector(`#${target} .comic-panel a[href="./${target}/index.html"]`);
                 if (!msgExists) {
                     document.getElementById(target).appendChild(directLinkMsg);
                 }
