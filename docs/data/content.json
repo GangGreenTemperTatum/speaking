@@ -1,0 +1,296 @@
+{
+  "conferences": [
+    {
+      "id": "apidays-2023",
+      "name": "API Days",
+      "path": "apidays",
+      "year": "2023",
+      "icon": "fas fa-cloud",
+      "description": "Talks on AI/ML Security and LLM Application Safety"
+    },
+    {
+      "id": "apisec-2023",
+      "name": "APISec",
+      "path": "apisec",
+      "year": "2023",
+      "icon": "fas fa-shield-alt",
+      "description": "Talks on AI/ML Security and LLM Application Safety"
+    },
+    {
+      "id": "dc604-2023",
+      "name": "DC604",
+      "path": "dc604",
+      "year": "2023",
+      "icon": "fas fa-users",
+      "description": "Talks on AI/ML Security and LLM Application Safety"
+    },
+    {
+      "id": "in-cyber-forum-2024",
+      "name": "In-Cyber Forum",
+      "path": "in-cyber-forum",
+      "year": "2024",
+      "icon": "fas fa-globe",
+      "description": "Talks on AI/ML Security and LLM Application Safety"
+    },
+    {
+      "id": "isaca-2024",
+      "name": "ISACA",
+      "path": "isaca",
+      "year": "2024",
+      "icon": "fas fa-certificate",
+      "description": "Talks on AI/ML Security and LLM Application Safety"
+    },
+    {
+      "id": "mako-lab-2023",
+      "name": "Mako Lab",
+      "path": "mako-lab",
+      "year": "2023",
+      "icon": "fas fa-flask",
+      "description": "Talks on AI/ML Security and LLM Application Safety"
+    },
+    {
+      "id": "mako-lab-2024",
+      "name": "Mako Lab",
+      "path": "mako-lab",
+      "year": "2024",
+      "icon": "fas fa-flask",
+      "description": "Talks on AI/ML Security and LLM Application Safety"
+    },
+    {
+      "id": "owasp/owasp-toronto-2023",
+      "name": "OWASP TORONTO",
+      "path": "owasp/owasp-toronto",
+      "year": "2023",
+      "icon": "fas fa-shield-virus",
+      "description": "Talks on AI/ML Security and LLM Application Safety"
+    },
+    {
+      "id": "owasp/owasp-toronto-2024",
+      "name": "OWASP TORONTO",
+      "path": "owasp/owasp-toronto",
+      "year": "2024",
+      "icon": "fas fa-shield-virus",
+      "description": "Talks on AI/ML Security and LLM Application Safety"
+    },
+    {
+      "id": "owasp/owasp-toronto-2025",
+      "name": "OWASP TORONTO",
+      "path": "owasp/owasp-toronto",
+      "year": "2025",
+      "icon": "fas fa-shield-virus",
+      "description": "Talks on AI/ML Security and LLM Application Safety"
+    },
+    {
+      "id": "owasp/owasp-vancouver-2023",
+      "name": "OWASP VANCOUVER",
+      "path": "owasp/owasp-vancouver",
+      "year": "2023",
+      "icon": "fas fa-shield-virus",
+      "description": "Talks on AI/ML Security and LLM Application Safety"
+    },
+    {
+      "id": "owasp/owasp-vancouver-2024",
+      "name": "OWASP VANCOUVER",
+      "path": "owasp/owasp-vancouver",
+      "year": "2024",
+      "icon": "fas fa-shield-virus",
+      "description": "Talks on AI/ML Security and LLM Application Safety"
+    },
+    {
+      "id": "owasp/owasp-vancouver-2025",
+      "name": "OWASP VANCOUVER",
+      "path": "owasp/owasp-vancouver",
+      "year": "2025",
+      "icon": "fas fa-shield-virus",
+      "description": "Talks on AI/ML Security and LLM Application Safety"
+    },
+    {
+      "id": "owasp/owasp-atlanta-2023",
+      "name": "OWASP ATLANTA",
+      "path": "owasp/owasp-atlanta",
+      "year": "2023",
+      "icon": "fas fa-shield-virus",
+      "description": "Talks on AI/ML Security and LLM Application Safety"
+    },
+    {
+      "id": "owasp/owasp-atlanta-2024",
+      "name": "OWASP ATLANTA",
+      "path": "owasp/owasp-atlanta",
+      "year": "2024",
+      "icon": "fas fa-shield-virus",
+      "description": "Talks on AI/ML Security and LLM Application Safety"
+    },
+    {
+      "id": "owasp/owasp-atlanta-2025",
+      "name": "OWASP ATLANTA",
+      "path": "owasp/owasp-atlanta",
+      "year": "2025",
+      "icon": "fas fa-shield-virus",
+      "description": "Talks on AI/ML Security and LLM Application Safety"
+    },
+    {
+      "id": "rsa-usa-2024",
+      "name": "RSA Conference",
+      "path": "rsa-usa",
+      "year": "2024",
+      "icon": "fas fa-lock",
+      "description": "Talks on AI/ML Security and LLM Application Safety"
+    },
+    {
+      "id": "rsa-usa-2025",
+      "name": "RSA Conference",
+      "path": "rsa-usa",
+      "year": "2025",
+      "icon": "fas fa-lock",
+      "description": "Talks on AI/ML Security and LLM Application Safety"
+    }
+  ],
+  "podcasts": [
+    {
+      "id": "podcasts-bareknuckles_and_brass_tacks",
+      "name": "Bare Knuckles and Brass Tacks",
+      "path": "podcasts/bareknuckles_and_brass_tacks",
+      "year": "2024",
+      "icon": "fas fa-fist-raised",
+      "description": "Discussion about AI and ML security"
+    },
+    {
+      "id": "podcasts-chai_chat_podcast",
+      "name": "ChAI Chat Podcast",
+      "path": "podcasts/chai_chat_podcast",
+      "year": "2023",
+      "icon": "fas fa-mug-hot",
+      "description": "Conversations on AI ethics and security challenges"
+    },
+    {
+      "id": "podcasts-f5_dev_central",
+      "name": "F5 DevCentral",
+      "path": "podcasts/f5_dev_central",
+      "year": "2023",
+      "icon": "fas fa-server",
+      "description": "Discussion about AI and ML security"
+    },
+    {
+      "id": "podcasts-mlops_community-2023-november",
+      "name": "MLOps Community",
+      "path": "podcasts/mlops_community/2023/november",
+      "year": "2023",
+      "icon": "fas fa-cogs",
+      "description": "Exploring the intersection of MLOps and security"
+    },
+    {
+      "id": "podcasts-owasp-owasp-llm-apps-podcast",
+      "name": "OWASP LLM Apps Podcast",
+      "path": "podcasts/owasp/owasp-llm-apps-podcast",
+      "year": "2024",
+      "icon": "fas fa-shield-virus",
+      "description": "Security considerations for LLM applications"
+    },
+    {
+      "id": "podcasts-software_testing_and_quality_talks",
+      "name": "Software Testing & Quality Talks",
+      "path": "podcasts/software_testing_and_quality_talks",
+      "year": "2024",
+      "icon": "fas fa-check-circle",
+      "description": "Discussion about AI and ML security"
+    },
+    {
+      "id": "podcasts-synack",
+      "name": "Synack Podcast",
+      "path": "podcasts/synack",
+      "year": "2023",
+      "icon": "fas fa-bug",
+      "description": "Discussion about AI and ML security"
+    }
+  ],
+  "publications": [
+    {
+      "id": "arxiv-ai-red-teaming",
+      "title": "The Automation Advantage in AI Red Teaming",
+      "publisher": "arXiv",
+      "description": "Academic paper on automated approaches to AI security testing",
+      "url": "https://arxiv.org/abs/2504.19855",
+      "icon": "fas fa-file-alt",
+      "external": true,
+      "year": "2024"
+    },
+    {
+      "id": "cohere-ai-security",
+      "title": "The State of AI Security",
+      "publisher": "Cohere",
+      "description": "An in-depth look at current AI security challenges",
+      "url": "https://cohere.com/blog/the-state-of-ai-security",
+      "icon": "fas fa-brain",
+      "external": true,
+      "year": "2023"
+    },
+    {
+      "id": "cohere-straight-talk",
+      "title": "Straight talk on AI security with Exabeam's Steve Wilson",
+      "publisher": "Cohere",
+      "description": "Interview discussing AI security challenges and solutions",
+      "url": "https://cohere.com/blog/straight-talk-on-ai-security-with-exabeams-steve-wilson",
+      "icon": "fas fa-brain",
+      "external": true,
+      "year": "2023"
+    },
+    {
+      "id": "cohere-gen-ai-changed-security",
+      "title": "How generative AI has changed security",
+      "publisher": "Cohere",
+      "description": "Analysis of the security landscape in the era of generative AI",
+      "url": "https://cohere.com/blog/how-generative-ai-has-changed-security-2",
+      "icon": "fas fa-brain",
+      "external": true,
+      "year": "2023"
+    },
+    {
+      "id": "cohere-enterprise-ai-security",
+      "title": "Enterprise AI security: Deploying LLM applications safely",
+      "publisher": "Cohere",
+      "description": "Guidelines for secure enterprise LLM deployment",
+      "url": "https://cohere.com/blog/enterprise-ai-security-deploying-llm-applications-safely",
+      "icon": "fas fa-brain",
+      "external": true,
+      "year": "2023"
+    },
+    {
+      "id": "bugcrowd-hacking-llm",
+      "title": "Hacking LLM applications: A meticulous hacker's two cents",
+      "publisher": "BugCrowd",
+      "description": "Insights into vulnerabilities specific to LLM applications",
+      "url": "https://www.bugcrowd.com/blog/hacking-llm-applications-a-meticulous-hackers-two-cents/",
+      "icon": "fas fa-bug",
+      "external": true,
+      "year": "2023"
+    },
+    {
+      "id": "bugcrowd-hacking-sidekick",
+      "title": "A low-cost hacking sidekick: Baby steps to using offensive AI agents",
+      "publisher": "BugCrowd",
+      "description": "Guide to leveraging AI for ethical hacking",
+      "url": "https://www.bugcrowd.com/blog/a-low-cost-hacking-sidekick-baby-steps-to-using-offensive-ai-agents/",
+      "icon": "fas fa-bug",
+      "external": true,
+      "year": "2023"
+    },
+    {
+      "id": "packt-llm-security-handbook",
+      "title": "LLM Security Handbook - Chapter 8: Mitigating LLM Risks",
+      "publisher": "Packt Publishing",
+      "description": "Strategies and techniques for mitigating risks in LLM applications",
+      "url": "/packt/llm_sec_handbook/chapter_8_mitigating_llm_risks-strategies_techniques",
+      "icon": "fas fa-book",
+      "year": "2024"
+    },
+    {
+      "id": "owasp-top-10-llm",
+      "title": "OWASP Top 10 for LLM Applications",
+      "publisher": "OWASP",
+      "description": "Contributing author to the OWASP Top 10 for LLM Applications guide",
+      "url": "/owasp/owasp-llm-apps",
+      "icon": "fas fa-shield-virus",
+      "year": "2023"
+    }
+  ]
+}

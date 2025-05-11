@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | Ads Dawson</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto+Mono:wght@400;700&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="comic-container">
+        <!-- Header Panel -->
+        <header class="comic-panel intro-panel">
+            <div class="panel-content">
+                <h1 class="glitch-text">404</h1>
+                <div class="subtitle">Page Not Found</div>
+                <div class="speech-bubble">
+                    <p>Oops! It looks like this page has mysteriously disappeared!</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="comic-grid">
+            <section class="content-section active">
+                <div class="comic-panel">
+                    <div class="panel-content">
+                        <h2><i class="fas fa-question-circle"></i> What happened?</h2>
+                        <p>The page you were looking for couldn't be found. It might have been moved, deleted, or never existed in the first place.</p>
+                        <p>Let's get you back on track!</p>
+                        <div style="text-align: center; margin-top: 2rem;">
+                            <a href="./" class="btn-view"><i class="fas fa-home"></i> Back to Home</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="comic-panel footer-panel">
+            <div class="panel-content">
+                <div class="social-links">
+                    <a href="https://github.com/GangGreenTemperTatum" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/adamdawson0" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <p>&copy; <span id="year"></span> Ads Dawson. All rights reserved.</p>
+                <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

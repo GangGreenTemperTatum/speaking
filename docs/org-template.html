@@ -1,0 +1,35 @@
+/* Add to your style.css */
+.comic-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 100%;
+}
+
+.loader-text {
+  font-family: 'Bangers', cursive;
+  font-size: 2rem;
+  color: var(--primary);
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.comic-error {
+  background-color: #fff5f5;
+  border: 3px solid #ff3864;
+  padding: 1rem;
+  margin: 1rem 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+.comic-error i {
+  color: #ff3864;
+  margin-right: 0.5rem;
+}

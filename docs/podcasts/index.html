@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ads Dawson | Podcast Appearances</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto+Mono:wght@400;700&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="comic-container">
+        <!-- Header Panel -->
+        <header class="comic-panel intro-panel">
+            <div class="panel-content">
+                <h1 class="glitch-text">Podcast Appearances</h1>
+                <div class="subtitle">Talking AI Security Across the Web</div>
+                <a href="../index.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Home</a>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="comic-grid">
+            <section class="content-section active">
+                <!-- Podcast Appearances -->
+                <div class="comic-panel podcast-item">
+                    <div class="panel-content">
+                        <div class="podcast-logo"><i class="fas fa-fist-raised"></i> Bare Knuckles and Brass Tacks</div>
+                        <h3>Bare Knuckles and Brass Tacks</h3>
+                        <p>Discussions on AI security with practical insights</p>
+                        <div class="podcast-meta">
+                            <span class="podcast-date">2024</span>
+                            <a href="/podcasts/bareknuckles_and_brass_tacks" class="btn-listen">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comic-panel podcast-item">
+                    <div class="panel-content">
+                        <div class="podcast-logo"><i class="fas fa-mug-hot"></i> ChAI Chat Podcast</div>
+                        <h3>ChAI Chat Podcast</h3>
+                        <p>Conversations on AI ethics and security challenges</p>
+                        <div class="podcast-meta">
+                            <span class="podcast-date">2023</span>
+                            <a href="/podcasts/chai_chat_podcast" class="btn-listen">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comic-panel podcast-item">
+                    <div class="panel-content">
+                        <div class="podcast-logo"><i class="fas fa-server"></i> F5 DevCentral</div>
+                        <h3>F5 DevCentral</h3>
+                        <p>Technical discussions on API security and AI integration</p>
+                        <div class="podcast-meta">
+                            <span class="podcast-date">2023</span>
+                            <a href="/podcasts/f5_dev_central" class="btn-listen">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comic-panel podcast-item">
+                    <div class="panel-content">
+                        <div class="podcast-logo"><i class="fas fa-cogs"></i> MLOps Community</div>
+                        <h3>MLOps Community</h3>
+                        <p>Exploring the intersection of MLOps and security</p>
+                        <div class="podcast-meta">
+                            <span class="podcast-date">2023</span>
+                            <a href="/podcasts/mlops_community/2023/november" class="btn-listen">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comic-panel podcast-item">
+                    <div class="panel-content">
+                        <div class="podcast-logo"><i class="fas fa-shield-virus"></i> OWASP LLM Apps Podcast</div>
+                        <h3>OWASP LLM Apps Podcast</h3>
+                        <p>Security considerations for LLM applications</p>
+                        <div class="podcast-meta">
+                            <span class="podcast-date">2024</span>
+                            <a href="/podcasts/owasp/owasp-llm-apps-podcast" class="btn-listen">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comic-panel podcast-item">
+                    <div class="panel-content">
+                        <div class="podcast-logo"><i class="fas fa-check-circle"></i> Software Testing & Quality Talks</div>
+                        <h3>Software Testing & Quality Talks</h3>
+                        <p>Testing methodologies for AI systems</p>
+                        <div class="podcast-meta">
+                            <span class="podcast-date">2024</span>
+                            <a href="/podcasts/software_testing_and_quality_talks" class="btn-listen">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comic-panel podcast-item">
+                    <div class="panel-content">
+                        <div class="podcast-logo"><i class="fas fa-bug"></i> Synack Podcast</div>
+                        <h3>Synack Podcast</h3>
+                        <p>Ethical hacking and AI security vulnerabilities</p>
+                        <div class="podcast-meta">
+                            <span class="podcast-date">2023</span>
+                            <a href="/podcasts/synack" class="btn-listen">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="comic-panel footer-panel">
+            <div class="panel-content">
+                <div class="social-links">
+                    <a href="https://github.com/GangGreenTemperTatum" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/adamdawson0" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <p>&copy; <span id="year"></span> Ads Dawson. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Set copyright year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Add comic book entrance animation
+        const panels = document.querySelectorAll('.comic-panel');
+
+        function animatePanelsOnScroll() {
+            panels.forEach(panel => {
+                const panelTop = panel.getBoundingClientRect().top;
+                const panelBottom = panel.getBoundingClientRect().bottom;
+                const windowHeight = window.innerHeight;
+
+                if (panelTop < windowHeight && panelBottom > 0) {
+                    panel.classList.add('animate');
+                }
+            });
+        }
+
+        // Initial check on load
+        document.addEventListener('DOMContentLoaded', animatePanelsOnScroll);
+
+        // Check on scroll
+        window.addEventListener('scroll', animatePanelsOnScroll);
+    </script>
+</body>
+</html>

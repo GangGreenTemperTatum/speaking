@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talk Details | AI/ML Security</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto+Mono:wght@400;700&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Add markdown parser -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        /* Override the glitch-text animation for this page */
+        .glitch-text::before,
+        .glitch-text::after {
+            display: none; /* Remove the animated text copies */
+        }
+
+        /* Add a simple background to make content more readable */
+        .content-section {
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 1rem;
+            border-radius: 10px;
+        }
+
+        /* Style for README.md not found */
+        .readme-placeholder {
+            padding: 2rem;
+            text-align: center;
+            background-color: #f8f8f8;
+            border: 2px dashed #ccc;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="comic-container">
+        <!-- Header Panel (simplified, no glitch effect) -->
+        <header class="comic-panel intro-panel">
+            <div class="panel-content">
+                <h1 id="view-title">Loading...</h1>
+                <div class="subtitle" id="view-subtitle"></div>
+                <a href="/" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Home</a>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="comic-grid">
+            <section class="content-section active">
+                <div id="content-container" class="comic-panel">
+                    <div class="panel-content">
+                        <div class="comic-loader">
+                            <div class="loader-text">LOADING...</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="comic-panel footer-panel">
+            <div class="panel-content">
+                <div class="social-links">
+                    <a href="https://github.com/GangGreenTemperTatum" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/adamdawson0" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <p>&copy; <span id="year"></span> Ads Dawson. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/viewer.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ads Dawson | Television Appearances</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto+Mono:wght@400;700&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="comic-container">
+        <!-- Header Panel -->
+        <header class="comic-panel intro-panel">
+            <div class="panel-content">
+                <h1 class="glitch-text">Television</h1>
+                <div class="subtitle">Television & Video Appearances</div>
+                <a href="../index.html" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Home</a>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="comic-grid">
+            <section class="content-section active">
+                <!-- NASDAQ TradeTalks -->
+                <h2 class="section-title"><span class="highlight">NASDAQ TradeTalks</span></h2>
+                <div class="comic-panel television-item">
+                    <div class="panel-content">
+                        <div class="tv-logo"><i class="fas fa-chart-line"></i> NASDAQ</div>
+                        <h3>The Ever-Changing Landscape of AI Safety</h3>
+                        <p>Discussed the evolving challenges and solutions in AI safety, focusing on emerging threats, regulatory responses, and best practices for businesses implementing AI systems securely.</p>
+                        <div class="tv-meta">
+                            <span class="tv-date">2025</span>
+                            <div class="button-group">
+                                <a href="https://www.youtube.com/watch?v=kWJyrbWsRNk" class="btn-watch" target="_blank">Watch Recording</a>
+                                <a href="./nasdaq-tradetalks/README.md" class="btn-readme" target="_blank" title="View README"><i class="fas fa-file-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="links-section">
+                            <h4>Additional Links</h4>
+                            <ul>
+                                <li><a href="https://x.com/TradeTalks/status/1910011018417152209" target="_blank">X Post</a></li>
+                                <li><a href="https://www.nasdaq.com/tradetalks" target="_blank">NASDAQ Site Archive</a></li>
+                                <li><a href="https://nd.nasdaq.com/index.php/email/emailWebview?email=MzAzLVFLTS00NjMAAAGZvtyL08Ia-vzz6UkWW2Cy1pxd4KKA_IB971Vv4isec8ZPn9Yn4zf6SN6GDxFLlqHXhOeIcraIZ1_20-X0JHaPFQJAiOmMFrvSAw" target="_blank">Newsletter</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="comic-panel footer-panel">
+            <div class="panel-content">
+                <div class="social-links">
+                    <a href="https://github.com/GangGreenTemperTatum" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/adamdawson0" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <p>&copy; <span id="year"></span> Ads Dawson. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Set copyright year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Add comic book entrance animation
+        const panels = document.querySelectorAll('.comic-panel');
+
+        function animatePanelsOnScroll() {
+            panels.forEach(panel => {
+                const panelTop = panel.getBoundingClientRect().top;
+                const panelBottom = panel.getBoundingClientRect().bottom;
+                const windowHeight = window.innerHeight;
+
+                if (panelTop < windowHeight && panelBottom > 0) {
+                    panel.classList.add('animate');
+                }
+            });
+        }
+
+        // Initial check on load
+        document.addEventListener('DOMContentLoaded', animatePanelsOnScroll);
+
+        // Check on scroll
+        window.addEventListener('scroll', animatePanelsOnScroll);
+    </script>
+</body>
+</html>
