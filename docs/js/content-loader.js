@@ -142,6 +142,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Add year filter for conferences
         addYearFilter('conferences', conferences.map(c => c.year));
+
+        // Add name filter for conferences
+        addNameFilter('conferences', conferences.map(c => c.name));
     }
 
     function loadPodcasts() {
@@ -237,6 +240,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Add year filter for podcasts
         addYearFilter('podcasts', podcasts.map(p => p.year));
+
+        // Add name filter for podcasts
+        addNameFilter('podcasts', podcasts.map(p => p.name));
     }
 
     function loadPublications() {
@@ -362,6 +368,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Add year filter for publications
         addYearFilter('publications', publications.map(p => p.year));
+
+        // Add publisher filter for publications
+        addNameFilter('publications', publications.map(p => p.publisher), 'Publisher');
     }
 
     // Add the new function to load television appearances
@@ -418,6 +427,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Add year filter for television
         addYearFilter('television', television.map(t => t.year));
+
+        // Add name filter for television
+        addNameFilter('television', television.map(t => t.name));
     }
 
     // Helper function to create year filters
@@ -441,6 +453,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const allBtn = document.createElement('button');
         allBtn.className = 'filter-btn active';
         allBtn.textContent = 'All';
+        allBtn.setAttribute('data-filter-type', 'year');
         allBtn.setAttribute('data-filter-value', 'all');
         yearFilter.appendChild(allBtn);
 
@@ -449,6 +462,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const btn = document.createElement('button');
             btn.className = 'filter-btn';
             btn.textContent = year;
+            btn.setAttribute('data-filter-type', 'year');
             btn.setAttribute('data-filter-value', year);
             yearFilter.appendChild(btn);
         });
@@ -470,7 +484,11 @@ document.addEventListener('DOMContentLoaded', function() {
         filterButtons.forEach(button => {
             button.addEventListener('click', function() {
                 // Update active state
-                filterButtons.forEach(btn => btn.classList.remove('active'));
+                filterButtons.forEach(btn => {
+                    if (btn.getAttribute('data-filter-type') === 'year') {
+                        btn.classList.remove('active');
+                    }
+                });
                 this.classList.add('active');
 
                 const filterValue = this.getAttribute('data-filter-value');
@@ -478,6 +496,156 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Filter items
                 items.forEach(item => {
                     if (filterValue === 'all' || item.getAttribute('data-year') === filterValue) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    }
+
+    // New helper function to create name filters
+    function addNameFilter(sectionId, names, labelText = 'Name') {
+        const section = document.getElementById(sectionId);
+        if (!section) return;
+
+        // Get unique names and sort alphabetically
+        const uniqueNames = [...new Set(names)].sort();
+
+        // If there's only one or zero names, don't create a filter
+        if (uniqueNames.length <= 1) return;
+
+        // Find the filter container or create it
+        let filterContainer = section.querySelector('.filter-container');
+        if (!filterContainer) {
+            filterContainer = document.createElement('div');
+            filterContainer.className = 'filter-container';
+
+            // Insert filter container after the section title
+            const sectionTitle = section.querySelector('.section-title');
+            if (sectionTitle) {
+                section.insertBefore(filterContainer, sectionTitle.nextSibling);
+            } else {
+                section.prepend(filterContainer);
+            }
+        }
+
+        // Create name filter
+        const nameFilter = document.createElement('div');
+        nameFilter.className = 'filter-group';
+        nameFilter.innerHTML = `<span class="filter-label">Filter by ${labelText}:</span>`;
+
+        // Add "All" button
+        const allBtn = document.createElement('button');
+        allBtn.className = 'filter-btn active';
+        allBtn.textContent = 'All';
+        allBtn.setAttribute('data-filter-type', 'name');
+        allBtn.setAttribute('data-filter-value', 'all');
+        nameFilter.appendChild(allBtn);
+
+        // Add name buttons
+        uniqueNames.forEach(name => {
+            const btn = document.createElement('button');
+            btn.className = 'filter-btn';
+            btn.textContent = name.length > 15 ? name.substring(0, 15) + '...' : name;
+            btn.setAttribute('data-filter-type', 'name');
+            btn.setAttribute('data-filter-value', name);
+            btn.title = name; // Add full name as tooltip for truncated names
+            nameFilter.appendChild(btn);
+        });
+
+        filterContainer.appendChild(nameFilter);
+
+        // Add event listeners and data attributes to items
+        const items = section.querySelectorAll('.comic-panel');
+
+        // Add data-name attribute to items
+        items.forEach((item, index) => {
+            if (sectionId === 'conferences') {
+                const nameElement = item.querySelector('h3');
+                if (nameElement) {
+                    const fullText = nameElement.textContent;
+                    const namePart = fullText.split(' ')[0] + (fullText.split(' ')[1] || '');
+                    item.setAttribute('data-name', names[index]);
+                }
+            } else if (sectionId === 'podcasts') {
+                const nameElement = item.querySelector('h3');
+                if (nameElement) {
+                    item.setAttribute('data-name', names[index]);
+                }
+            } else if (sectionId === 'publications') {
+                const publisherElement = item.querySelector('.pub-logo');
+                if (publisherElement) {
+                    item.setAttribute('data-name', names[index]);
+                }
+            } else if (sectionId === 'television') {
+                const nameElement = item.querySelector('h3');
+                if (nameElement) {
+                    item.setAttribute('data-name', names[index]);
+                }
+            }
+        });
+
+        // Add event listeners to filter buttons
+        const filterButtons = nameFilter.querySelectorAll('.filter-btn');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Update active state
+                filterButtons.forEach(btn => {
+                    if (btn.getAttribute('data-filter-type') === 'name') {
+                        btn.classList.remove('active');
+                    }
+                });
+                this.classList.add('active');
+
+                const filterValue = this.getAttribute('data-filter-value');
+
+                // Filter items
+                items.forEach(item => {
+                    // Don't change display if year filter is active
+                    const yearFilterActive = section.querySelector('.filter-btn[data-filter-type="year"].active');
+                    const yearFilterValue = yearFilterActive ? yearFilterActive.getAttribute('data-filter-value') : 'all';
+
+                    const matchesYear = yearFilterValue === 'all' || item.getAttribute('data-year') === yearFilterValue;
+                    const matchesName = filterValue === 'all' || item.getAttribute('data-name') === filterValue;
+
+                    if (matchesYear && matchesName) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Modify year filter buttons to respect name filter
+        const yearFilterButtons = section.querySelectorAll('.filter-btn[data-filter-type="year"]');
+
+        yearFilterButtons.forEach(button => {
+            const originalClickHandler = button.onclick;
+            button.onclick = null;
+
+            button.addEventListener('click', function() {
+                // Update active state for year buttons
+                yearFilterButtons.forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                this.classList.add('active');
+
+                const yearFilterValue = this.getAttribute('data-filter-value');
+
+                // Check if name filter is active
+                const nameFilterActive = section.querySelector('.filter-btn[data-filter-type="name"].active');
+                const nameFilterValue = nameFilterActive ? nameFilterActive.getAttribute('data-filter-value') : 'all';
+
+                // Filter items
+                items.forEach(item => {
+                    const matchesYear = yearFilterValue === 'all' || item.getAttribute('data-year') === yearFilterValue;
+                    const matchesName = nameFilterValue === 'all' || item.getAttribute('data-name') === nameFilterValue;
+
+                    if (matchesYear && matchesName) {
                         item.style.display = 'block';
                     } else {
                         item.style.display = 'none';
