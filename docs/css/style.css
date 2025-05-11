@@ -693,3 +693,138 @@ h3 {
     margin-right: 0.5rem;
     color: var(--secondary);
 }
+
+.readme-placeholder p {
+    margin-bottom: 1rem;
+}
+
+.readme-placeholder .btn-view,
+.readme-placeholder .btn-listen,
+.readme-placeholder .btn-read {
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+/* Add styles for the loading indicator */
+.loading-indicator {
+    text-align: center;
+    padding: 2rem 0;
+    font-family: 'Bangers', cursive;
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.loading-indicator i {
+    margin-right: 0.5rem;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* GitHub button styling */
+.button-group {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.btn-github {
+    background-color: #24292e;
+    color: white;
+    border: 2px solid var(--panel-border);
+    padding: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn-github:hover {
+    background-color: #0366d6;
+    transform: translateY(-2px);
+}
+
+/* README button styling */
+.btn-readme {
+    background-color: #4caf50;
+    color: white;
+    border: 2px solid var(--panel-border);
+    padding: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn-readme:hover {
+    background-color: #3e8e41;
+    transform: translateY(-2px);
+}
+
+/* Add to your existing CSS file - Television specific styles */
+
+.television-item {
+    margin-bottom: 2rem;
+}
+
+.tv-logo {
+    position: absolute;
+    top: -10px;
+    right: 40px;
+    background-color: var(--secondary);
+    padding: 0.3rem 0.8rem;
+    font-family: 'Bangers', cursive;
+    font-size: 1.2rem;
+    transform: rotate(5deg);
+    border: 2px solid var(--panel-border);
+    z-index: 2;
+}
+
+.tv-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.tv-date {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.btn-watch {
+    background-color: var(--primary);
+    color: var(--light);
+    border: none;
+    padding: 0.5rem 1rem;
+    font-family: 'Bangers', cursive;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid var(--panel-border);
+    transition: all 0.3s ease;
+}
+
+.btn-watch:hover {
+    background-color: var(--tertiary);
+    color: var(--dark);
+    transform: scale(1.05);
+}
+
+/* TV screen effect for television items */
+.television-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(to right, transparent, var(--tertiary), transparent);
+    opacity: 0.5;
+}

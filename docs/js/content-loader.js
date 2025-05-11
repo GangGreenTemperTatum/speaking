@@ -1,92 +1,100 @@
 /**
- * Content Loader - Hard-coded data to ensure content displays
+ * Content Loader - Local path version
  */
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Content loader initialized - DIRECT VERSION');
+    console.log('Content loader initialized - LOCAL PATH VERSION');
 
-    // Load conferences directly
+    // Remove loading indicators
+    document.querySelectorAll('.loading-indicator').forEach(el => el.remove());
+
+    // Load all content sections
     loadConferences();
-
-    // Load podcasts directly
     loadPodcasts();
-
-    // Load publications directly
     loadPublications();
+    loadTelevision(); // New section for television appearances
 
     function loadConferences() {
         const conferences = [
             {
                 name: "API Days",
-                path: "apidays",
                 year: "2023",
                 icon: "fas fa-cloud",
                 description: "Talks on AI/ML Security at API level",
-                subdirectory: "interface"
+                path: "apidays",
+                localPath: "conferences/apidays/2023"
             },
             {
                 name: "APISec",
-                path: "apisec",
                 year: "2023",
                 icon: "fas fa-shield-alt",
                 description: "Securing LLM and NLP APIs",
-                subdirectory: "december"
+                path: "apisec",
+                subdir: "december",
+                localPath: "conferences/apisec/2023/december"
             },
             {
                 name: "DC604",
-                path: "dc604",
                 year: "2023",
                 icon: "fas fa-users",
                 description: "Hacker Summer Camp - Poisoning Web Training Data",
-                subdirectory: "hacker-summer-camp-23"
+                path: "dc604",
+                subdir: "hacker-summer-camp-23",
+                localPath: "conferences/dc604/2023/hacker-summer-camp-23"
             },
             {
                 name: "In-Cyber Forum",
-                path: "in-cyber-forum",
                 year: "2024",
                 icon: "fas fa-globe",
                 description: "Language AI Security at the API level",
-                subdirectory: "october"
+                path: "in-cyber-forum",
+                subdir: "october",
+                localPath: "conferences/in-cyber-forum/2024/october"
             },
             {
                 name: "ISACA",
-                path: "isaca",
                 year: "2024",
                 icon: "fas fa-certificate",
                 description: "Application Security Sector Day",
-                subdirectory: "feb/appsec-security-sector-days"
+                path: "isaca",
+                subdir: "feb/appsec-security-sector-days",
+                localPath: "conferences/isaca/2024/feb/appsec-security-sector-days"
             },
             {
                 name: "OWASP Toronto",
-                path: "owasp/owasp-toronto",
                 year: "2024",
                 icon: "fas fa-shield-virus",
                 description: "OWASP Top 10 for LLM Applications",
-                subdirectory: "june"
+                path: "owasp/owasp-toronto",
+                subdir: "june",
+                localPath: "conferences/owasp/owasp-toronto/2024/june"
             },
             {
                 name: "OWASP Toronto",
-                path: "owasp/owasp-toronto",
                 year: "2025",
                 icon: "fas fa-shield-virus",
                 description: "Shiny Rocks in Offensive AI",
-                subdirectory: "march"
+                path: "owasp/owasp-toronto",
+                subdir: "march",
+                localPath: "conferences/owasp/owasp-toronto/2025/march"
             },
             {
                 name: "OWASP Vancouver",
-                path: "owasp/owasp-vancouver",
                 year: "2023",
                 icon: "fas fa-shield-virus",
                 description: "Language AI Security at the API level",
-                subdirectory: "november"
+                path: "owasp/owasp-vancouver",
+                subdir: "november",
+                localPath: "conferences/owasp/owasp-vancouver/2023/november"
             },
             {
                 name: "RSA Conference",
-                path: "rsa-usa",
                 year: "2024",
                 icon: "fas fa-lock",
                 description: "Keynote on AI/ML Security",
-                subdirectory: "may"
+                path: "rsa-usa",
+                subdir: "may",
+                localPath: "conferences/rsa-usa/2024/may"
             }
         ];
 
@@ -98,14 +106,22 @@ document.addEventListener('DOMContentLoaded', function() {
         conferencesSection.innerHTML = '';
         conferencesSection.appendChild(sectionTitle);
 
-        // Create simple conference items
+        // Create simple conference items with local paths
         conferences.forEach(conf => {
             const panel = document.createElement('div');
             panel.className = 'comic-panel conference-item';
             panel.setAttribute('data-year', conf.year);
-            panel.setAttribute('data-org', conf.path.split('/')[0]);
 
-            // Fix the link to correctly point to view.html with proper path info
+            // Path to files within docs directory
+            const viewerLink = `view.html?type=conference&org=${conf.path}&year=${conf.year}${conf.subdir ? '&subdir=' + conf.subdir : ''}`;
+
+            // Find slide file if it exists
+            let slideFile = "";
+            if (conf.path === "apidays" && conf.year === "2023") {
+                slideFile = `${conf.localPath}/Live Edit - INTERFACE ApiSec Slides - Language AI Security at the API level_  Avoiding Hacks, Injections and Breaches - 06-28-2023 v1.1.pdf`;
+            }
+            // ...add other slide files as needed...
+
             panel.innerHTML = `
                 <div class="panel-content">
                     <div class="conf-logo"><i class="${conf.icon}"></i> ${conf.name}</div>
@@ -113,7 +129,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     <p>${conf.description}</p>
                     <div class="conf-meta">
                         <span class="conf-date">${conf.year}</span>
-                        <a href="view.html?type=conference&org=${conf.path}&year=${conf.year}&subdir=${conf.subdirectory || ''}" class="btn-view">View Details</a>
+                        <div class="button-group">
+                            <a href="${viewerLink}" class="btn-view">View Details</a>
+                            ${slideFile ? `<a href="${slideFile}" class="btn-slides" target="_blank"><i class="fas fa-file-pdf"></i></a>` : ''}
+                        </div>
                     </div>
                 </div>
             `;
@@ -129,53 +148,52 @@ document.addEventListener('DOMContentLoaded', function() {
         const podcasts = [
             {
                 name: "Bare Knuckles and Brass Tacks",
-                path: "podcasts/bareknuckles_and_brass_tacks",
                 year: "2024",
                 icon: "fas fa-fist-raised",
-                description: "Discussion about AI and ML security"
+                description: "Discussion about AI and ML security",
+                path: "bareknuckles_and_brass_tacks"
             },
             {
                 name: "ChAI Chat Podcast",
-                path: "podcasts/chai_chat_podcast",
                 year: "2023",
                 icon: "fas fa-mug-hot",
-                description: "Conversations on AI ethics and security challenges"
+                description: "Conversations on AI ethics and security challenges",
+                path: "chai_chat_podcast"
             },
             {
                 name: "F5 DevCentral",
-                path: "podcasts/f5_dev_central",
                 year: "2023",
                 icon: "fas fa-server",
-                description: "Technical discussions on API security and AI integration"
+                description: "Technical discussions on API security and AI integration",
+                path: "f5_dev_central"
             },
             {
                 name: "MLOps Community",
-                path: "podcasts/mlops_community",
                 year: "2023",
                 icon: "fas fa-cogs",
                 description: "Exploring the intersection of MLOps and security",
-                subdirectory: "2023/november"
+                path: "mlops_community/2023/november"
             },
             {
                 name: "OWASP LLM Apps Podcast",
-                path: "podcasts/owasp/owasp-llm-apps-podcast",
                 year: "2024",
                 icon: "fas fa-shield-virus",
-                description: "Security considerations for LLM applications"
+                description: "Security considerations for LLM applications",
+                path: "owasp/owasp-llm-apps-podcast"
             },
             {
                 name: "Software Testing & Quality Talks",
-                path: "podcasts/software_testing_and_quality_talks",
                 year: "2024",
                 icon: "fas fa-check-circle",
-                description: "Testing methodologies for AI systems"
+                description: "Testing methodologies for AI systems",
+                path: "software_testing_and_quality_talks"
             },
             {
                 name: "Synack Podcast",
-                path: "podcasts/synack",
                 year: "2023",
                 icon: "fas fa-bug",
-                description: "Ethical hacking and AI security vulnerabilities"
+                description: "Ethical hacking and AI security vulnerabilities",
+                path: "synack"
             }
         ];
 
@@ -187,13 +205,18 @@ document.addEventListener('DOMContentLoaded', function() {
         podcastsSection.innerHTML = '';
         podcastsSection.appendChild(sectionTitle);
 
-        // Add podcast panels
+        // Add podcast panels with viewer.html links
         podcasts.forEach(podcast => {
             const panel = document.createElement('div');
             panel.className = 'comic-panel podcast-item';
             panel.setAttribute('data-year', podcast.year);
 
-            // Fix the podcast link to use view.html correctly
+            // Create a link to the viewer.html with the parameters
+            const viewerLink = `view.html?type=podcast&org=${podcast.path}&year=${podcast.year}`;
+
+            // Also create direct link to README.md file
+            const readmeLink = `podcasts/${podcast.path}/README.md`;
+
             panel.innerHTML = `
                 <div class="panel-content">
                     <div class="podcast-logo"><i class="${podcast.icon}"></i> ${podcast.name}</div>
@@ -201,7 +224,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     <p>${podcast.description}</p>
                     <div class="podcast-meta">
                         <span class="podcast-date">${podcast.year}</span>
-                        <a href="view.html?type=podcast&org=${podcast.path}&year=${podcast.year}&subdir=${podcast.subdirectory || ''}" class="btn-listen">View Details</a>
+                        <div class="button-group">
+                            <a href="${viewerLink}" class="btn-listen">View Details</a>
+                            <a href="${readmeLink}" class="btn-readme" target="_blank" title="View README"><i class="fas fa-file-alt"></i></a>
+                        </div>
                     </div>
                 </div>
             `;
@@ -232,6 +258,30 @@ document.addEventListener('DOMContentLoaded', function() {
                 year: "2023"
             },
             {
+                title: "Straight talk on AI security with Exabeam's Steve Wilson",
+                publisher: "Cohere",
+                description: "Interview discussing AI security challenges and solutions",
+                url: "https://cohere.com/blog/straight-talk-on-ai-security-with-exabeams-steve-wilson",
+                icon: "fas fa-brain",
+                year: "2023"
+            },
+            {
+                title: "How generative AI has changed security",
+                publisher: "Cohere",
+                description: "Analysis of the security landscape in the era of generative AI",
+                url: "https://cohere.com/blog/how-generative-ai-has-changed-security-2",
+                icon: "fas fa-brain",
+                year: "2023"
+            },
+            {
+                title: "Enterprise AI security: Deploying LLM applications safely",
+                publisher: "Cohere",
+                description: "Guidelines for secure enterprise LLM deployment",
+                url: "https://cohere.com/blog/enterprise-ai-security-deploying-llm-applications-safely",
+                icon: "fas fa-brain",
+                year: "2023"
+            },
+            {
                 title: "Hacking LLM applications: A meticulous hacker's two cents",
                 publisher: "BugCrowd",
                 description: "Insights into vulnerabilities specific to LLM applications",
@@ -240,20 +290,28 @@ document.addEventListener('DOMContentLoaded', function() {
                 year: "2023"
             },
             {
-                title: "OWASP Top 10 for LLM Applications",
-                publisher: "OWASP",
-                description: "Contributing author to the OWASP Top 10 for LLM Applications guide",
-                path: "owasp/owasp-llm-apps",
-                icon: "fas fa-shield-virus",
+                title: "A low-cost hacking sidekick: Baby steps to using offensive AI agents",
+                publisher: "BugCrowd",
+                description: "Guide to leveraging AI for ethical hacking",
+                url: "https://www.bugcrowd.com/blog/a-low-cost-hacking-sidekick-baby-steps-to-using-offensive-ai-agents/",
+                icon: "fas fa-bug",
                 year: "2023"
             },
             {
                 title: "LLM Security Handbook - Chapter 8: Mitigating LLM Risks",
                 publisher: "Packt Publishing",
                 description: "Strategies and techniques for mitigating risks in LLM applications",
-                path: "packt/llm_sec_handbook/chapter_8_mitigating_llm_risks-strategies_techniques",
+                url: "https://github.com/GangGreenTemperTatum/speaking/tree/main/books/packt/llm_sec_handbook/chapter_8_mitigating_llm_risks-strategies_techniques",
                 icon: "fas fa-book",
                 year: "2024"
+            },
+            {
+                title: "OWASP Top 10 for LLM Applications",
+                publisher: "OWASP",
+                description: "Contributing author to the OWASP Top 10 for LLM Applications guide",
+                url: "https://owasp.org/www-project-top-10-for-large-language-model-applications/",
+                icon: "fas fa-shield-virus",
+                year: "2023"
             }
         ];
 
@@ -271,17 +329,6 @@ document.addEventListener('DOMContentLoaded', function() {
             panel.className = 'comic-panel publication-item';
             panel.setAttribute('data-year', pub.year);
 
-            const isExternal = pub.url && pub.url.startsWith('http');
-            const btnTarget = isExternal ? 'target="_blank"' : '';
-
-            // For internal links, use view.html
-            let linkHtml;
-            if (isExternal) {
-                linkHtml = `<a href="${pub.url}" class="btn-read" ${btnTarget}>Visit External Link</a>`;
-            } else {
-                linkHtml = `<a href="view.html?type=publication&org=${pub.path}&year=${pub.year}" class="btn-read">View Details</a>`;
-            }
-
             panel.innerHTML = `
                 <div class="panel-content">
                     <div class="pub-logo"><i class="${pub.icon}"></i> ${pub.publisher}</div>
@@ -289,7 +336,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <p>${pub.description}</p>
                     <div class="pub-meta">
                         <span class="pub-date">${pub.year}</span>
-                        ${linkHtml}
+                        <a href="${pub.url}" class="btn-read" target="_blank">Read More</a>
                     </div>
                 </div>
             `;
@@ -299,6 +346,62 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Add year filter for publications
         addYearFilter('publications', publications.map(p => p.year));
+    }
+
+    // Add the new function to load television appearances
+    function loadTelevision() {
+        const television = [
+            {
+                name: "NASDAQ TradeTalks",
+                year: "2025",
+                icon: "fas fa-chart-line",
+                description: "The Ever-Changing Landscape of AI Safety",
+                path: "nasdaq-tradetalks",
+                date: "2025",
+                videoUrl: "https://www.youtube.com/watch?v=kWJyrbWsRNk"
+            }
+        ];
+
+        const televisionSection = document.getElementById('television');
+        if (!televisionSection) return;
+
+        // Keep section title
+        const sectionTitle = televisionSection.querySelector('.section-title');
+        televisionSection.innerHTML = '';
+        televisionSection.appendChild(sectionTitle);
+
+        // Create simple television items
+        television.forEach(tv => {
+            const panel = document.createElement('div');
+            panel.className = 'comic-panel television-item';
+            panel.setAttribute('data-year', tv.year);
+
+            // Create a link to the viewer.html with the parameters
+            const viewerLink = `view.html?type=television&org=${tv.path}&year=${tv.year}`;
+
+            // Also create direct link to README.md file
+            const readmeLink = `television/${tv.path}/README.md`;
+
+            panel.innerHTML = `
+                <div class="panel-content">
+                    <div class="tv-logo"><i class="${tv.icon}"></i> ${tv.name}</div>
+                    <h3>${tv.name}</h3>
+                    <p>${tv.description}</p>
+                    <div class="tv-meta">
+                        <span class="tv-date">${tv.date}</span>
+                        <div class="button-group">
+                            ${tv.videoUrl ? `<a href="${tv.videoUrl}" class="btn-watch" target="_blank">Watch Recording</a>` : `<a href="${viewerLink}" class="btn-watch">View Details</a>`}
+                            <a href="${readmeLink}" class="btn-readme" target="_blank" title="View README"><i class="fas fa-file-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            televisionSection.appendChild(panel);
+        });
+
+        // Add year filter for television
+        addYearFilter('television', television.map(t => t.year));
     }
 
     // Helper function to create year filters

@@ -9,6 +9,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto+Mono:wght@400;700&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        // Error handler for better debugging
+        window.addEventListener('error', function(e) {
+            console.error('Global error:', e.message, e);
+            const errorDiv = document.createElement('div');
+            errorDiv.style.position = 'fixed';
+            errorDiv.style.top = '0';
+            errorDiv.style.left = '0';
+            errorDiv.style.right = '0';
+            errorDiv.style.backgroundColor = '#ffdddd';
+            errorDiv.style.color = '#ff0000';
+            errorDiv.style.padding = '10px';
+            errorDiv.style.zIndex = '10000';
+            errorDiv.textContent = `Error: ${e.message}`;
+            document.body.appendChild(errorDiv);
+            setTimeout(() => errorDiv.remove(), 5000);
+        });
+
+        // Set copyright year
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
 </head>
 <body>
     <div class="comic-container">
@@ -34,6 +57,9 @@
             <div class="nav-item" data-target="publications">
                 <i class="fas fa-book"></i> Publications
             </div>
+            <div class="nav-item" data-target="television">
+                <i class="fas fa-tv"></i> Television
+            </div>
         </nav>
 
         <!-- Main Content -->
@@ -41,19 +67,33 @@
             <!-- Conferences Section -->
             <section id="conferences" class="content-section active">
                 <h2 class="section-title"><span class="highlight">Conference & Events Talks</span></h2>
-                <!-- Content will be loaded dynamically -->
+                <div class="loading-indicator">
+                    <i class="fas fa-spinner fa-spin"></i> Loading conferences...
+                </div>
             </section>
 
             <!-- Podcasts Section -->
             <section id="podcasts" class="content-section">
                 <h2 class="section-title"><span class="highlight">Podcast Appearances</span></h2>
-                <!-- Content will be loaded dynamically -->
+                <div class="loading-indicator">
+                    <i class="fas fa-spinner fa-spin"></i> Loading podcasts...
+                </div>
             </section>
 
             <!-- Publications Section -->
             <section id="publications" class="content-section">
                 <h2 class="section-title"><span class="highlight">Publications</span></h2>
-                <!-- Content will be loaded dynamically -->
+                <div class="loading-indicator">
+                    <i class="fas fa-spinner fa-spin"></i> Loading publications...
+                </div>
+            </section>
+
+            <!-- Television Section -->
+            <section id="television" class="content-section">
+                <h2 class="section-title"><span class="highlight">Television Appearances</span></h2>
+                <div class="loading-indicator">
+                    <i class="fas fa-spinner fa-spin"></i> Loading television appearances...
+                </div>
             </section>
         </main>
 
@@ -69,13 +109,9 @@
         </footer>
     </div>
 
-    <!-- Load only content-loader.js, ignore any fetch issues -->
-    <script>
-        // Set copyright year
-        document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('year').textContent = new Date().getFullYear();
-        });
-    </script>
-    <script src="js/content-loader.js"></script>
+    <!-- Scripts - Add defer to ensure they load properly -->
+    <script defer src="js/content-loader.js"></script>
+    <script defer src="js/debug.js"></script>
+    <script defer src="js/file-copier.js"></script>
 </body>
 </html>
