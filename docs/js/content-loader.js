@@ -250,6 +250,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 year: "2024"
             },
             {
+                title: "Inside the Mind of a Hacker 2024 Edition",
+                publisher: "BugCrowd",
+                description: "Analysis of hacker motivations, methods, and impact in the evolving security landscape",
+                url: "https://www.bugcrowd.com/blog/inside-the-mind-of-a-hacker-2024-edition/",
+                icon: "fas fa-bug",
+                year: "2024"
+            },
+            {
+                title: "Hacker Spotlight: Ads Dawson",
+                publisher: "BugCrowd",
+                description: "Profile highlighting my journey, methodologies, and contributions to security research",
+                url: "https://www.bugcrowd.com/blog/hacker-spotlight-ads-dawson/",
+                icon: "fas fa-bug",
+                year: "2023"
+            },
+            {
                 title: "The State of AI Security",
                 publisher: "Cohere",
                 description: "An in-depth look at current AI security challenges",
