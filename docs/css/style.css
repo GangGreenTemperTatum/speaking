@@ -1,0 +1,695 @@
+:root {
+    --primary: #ff3864;
+    --secondary: #2de2e6;
+    --tertiary: #f6f740;
+    --dark: #0d0221;
+    --light: #f9f9f9;
+    --panel-bg: #ffffff;
+    --panel-border: #000000;
+    --speech-bubble: #ffffff;
+    --comic-shadow: rgba(0, 0, 0, 0.3);
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Neue', cursive;
+    background-color: #f0f0f0;
+    background-image:
+        radial-gradient(var(--tertiary) 2px, transparent 2px),
+        radial-gradient(var(--secondary) 2px, transparent 2px);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+.comic-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 2px;
+    color: var(--dark);
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--secondary);
+    text-shadow: 2px 2px 0 var(--dark);
+}
+
+/* Comic Panels */
+.comic-panel {
+    background-color: var(--panel-bg);
+    border: 3px solid var(--panel-border);
+    box-shadow: 5px 5px 0 var(--comic-shadow);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.comic-panel:hover {
+    transform: translateY(-5px);
+}
+
+.comic-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 30px 30px 0;
+    border-color: transparent var(--tertiary) transparent transparent;
+}
+
+.panel-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Header Panel */
+.intro-panel {
+    background-color: var(--panel-bg);
+    text-align: center;
+    padding: 3rem 1.5rem;
+    position: relative;
+    border-width: 5px;
+}
+
+.intro-panel h1 {
+    color: var(--primary);
+    text-shadow: 3px 3px 0 var(--dark);
+}
+
+/* Glitch Text Effect */
+.glitch-text {
+    position: relative;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+    content: 'Ads Dawson';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.glitch-text::before {
+    left: 2px;
+    text-shadow: -2px 0 var(--secondary);
+    clip: rect(24px, 550px, 90px, 0);
+    animation: glitch-anim 3s infinite linear alternate-reverse;
+}
+
+.glitch-text::after {
+    left: -2px;
+    text-shadow: -2px 0 var(--tertiary);
+    clip: rect(85px, 550px, 140px, 0);
+    animation: glitch-anim 2.5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+    0% {
+        clip: rect(24px, 550px, 90px, 0);
+    }
+    20% {
+        clip: rect(65px, 550px, 36px, 0);
+    }
+    40% {
+        clip: rect(12px, 550px, 121px, 0);
+    }
+    60% {
+        clip: rect(98px, 550px, 54px, 0);
+    }
+    80% {
+        clip: rect(34px, 550px, 78px, 0);
+    }
+    100% {
+        clip: rect(67px, 550px, 107px, 0);
+    }
+}
+
+/* Speech Bubbles */
+.speech-bubble {
+    position: relative;
+    background: var(--speech-bubble);
+    border: 3px solid var(--panel-border);
+    border-radius: 20px;
+    padding: 1rem;
+    margin: 1.5rem auto;
+    max-width: 80%;
+}
+
+.speech-bubble::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -15px;
+    border-width: 15px;
+    border-style: solid;
+    border-color: var(--panel-border) transparent transparent var(--panel-border);
+}
+
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -12px;
+    border-width: 12px;
+    border-style: solid;
+    border-color: var(--speech-bubble) transparent transparent var(--speech-bubble);
+}
+
+/* Navigation */
+.comic-nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.nav-item {
+    background-color: var(--panel-bg);
+    border: 3px solid var(--panel-border);
+    padding: 0.8rem 1.5rem;
+    margin: 0 0.5rem 1rem 0.5rem;
+    font-family: 'Bangers', cursive;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    box-shadow: 3px 3px 0 var(--comic-shadow);
+}
+
+.nav-item:hover {
+    background-color: var(--tertiary);
+    transform: translateY(-3px);
+    box-shadow: 5px 5px 0 var(--comic-shadow);
+}
+
+.nav-item.active {
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+.nav-item i {
+    margin-right: 0.5rem;
+}
+
+/* Content Sections */
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.highlight {
+    background-color: var(--tertiary);
+    padding: 0.2rem 0.5rem;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+/* Conference Items */
+.conference-item, .podcast-item, .publication-item {
+    margin-bottom: 2rem;
+}
+
+.conf-logo, .podcast-logo, .pub-logo {
+    position: absolute;
+    top: -10px;
+    right: 40px;
+    background-color: var(--secondary);
+    padding: 0.3rem 0.8rem;
+    font-family: 'Bangers', cursive;
+    font-size: 1.2rem;
+    transform: rotate(5deg);
+    border: 2px solid var(--panel-border);
+    z-index: 2;
+}
+
+.conf-meta, .podcast-meta, .pub-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.conf-date, .podcast-date, .pub-date {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.btn-view, .btn-listen, .btn-read {
+    background-color: var(--primary);
+    color: var(--light);
+    border: none;
+    padding: 0.5rem 1rem;
+    font-family: 'Bangers', cursive;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid var(--panel-border);
+    transition: all 0.3s ease;
+}
+
+.btn-view:hover, .btn-listen:hover, .btn-read:hover {
+    background-color: var(--tertiary);
+    color: var(--dark);
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer-panel {
+    text-align: center;
+    background-color: var(--dark);
+    color: var(--light);
+    border-width: 5px;
+}
+
+.social-links {
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: var(--light);
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--tertiary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .comic-container {
+        margin: 1rem auto;
+    }
+
+    .nav-item {
+        padding: 0.6rem 1rem;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .nav-item {
+        padding: 0.5rem 0.8rem;
+        font-size: 1rem;
+        margin: 0 0.3rem 0.8rem 0.3rem;
+    }
+
+    .conf-meta, .podcast-meta, .pub-meta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .conf-date, .podcast-date {
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Add this to your existing CSS file */
+
+/* Filter Styles */
+.filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+    background: var(--panel-bg);
+    padding: 1rem;
+    border: 2px solid var(--panel-border);
+    box-shadow: 3px 3px 0 var(--comic-shadow);
+}
+
+.filter-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.filter-label {
+    font-family: 'Bangers', cursive;
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+.filter-btn {
+    background-color: var(--panel-bg);
+    border: 2px solid var(--panel-border);
+    padding: 0.3rem 0.8rem;
+    font-family: 'Comic Neue', cursive;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+    background-color: var(--tertiary);
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+/* Conference Talk Styles */
+.conf-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.conf-talk {
+    border-left: 3px solid var(--secondary);
+    padding-left: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.conf-talk p {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .filter-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filter-group {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Add to your style.css */
+.comic-loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+  }
+
+  .loader-text {
+    font-family: 'Bangers', cursive;
+    font-size: 2rem;
+    color: var(--primary);
+    animation: pulse 1.5s infinite;
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
+
+  .comic-error {
+    background-color: #fff5f5;
+    border: 3px solid #ff3864;
+    padding: 1rem;
+    margin: 1rem 0;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .comic-error i {
+    color: #ff3864;
+    margin-right: 0.5rem;
+  }
+
+  /* Clickable panels */
+.panel-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+}
+
+.panel-link:hover, .panel-link:focus {
+    outline: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Markdown content styling */
+.markdown-content {
+    font-family: 'Comic Neue', cursive;
+    line-height: 1.6;
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4,
+.markdown-content h5,
+.markdown-content h6 {
+    font-family: 'Bangers', cursive;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.markdown-content img {
+    max-width: 100%;
+    height: auto;
+    border: 3px solid var(--panel-border);
+    margin: 1rem 0;
+}
+
+.markdown-content a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.markdown-content a:hover {
+    text-decoration: underline;
+}
+
+.markdown-content code {
+    font-family: 'Roboto Mono', monospace;
+    background-color: #f5f5f5;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+}
+
+.markdown-content pre {
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin: 1rem 0;
+}
+
+.markdown-content blockquote {
+    border-left: 4px solid var(--secondary);
+    padding-left: 1rem;
+    margin-left: 0;
+    color: #555;
+}
+
+/* Files section */
+.files-section {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 2px dashed var(--panel-border);
+}
+
+.files-list {
+    list-style: none;
+    padding: 0;
+}
+
+.files-list li {
+    margin-bottom: 0.5rem;
+}
+
+.files-list a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #f5f5f5;
+    border: 2px solid var(--panel-border);
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--dark);
+    transition: all 0.3s ease;
+}
+
+.files-list a:hover {
+    background-color: var(--tertiary);
+    transform: translateY(-2px);
+}
+
+.btn-back {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--secondary);
+    color: var(--dark);
+    border: 2px solid var(--panel-border);
+    text-decoration: none;
+    font-family: 'Bangers', cursive;
+    transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+    transform: translateY(-2px);
+    background-color: var(--tertiary);
+}
+
+/* Make publication panels look good */
+.publication-item {
+    position: relative;
+}
+
+.publication-item .pub-logo {
+    position: absolute;
+    top: -10px;
+    right: 40px;
+    background-color: var(--secondary);
+    padding: 0.3rem 0.8rem;
+    font-family: 'Bangers', cursive;
+    font-size: 1.2rem;
+    transform: rotate(5deg);
+    border: 2px solid var(--panel-border);
+    z-index: 2;
+}
+
+.publication-item h3 {
+    margin-right: 60px;
+    margin-top: 10px;
+}
+
+/* Ensure sections are empty before populating */
+.content-section:not(.active) {
+    display: none;
+}
+
+/* Add these styles to the end of your existing CSS file */
+
+/* Image Gallery */
+.image-gallery {
+    margin-top: 2rem;
+    border-top: 2px dashed var(--panel-border);
+    padding-top: 1rem;
+}
+
+.gallery-item {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.gallery-item img {
+    max-width: 100%;
+    height: auto;
+    border: 3px solid var(--panel-border);
+    box-shadow: 5px 5px 0 var(--comic-shadow);
+}
+
+.gallery-item p {
+    margin-top: 0.5rem;
+    font-weight: bold;
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* Path not found message */
+.path-info {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.9rem;
+    overflow-x: auto;
+}
+
+.path-info .path {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.readme-placeholder {
+    padding: 2rem;
+    text-align: center;
+    background-color: #f8f8f8;
+    border: 2px dashed #ccc;
+    margin: 1rem 0 2rem 0;
+    position: relative;
+}
+
+.readme-placeholder h3 {
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.readme-placeholder i {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    color: var(--secondary);
+}

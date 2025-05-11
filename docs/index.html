@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ads Dawson | AI/ML Security Speaker</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto+Mono:wght@400;700&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="comic-container">
+        <!-- Header Panel -->
+        <header class="comic-panel intro-panel">
+            <div class="panel-content">
+                <h1 class="glitch-text">Ads Dawson</h1>
+                <div class="subtitle">AI/ML Staff Security Researcher</div>
+                <div class="speech-bubble">
+                    <p>Exploring the wild frontiers of AI security!</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="comic-nav">
+            <div class="nav-item active" data-target="conferences">
+                <i class="fas fa-microphone-alt"></i> Conferences
+            </div>
+            <div class="nav-item" data-target="podcasts">
+                <i class="fas fa-podcast"></i> Podcasts
+            </div>
+            <div class="nav-item" data-target="publications">
+                <i class="fas fa-book"></i> Publications
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="comic-grid">
+            <!-- Conferences Section -->
+            <section id="conferences" class="content-section active">
+                <h2 class="section-title"><span class="highlight">Conference & Events Talks</span></h2>
+                <!-- Content will be loaded dynamically -->
+            </section>
+
+            <!-- Podcasts Section -->
+            <section id="podcasts" class="content-section">
+                <h2 class="section-title"><span class="highlight">Podcast Appearances</span></h2>
+                <!-- Content will be loaded dynamically -->
+            </section>
+
+            <!-- Publications Section -->
+            <section id="publications" class="content-section">
+                <h2 class="section-title"><span class="highlight">Publications</span></h2>
+                <!-- Content will be loaded dynamically -->
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="comic-panel footer-panel">
+            <div class="panel-content">
+                <div class="social-links">
+                    <a href="https://github.com/GangGreenTemperTatum" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/adamdawson0" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <p>&copy; <span id="year"></span> Ads Dawson. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Load only content-loader.js, ignore any fetch issues -->
+    <script>
+        // Set copyright year
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
+    <script src="js/content-loader.js"></script>
+</body>
+</html>
