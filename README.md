@@ -6,6 +6,9 @@
 
 ## Other resources for professional writing:
 
+[Arxiv Papers](https://arxiv.org/)
+   1. [The Automation Advantage in AI Red Teaming](https://arxiv.org/abs/2504.19855)
+
 [Cohere Author Page](https://cohere.com/blog/authors/adsdawson)
    1. [The State of AI Security](https://cohere.com/blog/the-state-of-ai-security)
    2. [Straight talk on AI security with Exabeam’s Steve Wilson](https://cohere.com/blog/straight-talk-on-ai-security-with-exabeams-steve-wilson)
