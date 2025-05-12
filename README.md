@@ -126,6 +126,13 @@ cd docs
 serve
 ```
 
+Run with the following command to serve the files with CORS enabled:
+
+```bash
+npm install -g http-server
+npx http-server -p 3000 --cors
+```
+
 ## License
 
 Copyright © Ads Dawson. All rights reserved.
