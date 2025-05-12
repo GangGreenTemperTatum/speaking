@@ -14,11 +14,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Exit if no parameters found
     if (!type || !org || !year) {
         document.getElementById('content-container').innerHTML = `
-            <div class="panel-content">
-                <div class="comic-error">
-                    <i class="fas fa-exclamation-triangle"></i> Missing content parameters
+            <div class="comic-panel">
+                <div class="panel-content">
+                    <div class="comic-error">
+                        <i class="fas fa-exclamation-triangle"></i> Missing content parameters
+                    </div>
+                    <p>Please return to the <a href="./">main page</a> and try again.</p>
                 </div>
-                <p>Please return to the <a href="/">main page</a> and try again.</p>
             </div>
         `;
         return;
@@ -65,7 +67,15 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!contentContainer) return;
 
         // Show loading indicator
-        contentContainer.innerHTML = '<div class="loading-indicator">Loading conference content...</div>';
+        contentContainer.innerHTML = `
+            <div class="comic-panel">
+                <div class="panel-content">
+                    <div class="loading-indicator">
+                        <i class="fas fa-spinner fa-spin"></i> Loading conference content...
+                    </div>
+                </div>
+            </div>
+        `;
 
         const basePath = `conferences/${org}/${year}`;
         const dirPath = subdir ? `${basePath}/${subdir}` : basePath;
@@ -84,8 +94,10 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(markdown => {
                 // Display the README content
                 contentContainer.innerHTML = `
-                    <div class="markdown-content">
-                        <div id="readme-content"></div>
+                    <div class="comic-panel">
+                        <div class="panel-content">
+                            <div id="readme-content"></div>
+                        </div>
                     </div>
                 `;
 
@@ -94,16 +106,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 // Now add file listing
                 listDirectoryFiles(dirPath, contentContainer);
+
+                // Add animation to panels
+                animatePanels();
             })
             .catch(error => {
                 console.error('Error loading README:', error);
                 contentContainer.innerHTML = `
-                    <div class="panel-content">
-                        <div class="comic-error">
-                            <i class="fas fa-exclamation-triangle"></i> Content not found
+                    <div class="comic-panel">
+                        <div class="panel-content">
+                            <div class="comic-error">
+                                <i class="fas fa-exclamation-triangle"></i> Content not found
+                            </div>
+                            <p>Could not load content for ${getOrgDisplayName(org)} (${year}).</p>
+                            <p>Error: ${error.message}</p>
                         </div>
-                        <p>Could not load content for ${getOrgDisplayName(org)} (${year}).</p>
-                        <p>Error: ${error.message}</p>
                     </div>
                 `;
             });
@@ -115,7 +132,15 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!contentContainer) return;
 
         // Show loading indicator
-        contentContainer.innerHTML = '<div class="loading-indicator">Loading podcast content...</div>';
+        contentContainer.innerHTML = `
+            <div class="comic-panel">
+                <div class="panel-content">
+                    <div class="loading-indicator">
+                        <i class="fas fa-spinner fa-spin"></i> Loading podcast content...
+                    </div>
+                </div>
+            </div>
+        `;
 
         // Determine path
         const basePath = `podcasts/${org}`;
@@ -134,23 +159,30 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(markdown => {
                 // Display the README content
                 contentContainer.innerHTML = `
-                    <div class="markdown-content">
-                        <div id="readme-content"></div>
+                    <div class="comic-panel">
+                        <div class="panel-content">
+                            <div id="readme-content"></div>
+                        </div>
                     </div>
                 `;
 
                 // Convert markdown to HTML (basic conversion)
                 document.getElementById('readme-content').innerHTML = convertMarkdown(markdown);
+
+                // Add animation to panels
+                animatePanels();
             })
             .catch(error => {
                 console.error('Error loading README:', error);
                 contentContainer.innerHTML = `
-                    <div class="panel-content">
-                        <div class="comic-error">
-                            <i class="fas fa-exclamation-triangle"></i> Content not found
+                    <div class="comic-panel">
+                        <div class="panel-content">
+                            <div class="comic-error">
+                                <i class="fas fa-exclamation-triangle"></i> Content not found
+                            </div>
+                            <p>Could not load content for ${getOrgDisplayName(org)} podcast.</p>
+                            <p>Error: ${error.message}</p>
                         </div>
-                        <p>Could not load content for ${getOrgDisplayName(org)} podcast.</p>
-                        <p>Error: ${error.message}</p>
                     </div>
                 `;
             });
@@ -162,10 +194,15 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!contentContainer) return;
 
         contentContainer.innerHTML = `
-            <div class="panel-content">
-                <p>Publication content for ${org} (${year}) will be added soon.</p>
+            <div class="comic-panel">
+                <div class="panel-content">
+                    <p>Publication content for ${org} (${year}) will be added soon.</p>
+                </div>
             </div>
         `;
+
+        // Add animation to panels
+        animatePanels();
     }
 
     // Television content loader
@@ -174,7 +211,15 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!contentContainer) return;
 
         // Show loading indicator
-        contentContainer.innerHTML = '<div class="loading-indicator">Loading television content...</div>';
+        contentContainer.innerHTML = `
+            <div class="comic-panel">
+                <div class="panel-content">
+                    <div class="loading-indicator">
+                        <i class="fas fa-spinner fa-spin"></i> Loading television content...
+                    </div>
+                </div>
+            </div>
+        `;
 
         // Determine path
         const basePath = `television/${org}`;
@@ -193,23 +238,30 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(markdown => {
                 // Display the README content
                 contentContainer.innerHTML = `
-                    <div class="markdown-content">
-                        <div id="readme-content"></div>
+                    <div class="comic-panel">
+                        <div class="panel-content">
+                            <div id="readme-content"></div>
+                        </div>
                     </div>
                 `;
 
                 // Convert markdown to HTML (basic conversion)
                 document.getElementById('readme-content').innerHTML = convertMarkdown(markdown);
+
+                // Add animation to panels
+                animatePanels();
             })
             .catch(error => {
                 console.error('Error loading README:', error);
                 contentContainer.innerHTML = `
-                    <div class="panel-content">
-                        <div class="comic-error">
-                            <i class="fas fa-exclamation-triangle"></i> Content not found
+                    <div class="comic-panel">
+                        <div class="panel-content">
+                            <div class="comic-error">
+                                <i class="fas fa-exclamation-triangle"></i> Content not found
+                            </div>
+                            <p>Could not load content for ${getOrgDisplayName(org)} television appearance.</p>
+                            <p>Error: ${error.message}</p>
                         </div>
-                        <p>Could not load content for ${getOrgDisplayName(org)} television appearance.</p>
-                        <p>Error: ${error.message}</p>
                     </div>
                 `;
             });
@@ -220,30 +272,47 @@ document.addEventListener('DOMContentLoaded', function() {
         // For specific directories, add known files
         if (dirPath === "conferences/apidays/2023") {
             const filesSection = document.createElement('div');
-            filesSection.className = 'files-section';
+            filesSection.className = 'comic-panel';
             filesSection.innerHTML = `
-                <h3>Files</h3>
-                <ul class="file-list">
-                    <li><a href="${dirPath}/Live Edit - INTERFACE ApiSec Slides - Language AI Security at the API level_  Avoiding Hacks, Injections and Breaches - 06-28-2023 v1.1.pdf" target="_blank">
-                        <i class="fas fa-file-pdf"></i> API Security Slides (PDF)
-                    </a></li>
-                </ul>
+                <div class="panel-content">
+                    <h3><i class="fas fa-file-alt"></i> Files</h3>
+                    <ul class="file-list">
+                        <li><a href="${dirPath}/Live Edit - INTERFACE ApiSec Slides - Language AI Security at the API level_  Avoiding Hacks, Injections and Breaches - 06-28-2023 v1.1.pdf" target="_blank">
+                            <i class="fas fa-file-pdf"></i> API Security Slides (PDF)
+                        </a></li>
+                    </ul>
+                </div>
             `;
             container.appendChild(filesSection);
+
+            // Add animation to the new panel
+            setTimeout(animatePanels, 100);
         }
-        // Add more special cases as needed
     }
+
+    // Function to animate panels
+    function animatePanels() {
+        const panels = document.querySelectorAll('.comic-panel');
+        panels.forEach((panel, index) => {
+            setTimeout(() => {
+                panel.classList.add('animate');
+            }, index * 150);
+        });
+    }
+
+    // Call this once when the page loads
+    setTimeout(animatePanels, 300);
 
     // Simple markdown to HTML converter
     function convertMarkdown(markdown) {
         if (!markdown) return '';
 
-        // Replace headers
+        // Replace headers with comic styled headers
         let html = markdown
-            .replace(/^# (.*$)/gm, '<h1>$1</h1>')
-            .replace(/^## (.*$)/gm, '<h2>$1</h2>')
-            .replace(/^### (.*$)/gm, '<h3>$1</h3>')
-            .replace(/^#### (.*$)/gm, '<h4>$1</h4>')
+            .replace(/^# (.*$)/gm, '<h1 class="comic-title">$1</h1>')
+            .replace(/^## (.*$)/gm, '<h2 class="comic-subtitle">$1</h2>')
+            .replace(/^### (.*$)/gm, '<h3 class="comic-heading">$1</h3>')
+            .replace(/^#### (.*$)/gm, '<h4 class="comic-subheading">$1</h4>')
             .replace(/^##### (.*$)/gm, '<h5>$1</h5>')
             .replace(/^###### (.*$)/gm, '<h6>$1</h6>');
 
@@ -254,15 +323,15 @@ document.addEventListener('DOMContentLoaded', function() {
             .replace(/__(.*?)__/g, '<strong>$1</strong>')
             .replace(/_(.*?)_/g, '<em>$1</em>');
 
-        // Replace links
-        html = html.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank">$1</a>');
+        // Replace links with comic styled links
+        html = html.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" class="comic-link" target="_blank">$1</a>');
 
         // Replace lists
-        html = html.replace(/^\s*\*\s(.*$)/gm, '<li>$1</li>');
-        html = html.replace(/(<li>.*<\/li>\n)+/g, '<ul>$&</ul>');
+        html = html.replace(/^\s*\*\s(.*$)/gm, '<li class="comic-list-item">$1</li>');
+        html = html.replace(/(<li.*>.*<\/li>\n)+/g, '<ul class="comic-list">$&</ul>');
 
-        // Replace paragraphs
-        html = html.replace(/^([^<].*)\n$/gm, '<p>$1</p>');
+        // Replace paragraphs with comic styled paragraphs
+        html = html.replace(/^([^<].*)\n$/gm, '<p class="comic-text">$1</p>');
 
         // Remove empty lines
         html = html.replace(/^\s*[\r\n]/gm, '');
