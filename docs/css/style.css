@@ -902,3 +902,291 @@ h3 {
         text-align: center;
     }
 }
+
+.markdown-content {
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.markdown-content h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.markdown-content h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.75rem;
+}
+
+.markdown-content h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.markdown-content p {
+    margin-bottom: 1rem;
+}
+
+.markdown-content ul, .markdown-content ol {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+}
+
+.markdown-content li {
+    margin-bottom: 0.5rem;
+}
+
+.markdown-content a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.markdown-content a:hover {
+    text-decoration: underline;
+}
+
+/* File list styling */
+.files-section {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.file-list {
+    list-style: none;
+    padding: 0;
+}
+
+.file-list li {
+    margin-bottom: 10px;
+}
+
+.file-list a {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 12px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.2s ease;
+}
+
+.file-list a:hover {
+    background-color: #f0f0f0;
+    border-color: #ccc;
+}
+
+.file-list i {
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+
+/* Error styling */
+.comic-error {
+    font-size: 1.5rem;
+    color: #dc3545;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.comic-error i {
+    margin-right: 10px;
+}
+
+/* Loading indicator */
+.loading-indicator {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2rem;
+    color: #6c757d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+
+.loading-indicator:before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Content viewer comic styling */
+#content-container .comic-panel {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#content-container .comic-panel.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Markdown styling for comic look */
+.comic-title {
+    font-family: 'Bangers', cursive;
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin: 0.5rem 0 1.5rem 0;
+    letter-spacing: 1px;
+}
+
+.comic-subtitle {
+    font-family: 'Bangers', cursive;
+    font-size: 2rem;
+    color: var(--dark);
+    margin: 1.5rem 0 1rem 0;
+    letter-spacing: 1px;
+}
+
+.comic-heading {
+    font-family: 'Bangers', cursive;
+    font-size: 1.5rem;
+    color: var(--secondary);
+    margin: 1.2rem 0 0.8rem 0;
+    letter-spacing: 1px;
+}
+
+.comic-subheading {
+    font-family: 'Bangers', cursive;
+    font-size: 1.3rem;
+    color: var(--dark);
+    margin: 1rem 0 0.6rem 0;
+}
+
+.comic-text {
+    font-family: 'Comic Neue', cursive;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.comic-list {
+    margin: 0.8rem 0 1.5rem 1.5rem;
+    list-style-type: none;
+}
+
+.comic-list-item {
+    font-family: 'Comic Neue', cursive;
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.comic-list-item:before {
+    content: '•';
+    color: var(--primary);
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -0.3rem;
+}
+
+.comic-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px dotted var(--primary);
+    transition: all 0.2s ease;
+}
+
+.comic-link:hover {
+    background-color: var(--tertiary);
+    color: var(--dark);
+    border-bottom: 2px solid var(--dark);
+}
+
+/* Loading indicator styling for content viewer */
+#content-container .loading-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bangers', cursive;
+    font-size: 1.5rem;
+    color: var(--primary);
+    padding: 2rem;
+}
+
+#content-container .loading-indicator i {
+    margin-right: 0.8rem;
+    font-size: 1.8rem;
+    animation: spin 1s infinite linear;
+}
+
+/* Error message in comic style */
+#content-container .comic-error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bangers', cursive;
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    background-color: rgba(255, 56, 100, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+#content-container .comic-error i {
+    margin-right: 1rem;
+    font-size: 2rem;
+}
+
+/* File list styling for content viewer */
+#content-container .file-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+#content-container .file-list li {
+    margin-bottom: 0.8rem;
+}
+
+#content-container .file-list a {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: var(--panel-bg);
+    border: 2px solid var(--panel-border);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--dark);
+    font-family: 'Comic Neue', cursive;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#content-container .file-list a:hover {
+    background-color: var(--tertiary);
+    transform: translateY(-3px);
+    box-shadow: 3px 3px 0 var(--comic-shadow);
+}
+
+#content-container .file-list i {
+    margin-right: 0.8rem;
+    font-size: 1.2em;
+    color: var(--primary);
+}

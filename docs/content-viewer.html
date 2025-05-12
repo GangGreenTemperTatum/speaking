@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Not Found | Ads Dawson</title>
+    <title>Content Viewer</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,24 +15,19 @@
         <!-- Header Panel -->
         <header class="comic-panel intro-panel">
             <div class="panel-content">
-                <h1 class="glitch-text">404</h1>
-                <div class="subtitle">Page Not Found</div>
-                <div class="speech-bubble">
-                    <p>Oops! It looks like this page has mysteriously disappeared!</p>
-                </div>
+                <h1 id="view-title" class="glitch-text">Loading Content...</h1>
+                <div id="view-subtitle" class="subtitle"></div>
+                <a href="./" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Home</a>
             </div>
         </header>
 
         <!-- Main Content -->
         <main class="comic-grid">
-            <section class="content-section active">
+            <section id="content-container" class="content-section active">
                 <div class="comic-panel">
                     <div class="panel-content">
-                        <h2><i class="fas fa-question-circle"></i> What happened?</h2>
-                        <p>The page you were looking for couldn't be found. It might have been moved, deleted, or never existed in the first place.</p>
-                        <p>Let's get you back on track!</p>
-                        <div style="text-align: center; margin-top: 2rem;">
-                            <a href="./" class="btn-view"><i class="fas fa-home"></i> Back to Home</a>
+                        <div class="loading-indicator">
+                            <i class="fas fa-spinner fa-spin"></i> Loading content...
                         </div>
                     </div>
                 </div>
@@ -46,10 +41,12 @@
                     <a href="https://github.com/GangGreenTemperTatum" target="_blank"><i class="fab fa-github"></i></a>
                     <a href="https://linkedin.com/in/adamdawson0" target="_blank"><i class="fab fa-linkedin"></i></a>
                 </div>
-                <p>&copy; <span id="year"></span> Ads Dawson. All rights reserved.</p>
-                <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+                <p>&copy; <span id="year">2024</span> Ads Dawson. All rights reserved.</p>
             </div>
         </footer>
     </div>
+
+    <script src="js/debug.js"></script>
+    <script src="js/viewer.js"></script>
 </body>
 </html>

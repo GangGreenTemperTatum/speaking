@@ -113,7 +113,11 @@ document.addEventListener('DOMContentLoaded', function() {
             panel.setAttribute('data-year', conf.year);
 
             // Path to files within docs directory
-            const viewerLink = `view.html?type=conference&org=${conf.path}&year=${conf.year}${conf.subdir ? '&subdir=' + conf.subdir : ''}`;
+            // Use content-viewer.html instead of view.html to prevent redirect issues
+            const viewerLink = `content-viewer.html?type=conference&org=${conf.path}&year=${conf.year}${conf.subdir ? '&subdir=' + conf.subdir : ''}`;
+
+            // Debug log
+            console.log(`Generated link for ${conf.name}: ${viewerLink}`);
 
             // Find slide file if it exists
             let slideFile = "";
@@ -215,7 +219,11 @@ document.addEventListener('DOMContentLoaded', function() {
             panel.setAttribute('data-year', podcast.year);
 
             // Create a link to the viewer.html with the parameters
-            const viewerLink = `view.html?type=podcast&org=${podcast.path}&year=${podcast.year}`;
+            // Use content-viewer.html instead of view.html to prevent redirect issues
+            const viewerLink = `content-viewer.html?type=podcast&org=${podcast.path}&year=${podcast.year}`;
+
+            // Debug log
+            console.log(`Generated link for ${podcast.name}: ${viewerLink}`);
 
             // Also create direct link to README.md file
             const readmeLink = `podcasts/${podcast.path}/README.md`;
@@ -402,7 +410,11 @@ document.addEventListener('DOMContentLoaded', function() {
             panel.setAttribute('data-year', tv.year);
 
             // Create a link to the viewer.html with the parameters
-            const viewerLink = `view.html?type=television&org=${tv.path}&year=${tv.year}`;
+            // Use content-viewer.html instead of view.html to prevent redirect issues
+            const viewerLink = `content-viewer.html?type=television&org=${tv.path}&year=${tv.year}`;
+
+            // Debug log
+            console.log(`Generated link for ${tv.name}: ${viewerLink}`);
 
             // Also create direct link to README.md file
             const readmeLink = `television/${tv.path}/README.md`;
