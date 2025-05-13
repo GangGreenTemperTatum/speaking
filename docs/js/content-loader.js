@@ -272,10 +272,26 @@ document.addEventListener('DOMContentLoaded', function() {
                 year: "2024"
             },
             {
+                title: "The 12 Hacker “Battlestations” of the Holidays",
+                publisher: "BugCrowd",
+                description: "AOnnnnnn the 12th day of Christmas, a hacker gave to me…",
+                url: "https://www.bugcrowd.com/blog/the-12-hacker-battlestations-of-the-holidays/",
+                icon: "fas fa-bug",
+                year: "2024"
+            },
+            {
                 title: "Hacker Spotlight: Ads Dawson",
                 publisher: "BugCrowd",
                 description: "Profile highlighting my journey, methodologies, and contributions to security research",
                 url: "https://www.bugcrowd.com/blog/hacker-spotlight-ads-dawson/",
+                icon: "fas fa-bug",
+                year: "2023"
+            },
+            {
+                title: "Defining and Prioritizing AI Vulnerabilities for Security Testing",
+                publisher: "BugCrowd",
+                description: "VRT version 1.12",
+                url: "https://www.bugcrowd.com/blog/defining-and-prioritizing-ai-vulnerabilities-for-security-testing/",
                 icon: "fas fa-bug",
                 year: "2023"
             },
