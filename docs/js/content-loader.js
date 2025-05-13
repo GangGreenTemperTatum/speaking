@@ -328,12 +328,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 year: "2023"
             },
             {
+                title: "Hacking LLM applications: In the trenches with DSPy",
+                publisher: "BugCrowd",
+                description: "An in-depth exploration of automated AI red teaming using DSPy",
+                url: "https://www.bugcrowd.com/blog/hacking-llm-applications-in-the-trenches-with-dspy/",
+                icon: "fas fa-bug",
+                year: "2025"
+            },
+            {
                 title: "Hacking LLM applications: A meticulous hacker's two cents",
                 publisher: "BugCrowd",
                 description: "Insights into vulnerabilities specific to LLM applications",
                 url: "https://www.bugcrowd.com/blog/hacking-llm-applications-a-meticulous-hackers-two-cents/",
                 icon: "fas fa-bug",
-                year: "2023"
+                year: "2025"
             },
             {
                 title: "A low-cost hacking sidekick: Baby steps to using offensive AI agents",
@@ -341,7 +349,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 description: "Guide to leveraging AI for ethical hacking",
                 url: "https://www.bugcrowd.com/blog/a-low-cost-hacking-sidekick-baby-steps-to-using-offensive-ai-agents/",
                 icon: "fas fa-bug",
-                year: "2023"
+                year: "2025"
             },
             {
                 title: "LLM Security Handbook - Chapter 8: Mitigating LLM Risks",
