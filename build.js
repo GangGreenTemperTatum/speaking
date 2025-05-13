@@ -162,6 +162,16 @@ const publications = [
     year: "2023"
   },
   {
+    id: "bugcrowd-airt-dspy",
+    title: "Hacking LLM applications: In the trenches with DSPy",
+    publisher: "BugCrowd",
+    description: "An in-depth exploration of automated AI red teaming using DSPy",
+    url: "https://www.bugcrowd.com/blog/hacking-llm-applications-in-the-trenches-with-dspy/",
+    icon: "fas fa-bug",
+    external: true,
+    year: "2025"
+  },
+  {
     id: "bugcrowd-hacking-llm",
     title: "Hacking LLM applications: A meticulous hacker's two cents",
     publisher: "BugCrowd",
@@ -169,7 +179,7 @@ const publications = [
     url: "https://www.bugcrowd.com/blog/hacking-llm-applications-a-meticulous-hackers-two-cents/",
     icon: "fas fa-bug",
     external: true,
-    year: "2023"
+    year: "2025"
   },
   {
     id: "bugcrowd-hacking-sidekick",
@@ -179,7 +189,7 @@ const publications = [
     url: "https://www.bugcrowd.com/blog/a-low-cost-hacking-sidekick-baby-steps-to-using-offensive-ai-agents/",
     icon: "fas fa-bug",
     external: true,
-    year: "2023"
+    year: "2025"
   },
   {
     id: "packt-llm-security-handbook",
