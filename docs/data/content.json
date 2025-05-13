@@ -225,6 +225,16 @@
       "year": "2024"
     },
     {
+      "id": "bugcrowd-battlestations",
+      "title": "The 12 Hacker 'Battlestations' of the Holidays",
+      "publisher": "BugCrowd",
+      "description": "On the 12th day of Christmas, a hacker gave to me…",
+      "url": "https://www.bugcrowd.com/blog/    the-12-hacker-battlestations-of-the-holidays/",
+      "icon": "fas fa-bug",
+      "external": true,
+      "year": "2024"
+    },
+    {
       "id": "bugcrowd-hacker-spotlight",
       "title": "Hacker Spotlight: Ads Dawson",
       "publisher": "BugCrowd",
@@ -241,6 +251,16 @@
       "description": "An in-depth look at current AI security challenges",
       "url": "https://cohere.com/blog/the-state-of-ai-security",
       "icon": "fas fa-brain",
+      "external": true,
+      "year": "2023"
+    },
+    {
+      "id": "bugcrowd-ai-vrt",
+      "title": "Defining and Prioritizing AI Vulnerabilities for Security Testing",
+      "publisher": "BugCrowd",
+      "description": "VRT version 1.12",
+      "url": "https://www.bugcrowd.com/blog/    defining-and-prioritizing-ai-vulnerabilities-for-security-testing/",
+      "icon": "fas fa-bug",
       "external": true,
       "year": "2023"
     },
