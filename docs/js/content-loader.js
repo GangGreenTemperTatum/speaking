@@ -328,6 +328,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 year: "2023"
             },
             {
+                title: "Rigging the system: The art of AI exploits",
+                publisher: "BugCrowd",
+                description: "Leveraging agents, crafting exploits, and mining the hidden gems of AI security",
+                url: "https://www.bugcrowd.com/blog/rigging-the-system-the-art-of-ai-exploits/",
+                icon: "fas fa-bug",
+                year: "2025"
+            },
+            {
                 title: "Hacking AI applications: In the trenches with DSPy",
                 publisher: "BugCrowd",
                 description: "An in-depth exploration of automated AI red teaming using DSPy",
