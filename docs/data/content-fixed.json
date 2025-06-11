@@ -255,6 +255,16 @@
       "year": "2023"
     },
     {
+      "id": "bugcrowd-agents-rigging",
+      "title": "Rigging the system: The art of AI exploits",
+      "publisher": "BugCrowd",
+      "description": "Leveraging agents, crafting exploits, and mining the hidden gems of AI security",
+      "url": "https://www.bugcrowd.com/blog/rigging-the-system-the-art-of-ai-exploits/",
+      "icon": "fas fa-bug",
+      "external": true,
+      "year": "2025"
+    },
+    {
       "id": "bugcrowd-airt-dspy",
       "title": "Hacking AI applications: In the trenches with DSPy",
       "publisher": "BugCrowd",
