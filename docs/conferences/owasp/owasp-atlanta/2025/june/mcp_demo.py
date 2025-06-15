@@ -1,6 +1,12 @@
 import asyncio
+import logfire
+import os
 import rigging as rg
 from loguru import logger
+
+logfire.configure()
+
+os.environ.setdefault("LOGFIRE_TOKEN", "")
 
 logger.enable("rigging")
 
@@ -22,13 +28,43 @@ async def main():
 
         if mcp_client.tools:
             logger.info("Starting chat with available tools...")
-            chat = (
-                await rg.get_generator("openai/o3-mini")
+            logger.info(f"Available tools: {[tool.name for tool in mcp_client.tools]}")
+
+            generator = (
+                rg.get_generator("openai/o3-mini")
                 .chat("Use the tools available to me to tell me the weather in Atlanta")
                 .using(*mcp_client.tools)
-                .run()
+                .with_(
+                    max_tokens=2000,
+                    temperature=0.1,
+                    # Add timeout settings if supported
+                )
             )
-            print(chat.conversation)
+
+            try:
+                logger.info("Starting chat generation...")
+                chat = await asyncio.wait_for(generator.run(), timeout=60)
+
+                logger.info(f"Chat completed with {len(chat.messages)} messages")
+                for i, message in enumerate(chat.messages):
+                    logger.info(f"Message {i + 1} ({message.role}): {message.content}")
+                    if hasattr(message, "tool_calls") and message.tool_calls:
+                        logger.info(
+                            f"Tool calls: {[call.function.name for call in message.tool_calls]}"
+                        )
+
+                final_message = chat.last
+                logger.info(f"Final response: {final_message.content}")
+
+                print(chat.conversation)
+
+            except asyncio.TimeoutError:
+                logger.error("Chat generation timed out after 3 minutes")
+                print("Chat generation timed out")
+            except Exception as e:
+                logger.error(f"Error during chat generation: {e}")
+                print(f"Error: {e}")
+
         else:
             logger.warning("No MCP tools found.")
             print("No MCP tools found.")
