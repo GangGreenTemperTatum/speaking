@@ -206,7 +206,7 @@
   "publications": [
     {
       "id": "arxiv-airtbench",
-      "title": "AIRTBench: Measuring Autonomous AI Red Teaming Capabilities in Language Models",
+      "title": "arXiv:2506.14682 - AIRTBench: Measuring Autonomous AI Red Teaming Capabilities in Language Models",
       "publisher": "arXiv",
       "description": "Academic paper on an AI red teaming benchmark for evaluating language models' ability to autonomously discover and exploit Artificial Intelligence and Machine Learning (AI/ML) security vulnerabilities.",
       "url": "https://arxiv.org/abs/2506.14682",
