@@ -112,6 +112,16 @@ podcastPaths.forEach(podcast => {
 // Process publications from README.md
 const publications = [
   {
+    id: "arxiv-airtbench",
+    title: "AIRTBench: Measuring Autonomous AI Red Teaming Capabilities in Language Models",
+    publisher: "arXiv",
+    description: "Academic paper on an AI red teaming benchmark for evaluating language models' ability to autonomously discover and exploit Artificial Intelligence and Machine Learning (AI/ML) security vulnerabilities.",
+    url: "https://arxiv.org/abs/2506.14682",
+    icon: "fas fa-file-alt",
+    external: true,
+    year: "2025"
+  },
+  {
     id: "arxiv-ai-red-teaming",
     title: "The Automation Advantage in AI Red Teaming",
     publisher: "arXiv",
