@@ -16,6 +16,11 @@ rg.logging.configure_logging(
     log_file_level="debug",
 )
 
+# code ~/Library/Application\ Support/Claude/claude_desktop_config.json
+# go to ~/git/mcp/weather
+# uv run weather-server --sse
+# python docs/conferences/owasp/owasp-atlanta/2025/june/mcp_demo.py
+
 MCP_SSE_URL = "http://0.0.0.0:8000/sse"
 
 
