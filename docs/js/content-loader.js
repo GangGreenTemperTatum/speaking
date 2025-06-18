@@ -264,6 +264,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 year: "2025"
             },
             {
+                title: "AI Red Teaming Case Study: Claude 3.7 Sonnet Solves the Turtle Challenge",
+                publisher: "Dreadnode",
+                description: "Ads reveals groundbreaking research where AI models crushed a cybersecurity challenge so brutal that 94% of human hackers fail—yet three frontier AIs (Claude, Gemini, and Llama) each cracked it using wildly different strategies, from Claude's methodical 9-minute persistence to Llama's lightning-fast 1-minute creative deception. Using their AIRTBench benchmark of 70 AI/ML security challenges and their Strikes evaluation platform, Ads demonstrates that these aren't just pattern-matching machines but genuine problem-solvers adapting under pressure, marking a pivotal moment where AI offensive capabilities have officially surpassed most human experts—and they're sharing the complete dataset so the security community can prepare for what's coming next.",
+                url: "https://dreadnode.io/blog/ai-red-teaming-case-study-claude-sonnet-solves-turtle",
+                icon: "fas fa-skull",
+                year: "2025"
+            },
+            {
+                title: "Do LLM Agents Have AI Red Team Capabilities? We Built a Benchmark to Find Out",
+                publisher: "Dreadnode",
+                description: "We're excited to introduce AIRTBench, an AI red teaming framework that tests LLMs against AI/ML black-box capture-the-flag (CTF) challenges to see how they perform when attacking other AI systems. Think of it as a proving ground where models face the kind of adversarial scenarios they'd encounter in the wild, not just in carefully curated test suites.",
+                url: "https://dreadnode.io/blog/ai-red-team-benchmark",
+                icon: "fas fa-skull",
+                year: "2025"
+            },
+            {
                 title: "arXiv:2504.19855 - The Automation Advantage in AI Red Teaming",
                 publisher: "arXiv",
                 description: "Academic paper on automated approaches to AI security testing",
@@ -382,14 +398,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 url: "https://owasp.org/www-project-top-10-for-large-language-model-applications/",
                 icon: "fas fa-shield-virus",
                 year: "2023"
-            },
-            {
-                title: "Do LLM Agents Have AI Red Team Capabilities? We Built a Benchmark to Find Out",
-                publisher: "Dreadnode",
-                description: "We're excited to introduce AIRTBench, an AI red teaming framework that tests LLMs against AI/ML black-box capture-the-flag (CTF) challenges to see how they perform when attacking other AI systems. Think of it as a proving ground where models face the kind of adversarial scenarios they'd encounter in the wild, not just in carefully curated test suites.",
-                url: "https://dreadnode.io/blog/ai-red-team-benchmark",
-                icon: "fas fa-skull",
-                year: "2025"
             },
         ];
 
