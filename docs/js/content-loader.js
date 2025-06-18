@@ -264,7 +264,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 year: "2025"
             },
             {
-                title: "The Automation Advantage in AI Red Teaming",
+                title: "arXiv:2504.19855 - The Automation Advantage in AI Red Teaming",
                 publisher: "arXiv",
                 description: "Academic paper on automated approaches to AI security testing",
                 url: "https://arxiv.org/abs/2504.19855",

@@ -113,7 +113,7 @@ podcastPaths.forEach(podcast => {
 const publications = [
   {
     id: "arxiv-airtbench",
-    title: "AIRTBench: Measuring Autonomous AI Red Teaming Capabilities in Language Models",
+    title: "arXiv:2506.14682 - AIRTBench: Measuring Autonomous AI Red Teaming Capabilities in Language Models",
     publisher: "arXiv",
     description: "Academic paper on an AI red teaming benchmark for evaluating language models' ability to autonomously discover and exploit Artificial Intelligence and Machine Learning (AI/ML) security vulnerabilities.",
     url: "https://arxiv.org/abs/2506.14682",
@@ -123,7 +123,7 @@ const publications = [
   },
   {
     id: "arxiv-ai-red-teaming",
-    title: "The Automation Advantage in AI Red Teaming",
+    title: "arXiv:2504.19855 - The Automation Advantage in AI Red Teaming",
     publisher: "arXiv",
     description: "Academic paper on automated approaches to AI security testing",
     url: "https://arxiv.org/abs/2504.19855",
