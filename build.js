@@ -122,6 +122,15 @@ const publications = [
     year: "2025"
   },
   {
+  id: "dreadnode-ai-red-team-benchmark",
+  title: "Do LLM Agents Have AI Red Team Capabilities? We Built a Benchmark to Find Out",
+  publisher: "Dreadnode",
+  description: "We're excited to introduce AIRTBench, an AI red teaming framework that tests LLMs against AI/ML black-box capture-the-flag (CTF) challenges to see how they perform when attacking other AI systems. Think of it as a proving ground where models face the kind of adversarial scenarios they'd encounter in the wild, not just in carefully curated test suites.",
+  url: "https://dreadnode.io/blog/ai-red-team-benchmark",
+  icon: "fas fa-skull",
+  year: "2025"
+  },
+  {
     id: "arxiv-ai-red-teaming",
     title: "arXiv:2504.19855 - The Automation Advantage in AI Red Teaming",
     publisher: "arXiv",
@@ -228,16 +237,7 @@ const publications = [
     url: "/owasp/owasp-llm-apps",
     icon: "fas fa-shield-virus",
     year: "2023"
-  },
-  {
-  id: "dreadnode-ai-red-team-benchmark",
-  title: "Do LLM Agents Have AI Red Team Capabilities? We Built a Benchmark to Find Out",
-  publisher: "Dreadnode",
-  description: "We're excited to introduce AIRTBench, an AI red teaming framework that tests LLMs against AI/ML black-box capture-the-flag (CTF) challenges to see how they perform when attacking other AI systems. Think of it as a proving ground where models face the kind of adversarial scenarios they'd encounter in the wild, not just in carefully curated test suites.",
-  url: "https://dreadnode.io/blog/ai-red-team-benchmark",
-  icon: "fas fa-book",
-  year: "2025"
- },
+  }
 ];
 
 // Add publication entries
