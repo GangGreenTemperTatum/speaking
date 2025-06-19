@@ -39,7 +39,7 @@ async def main():
             generator = rg.get_generator("openai/o3-mini")
             chat = (
                 await generator.chat(
-                    "Use the nmap_tcp_ports_syn_scan tool to scan localhost for open TCP ports. Be patient as network scans can take time."
+                    "Use the available Robopages tool presented to you in order to enumerate open ports on localhost and return the results"
                 )
                 .using(*robopages_tools)
                 .run()
