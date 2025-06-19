@@ -424,7 +424,7 @@ async def agent_loop(
     "-g",
     "--generator-id",
     type=str,
-    default="o3-mini",
+    default="groq/meta-llama/llama-4-scout-17b-16e-instruct",
     required=True,
     help="Rigging generator identifier (gpt-4, mistral/mistral-medium, etc.)",
 )
@@ -491,14 +491,7 @@ def cli(
     client = httpx.AsyncClient(
         base_url=base_url,
         verify=False,
-        proxy=(
-            {
-                "http://": proxy,
-                "https://": proxy,
-            }
-            if proxy
-            else None
-        ),
+        proxy=proxy,  # Just pass the proxy string directly
     )
 
     base_chat: rg.ChatPipeline = generator.chat(
