@@ -1,6 +1,7 @@
 import abc
 import asyncio
 import json
+import os
 import pathlib
 import typing as t
 from dataclasses import dataclass, field
@@ -8,10 +9,18 @@ from dataclasses import dataclass, field
 import click
 import httpx
 from loguru import logger
+import logfire
 from pydantic import StringConstraints
 
 import rigging as rg
 from rigging import logging
+
+# ======== LOGGING ========
+
+logger.enable("rigging")
+
+logfire.configure()
+os.environ.setdefault("LOGFIRE_TOKEN", "")  # (1)!
 
 # Constants
 
