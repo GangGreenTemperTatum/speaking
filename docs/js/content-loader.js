@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
     loadConferences();
     loadPodcasts();
     loadPublications();
-    loadTelevision(); // New section for television appearances
+    loadVolunteering();
+    loadTelevision();
 
     function loadConferences() {
         const conferences = [
@@ -437,7 +438,83 @@ document.addEventListener('DOMContentLoaded', function() {
         addNameFilter('publications', publications.map(p => p.publisher), 'Publisher');
     }
 
-    // Add the new function to load television appearances
+    function loadVolunteering() {
+        const volunteering = [
+            {
+                title: "Hacker Advisory Board Member",
+                organization: "Bugcrowd",
+                description: "Representing the global hacker community on Bugcrowd's Hacker Advisory Board.",
+                sector: "Science & Technology",
+                date: "Nov 2024 – Present",
+                icon: "fas fa-bug",
+                year: "2024",
+                url: "https://www.bugcrowd.com/blog/what-is-bugcrowds-hacker-advisory-board/"
+            },
+            {
+                title: "Member – Artificial Intelligence Working Group",
+                organization: "MITRE",
+                description: "Contributing to AI security standards and working group initiatives.",
+                sector: "Science & Technology",
+                date: "Jul 2024 – Present",
+                icon: "fas fa-brain",
+                year: "2024",
+                url: "https://cwe.mitre.org/community/working_groups.html"
+            },
+            {
+                title: "Technical Lead & Founding Member",
+                organization: "OWASP Top 10 for Large Language Model Applications",
+                description: "Led the project from inception to becoming an OWASP Flagship.",
+                sector: "Science & Technology",
+                date: "May 2023 – Present",
+                icon: "fas fa-shield-virus",
+                year: "2023"
+            }
+            // Add more volunteering entries as needed
+        ];
+
+        const volunteeringSection = document.getElementById('volunteering');
+        if (!volunteeringSection) return;
+
+        // Clear loading indicator
+        volunteeringSection.innerHTML = '<h2 class="section-title"><span class="highlight">Volunteering Experience</span></h2>';
+
+        // Add dedicated page link
+        const dedicatedLink = document.createElement('div');
+        dedicatedLink.className = 'comic-panel';
+        dedicatedLink.innerHTML = `
+            <div class="panel-content" style="text-align: center;">
+                <h3>View Full Volunteering Experience</h3>
+                <p>Explore detailed information about all volunteering activities and community contributions.</p>
+                <a href="volunteering/" class="btn-view">View Full Page</a>
+            </div>
+        `;
+        volunteeringSection.appendChild(dedicatedLink);
+
+        // Add recent volunteering items (limit to 3 most recent)
+        volunteering.slice(0, 3).forEach(vol => {
+            const panel = document.createElement('div');
+            panel.className = 'comic-panel volunteering-item';
+
+            panel.innerHTML = `
+                <div class="panel-content">
+                    <div class="vol-logo"><i class="${vol.icon}"></i> ${vol.organization.split(' ')[0]}</div>
+                    <h3>${vol.title}</h3>
+                    <div class="vol-meta-header">
+                        <span class="vol-company">${vol.organization}</span>
+                        <span class="vol-date">${vol.date}</span>
+                    </div>
+                    <p>${vol.description}</p>
+                    <div class="vol-meta">
+                        <span class="vol-sector">${vol.sector}</span>
+                        ${vol.url ? `<a href="${vol.url}" class="btn-read" target="_blank">Learn More</a>` : ''}
+                    </div>
+                </div>
+            `;
+
+            volunteeringSection.appendChild(panel);
+        });
+    }
+
     function loadTelevision() {
         const television = [
             {
