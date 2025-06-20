@@ -1190,3 +1190,33 @@ h3 {
     font-size: 1.2em;
     color: var(--primary);
 }
+
+.btn-linkedin {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #0077b5;
+    color: white;
+    border: 2px solid var(--panel-border);
+    text-decoration: none;
+    font-family: 'Bangers', cursive;
+    transition: all 0.3s ease;
+    box-shadow: 3px 3px 0 var(--comic-shadow);
+}
+
+.btn-linkedin:hover {
+    transform: translateY(-2px);
+    background-color: #005885;
+    box-shadow: 5px 5px 0 var(--comic-shadow);
+}
+
+.btn-linkedin i {
+    margin-right: 0.5rem;
+}
+
+/* Button group styling for header buttons */
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
