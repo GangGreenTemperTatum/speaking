@@ -51,14 +51,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Show corresponding section
             sections.forEach(section => {
-                section.classList.remove('active');
                 if (section.id === target) {
                     section.classList.add('active');
-                    console.log(`Activated section: ${section.id} with ${section.children.length} children`);
+                    section.style.display = 'block';
+
+                    // Load content dynamically if needed
+                    if (target === 'volunteering' && !section.querySelector('.volunteering-item')) {
+                        // Load volunteering content if not already loaded
+                        if (typeof loadVolunteering === 'function') {
+                            loadVolunteering();
+                        }
+                    }
+                } else {
+                    section.classList.remove('active');
+                    section.style.display = 'none';
                 }
             });
-        });
-    });
 
     // Add comic book entrance animation
     const panels = document.querySelectorAll('.comic-panel');
