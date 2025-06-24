@@ -11,7 +11,7 @@
   - **Abstract:**
   -   Want to harness AI for offensive security and get real-world, scalable results? Join Dreadnode Staff Security Researcher and OWASP Top 10 for LLM Applications founding member and tech leader, Ads Dawson, as he dives into adversarial AI and ML, Red Teaming LLMs and chatbots, and next-gen offensive security workflows.
 Whether you're an AI red team veteran or just starting out, this session will equip you with the tools, tactics, and knowledge to navigate an AI-native threat landscape.
-- 🍿 **YouTube Recording** TBC
+- 🍿 **YouTube Recording** [Harnessing AI for Offensive Security by Ads Dawson - OWASP Atlanta](https://youtu.be/Xb_o_hVNm0E)
 - 📣 **Speaker card:** 
 - 🗣️ **Social links:** TBC
 - 🗣️ **OWASP Slack link:** TBC
