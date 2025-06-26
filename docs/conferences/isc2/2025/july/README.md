@@ -1,7 +1,7 @@
 # [ISC2](https://www.isc2.org/)
 ## Behind the Prompt: Exposing and Mitigating the Top LLM Vulnerabilities
 
-
+<img width="866" alt="image" src="https://github.com/user-attachments/assets/0eec0c63-9d35-424f-84a6-64df9f26072b" />
 
 - **Talk title:** "Behind the Prompt: Exposing and Mitigating the Top LLM Vulnerabilities"
   - July 8, 2025 (Tuesday), @ 12:05 p.m. - 1:05 p.m. (LIVE)
