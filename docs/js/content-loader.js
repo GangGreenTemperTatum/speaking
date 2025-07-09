@@ -98,6 +98,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 localPath: "conferences/rsa-usa/2024/may"
             },
             {
+                name: "OWASP Cairo",
+                year: "2025",
+                icon: "fas fa-shield-virus",
+                description: "AI, Security, and Hacking Tools",
+                path: "owasp/owasp-cairo",
+                subdir: "july",
+                localPath: "conferences/owasp/owasp-cairo/2025/july"
+            },
+            {
                 name: "OWASP Atlanta",
                 year: "2025",
                 icon: "fas fa-shield-virus",
