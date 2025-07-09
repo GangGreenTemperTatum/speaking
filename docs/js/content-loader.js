@@ -96,6 +96,84 @@ document.addEventListener('DOMContentLoaded', function() {
                 path: "rsa-usa",
                 subdir: "may",
                 localPath: "conferences/rsa-usa/2024/may"
+            },
+            {
+                name: "OWASP Atlanta",
+                year: "2025",
+                icon: "fas fa-shield-virus",
+                description: "Harnessing AI for Offensive Security",
+                path: "owasp/owasp-atlanta",
+                subdir: "june",
+                localPath: "conferences/owasp/owasp-atlanta/2025/june"
+            },
+            {
+                name: "ISC2",
+                year: "2025",
+                icon: "fas fa-certificate",
+                description: "Behind the Prompt: Exposing and Mitigating the Top LLM Vulnerabilities",
+                path: "isc2",
+                subdir: "july",
+                localPath: "conferences/isc2/2025/july"
+            },
+            {
+                name: "Interface",
+                year: "2023",
+                icon: "fas fa-cloud",
+                description: "Language AI Security at the API level",
+                path: "interface",
+                localPath: "conferences/interface"
+            },
+            {
+                name: "Lakera AI",
+                year: "2023",
+                icon: "fas fa-shield-alt",
+                description: "How to Secure AI Applications: Lessons from OWASP's Top 10 for LLMs",
+                path: "lakera",
+                subdir: "december",
+                localPath: "conferences/lakera/december/2023"
+            },
+            {
+                name: "Lakera AI",
+                year: "2024",
+                icon: "fas fa-shield-alt",
+                description: "Decoding OWASP Large Language Model Security Verification Standard (LLMSVS)",
+                path: "lakera",
+                subdir: "april",
+                localPath: "conferences/lakera/april/2024"
+            },
+            {
+                name: "Mako Lab",
+                year: "2025",
+                icon: "fas fa-flask",
+                description: "Mastering AI chatbot security",
+                path: "mako-lab",
+                localPath: "conferences/mako-lab"
+            },
+            {
+                name: "MLOps Community",
+                year: "2024",
+                icon: "fas fa-cogs",
+                description: "AI in Production",
+                path: "mlopscommunity",
+                subdir: "february",
+                localPath: "conferences/mlopscommunity/2024/february"
+            },
+            {
+                name: "OWASP LLM Apps",
+                year: "2025",
+                icon: "fas fa-shield-virus",
+                description: "Sandboxing AI Models with Dyana & OWASP Top 10 for LLM Apps - Ep.4",
+                path: "owasp/owasp-llm-apps",
+                localPath: "conferences/owasp/owasp-llm-apps"
+            },
+            {
+                name: "RSA Conference",
+                year: "2025",
+                icon: "fas fa-lock",
+                description: "OWASP AI Security Summit — Safeguarding GenAI & Agentic Apps, Top 10 Risks in 2025",
+                path: "rsa-usa",
+                subdir: "april",
+                localPath: "conferences/rsa-usa/2025/april"
             }
         ];
 
