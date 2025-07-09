@@ -1,7 +1,7 @@
 # [ISC2](https://www.isc2.org/)
 ## Behind the Prompt: Exposing and Mitigating the Top LLM Vulnerabilities
 
-![behind_the_prompt_exposing_and_mitigating_the_top_llm_vulnerabilities-isc2-july-2025](behind_the_prompt_exposing_and_mitigating_the_top_llm_vulnerabilities-isc2-july-2025.png)
+![behind_the_prompt_exposing_and_mitigating_the_top_llm_vulnerabilities-isc2-july-2025](conferences/isc2/2025/july/behind_the_prompt_exposing_and_mitigating_the_top_llm_vulnerabilities-isc2-july-2025.png)
 
 <img width="866" alt="image" src="https://github.com/user-attachments/assets/0eec0c63-9d35-424f-84a6-64df9f26072b" />
 
