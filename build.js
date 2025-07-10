@@ -23,7 +23,7 @@ const conferenceOrgs = [
   { id: "in-cyber-forum", years: ["2024"] },
   { id: "isaca", years: ["2024"] },
   { id: "mako-lab", years: ["2023", "2024"] },
-  { id: "owasp", subDirs: ["owasp-toronto", "owasp-vancouver", "owasp-atlanta"], years: ["2023", "2024", "2025"] },
+  { id: "owasp", subDirs: ["owasp-cairo", "owasp-toronto", "owasp-vancouver", "owasp-atlanta"], years: ["2023", "2024", "2025"] },
   { id: "rsa-usa", years: ["2024", "2025"] }
 ];
 

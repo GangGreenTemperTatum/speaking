@@ -105,6 +105,14 @@
       "description": "Talks on AI/ML Security and LLM Application Safety"
     },
     {
+      "id": "owasp/owasp-cairo-2025",
+      "name": "OWASP CAIRO",
+      "path": "owasp/owasp-cairo",
+      "year": "2023",
+      "icon": "fas fa-shield-virus",
+      "description": "AI, Security, and Hacking Tools"
+    },
+    {
       "id": "owasp/owasp-atlanta-2023",
       "name": "OWASP ATLANTA",
       "path": "owasp/owasp-atlanta",
