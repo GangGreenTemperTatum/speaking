@@ -112,6 +112,16 @@ podcastPaths.forEach(podcast => {
 // Process publications from README.md
 const publications = [
   {
+    id: "bugcrowd-author-profile",
+    title: "Bugcrowd Author Profile - Ads Dawson",
+    publisher: "BugCrowd",
+    description: "Complete collection of all my published articles, research, and contributions on the Bugcrowd blog covering API and web application Hacking, AI security, red teaming, and vulnerability research.",
+    url: "https://arxiv.org/abs/2506.14682",
+    icon: "fas fa-bug",
+    external: true,
+    year: "2025"
+  },
+  {
     id: "arxiv-airtbench",
     title: "arXiv:2506.14682 - AIRTBench: Measuring Autonomous AI Red Teaming Capabilities in Language Models",
     publisher: "arXiv",
