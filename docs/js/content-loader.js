@@ -183,6 +183,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 path: "rsa-usa",
                 subdir: "april",
                 localPath: "conferences/rsa-usa/2025/april"
+            },
+            {
+                name: "BugCrowd BugBoss",
+                year: "2025",
+                icon: "fas fa-bug",
+                description: "BugBoss Show n Tell - July 2025",
+                path: "bugcrowd",
+                subdir: "july/bugboss",
+                localPath: "conferences/bugcrowd/2025/july/bugboss"
             }
         ];
 
