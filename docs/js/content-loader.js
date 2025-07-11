@@ -98,6 +98,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 localPath: "conferences/rsa-usa/2024/may"
             },
             {
+                name: "OWASP Cairo",
+                year: "2025",
+                icon: "fas fa-shield-virus",
+                description: "AI, Security, and Hacking Tools",
+                path: "owasp/owasp-cairo",
+                subdir: "july",
+                localPath: "conferences/owasp/owasp-cairo/2025/july"
+            },
+            {
                 name: "OWASP Atlanta",
                 year: "2025",
                 icon: "fas fa-shield-virus",
@@ -334,6 +343,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function loadPublications() {
         const publications = [
+            {
+                title: "Bugcrowd Author Profile - Ads Dawson",
+                publisher: "BugCrowd",
+                description: "Complete collection of all my published articles,     research, and contributions on the Bugcrowd blog covering AI    security, red teaming, and vulnerability research.",
+                url: "https://www.bugcrowd.com/blog/author/ads-dawson/",
+                icon: "fas fa-user-edit",
+                year: "2025"
+            },
             {
                 title: "arXiv:2506.14682 - AIRTBench: Measuring Autonomous AI Red Teaming Capabilities in Language Models",
                 publisher: "arXiv",
