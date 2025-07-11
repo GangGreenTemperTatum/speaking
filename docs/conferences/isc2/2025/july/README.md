@@ -34,6 +34,7 @@ Steve Wilson: Founder and Co-chair, OWASP Gen AI Security Project
   - Understand how you should think about AI/LLM security for your organization.
   - Learn how to evaluate AI security solutions.
 
+- 📄 **Slides (PDF):** [Behind the Prompt: Exposing and Mitigating the Top LLM Vulnerabilities](ISACA%202025%20Ads%20and%20Steve%20-%20Behind%20the%20Prompt_%20Exposing%20and%20Mitigating%20the%20Top%20LLM%20Vulnerabilities%20-%20ISC2%27s%20Spotlight%20on%20AI%20virtual%20conference.pdf)
 - 🍿 **YouTube Recording** [TBC](TBC)
 - 🗣️ **Social links:** [TBC](TBC)
 

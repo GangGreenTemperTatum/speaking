@@ -9,6 +9,7 @@
 
 ![image](https://github.com/user-attachments/assets/30b43ba4-f942-444e-87fc-2ccfb69e8f31)
 
+- 📄 **Slides (PDF):** [OWASP Toronto March 2025 - Shiny Rocks in Offensive AI](Ads%20Dawson%20-%20OWASP%20Toronto%20March%2019%202025%20-%20Shiny%20Rocks%20in%20Offensive%20AI%20%28The%20stored%20XSS%20kind%20and%20more%29%20_%20Dreadnode%20-%20OWASP%20Toronto%20-%20March%2019%202025%20-%20How%20to%20Utilize%20AI%20in%20Offensive%20Security%E2%80%94An%20Intro%20to%20Offensive%20AI%20Tooling.pdf)
 - 🍿 **YouTube Recording** [OWASP Toronto | ads dawson | March 2025 - How to Utilize AI in Offensive Security—An Intro to Offensive AI Tooling](https://www.youtube.com/watch?v=ycuIrgkWTuU)
 - 📣 **Speaker card:** 
 - 🗣️ **Social links:** [TBC](TBC)

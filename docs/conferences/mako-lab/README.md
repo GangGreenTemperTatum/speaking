@@ -25,6 +25,7 @@ Details:
 
 🎯Don’t miss out! Sign up today and take this major step towards mastering the future of AI chatbot security.
 
+- 🖼️ **Event Graphics:** [Event Poster](makolab_mastering_ai_chatbot_security.png) | [Speaker Card](makolab_mastering_ai_chatbot_security_speaker.png)
 - 🍿 **Recording**: TBC
 - 🗣️ **Social links**: [here](https://www.linkedin.com/posts/makolab_aichatbotsecurity-webinar-cybersecurity-activity-7316060442806693890-Y3ae?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA1p028B5AHnJgHCbLKDdcDTNnvyDWkUwzE)
 <br>

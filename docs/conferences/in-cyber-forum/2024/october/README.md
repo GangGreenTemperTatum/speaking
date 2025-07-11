@@ -8,6 +8,7 @@
 ---
 > Ads Dawson est une force dynamique avec plus de 13 ans d'expérience dans l'ingénierie de sécurité, la sécurité offensive et les opérations de l'équipe rouge, maîtrisant divers domaines allant du réseau à la sécurité des applications. Professionnel de la cybersécurité motivé, Ads dirige le groupe de travail principal du projet de sécurité des applications OWASP LLM, faisant progresser la sécurité de l'IA et les opérations de sécurité machine. Il excelle dans les activités d'équipe rouge adversaire, utilisant l'apprentissage automatique pour affiner ses compétences et automatisant de manière créative les techniques pour briser la technologie.
 
+- 📄 **Slides (PDF):** [LLM and NLP API Architecture - A Journey to Avoiding Data Breaches](Ads%20Dawson%20-%20DT01%20TECH%20LAB%20-%20In-Cyber%20Forum%20Montreal%20Canada%20-%20Language%20AI%20Security%20at%20the%20API%20level%20%20LLM%20and%20NLP%20API%20Architecture_%20A%20Journey%20to%20Avoiding%20Data%20Breaches%20Oct%2029%2024.pdf)
 - 🍿 **YouTube Recording** [TBC](tbc)
 - 📣 **Speaker list:** [Here](https://northamerica.forum-incyber.com/en/personalities-2024/)
 - 🃏 **Speaker Card:** [Here](https://northamerica.forum-incyber.com/programme-2024/)

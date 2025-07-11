@@ -4,6 +4,7 @@
 - **Talk title:** "Securing LLM and NLP API Architecture: A Journey to Avoiding Data breaches, Attacks and More"
   - Thu, Feb 15, 2024 12:00 PM - 4:00 PM PST
   - **Abstract:** _[Ads Dawson](https://linkedin.com/in/adamdawson0), In this session we will take an insightful journey through the challenges and solutions involved in securing large language models and natural language programming APIs. With his extensive experience, Ads will shed light on how to avoid data breaches, fortify against attacks, and enhance the security of these crucial technologies through the use of tools like OWASP Top 10 for LLMs. Don't miss this opportunity to learn from a true expert in the field!_
+- 📄 **Slides (PDF):** [ISACA Application Security Sector Day 2024 - LLM and NLP API Architecture](ISACA%20Application%20Security%20Sector%20Day%202024%20-%20LLM%20and%20NLP%20API%20Architecture%20A%20Journey%20to%20Avoiding%20Data%20Breaches%20-%2002-15-2024%20-%20v1.1%20LIVE.pptx.pdf)
 - 🍿 **YouTube Recording** [TBC]()
 - 📣 **Speaker card:** 
 

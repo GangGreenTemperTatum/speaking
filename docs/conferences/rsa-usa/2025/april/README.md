@@ -42,6 +42,7 @@ https://path.rsaconference.com/flow/rsac/us25/FullAgenda/page/catalog/session/17
 🔗 As always, check out what is new on our website:
 https://genai.owasp.org
 
+- 📄 **Slides (PDF):** [RSA 2025 OWASP Top 10 for LLM Apps and GenAI Project](RSA%202025%20Ads%20and%20Steve%20-%20OWASP%20Top%2010%20for%20LLM%20Apps%20and%20GenAI%20Project_%20The%20Stochastic%20Shall%20Inherit%20the%20Earth%20%28But%20Let%27s%20Secure%20It%20First%29%20-%20OWASP%20AI%20Security%20Summit%202025.pdf)
 - 🍿 **YouTube Recording** [Here](TBC)
 - 🗣️ **Social links:** [Here](https://www.linkedin.com/posts/owasp-top-10-for-large-language-model-applications_rsac2025-owasp-agenticai-activity-7312462455845097472-VhFs?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA1p028B5AHnJgHCbLKDdcDTNnvyDWkUwzE)
 
