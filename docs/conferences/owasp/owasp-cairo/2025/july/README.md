@@ -13,9 +13,10 @@
 
 *🎙️ Ads – Staff AI Security Researcher @ Dreadnode*
 *Talk: Dreadnode, dyana: A Hacker’s Sandbox for Profiling ML Models, Binaries & Beyond*
-*What it’s about:*
-*Ads will introduce dyana, a tool that lets you safely run and inspect machine learning models, executables, and other artifacts. He’ll explain how dyana works, why it’s useful, and show a live demo of a backdoored ML model in action. You’ll * also see how you can use dyana in your own testing or response workflows.*
+*What it's about:*
+*Ads will introduce dyana, a tool that lets you safely run and inspect machine learning models, executables, and other artifacts. He'll explain how dyana works, why it's useful, and show a live demo of a backdoored ML model in action. You'll * also see how you can use dyana in your own testing or response workflows.*
 
+- 📄 **Slides (PDF):** [AI, Security, and Hacking Tools - OWASP Cairo - July 2025](Ads%20Dawson%20-%20AI%2C%20Security%2C%20and%20Hacking%20Tools%20_%20Dreadnode%20-%20OWASP%20Cairo%20-%20Saturday%20July%2019%202025.pdf)
 - 🍿 **YouTube Recording** [TBC](TBC)
 - 📣 **Speaker card:**
 - 🗣️ **Social links:** [Here](https://www.linkedin.com/posts/owasp-cairo_ai-security-and-hacking-tools-sat-jul-activity-7348837080682102786-UayE/?utm_source=share&utm_medium=member_ios&rcm=ACoAAEjrM1ABe4mFQabKZ8zfULzqkcSMVmuWVek)
