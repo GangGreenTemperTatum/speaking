@@ -21,4 +21,6 @@
 - 📣 **Speaker card:**
 - 🗣️ **Social links:** [Here](https://www.linkedin.com/posts/owasp-cairo_ai-security-and-hacking-tools-sat-jul-activity-7348837080682102786-UayE/?utm_source=share&utm_medium=member_ios&rcm=ACoAAEjrM1ABe4mFQabKZ8zfULzqkcSMVmuWVek)
 
+![dyana demo](https://github.com/GangGreenTemperTatum/speaking/raw/main/docs/conferences/owasp/owasp-cairo/2025/july/dyana.gif)
+
 ----------------------------
