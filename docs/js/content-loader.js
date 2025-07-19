@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 localPath: "conferences/owasp/owasp-llm-apps"
             },
             {
-                name: "RSA Conference",
+                name: "RSA Conference 2025",
                 year: "2025",
                 icon: "fas fa-lock",
                 description: "OWASP AI Security Summit — Safeguarding GenAI & Agentic Apps, Top 10 Risks in 2025",
@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 localPath: "conferences/rsa-usa/2025/april"
             },
             {
-                name: "BugCrowd",
+                name: "BugBoss v3 Show n Tell",
                 year: "2025",
                 icon: "fas fa-bug",
                 description: "BugBoss Show n Tell - July 2025",
@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 localPath: "conferences/bugcrowd/2025/july/bugboss"
             },
             {
-                name: "BugCrowd",
+                name: "BugCrowd x RHIC Cyberrange",
                 year: "2025",
                 icon: "fas fa-bug",
                 description: "BugCrowd x Dreadnode Crucible: Rhode Island College RHIC - July 2025",
