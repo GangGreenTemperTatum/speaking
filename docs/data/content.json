@@ -108,7 +108,7 @@
       "id": "owasp/owasp-cairo-2025",
       "name": "OWASP CAIRO",
       "path": "owasp/owasp-cairo",
-      "year": "2023",
+      "year": "2025",
       "icon": "fas fa-shield-virus",
       "description": "AI, Security, and Hacking Tools"
     },
@@ -151,6 +151,14 @@
       "year": "2025",
       "icon": "fas fa-bug",
       "description": "BugCrowd x Dreadnode Crucible: Rhode Island College Cyber Range"
+    },
+    {
+      "id": "isc2-2025",
+      "name": "ISC2",
+      "path": "isc2",
+      "year": "2025",
+      "icon": "fas fa-certificate",
+      "description": "Behind the Prompt: Exposing and Mitigating the Top LLM Vulnerabilities"
     },
     {
       "id": "rsa-usa-2024",
