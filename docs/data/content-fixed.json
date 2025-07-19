@@ -75,7 +75,7 @@
     {
       "id": "lakera-2023",
       "name": "Lakera AI",
-      "path": "lakera",
+      "path": "lakera/december/2023",
       "year": "2023",
       "icon": "fas fa-shield-alt",
       "description": "How to Secure AI Applications: Lessons from OWASP's Top 10 for LLMs"
@@ -83,7 +83,7 @@
     {
       "id": "lakera-2024",
       "name": "Lakera AI",
-      "path": "lakera",
+      "path": "lakera/april/2024",
       "year": "2024",
       "icon": "fas fa-shield-alt",
       "description": "Decoding OWASP Large Language Model Security Verification Standard (LLMSVS)"
@@ -179,7 +179,7 @@
   ],
   "podcasts": [
     {
-      "id": "podcasts-bareknuckles_and_brass_tacks",
+      "id": "podcasts-bareknuckles_and_brass_tacks-2024",
       "name": "Bare Knuckles and Brass Tacks",
       "path": "podcasts/bareknuckles_and_brass_tacks",
       "year": "2024",
@@ -187,7 +187,7 @@
       "description": "Discussion about AI and ML security"
     },
     {
-      "id": "podcasts-chai_chat_podcast",
+      "id": "podcasts-chai_chat_podcast-2023",
       "name": "ChAI Chat Podcast",
       "path": "podcasts/chai_chat_podcast",
       "year": "2023",
@@ -195,7 +195,7 @@
       "description": "Conversations on AI ethics and security challenges"
     },
     {
-      "id": "podcasts-f5_dev_central",
+      "id": "podcasts-f5_dev_central-2023",
       "name": "F5 DevCentral",
       "path": "podcasts/f5_dev_central",
       "year": "2023",
@@ -203,7 +203,7 @@
       "description": "Discussion about AI and ML security"
     },
     {
-      "id": "podcasts-mlops_community-2023-november",
+      "id": "podcasts-mlops_community-2023-november-2023",
       "name": "MLOps Community",
       "path": "podcasts/mlops_community/2023/november",
       "year": "2023",
@@ -211,7 +211,7 @@
       "description": "Exploring the intersection of MLOps and security"
     },
     {
-      "id": "podcasts-owasp-owasp-llm-apps-podcast",
+      "id": "podcasts-owasp-owasp-llm-apps-podcast-2024",
       "name": "OWASP LLM Apps Podcast",
       "path": "podcasts/owasp/owasp-llm-apps-podcast",
       "year": "2024",
@@ -219,7 +219,15 @@
       "description": "Security considerations for LLM applications"
     },
     {
-      "id": "podcasts-software_testing_and_quality_talks",
+      "id": "podcasts-owasp-owasp-llm-apps-podcast-2025",
+      "name": "OWASP LLM Apps Podcast",
+      "path": "podcasts/owasp/owasp-llm-apps-podcast",
+      "year": "2025",
+      "icon": "fas fa-shield-virus",
+      "description": "Sandboxing AI Models with Dyana & OWASP Top 10 for LLM Apps - Ep.4"
+    },
+    {
+      "id": "podcasts-software_testing_and_quality_talks-2024",
       "name": "Software Testing & Quality Talks",
       "path": "podcasts/software_testing_and_quality_talks",
       "year": "2024",
@@ -227,7 +235,7 @@
       "description": "Discussion about AI and ML security"
     },
     {
-      "id": "podcasts-synack",
+      "id": "podcasts-synack-2023",
       "name": "Synack Podcast",
       "path": "podcasts/synack",
       "year": "2023",

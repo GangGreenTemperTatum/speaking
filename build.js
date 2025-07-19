@@ -25,7 +25,7 @@ const conferenceOrgs = [
   { id: "interface", years: ["2023"] },
   { id: "isaca", years: ["2024"] },
   { id: "isc2", years: ["2025"] },
-  { id: "lakera", years: ["2023", "2024"] },
+  { id: "lakera", subPaths: [{path: "december/2023", year: "2023"}, {path: "april/2024", year: "2024"}] },
   { id: "mako-lab", years: ["2023", "2024"] },
   { id: "mlopscommunity", years: ["2024"] },
   { id: "owasp", subDirs: [{name: "owasp-cairo", years: ["2025"]}, {name: "owasp-toronto", years: ["2024", "2025"]}, {name: "owasp-vancouver", years: ["2023"]}, {name: "owasp-atlanta", years: ["2025"]}, {name: "owasp-llm-apps", years: ["2025"]}] },
@@ -108,6 +108,29 @@ conferenceOrgs.forEach(org => {
         });
       });
     });
+  } else if (org.subPaths) {
+    org.subPaths.forEach(subPath => {
+      const orgConfig = contentMap[org.id] || { name: org.id, icon: "fas fa-microphone-alt" };
+      let description = "Talks on AI/ML Security and LLM Application Safety";
+      
+      // Special descriptions for Lakera
+      if (org.id === 'lakera') {
+        if (subPath.year === '2023') {
+          description = "How to Secure AI Applications: Lessons from OWASP's Top 10 for LLMs";
+        } else if (subPath.year === '2024') {
+          description = "Decoding OWASP Large Language Model Security Verification Standard (LLMSVS)";
+        }
+      }
+
+      content.conferences.push({
+        id: `${org.id}-${subPath.year}`,
+        name: orgConfig.name,
+        path: `${org.id}/${subPath.path}`,
+        year: subPath.year,
+        icon: orgConfig.icon,
+        description: description
+      });
+    });
   } else {
     org.years.forEach(year => {
       const orgConfig = contentMap[org.id] || { name: org.id, icon: "fas fa-microphone-alt" };
@@ -147,6 +170,7 @@ const podcastPaths = [
   { path: 'podcasts/f5_dev_central', name: 'F5 DevCentral', icon: 'fas fa-server', year: '2023' },
   { path: 'podcasts/mlops_community/2023/november', name: 'MLOps Community', icon: 'fas fa-cogs', year: '2023' },
   { path: 'podcasts/owasp/owasp-llm-apps-podcast', name: 'OWASP LLM Apps Podcast', icon: 'fas fa-shield-virus', year: '2024' },
+  { path: 'podcasts/owasp/owasp-llm-apps-podcast', name: 'OWASP LLM Apps Podcast', icon: 'fas fa-shield-virus', year: '2025' },
   { path: 'podcasts/software_testing_and_quality_talks', name: 'Software Testing & Quality Talks', icon: 'fas fa-check-circle', year: '2024' },
   { path: 'podcasts/synack', name: 'Synack Podcast', icon: 'fas fa-bug', year: '2023' }
 ];
@@ -159,11 +183,15 @@ podcastPaths.forEach(podcast => {
   } else if (podcast.name.includes('ChAI')) {
     description = 'Conversations on AI ethics and security challenges';
   } else if (podcast.name.includes('OWASP')) {
-    description = 'Security considerations for LLM applications';
+    if (podcast.year === '2025') {
+      description = 'Sandboxing AI Models with Dyana & OWASP Top 10 for LLM Apps - Ep.4';
+    } else {
+      description = 'Security considerations for LLM applications';
+    }
   }
 
   content.podcasts.push({
-    id: podcast.path.replace(/\//g, '-'),
+    id: `${podcast.path.replace(/\//g, '-')}-${podcast.year}`,
     name: podcast.name,
     path: podcast.path,
     year: podcast.year,
