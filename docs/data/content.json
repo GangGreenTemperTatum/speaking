@@ -17,6 +17,22 @@
       "description": "Talks on AI/ML Security and LLM Application Safety"
     },
     {
+      "id": "bugcrowd/bugboss-2025",
+      "name": "BugBoss",
+      "path": "bugcrowd/bugboss",
+      "year": "2025",
+      "icon": "fas fa-bug",
+      "description": "BugCrowd Bugboss v3 Show and Tell"
+    },
+    {
+      "id": "bugcrowd/rhic-2025",
+      "name": "RHIC",
+      "path": "bugcrowd/rhic",
+      "year": "2025",
+      "icon": "fas fa-bug",
+      "description": "BugCrowd x Dreadnode Crucible: Rhode Island College Cyber Range"
+    },
+    {
       "id": "dc604-2023",
       "name": "DC604",
       "path": "dc604",
@@ -33,12 +49,44 @@
       "description": "Talks on AI/ML Security and LLM Application Safety"
     },
     {
+      "id": "interface-2023",
+      "name": "Interface",
+      "path": "interface",
+      "year": "2023",
+      "icon": "fas fa-code",
+      "description": "Language AI Security at the API level - Avoiding Hacks, Injections and Breaches"
+    },
+    {
       "id": "isaca-2024",
       "name": "ISACA",
       "path": "isaca",
       "year": "2024",
       "icon": "fas fa-certificate",
       "description": "Talks on AI/ML Security and LLM Application Safety"
+    },
+    {
+      "id": "isc2-2025",
+      "name": "ISC2",
+      "path": "isc2",
+      "year": "2025",
+      "icon": "fas fa-certificate",
+      "description": "Behind the Prompt: Exposing and Mitigating the Top LLM Vulnerabilities"
+    },
+    {
+      "id": "lakera-2023",
+      "name": "Lakera AI",
+      "path": "lakera",
+      "year": "2023",
+      "icon": "fas fa-shield-alt",
+      "description": "How to Secure AI Applications: Lessons from OWASP's Top 10 for LLMs"
+    },
+    {
+      "id": "lakera-2024",
+      "name": "Lakera AI",
+      "path": "lakera",
+      "year": "2024",
+      "icon": "fas fa-shield-alt",
+      "description": "Decoding OWASP Large Language Model Security Verification Standard (LLMSVS)"
     },
     {
       "id": "mako-lab-2023",
@@ -57,10 +105,18 @@
       "description": "Talks on AI/ML Security and LLM Application Safety"
     },
     {
-      "id": "owasp/owasp-toronto-2023",
-      "name": "OWASP TORONTO",
-      "path": "owasp/owasp-toronto",
-      "year": "2023",
+      "id": "mlopscommunity-2024",
+      "name": "MLOps Community",
+      "path": "mlopscommunity",
+      "year": "2024",
+      "icon": "fas fa-cogs",
+      "description": "AI in Production - MLOps Security and Privacy Panel"
+    },
+    {
+      "id": "owasp/owasp-cairo-2025",
+      "name": "OWASP CAIRO",
+      "path": "owasp/owasp-cairo",
+      "year": "2025",
       "icon": "fas fa-shield-virus",
       "description": "Talks on AI/ML Security and LLM Application Safety"
     },
@@ -89,46 +145,6 @@
       "description": "Talks on AI/ML Security and LLM Application Safety"
     },
     {
-      "id": "owasp/owasp-vancouver-2024",
-      "name": "OWASP VANCOUVER",
-      "path": "owasp/owasp-vancouver",
-      "year": "2024",
-      "icon": "fas fa-shield-virus",
-      "description": "Talks on AI/ML Security and LLM Application Safety"
-    },
-    {
-      "id": "owasp/owasp-vancouver-2025",
-      "name": "OWASP VANCOUVER",
-      "path": "owasp/owasp-vancouver",
-      "year": "2025",
-      "icon": "fas fa-shield-virus",
-      "description": "Talks on AI/ML Security and LLM Application Safety"
-    },
-    {
-      "id": "owasp/owasp-cairo-2025",
-      "name": "OWASP CAIRO",
-      "path": "owasp/owasp-cairo",
-      "year": "2025",
-      "icon": "fas fa-shield-virus",
-      "description": "AI, Security, and Hacking Tools"
-    },
-    {
-      "id": "owasp/owasp-atlanta-2023",
-      "name": "OWASP ATLANTA",
-      "path": "owasp/owasp-atlanta",
-      "year": "2023",
-      "icon": "fas fa-shield-virus",
-      "description": "Talks on AI/ML Security and LLM Application Safety"
-    },
-    {
-      "id": "owasp/owasp-atlanta-2024",
-      "name": "OWASP ATLANTA",
-      "path": "owasp/owasp-atlanta",
-      "year": "2024",
-      "icon": "fas fa-shield-virus",
-      "description": "Talks on AI/ML Security and LLM Application Safety"
-    },
-    {
       "id": "owasp/owasp-atlanta-2025",
       "name": "OWASP ATLANTA",
       "path": "owasp/owasp-atlanta",
@@ -137,28 +153,12 @@
       "description": "Talks on AI/ML Security and LLM Application Safety"
     },
     {
-      "id": "bugcrowd/bugboss-2025",
-      "name": "BugBoss",
-      "path": "bugcrowd",
+      "id": "owasp/owasp-llm-apps-2025",
+      "name": "OWASP LLM Apps Project",
+      "path": "owasp/owasp-llm-apps",
       "year": "2025",
-      "icon": "fas fa-bug",
-      "description": "BugCrowd Bugboss v3 Show and Tell"
-    },
-    {
-      "id": "bugcrowd/rhic-2025",
-      "name": "RHIC",
-      "path": "bugcrowd",
-      "year": "2025",
-      "icon": "fas fa-bug",
-      "description": "BugCrowd x Dreadnode Crucible: Rhode Island College Cyber Range"
-    },
-    {
-      "id": "isc2-2025",
-      "name": "ISC2",
-      "path": "isc2",
-      "year": "2025",
-      "icon": "fas fa-certificate",
-      "description": "Behind the Prompt: Exposing and Mitigating the Top LLM Vulnerabilities"
+      "icon": "fas fa-shield-virus",
+      "description": "Sandboxing AI Models with Dyana & OWASP Top 10 for LLM Apps"
     },
     {
       "id": "rsa-usa-2024",
@@ -237,22 +237,12 @@
   ],
   "publications": [
     {
-      "id": "dreadnode-ai-red-team-benchmark-case-study",
-      "title": "AI Red Teaming Case Study: Claude 3.7 Sonnet Solves the Turtle Challenge",
-      "publisher": "Dreadnode",
-      "description": "Ads reveals groundbreaking research where AI models crushed a cybersecurity challenge so brutal that 94% of human hackers fail—yet three frontier AIs (Claude, Gemini, and Llama) each cracked it using wildly different strategies, from Claude's methodical 9-minute persistence to Llama's lightning-fast 1-minute creative deception. Using their AIRTBench benchmark of 70 AI/ML security challenges and their Strikes evaluation platform, Ads demonstrates that these aren't just pattern-matching machines but genuine problem-solvers adapting under pressure, marking a pivotal moment where AI offensive capabilities have officially surpassed most human experts—and they're sharing the complete dataset so the security community can prepare for what's coming next.",
-      "url": "https://dreadnode.io/blog/ai-red-teaming-case-study-claude-sonnet-solves-turtle",
-      "icon": "fas fa-file-skull",
-      "external": true,
-      "year": "2025"
-    },
-    {
-      "id": "dreadnode-ai-red-team-benchmark",
-      "title": "Do LLM Agents Have AI Red Team Capabilities? We Built a Benchmark to Find Out",
-      "publisher": "Dreadnode",
-      "description": "We're excited to introduce AIRTBench, an AI red teaming framework that tests LLMs against AI/ML black-box capture-the-flag (CTF) challenges to see how they perform when attacking other AI systems. Think of it as a proving ground where models face the kind of adversarial scenarios they'd encounter in the wild, not just in carefully curated test suites.",
-      "url": "https://dreadnode.io/blog/ai-red-team-benchmark",
-      "icon": "fas fa-file-skull",
+      "id": "bugcrowd-author-profile",
+      "title": "Bugcrowd Author Profile - Ads Dawson",
+      "publisher": "BugCrowd",
+      "description": "Complete collection of all my published articles, research, and contributions on the Bugcrowd blog covering API and web application Hacking, AI security, red teaming, and vulnerability research.",
+      "url": "https://arxiv.org/abs/2506.14682",
+      "icon": "fas fa-bug",
       "external": true,
       "year": "2025"
     },
@@ -267,6 +257,24 @@
       "year": "2025"
     },
     {
+      "id": "dreadnode-ai-red-team-benchmark-case-study",
+      "title": "AI Red Teaming Case Study: Claude 3.7 Sonnet Solves the Turtle Challenge",
+      "publisher": "Dreadnode",
+      "description": "Ads reveals groundbreaking research where AI models crushed a cybersecurity challenge so brutal that 94% of human hackers fail—yet three frontier AIs (Claude, Gemini, and Llama) each cracked it using wildly different strategies, from Claude's methodical 9-minute persistence to Llama's lightning-fast 1-minute creative deception. Using their AIRTBench benchmark of 70 AI/ML security challenges and their Strikes evaluation platform, Ads demonstrates that these aren't just pattern-matching machines but genuine problem-solvers adapting under pressure, marking a pivotal moment where AI offensive capabilities have officially surpassed most human experts—and they're sharing the complete dataset so the security community can prepare for what's coming next.",
+      "url": "https://dreadnode.io/blog/ai-red-teaming-case-study-claude-sonnet-solves-turtle",
+      "icon": "fas fa-skull",
+      "year": "2025"
+    },
+    {
+      "id": "dreadnode-ai-red-team-benchmark",
+      "title": "Do LLM Agents Have AI Red Team Capabilities? We Built a Benchmark to Find Out",
+      "publisher": "Dreadnode",
+      "description": "We're excited to introduce AIRTBench, an AI red teaming framework that tests LLMs against AI/ML black-box capture-the-flag (CTF) challenges to see how they perform when attacking other AI systems. Think of it as a proving ground where models face the kind of adversarial scenarios they'd encounter in the wild, not just in carefully curated test suites.",
+      "url": "https://dreadnode.io/blog/ai-red-team-benchmark",
+      "icon": "fas fa-skull",
+      "year": "2025"
+    },
+    {
       "id": "arxiv-ai-red-teaming",
       "title": "arXiv:2504.19855 - The Automation Advantage in AI Red Teaming",
       "publisher": "arXiv",
@@ -277,52 +285,12 @@
       "year": "2024"
     },
     {
-      "id": "bugcrowd-inside-mind-2024",
-      "title": "Inside the Mind of a Hacker 2024 Edition",
-      "publisher": "BugCrowd",
-      "description": "Analysis of hacker motivations, methods, and impact in the evolving security landscape",
-      "url": "https://www.bugcrowd.com/blog/inside-the-mind-of-a-hacker-2024-edition/",
-      "icon": "fas fa-bug",
-      "external": true,
-      "year": "2024"
-    },
-    {
-      "id": "bugcrowd-battlestations",
-      "title": "The 12 Hacker 'Battlestations' of the Holidays",
-      "publisher": "BugCrowd",
-      "description": "On the 12th day of Christmas, a hacker gave to me…",
-      "url": "https://www.bugcrowd.com/blog/    the-12-hacker-battlestations-of-the-holidays/",
-      "icon": "fas fa-bug",
-      "external": true,
-      "year": "2024"
-    },
-    {
-      "id": "bugcrowd-hacker-spotlight",
-      "title": "Hacker Spotlight: Ads Dawson",
-      "publisher": "BugCrowd",
-      "description": "Profile highlighting my journey, methodologies, and contributions to security research",
-      "url": "https://www.bugcrowd.com/blog/hacker-spotlight-ads-dawson/",
-      "icon": "fas fa-bug",
-      "external": true,
-      "year": "2023"
-    },
-    {
       "id": "cohere-ai-security",
       "title": "The State of AI Security",
       "publisher": "Cohere",
       "description": "An in-depth look at current AI security challenges",
       "url": "https://cohere.com/blog/the-state-of-ai-security",
       "icon": "fas fa-brain",
-      "external": true,
-      "year": "2023"
-    },
-    {
-      "id": "bugcrowd-ai-vrt",
-      "title": "Defining and Prioritizing AI Vulnerabilities for Security Testing",
-      "publisher": "BugCrowd",
-      "description": "VRT version 1.12",
-      "url": "https://www.bugcrowd.com/blog/    defining-and-prioritizing-ai-vulnerabilities-for-security-testing/",
-      "icon": "fas fa-bug",
       "external": true,
       "year": "2023"
     },
@@ -355,6 +323,16 @@
       "icon": "fas fa-brain",
       "external": true,
       "year": "2023"
+    },
+    {
+      "id": "bugcrowd-agents-rigging",
+      "title": "Rigging the system: The art of AI exploits",
+      "publisher": "BugCrowd",
+      "description": "Leveraging agents, crafting exploits, and mining the hidden gems of AI security",
+      "url": "https://www.bugcrowd.com/blog/rigging-the-system-the-art-of-ai-exploits/",
+      "icon": "fas fa-bug",
+      "external": true,
+      "year": "2025"
     },
     {
       "id": "bugcrowd-airt-dspy",

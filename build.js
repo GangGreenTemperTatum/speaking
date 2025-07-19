@@ -19,11 +19,16 @@ const content = {
 const conferenceOrgs = [
   { id: "apidays", years: ["2023"] },
   { id: "apisec", years: ["2023"] },
+  { id: "bugcrowd", subDirs: ["bugboss", "rhic"], years: ["2025"] },
   { id: "dc604", years: ["2023"] },
   { id: "in-cyber-forum", years: ["2024"] },
+  { id: "interface", years: ["2023"] },
   { id: "isaca", years: ["2024"] },
+  { id: "isc2", years: ["2025"] },
+  { id: "lakera", years: ["2023", "2024"] },
   { id: "mako-lab", years: ["2023", "2024"] },
-  { id: "owasp", subDirs: ["owasp-cairo", "owasp-toronto", "owasp-vancouver", "owasp-atlanta"], years: ["2023", "2024", "2025"] },
+  { id: "mlopscommunity", years: ["2024"] },
+  { id: "owasp", subDirs: [{name: "owasp-cairo", years: ["2025"]}, {name: "owasp-toronto", years: ["2024", "2025"]}, {name: "owasp-vancouver", years: ["2023"]}, {name: "owasp-atlanta", years: ["2025"]}, {name: "owasp-llm-apps", years: ["2025"]}] },
   { id: "rsa-usa", years: ["2024", "2025"] }
 ];
 
@@ -31,12 +36,15 @@ const conferenceOrgs = [
 const contentMap = {
   "apidays": { name: "API Days", icon: "fas fa-cloud" },
   "apisec": { name: "APISec", icon: "fas fa-shield-alt" },
+  "bugcrowd": { name: "BugCrowd", icon: "fas fa-bug" },
   "dc604": { name: "DC604", icon: "fas fa-users" },
   "in-cyber-forum": { name: "In-Cyber Forum", icon: "fas fa-globe" },
+  "interface": { name: "Interface", icon: "fas fa-code" },
   "isaca": { name: "ISACA", icon: "fas fa-certificate" },
-  "lakera": { name: "Lakera", icon: "fas fa-robot" },
+  "isc2": { name: "ISC2", icon: "fas fa-certificate" },
+  "lakera": { name: "Lakera AI", icon: "fas fa-shield-alt" },
   "mako-lab": { name: "Mako Lab", icon: "fas fa-flask" },
-  "mlopscommunity": { name: "MLOps Community", icon: "fas fa-brain" },
+  "mlopscommunity": { name: "MLOps Community", icon: "fas fa-cogs" },
   "owasp": { name: "OWASP", icon: "fas fa-shield-virus" },
   "packt": { name: "Packt Publishing", icon: "fas fa-book" },
   "rsa-usa": { name: "RSA Conference", icon: "fas fa-lock" }
@@ -45,11 +53,22 @@ const contentMap = {
 // Create conference entries
 conferenceOrgs.forEach(org => {
   if (org.id === 'owasp' && org.subDirs) {
-    org.subDirs.forEach(subDir => {
-      org.years.forEach(year => {
+    org.subDirs.forEach(subDirObj => {
+      const subDir = subDirObj.name || subDirObj;
+      const subDirYears = subDirObj.years || org.years;
+      
+      subDirYears.forEach(year => {
         const orgConfig = contentMap[org.id] || { name: org.id, icon: "fas fa-microphone-alt" };
         const orgPath = `${org.id}/${subDir}`;
-        const orgName = subDir.replace('owasp-', 'OWASP ').toUpperCase();
+        let orgName, description;
+        
+        if (subDir === 'owasp-llm-apps') {
+          orgName = 'OWASP LLM Apps Project';
+          description = 'Sandboxing AI Models with Dyana & OWASP Top 10 for LLM Apps';
+        } else {
+          orgName = subDir.replace('owasp-', 'OWASP ').toUpperCase();
+          description = 'Talks on AI/ML Security and LLM Application Safety';
+        }
 
         content.conferences.push({
           id: `${orgPath}-${year}`,
@@ -57,13 +76,57 @@ conferenceOrgs.forEach(org => {
           path: orgPath,
           year: year,
           icon: orgConfig.icon,
-          description: "Talks on AI/ML Security and LLM Application Safety"
+          description: description
+        });
+      });
+    });
+  } else if (org.id === 'bugcrowd' && org.subDirs) {
+    org.subDirs.forEach(subDir => {
+      org.years.forEach(year => {
+        const orgConfig = contentMap[org.id] || { name: org.id, icon: "fas fa-microphone-alt" };
+        const orgPath = `${org.id}/${subDir}`;
+        let orgName, description;
+        
+        if (subDir === 'bugboss') {
+          orgName = 'BugBoss';
+          description = 'BugCrowd Bugboss v3 Show and Tell';
+        } else if (subDir === 'rhic') {
+          orgName = 'RHIC';
+          description = 'BugCrowd x Dreadnode Crucible: Rhode Island College Cyber Range';
+        } else {
+          orgName = subDir.toUpperCase();
+          description = 'Talks on AI/ML Security and LLM Application Safety';
+        }
+
+        content.conferences.push({
+          id: `${orgPath}-${year}`,
+          name: orgName,
+          path: orgPath,
+          year: year,
+          icon: orgConfig.icon,
+          description: description
         });
       });
     });
   } else {
     org.years.forEach(year => {
       const orgConfig = contentMap[org.id] || { name: org.id, icon: "fas fa-microphone-alt" };
+      let description = "Talks on AI/ML Security and LLM Application Safety";
+      
+      // Special descriptions for specific conferences
+      if (org.id === 'interface') {
+        description = "Language AI Security at the API level - Avoiding Hacks, Injections and Breaches";
+      } else if (org.id === 'isc2') {
+        description = "Behind the Prompt: Exposing and Mitigating the Top LLM Vulnerabilities";
+      } else if (org.id === 'lakera') {
+        if (year === '2023') {
+          description = "How to Secure AI Applications: Lessons from OWASP's Top 10 for LLMs";
+        } else if (year === '2024') {
+          description = "Decoding OWASP Large Language Model Security Verification Standard (LLMSVS)";
+        }
+      } else if (org.id === 'mlopscommunity') {
+        description = "AI in Production - MLOps Security and Privacy Panel";
+      }
 
       content.conferences.push({
         id: `${org.id}-${year}`,
@@ -71,7 +134,7 @@ conferenceOrgs.forEach(org => {
         path: org.id,
         year: year,
         icon: orgConfig.icon,
-        description: "Talks on AI/ML Security and LLM Application Safety"
+        description: description
       });
     });
   }
