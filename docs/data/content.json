@@ -17,17 +17,17 @@
       "description": "Talks on AI/ML Security and LLM Application Safety"
     },
     {
-      "id": "bugcrowd/bugboss-2025",
+      "id": "bugcrowd-2025-july-bugboss-2025",
       "name": "BugBoss",
-      "path": "bugcrowd/bugboss",
+      "path": "bugcrowd/2025/july/bugboss",
       "year": "2025",
       "icon": "fas fa-bug",
       "description": "BugCrowd Bugboss v3 Show and Tell"
     },
     {
-      "id": "bugcrowd/rhic-2025",
+      "id": "bugcrowd-2025-july-rhic-2025",
       "name": "RHIC",
-      "path": "bugcrowd/rhic",
+      "path": "bugcrowd/2025/july/rhic",
       "year": "2025",
       "icon": "fas fa-bug",
       "description": "BugCrowd x Dreadnode Crucible: Rhode Island College Cyber Range"

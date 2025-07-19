@@ -19,7 +19,7 @@ const content = {
 const conferenceOrgs = [
   { id: "apidays", years: ["2023"] },
   { id: "apisec", years: ["2023"] },
-  { id: "bugcrowd", subDirs: ["bugboss", "rhic"], years: ["2025"] },
+  { id: "bugcrowd", subDirs: ["2025/july/bugboss", "2025/july/rhic"], years: ["2025"] },
   { id: "dc604", years: ["2023"] },
   { id: "in-cyber-forum", years: ["2024"] },
   { id: "interface", years: ["2023"] },
@@ -87,10 +87,10 @@ conferenceOrgs.forEach(org => {
         const orgPath = `${org.id}/${subDir}`;
         let orgName, description;
         
-        if (subDir === 'bugboss') {
+        if (subDir.includes('bugboss')) {
           orgName = 'BugBoss';
           description = 'BugCrowd Bugboss v3 Show and Tell';
-        } else if (subDir === 'rhic') {
+        } else if (subDir.includes('rhic')) {
           orgName = 'RHIC';
           description = 'BugCrowd x Dreadnode Crucible: Rhode Island College Cyber Range';
         } else {
@@ -99,7 +99,7 @@ conferenceOrgs.forEach(org => {
         }
 
         content.conferences.push({
-          id: `${orgPath}-${year}`,
+          id: `${orgPath.replace(/\//g, '-')}-${year}`,
           name: orgName,
           path: orgPath,
           year: year,
