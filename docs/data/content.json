@@ -137,6 +137,22 @@
       "description": "Talks on AI/ML Security and LLM Application Safety"
     },
     {
+      "id": "bugcrowd/bugboss-2025",
+      "name": "BugBoss",
+      "path": "bugcrowd",
+      "year": "2025",
+      "icon": "fas fa-bug",
+      "description": "BugCrowd Bugboss v3 Show and Tell"
+    },
+    {
+      "id": "bugcrowd/rhic-2025",
+      "name": "RHIC",
+      "path": "bugcrowd",
+      "year": "2025",
+      "icon": "fas fa-bug",
+      "description": "BugCrowd x Dreadnode Crucible: Rhode Island College Cyber Range"
+    },
+    {
       "id": "rsa-usa-2024",
       "name": "RSA Conference",
       "path": "rsa-usa",
