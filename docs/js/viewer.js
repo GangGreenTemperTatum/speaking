@@ -327,6 +327,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 files: ["Ads Dawson - BugCrowd - BugBoss Show n Tell - July 2025.pdf"],
                 titles: ["BugBoss Show n Tell Slides (PDF)"]
             },
+            "conferences/bugcrowd/2025/july/rhic": {
+                files: ["Ads Dawson - BugCrowd x Dreadnode Crucible - Rhode Island College RHIC - July 16 2025.pdf", "ads-rhic-x-bugcrowd-event-photo-wed-july-16-25.jpeg"],
+                titles: ["RHIC Cyberrange Presentation (PDF)", "Event Photo (JPEG)"]
+            },
             "conferences/mako-lab": {
                 files: ["makolab_mastering_ai_chatbot_security.png", "makolab_mastering_ai_chatbot_security_speaker.png"],
                 titles: ["Event Poster (PNG)", "Speaker Card (PNG)"]
@@ -435,6 +439,9 @@ document.addEventListener('DOMContentLoaded', function() {
             .replace(/__(.*?)__/g, '<strong>$1</strong>')
             .replace(/_(.*?)_/g, '<em>$1</em>');
 
+        // Replace images first (before links, since images use similar syntax)
+        html = html.replace(/!\[(.*?)\]\((.*?)\)/g, '<img src="$2" alt="$1" class="comic-image" style="max-width: 100%; height: auto; border-radius: 8px; margin: 10px 0;">');
+        
         // Replace links with comic styled links
         html = html.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" class="comic-link" target="_blank">$1</a>');
 
