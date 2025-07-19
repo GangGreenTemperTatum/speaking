@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 localPath: "conferences/rsa-usa/2025/april"
             },
             {
-                name: "BugBoss",
+                name: "BugCrowd",
                 year: "2025",
                 icon: "fas fa-bug",
                 description: "BugBoss Show n Tell - July 2025",
@@ -194,10 +194,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 localPath: "conferences/bugcrowd/2025/july/bugboss"
             },
             {
-                name: "RHIC",
+                name: "BugCrowd",
                 year: "2025",
                 icon: "fas fa-bug",
-                description: "BugCrowd x Dreadnode Crucible: Rhode Island College Cyber Range",
+                description: "BugCrowd x Dreadnode Crucible: Rhode Island College RHIC - July 2025",
                 path: "bugcrowd",
                 subdir: "july/rhic",
                 localPath: "conferences/bugcrowd/2025/july/rhic"
