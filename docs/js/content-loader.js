@@ -208,7 +208,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 icon: "fas fa-bug",
                 description: "Building and Deploying Offensive Security Agents with Dreadnode",
                 path: "offbyonesecurity",
-                subdir: "2025/july",
+                subdir: "july",
                 localPath: "conferences/offbyonesecurity/2025/july"
             }
         ];
