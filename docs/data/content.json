@@ -113,12 +113,20 @@
       "description": "AI in Production - MLOps Security and Privacy Panel"
     },
     {
+      "id": "offbyonesecurity-2025",
+      "name": "Off By One Security",
+      "path": "offbyonesecurity/2025/july",
+      "year": "2025",
+      "icon": "fas fa-shield-alt",
+      "description": "Building and Deploying Offensive Security Agents with Dreadnode"
+    },
+    {
       "id": "owasp/owasp-cairo-2025",
       "name": "OWASP CAIRO",
       "path": "owasp/owasp-cairo",
       "year": "2025",
       "icon": "fas fa-shield-virus",
-      "description": "Talks on AI/ML Security and LLM Application Safety"
+      "description": "OWASP CAIRO | AI, Security, and Hacking Tools"
     },
     {
       "id": "owasp/owasp-toronto-2024",
