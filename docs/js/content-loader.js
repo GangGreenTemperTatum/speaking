@@ -201,6 +201,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 path: "bugcrowd",
                 subdir: "july/rhic",
                 localPath: "conferences/bugcrowd/2025/july/rhic"
+            },
+            {
+                name: "Off By One Security",
+                year: "2025",
+                icon: "fas fa-bug",
+                description: "Building and Deploying Offensive Security Agents with Dreadnode",
+                path: "offbyonesecurity",
+                subdir: "2025/july",
+                localPath: "conferences/offbyonesecurity/2025/july"
             }
         ];
 

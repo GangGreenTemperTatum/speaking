@@ -28,6 +28,7 @@ const conferenceOrgs = [
   { id: "lakera", subPaths: [{path: "december/2023", year: "2023"}, {path: "april/2024", year: "2024"}] },
   { id: "mako-lab", years: ["2023", "2024"] },
   { id: "mlopscommunity", years: ["2024"] },
+  { id: "offbyonesecurity", subPaths: [{path: "2025/july", year: "2025"}] },
   { id: "owasp", subDirs: [{name: "owasp-cairo", years: ["2025"]}, {name: "owasp-toronto", years: ["2024", "2025"]}, {name: "owasp-vancouver", years: ["2023"]}, {name: "owasp-atlanta", years: ["2025"]}, {name: "owasp-llm-apps", years: ["2025"]}] },
   { id: "rsa-usa", years: ["2024", "2025"] }
 ];
@@ -45,6 +46,7 @@ const contentMap = {
   "lakera": { name: "Lakera AI", icon: "fas fa-shield-alt" },
   "mako-lab": { name: "Mako Lab", icon: "fas fa-flask" },
   "mlopscommunity": { name: "MLOps Community", icon: "fas fa-cogs" },
+  "offbyonesecurity": { name: "Off By One Security", icon: "fas fa-bug" },
   "owasp": { name: "OWASP", icon: "fas fa-shield-virus" },
   "packt": { name: "Packt Publishing", icon: "fas fa-book" },
   "rsa-usa": { name: "RSA Conference", icon: "fas fa-lock" }
@@ -56,12 +58,12 @@ conferenceOrgs.forEach(org => {
     org.subDirs.forEach(subDirObj => {
       const subDir = subDirObj.name || subDirObj;
       const subDirYears = subDirObj.years || org.years;
-      
+
       subDirYears.forEach(year => {
         const orgConfig = contentMap[org.id] || { name: org.id, icon: "fas fa-microphone-alt" };
         const orgPath = `${org.id}/${subDir}`;
         let orgName, description;
-        
+
         if (subDir === 'owasp-llm-apps') {
           orgName = 'OWASP LLM Apps Project';
           description = 'Sandboxing AI Models with Dyana & OWASP Top 10 for LLM Apps';
@@ -86,7 +88,7 @@ conferenceOrgs.forEach(org => {
         const orgConfig = contentMap[org.id] || { name: org.id, icon: "fas fa-microphone-alt" };
         const orgPath = `${org.id}/${subDir}`;
         let orgName, description;
-        
+
         if (subDir.includes('bugboss')) {
           orgName = 'BugBoss';
           description = 'BugCrowd Bugboss v3 Show and Tell';
@@ -112,7 +114,7 @@ conferenceOrgs.forEach(org => {
     org.subPaths.forEach(subPath => {
       const orgConfig = contentMap[org.id] || { name: org.id, icon: "fas fa-microphone-alt" };
       let description = "Talks on AI/ML Security and LLM Application Safety";
-      
+
       // Special descriptions for Lakera
       if (org.id === 'lakera') {
         if (subPath.year === '2023') {
@@ -135,7 +137,7 @@ conferenceOrgs.forEach(org => {
     org.years.forEach(year => {
       const orgConfig = contentMap[org.id] || { name: org.id, icon: "fas fa-microphone-alt" };
       let description = "Talks on AI/ML Security and LLM Application Safety";
-      
+
       // Special descriptions for specific conferences
       if (org.id === 'interface') {
         description = "Language AI Security at the API level - Avoiding Hacks, Injections and Breaches";
