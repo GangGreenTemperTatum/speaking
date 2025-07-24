@@ -41,6 +41,14 @@
       "description": "Talks on AI/ML Security and LLM Application Safety"
     },
     {
+      "id": "defcon-2025",
+      "name": "DEFCON",
+      "path": "defcon/2025/august/bb_village",
+      "year": "2025",
+      "icon": "fas fa-skull-crossbones",
+      "description": "Bug Bounty Village: Misaligned: AI Jailbreaking Panel with Basi Team Six (BT6) & Jason Haddix"
+    },
+    {
       "id": "in-cyber-forum-2024",
       "name": "In-Cyber Forum",
       "path": "in-cyber-forum",
@@ -117,8 +125,8 @@
       "name": "Off By One Security",
       "path": "offbyonesecurity/2025/july",
       "year": "2025",
-      "icon": "fas fa-shield-alt",
-      "description": "Building and Deploying Offensive Security Agents with Dreadnode"
+      "icon": "fas fa-bug",
+      "description": "Talks on AI/ML Security and LLM Application Safety"
     },
     {
       "id": "owasp/owasp-cairo-2025",
@@ -126,7 +134,7 @@
       "path": "owasp/owasp-cairo",
       "year": "2025",
       "icon": "fas fa-shield-virus",
-      "description": "OWASP CAIRO | AI, Security, and Hacking Tools"
+      "description": "Talks on AI/ML Security and LLM Application Safety"
     },
     {
       "id": "owasp/owasp-toronto-2024",

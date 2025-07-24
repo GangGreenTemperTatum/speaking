@@ -21,6 +21,7 @@ const conferenceOrgs = [
   { id: "apisec", years: ["2023"] },
   { id: "bugcrowd", subDirs: ["2025/july/bugboss", "2025/july/rhic"], years: ["2025"] },
   { id: "dc604", years: ["2023"] },
+  { id: "defcon", subPaths: [{path: "2025/august/bb_village", year: "2025"}] },
   { id: "in-cyber-forum", years: ["2024"] },
   { id: "interface", years: ["2023"] },
   { id: "isaca", years: ["2024"] },
@@ -39,6 +40,7 @@ const contentMap = {
   "apisec": { name: "APISec", icon: "fas fa-shield-alt" },
   "bugcrowd": { name: "BugCrowd", icon: "fas fa-bug" },
   "dc604": { name: "DC604", icon: "fas fa-users" },
+  "defcon": { name: "DEFCON", icon: "fas fa-skull-crossbones" },
   "in-cyber-forum": { name: "In-Cyber Forum", icon: "fas fa-globe" },
   "interface": { name: "Interface", icon: "fas fa-code" },
   "isaca": { name: "ISACA", icon: "fas fa-certificate" },
@@ -115,13 +117,15 @@ conferenceOrgs.forEach(org => {
       const orgConfig = contentMap[org.id] || { name: org.id, icon: "fas fa-microphone-alt" };
       let description = "Talks on AI/ML Security and LLM Application Safety";
 
-      // Special descriptions for Lakera
+      // Special descriptions for conferences
       if (org.id === 'lakera') {
         if (subPath.year === '2023') {
           description = "How to Secure AI Applications: Lessons from OWASP's Top 10 for LLMs";
         } else if (subPath.year === '2024') {
           description = "Decoding OWASP Large Language Model Security Verification Standard (LLMSVS)";
         }
+      } else if (org.id === 'defcon') {
+        description = "Misaligned: AI Jailbreaking Panel with Basi Team Six (BT6) & Jason Haddix";
       }
 
       content.conferences.push({

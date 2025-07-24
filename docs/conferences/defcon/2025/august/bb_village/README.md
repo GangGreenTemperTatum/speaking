@@ -1,11 +1,17 @@
-# [BugCrowd Bugboss v3 Show and Tell]()
-## [TBC](https://www.bugbountydefcon.com/agenda)
+# [Misaligned: AI Jailbreaking Panel:Basi Team Six (BT6), & Jason Haddix](https://www.bugbountydefcon.com/agenda)
+## [Bug Bounty Village Defcon](https://www.bugbountydefcon.com/agenda)
+
+![defcon33-bb-village-social.png](https://raw.githubusercontent.com/GangGreenTemperTatum/speaking/main/docs/conferences/defcon/2025/august/bb_village/defcon33-misaligned_ai-jailbreaking-bt6-bug-bounty-village-2025.png)
 
 - **Talk title:** ""
-  - **Abstract:** _Join APIsec University as Ads Dawson, v1.1 Technical Release Lead, Core Founding Member & Entry Lead for the OWASP Top 10 for Large Language Model Applications and a seasoned security engineer at Cohere takes us on an insightful journey through the challenges and solutions involved in securing large language models and natural language programming APIs. With his extensive experience, Ads will shed light on how to avoid data breaches, fortify against attacks, and enhance the security of these crucial technologies. Don’t miss this opportunity to learn from a true expert in API security!_
-- 📄 **Slides (PDF):** [BugBoss Show n Tell - July 2025](Ads%20Dawson%20-%20BugCrowd%20-%20BugBoss%20Show%20n%20Tell%20-%20July%202025.pdf)
-- 🍿 **YouTube Recording** [Ads Dawson’s Show & Tell: Behind his BugBoss findings](https://youtu.be/zlodGMqAuD8?feature=shared)
-- 📣 **Speaker card:** [Hacker Spotlight: Ads Dawson](https://www.bugcrowd.com/blog/hacker-spotlight-ads-dawson/)
+  - **Abstract:** _Join Jason haddix as he hosts a panel with the Basi group, the notorious Ai model jailbreak group led by Pliny the prompter. No model is safe, and usually jailbroken with hours, not days. Join us as we discuss war stories, techniques, and opportunities to get into AI hacking for profit._
+-
+- 🍿 **YouTube Recording** [TBC](TBC)
+- 📣 **Speaker card:** [@GangGreenTemperTatum](https://www.bugbountydefcon.com/2025-speakers))
 - 🗣️ **Social links:** [Here](tbc) | [Here](tbc)
+
+![defcon33-bb-village-speakers-snip.png](https://raw.githubusercontent.com/GangGreenTemperTatum/speaking/main/docs/conferences/defcon/2025/august/bb_village/defcon33-bb-village-speakers-snip.png)
+
+![defcon33-bb-village-agenda-snip.png](https://raw.githubusercontent.com/GangGreenTemperTatum/speaking/main/docs/conferences/defcon/2025/august/bb_village/defcon33-bb-village-agenda-snip.png)
 
 ------------------------------
