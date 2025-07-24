@@ -7,8 +7,10 @@
   - **Abstract:** _Join Jason haddix as he hosts a panel with the Basi group, the notorious Ai model jailbreak group led by Pliny the prompter. No model is safe, and usually jailbroken with hours, not days. Join us as we discuss war stories, techniques, and opportunities to get into AI hacking for profit._
 -
 - 🍿 **YouTube Recording** [TBC](TBC)
-- 📣 **Speaker card:** [@GangGreenTemperTatum](https://www.bugbountydefcon.com/agenda))
+- 📣 **Speaker card:** [@GangGreenTemperTatum](https://www.bugbountydefcon.com/2025-speakers))
 - 🗣️ **Social links:** [Here](tbc) | [Here](tbc)
+
+![defcon33-bb-village-speakers-snip.png](https://raw.githubusercontent.com/GangGreenTemperTatum/speaking/main/docs/conferences/defcon/2025/august/bb_village/defcon33-bb-village-speakers-snip.png)
 
 ![defcon33-bb-village-agenda-snip.png](https://raw.githubusercontent.com/GangGreenTemperTatum/speaking/main/docs/conferences/defcon/2025/august/bb_village/defcon33-bb-village-agenda-snip.png)
 
