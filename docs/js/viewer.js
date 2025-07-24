@@ -331,6 +331,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 files: ["Ads Dawson - BugCrowd x Dreadnode Crucible - Rhode Island College RHIC - July 16 2025.pdf", "ads-rhic-x-bugcrowd-event-photo-wed-july-16-25.jpeg"],
                 titles: ["RHIC Cyberrange Presentation (PDF)", "Event Photo (JPEG)"]
             },
+            "conferences/defcon/2025/august/bb_village": {
+                files: ["defcon33-misaligned_ai-jailbreaking-bt6-bug-bounty-village-2025.png", "defcon33-bb-village-agenda-snip.png"],
+                titles: ["DEFCON 33 Bug Bounty Village Social Card (PNG)", "Bug Bounty Village Agenda (PNG)"]
+            },
             "conferences/mako-lab": {
                 files: ["makolab_mastering_ai_chatbot_security.png", "makolab_mastering_ai_chatbot_security_speaker.png"],
                 titles: ["Event Poster (PNG)", "Speaker Card (PNG)"]
@@ -370,12 +374,12 @@ document.addEventListener('DOMContentLoaded', function() {
         if (pdfInfo) {
             const filesSection = document.createElement('div');
             filesSection.className = 'comic-panel';
-            
+
             let fileListHTML = '';
             pdfInfo.files.forEach((file, index) => {
                 const title = pdfInfo.titles[index] || `File ${index + 1}`;
                 const extension = file.split('.').pop().toLowerCase();
-                
+
                 // Choose appropriate icon based on file type
                 let icon = 'fas fa-file';
                 if (extension === 'pdf') icon = 'fas fa-file-pdf';
@@ -383,14 +387,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 else if (extension === 'py') icon = 'fab fa-python';
                 else if (['js', 'html', 'css', 'json'].includes(extension)) icon = 'fas fa-file-code';
                 else if (extension === 'md') icon = 'fas fa-file-alt';
-                
+
                 fileListHTML += `
                     <li><a href="${dirPath}/${encodeURIComponent(file)}" target="_blank">
                         <i class="${icon}"></i> ${title}
                     </a></li>
                 `;
             });
-            
+
             filesSection.innerHTML = `
                 <div class="panel-content">
                     <h3><i class="fas fa-file-alt"></i> Files</h3>
@@ -441,7 +445,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Replace images first (before links, since images use similar syntax)
         html = html.replace(/!\[(.*?)\]\((.*?)\)/g, '<img src="$2" alt="$1" class="comic-image" style="max-width: 100%; height: auto; border-radius: 8px; margin: 10px 0;">');
-        
+
         // Replace links with comic styled links
         html = html.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" class="comic-link" target="_blank">$1</a>');
 

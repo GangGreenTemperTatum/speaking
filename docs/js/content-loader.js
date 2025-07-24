@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 localPath: "conferences/rsa-usa/2025/april"
             },
             {
-                name: "BugBoss v3 Show n Tell",
+                name: "BugCrowd",
                 year: "2025",
                 icon: "fas fa-bug",
                 description: "BugBoss Show n Tell - July 2025",
@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 localPath: "conferences/bugcrowd/2025/july/bugboss"
             },
             {
-                name: "BugCrowd x RHIC Cyberrange",
+                name: "BugCrowd",
                 year: "2025",
                 icon: "fas fa-bug",
                 description: "BugCrowd x Dreadnode Crucible: Rhode Island College RHIC - July 2025",
@@ -210,6 +210,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 path: "offbyonesecurity",
                 subdir: "july",
                 localPath: "conferences/offbyonesecurity/2025/july"
+            },
+            {
+                name: "DEFCON",
+                year: "2025",
+                icon: "fas fa-skull-crossbones",
+                description: "Bug Bounty Village: Misaligned: AI Jailbreaking Panel with Basi Team Six (BT6) & Jason Haddix",
+                path: "defcon",
+                subdir: "august/bb_village",
+                localPath: "conferences/defcon/2025/august/bb_village"
             }
         ];
 
