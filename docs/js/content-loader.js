@@ -484,6 +484,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 year: "2023"
             },
             {
+                title: "How I hacked my way to the big leagues: Fat bounties, interviews on NASDAQ, and advisory boards",
+                publisher: "BugCrowd",
+                description: "Breaking things for fun and profit - Though Leadership",
+                url: "https://www.bugcrowd.com/blog/how-i-hacked-my-way-to-the-big-leagues-fat-bounties-interviews-on-nasdaq-and-advisory-boards/",
+                icon: "fas fa-bug",
+                year: "2025"
+            },
+            {
                 title: "Rigging the system: The art of AI exploits",
                 publisher: "BugCrowd",
                 description: "Leveraging agents, crafting exploits, and mining the hidden gems of AI security",
