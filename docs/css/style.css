@@ -1284,3 +1284,33 @@ h3 {
     margin: 0.5rem 0;
     line-height: 1.5;
 }
+
+/* GitHub Corner */
+.github-corner {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10;
+}
+
+.github-corner a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--dark);
+    color: var(--light);
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    border: 3px solid var(--panel-border);
+    transition: all 0.3s ease;
+    box-shadow: 3px 3px 0 var(--comic-shadow);
+}
+
+.github-corner a:hover {
+    background-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 5px 5px 0 var(--comic-shadow);
+}

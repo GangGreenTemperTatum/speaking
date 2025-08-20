@@ -46,7 +46,7 @@
       "path": "defcon/2025/august/bb_village",
       "year": "2025",
       "icon": "fas fa-skull-crossbones",
-      "description": "Bug Bounty Village: Misaligned: AI Jailbreaking Panel with Basi Team Six (BT6) & Jason Haddix"
+      "description": "Misaligned: AI Jailbreaking Panel with Basi Team Six (BT6) & Jason Haddix"
     },
     {
       "id": "in-cyber-forum-2024",
@@ -350,7 +350,7 @@
     },
     {
       "id": "bugcrowd-hacked-my-way",
-      "title": "How I hacked my way to the big leagues: Fat bounties, interviews  on NASDAQ, and advisory boards",
+      "title": "How I hacked my way to the big leagues: Fat bounties, interviews on NASDAQ, and advisory boards",
       "publisher": "BugCrowd",
       "description": "Breaking things for fun and profit - Though Leadership",
       "url": "https://www.bugcrowd.com/blog/how-i-hacked-my-way-to-the-big-leagues-fat-bounties-interviews-on-nasdaq-and-advisory-boards/",
