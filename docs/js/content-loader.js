@@ -605,6 +605,16 @@ document.addEventListener('DOMContentLoaded', function() {
     function loadVolunteering() {
         const volunteering = [
             {
+                title: "Hacker Ambassador",
+                organization: "Caido",
+                description: "Hacker/community ambassador contributing feature and enhancement development work, custom plugins to bridge the gap between community web app pentesters and bug bounty hunters, untapping Caido's full potential as a forefront security testing platform.",
+                sector: "Science & Technology",
+                date: "2024 – Present",
+                icon: "fas fa-shield-alt",
+                year: "2024",
+                url: "https://caido.io/"
+            },
+            {
                 title: "Hacker Advisory Board Member",
                 organization: "Bugcrowd",
                 description: "Representing the global hacker community on Bugcrowd's Hacker Advisory Board.",
