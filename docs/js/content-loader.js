@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 localPath: "conferences/interface"
             },
             {
-                name: "Lakera AI",
+                name: "Lakera",
                 year: "2023",
                 icon: "fas fa-shield-alt",
                 description: "How to Secure AI Applications: Lessons from OWASP's Top 10 for LLMs",
@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 localPath: "conferences/lakera/december/2023"
             },
             {
-                name: "Lakera AI",
+                name: "Lakera",
                 year: "2024",
                 icon: "fas fa-shield-alt",
                 description: "Decoding OWASP Large Language Model Security Verification Standard (LLMSVS)",
@@ -219,6 +219,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 path: "defcon",
                 subdir: "august/bb_village",
                 localPath: "conferences/defcon/2025/august/bb_village"
+            },
+            {
+                name: "PromptorGTFO",
+                year: "2025",
+                icon: "fas fa-terminal",
+                description: "Dreadnode: Deploying Offensive AI with Modular Agents",
+                path: "promptorgtfo",
+                subdir: "august",
+                localPath: "conferences/promptorgtfo/2025/august"
             }
         ];
 
@@ -484,6 +493,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 year: "2023"
             },
             {
+                title: "What Mission Impossible taught us about AI: The hacker roots of a face swap",
+                publisher: "BugCrowd",
+                description: "Is Tom Cruise the original deep fake hacker?",
+                url: "https://www.bugcrowd.com/blog/what-mission-impossible-taught-us-about-ai-the-hacker-roots-of-a-face-swap/",
+                icon: "fas fa-bug",
+                year: "2025"
+            },
+            {
                 title: "How I hacked my way to the big leagues: Fat bounties, interviews on NASDAQ, and advisory boards",
                 publisher: "BugCrowd",
                 description: "Breaking things for fun and profit - Though Leadership",
@@ -529,6 +546,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 description: "Strategies and techniques for mitigating risks in LLM applications",
                 url: "https://github.com/GangGreenTemperTatum/speaking/tree/main/books/packt/llm_sec_handbook/chapter_8_mitigating_llm_risks-strategies_techniques",
                 icon: "fas fa-book",
+                year: "2024"
+            },
+            {
+                title: "Lakera 2024 GenAI Security Readiness Report",
+                publisher: "Lakera",
+                description: "Contributing advisor to the Lakera 2024 GenAI Security Readiness Report",
+                url: "https://lakera-marketing-public.s3.eu-west-1.amazonaws.com/Lakera_AI_Global_GenAI_Security_Readiness_Report.pdf",
+                icon: "fas fa-shield-alt",
                 year: "2024"
             },
             {
