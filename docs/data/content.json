@@ -185,6 +185,14 @@
       "description": "Talks on AI/ML Security and LLM Application Safety"
     },
     {
+      "id": "promptorgtfo-2025",
+      "name": "PromptorGTFO",
+      "path": "promptorgtfo/2025/august",
+      "year": "2025",
+      "icon": "fas fa-terminal",
+      "description": "Dreadnode: Deploying Offensive AI with Modular Agents"
+    },
+    {
       "id": "rsa-usa-2025",
       "name": "RSA Conference",
       "path": "rsa-usa",
