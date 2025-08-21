@@ -349,6 +349,16 @@
       "year": "2023"
     },
     {
+      "id": "bugcrowd-mission-impossible",
+      "title": "What Mission Impossible taught us about AI: The hacker roots of a face swap",
+      "publisher": "BugCrowd",
+      "description": "Is Tom Cruise the original deep fake hacker?",
+      "url": "https://www.bugcrowd.com/blog/what-mission-impossible-taught-us-about-ai-the-hacker-roots-of-a-face-swap/",
+      "icon": "fas fa-bug",
+      "external": true,
+      "year": "2025"
+    },
+    {
       "id": "bugcrowd-hacked-my-way",
       "title": "How I hacked my way to the big leagues: Fat bounties, interviews on NASDAQ, and advisory boards",
       "publisher": "BugCrowd",
@@ -405,6 +415,16 @@
       "description": "Strategies and techniques for mitigating risks in LLM applications",
       "url": "/packt/llm_sec_handbook/chapter_8_mitigating_llm_risks-strategies_techniques",
       "icon": "fas fa-book",
+      "year": "2024"
+    },
+    {
+      "id": "lakera-genai-security-report",
+      "title": "Lakera 2024 GenAI Security Readiness Report",
+      "publisher": "Lakera",
+      "description": "Contributing advisor to the Lakera 2024 GenAI Security Readiness Report",
+      "url": "https://lakera-marketing-public.s3.eu-west-1.amazonaws.com/Lakera_AI_Global_GenAI_Security_Readiness_Report.pdf",
+      "icon": "fas fa-shield-alt",
+      "external": true,
       "year": "2024"
     },
     {
