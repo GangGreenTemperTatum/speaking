@@ -30,7 +30,7 @@ const conferenceOrgs = [
   { id: "mako-lab", years: ["2023", "2024"] },
   { id: "mlopscommunity", years: ["2024"] },
   { id: "offbyonesecurity", subPaths: [{path: "2025/july", year: "2025"}] },
-  { id: "owasp", subDirs: [{name: "owasp-cairo", years: ["2025"]}, {name: "owasp-toronto", years: ["2024", "2025"]}, {name: "owasp-vancouver", years: ["2023"]}, {name: "owasp-atlanta", years: ["2025"]}, {name: "owasp-llm-apps", years: ["2025"]}] },
+  { id: "owasp", subDirs: [{name: "owasp-cairo", years: ["2025"]}, {name: "owasp-toronto", subPaths: [{path: "2024/june", year: "2024"}, {path: "2025/march", year: "2025"}, {path: "2025/september", year: "2025"}]}, {name: "owasp-vancouver", years: ["2023"]}, {name: "owasp-atlanta", years: ["2025"]}, {name: "owasp-llm-apps", years: ["2025"]}] },
   { id: "rsa-usa", years: ["2024", "2025"] }
 ];
 
@@ -59,30 +59,64 @@ conferenceOrgs.forEach(org => {
   if (org.id === 'owasp' && org.subDirs) {
     org.subDirs.forEach(subDirObj => {
       const subDir = subDirObj.name || subDirObj;
-      const subDirYears = subDirObj.years || org.years;
+      
+      // Handle subPaths for owasp-toronto
+      if (subDirObj.subPaths) {
+        subDirObj.subPaths.forEach(subPath => {
+          const orgConfig = contentMap[org.id] || { name: org.id, icon: "fas fa-microphone-alt" };
+          const orgPath = `${org.id}/${subDir}/${subPath.path}`;
+          let orgName, description;
 
-      subDirYears.forEach(year => {
-        const orgConfig = contentMap[org.id] || { name: org.id, icon: "fas fa-microphone-alt" };
-        const orgPath = `${org.id}/${subDir}`;
-        let orgName, description;
+          if (subDir === 'owasp-llm-apps') {
+            orgName = 'OWASP LLM Apps Project';
+            description = 'Sandboxing AI Models with Dyana & OWASP Top 10 for LLM Apps';
+          } else {
+            orgName = subDir.replace('owasp-', 'OWASP ').toUpperCase();
+            // Add month-specific descriptions
+            if (subPath.path.includes('march')) {
+              description = 'How to Utilize AI in Offensive Security—An Intro to Offensive AI Tooling';
+            } else if (subPath.path.includes('september')) {
+              description = 'Becoming a Caido Power User: From Recon to Root';
+            } else {
+              description = 'Talks on AI/ML Security and LLM Application Safety';
+            }
+          }
 
-        if (subDir === 'owasp-llm-apps') {
-          orgName = 'OWASP LLM Apps Project';
-          description = 'Sandboxing AI Models with Dyana & OWASP Top 10 for LLM Apps';
-        } else {
-          orgName = subDir.replace('owasp-', 'OWASP ').toUpperCase();
-          description = 'Talks on AI/ML Security and LLM Application Safety';
-        }
-
-        content.conferences.push({
-          id: `${orgPath}-${year}`,
-          name: orgName,
-          path: orgPath,
-          year: year,
-          icon: orgConfig.icon,
-          description: description
+          content.conferences.push({
+            id: `${orgPath.replace(/\//g, '-')}`,
+            name: orgName,
+            path: orgPath,
+            year: subPath.year,
+            icon: orgConfig.icon,
+            description: description
+          });
         });
-      });
+      } else {
+        // Handle regular years for other OWASP chapters
+        const subDirYears = subDirObj.years || org.years;
+        subDirYears.forEach(year => {
+          const orgConfig = contentMap[org.id] || { name: org.id, icon: "fas fa-microphone-alt" };
+          const orgPath = `${org.id}/${subDir}`;
+          let orgName, description;
+
+          if (subDir === 'owasp-llm-apps') {
+            orgName = 'OWASP LLM Apps Project';
+            description = 'Sandboxing AI Models with Dyana & OWASP Top 10 for LLM Apps';
+          } else {
+            orgName = subDir.replace('owasp-', 'OWASP ').toUpperCase();
+            description = 'Talks on AI/ML Security and LLM Application Safety';
+          }
+
+          content.conferences.push({
+            id: `${orgPath}-${year}`,
+            name: orgName,
+            path: orgPath,
+            year: year,
+            icon: orgConfig.icon,
+            description: description
+          });
+        });
+      }
     });
   } else if (org.id === 'bugcrowd' && org.subDirs) {
     org.subDirs.forEach(subDir => {
