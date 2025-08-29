@@ -80,6 +80,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 localPath: "conferences/owasp/owasp-toronto/2025/march"
             },
             {
+                name: "OWASP Toronto",
+                year: "2025",
+                icon: "fas fa-shield-virus",
+                description: "Becoming a Caido Power User: From Recon to Root",
+                path: "owasp/owasp-toronto",
+                subdir: "september",
+                localPath: "conferences/owasp/owasp-toronto/2025/september"
+            },
+            {
                 name: "OWASP Vancouver",
                 year: "2023",
                 icon: "fas fa-shield-virus",
