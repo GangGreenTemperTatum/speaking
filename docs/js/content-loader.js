@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 localPath: "conferences/owasp/owasp-toronto/2024/june"
             },
             {
-                name: "OWASP Toronto",
+                name: "OWASP Toronto (March)",
                 year: "2025",
                 icon: "fas fa-shield-virus",
                 description: "Shiny Rocks in Offensive AI",
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 localPath: "conferences/owasp/owasp-toronto/2025/march"
             },
             {
-                name: "OWASP Toronto",
+                name: "OWASP Toronto (September)",
                 year: "2025",
                 icon: "fas fa-shield-virus",
                 description: "Becoming a Caido Power User: From Recon to Root",
