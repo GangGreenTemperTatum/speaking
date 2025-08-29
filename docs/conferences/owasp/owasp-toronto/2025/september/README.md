@@ -4,7 +4,7 @@
   - Wednesday, September 17, 2025 6:30 PM to 8:30 PM EDT
   - **Abstract:**
 
-![Ads Dawson Speaker](adsspeaker.png)
+<img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/344de58a-5c69-49fe-bb16-15b8dfb2f84a" />
 
 Note: In-person attendance is limited to 70 people, in a first-come, first-serve basis.
 Doors will open at 6:00 PM, with the event will start at 6:30 PM (EDT).
@@ -36,8 +36,8 @@ We encourage anyone to bring their laptops!
 > As OWASP Toronto Chapter Lead, Ads helps grow the local AppSec community through hands-on workshops and hacker-friendly talks. His research and fieldwork span modern web exploitation techniques, offensive tooling development, and methodologies for high-impact bug hunting, blending technical precision with a flair for creative mischief.
 >  He is a Hacker Advisory Member at BugCrowd, frequently contributes to community projects, and actively mentors new hackers breaking into the field. Whether it’s dissecting cutting-edge vulnerabilities or showing how to weaponize tools like Caido to speed up hunts, Ads lives by the philosophy: “Harness code to conjure creative chaos—think evil; do good.”
 
-![adscaidobanner](adscaidobanner.png)
+<img width="1916" height="1078" alt="image" src="https://github.com/user-attachments/assets/6a5fa1e2-8641-49a5-a0bf-391737cd4515" />
 
-![adsspeaker2](adsspeaker2.png)
+<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/2e05e367-8a98-4527-8d94-5d17ddcbe8ec" />
 
 ----------------------------
