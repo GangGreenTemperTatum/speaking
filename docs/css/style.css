@@ -112,13 +112,14 @@ h3 {
     text-shadow: 3px 3px 0 var(--dark);
 }
 
-/* Glitch Text Effect */
+/* Glitch Text Effect - Only apply to homepage */
 .glitch-text {
     position: relative;
 }
 
-.glitch-text::before,
-.glitch-text::after {
+/* Only apply glitch effect on homepage main title */
+.homepage-header .glitch-text::before,
+.homepage-header .glitch-text::after {
     content: 'Ads Dawson';
     position: absolute;
     top: 0;
@@ -127,14 +128,14 @@ h3 {
     height: 100%;
 }
 
-.glitch-text::before {
+.homepage-header .glitch-text::before {
     left: 2px;
     text-shadow: -2px 0 var(--secondary);
     clip: rect(24px, 550px, 90px, 0);
     animation: glitch-anim 3s infinite linear alternate-reverse;
 }
 
-.glitch-text::after {
+.homepage-header .glitch-text::after {
     left: -2px;
     text-shadow: -2px 0 var(--tertiary);
     clip: rect(85px, 550px, 140px, 0);
