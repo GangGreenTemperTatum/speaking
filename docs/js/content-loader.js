@@ -146,8 +146,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 year: "2023",
                 icon: "fas fa-shield-alt",
                 description: "How to Secure AI Applications: Lessons from OWASP's Top 10 for LLMs",
-                path: "lakera",
-                subdir: "december",
+                path: "lakera/december",
+                subdir: "2023",
                 localPath: "conferences/lakera/december/2023"
             },
             {
@@ -155,8 +155,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 year: "2024",
                 icon: "fas fa-shield-alt",
                 description: "Decoding OWASP Large Language Model Security Verification Standard (LLMSVS)",
-                path: "lakera",
-                subdir: "april",
+                path: "lakera/april",
+                subdir: "2024",
                 localPath: "conferences/lakera/april/2024"
             },
             {
