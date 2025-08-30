@@ -1,6 +1,6 @@
 # [OWASP](https://www.owasp.org)
 ## [OWASP Toronto Chapter](https://www.meetup.com/owasp-toronto/)
-- **Talk title:** "**[Becoming a Caido Power User: From Recon to Root](https://www.meetup.com/owasp-toronto/events/310758481/?response=3&utm_medium=email&utm_source=braze_canvas&utm_campaign=mmrk_alleng_event_announcement_prod_unfiltered_v7_en&utm_term=promo&utm_content=lp_meetup&dispatch_id=68b109711269b37297de2dd0b392647a)**"
+- **Talk title:** "**[Becoming a Caido Power User: From Recon to Root](https://www.meetup.com/owasp-toronto/events/310758481/?eventOrigin=group_events_list)**"
   - Wednesday, September 17, 2025 6:30 PM to 8:30 PM EDT
   - **Abstract:**
 
@@ -24,10 +24,9 @@ Whether you're starting fresh or looking for a faster, more efficient replacemen
 We encourage anyone to bring their laptops!
 
 - 📄 **Slides (PDF):** [TBC](TBC)
-- 🍿 **YouTube Recording** [TBC](TBC)
+- 🍿 **YouTube Recording** [OWASP Toronto - Becoming a Caido Power User: From Recon to Root](https://www.youtube.com/watch?v=HeIvqjnezvI)
 - 📣 **Speaker card:**
-- 🗣️ **Social links:** [TBC](TBC)
-- 🗣️ **OWASP Slack link:** [TBC](TBC)
+- 🗣️ **Social links:** [OWASP LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7367351239124135936/)
 
 <br>
 
