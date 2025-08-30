@@ -779,7 +779,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Add "All" button
         const allBtn = document.createElement('button');
-        allBtn.className = 'filter-btn active';
+        allBtn.className = 'filter-btn';
         allBtn.textContent = 'All';
         allBtn.setAttribute('data-filter-type', 'year');
         allBtn.setAttribute('data-filter-value', 'all');
@@ -788,7 +788,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // Add year buttons
         uniqueYears.forEach(year => {
             const btn = document.createElement('button');
-            btn.className = 'filter-btn';
+            // Default to 2025 being active
+            btn.className = year === '2025' ? 'filter-btn active' : 'filter-btn';
             btn.textContent = year;
             btn.setAttribute('data-filter-type', 'year');
             btn.setAttribute('data-filter-value', year);
@@ -830,6 +831,16 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 });
             });
+        });
+
+        // Apply initial 2025 filter
+        const yearItems = section.querySelectorAll(`[data-year]`);
+        yearItems.forEach(item => {
+            if (item.getAttribute('data-year') === '2025') {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
         });
     }
 
