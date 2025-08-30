@@ -297,7 +297,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const podcasts = [
             {
                 name: "Bare Knuckles and Brass Tacks",
-                year: "2024",
+                year: "2025",
                 icon: "fas fa-fist-raised",
                 description: "Discussion about AI and ML security",
                 path: "bareknuckles_and_brass_tacks"
