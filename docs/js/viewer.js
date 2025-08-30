@@ -77,7 +77,9 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         `;
 
-        const basePath = `conferences/${org}/${year}`;
+        // Handle organizations without year subdirectories (like mako-lab, interface)
+        const noYearOrgs = ['mako-lab', 'interface'];
+        const basePath = noYearOrgs.includes(org) ? `conferences/${org}` : `conferences/${org}/${year}`;
         const dirPath = subdir ? `${basePath}/${subdir}` : basePath;
 
         // Try to load README.md

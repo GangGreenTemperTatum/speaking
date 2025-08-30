@@ -103,6 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             {
                 name: "RSA Conference",
+                displayName: "RSA Conference 2024",
                 year: "2024",
                 icon: "fas fa-lock",
                 description: "Keynote on AI/ML Security",
@@ -192,7 +193,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 localPath: "conferences/owasp/owasp-llm-apps"
             },
             {
-                name: "RSA Conference 2025",
+                name: "RSA Conference",
+                displayName: "RSA Conference 2025",
                 year: "2025",
                 icon: "fas fa-lock",
                 description: "OWASP AI Security Summit — Safeguarding GenAI & Agentic Apps, Top 10 Risks in 2025",
