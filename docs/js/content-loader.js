@@ -62,7 +62,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 localPath: "conferences/isaca/2024/feb/appsec-security-sector-days"
             },
             {
-                name: "OWASP Toronto",
+                name: "OWASP",
+                displayName: "OWASP Toronto",
                 year: "2024",
                 icon: "fas fa-shield-virus",
                 description: "OWASP Top 10 for LLM Applications",
@@ -71,7 +72,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 localPath: "conferences/owasp/owasp-toronto/2024/june"
             },
             {
-                name: "OWASP Toronto (March)",
+                name: "OWASP",
+                displayName: "OWASP Toronto (March)",
                 year: "2025",
                 icon: "fas fa-shield-virus",
                 description: "Shiny Rocks in Offensive AI",
@@ -80,7 +82,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 localPath: "conferences/owasp/owasp-toronto/2025/march"
             },
             {
-                name: "OWASP Toronto (September)",
+                name: "OWASP",
+                displayName: "OWASP Toronto (September)",
                 year: "2025",
                 icon: "fas fa-shield-virus",
                 description: "Becoming a Caido Power User: From Recon to Root",
@@ -89,7 +92,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 localPath: "conferences/owasp/owasp-toronto/2025/september"
             },
             {
-                name: "OWASP Vancouver",
+                name: "OWASP",
+                displayName: "OWASP Vancouver",
                 year: "2023",
                 icon: "fas fa-shield-virus",
                 description: "Language AI Security at the API level",
@@ -107,7 +111,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 localPath: "conferences/rsa-usa/2024/may"
             },
             {
-                name: "OWASP Cairo",
+                name: "OWASP",
+                displayName: "OWASP Cairo",
                 year: "2025",
                 icon: "fas fa-shield-virus",
                 description: "AI, Security, and Hacking Tools",
@@ -116,7 +121,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 localPath: "conferences/owasp/owasp-cairo/2025/july"
             },
             {
-                name: "OWASP Atlanta",
+                name: "OWASP",
+                displayName: "OWASP Atlanta",
                 year: "2025",
                 icon: "fas fa-shield-virus",
                 description: "Harnessing AI for Offensive Security",
@@ -177,7 +183,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 localPath: "conferences/mlopscommunity/2024/february"
             },
             {
-                name: "OWASP LLM Apps",
+                name: "OWASP",
+                displayName: "OWASP LLM Apps",
                 year: "2025",
                 icon: "fas fa-shield-virus",
                 description: "Sandboxing AI Models with Dyana & OWASP Top 10 for LLM Apps - Ep.4",
@@ -270,8 +277,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
             panel.innerHTML = `
                 <div class="panel-content">
-                    <div class="conf-logo"><i class="${conf.icon}"></i> ${conf.name}</div>
-                    <h3>${conf.name} ${conf.year}</h3>
+                    <div class="conf-logo"><i class="${conf.icon}"></i> ${conf.displayName || conf.name}</div>
+                    <h3>${conf.displayName || conf.name} ${conf.year}</h3>
                     <p>${conf.description}</p>
                     <div class="conf-meta">
                         <span class="conf-date">${conf.year}</span>
