@@ -550,12 +550,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 year: "2025"
             },
             {
-                title: "LLM Security Handbook - Chapter 8: Mitigating LLM Risks",
+                title: "AI Native LLM Security: A comprehensive guide to leveraging OWASP Top 10 for LLM applications and beyond",
                 publisher: "Packt Publishing",
-                description: "Strategies and techniques for mitigating risks in LLM applications",
-                url: "https://github.com/GangGreenTemperTatum/speaking/tree/main/books/packt/llm_sec_handbook/chapter_8_mitigating_llm_risks-strategies_techniques",
+                description: "A comprehensive guide exploring adversarial AI attacks and security challenges, built on the expertise of OWASP Top 10 for LLM applications pioneers",
+                url: "https://www.packtpub.com/en-ca/product/ai-native-llm-security-9781836203742",
                 icon: "fas fa-book",
-                year: "2024"
+                year: "2025"
             },
             {
                 title: "Lakera 2024 GenAI Security Readiness Report",
