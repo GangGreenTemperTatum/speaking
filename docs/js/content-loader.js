@@ -221,6 +221,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 localPath: "conferences/bugcrowd/2025/july/rhic"
             },
             {
+                name: "BugCrowd",
+                displayName: "EdProtect: An Edtech Security Symposium",
+                year: "2025",
+                icon: "fas fa-bug",
+                description: "Breakout 2 - Bug Bounty Student Training by Bugcrowd at UC Berkeley Center for Long-Term Cybersecurity",
+                path: "bugcrowd",
+                subdir: "september/edprotect",
+                localPath: "conferences/bugcrowd/2025/september/edprotect"
+            },
+            {
                 name: "Off By One Security",
                 year: "2025",
                 icon: "fas fa-bug",
