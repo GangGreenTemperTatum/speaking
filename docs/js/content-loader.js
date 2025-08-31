@@ -231,6 +231,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 localPath: "conferences/bugcrowd/2025/september/edprotect"
             },
             {
+                name: "BugCrowd",
+                displayName: "Rochester Institute of Technology - LLM AI AppSec Workshop",
+                year: "2025",
+                icon: "fas fa-bug",
+                description: "LLM AI Application Security hacking presentation and workshop for RIT College Program students",
+                path: "bugcrowd",
+                subdir: "2025/rit",
+                localPath: "conferences/bugcrowd/2025/rit"
+            },
+            {
                 name: "Off By One Security",
                 year: "2025",
                 icon: "fas fa-bug",
