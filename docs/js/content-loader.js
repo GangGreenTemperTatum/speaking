@@ -237,8 +237,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 icon: "fas fa-bug",
                 description: "LLM AI Application Security hacking presentation and workshop for RIT College Program students",
                 path: "bugcrowd",
-                subdir: "2025/rit",
-                localPath: "conferences/bugcrowd/2025/rit"
+                subdir: "september/rit",
+                localPath: "conferences/bugcrowd/2025/september/rit"
             },
             {
                 name: "Off By One Security",
