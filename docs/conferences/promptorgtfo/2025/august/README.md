@@ -6,7 +6,8 @@
   - **Abstract:**
 > In this live demo, '[Ads](https://www.linkedin.com/in/adam-dawson0/)' will introduce Dreadnode Agents through their open-source agent library 'Rigging' serving as a modular offensive AI approach to automate and augment targeted recon and exploitation. Using the Bbot Blacklantern toolkit and Neo4j as our graph intelligence backend, we map live target domains in real-time, identifying exposed surfaces and lateral paths.
 
-- 🍿 **YouTube Recording** [Here](TBC)
+- 🍿 **YouTube Recording** [Here](https://www.youtube.com/watch?v=f7BfVjgvSXg&list=PLXz1MhBqAGJw-pySlsaAyuMv1OQKsbVtR&index=8)
+- 🍿 **YouTube Playlyst Prompt||GTFO #5 | August 21, 2025** [Here](https://www.youtube.com/playlist?list=PLXz1MhBqAGJw-pySlsaAyuMv1OQKsbVtR)
 - 🗣️ **Social links:** [Here](https://www.linkedin.com/feed/update/urn:li:activity:7362902737350459392/)
 
 ------------------------------
