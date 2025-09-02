@@ -38,7 +38,6 @@ This educational session aligns with BugCrowd's commitment to training the next 
 
 🎓 **Educational Impact:** Training the next generation of cybersecurity professionals through practical bug bounty methodologies
 
-- 📄 **Slides (PDF):** [BugBoss Show n Tell - July 2025](Ads%20Dawson%20-%20BugCrowd%20-%20BugBoss%20Show%20n%20Tell%20-%20July%202025.pdf)
-- 🍿 **YouTube Recording** [Ads Dawson’s Show & Tell: Behind his BugBoss findings](https://youtu.be/zlodGMqAuD8?feature=shared)
+- 📄 **Slides (PDF):** [TBC](TBC)
 - 📣 **Speaker card:** [Hacker Spotlight: Ads Dawson](https://www.bugcrowd.com/blog/hacker-spotlight-ads-dawson/)
 - 🗣️ **Social links:** [Here](tbc) | [Here](tbc)

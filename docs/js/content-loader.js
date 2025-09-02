@@ -372,6 +372,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 icon: "fas fa-bug",
                 description: "Ethical hacking and AI security vulnerabilities",
                 path: "synack"
+            },
+            {
+                name: "The Boring AppSec Podcast",
+                year: "2025",
+                icon: "fas fa-shield-alt",
+                description: "AI Security Deep Dive - Modern AI attack vectors and LLM application security",
+                path: "the_boring_appsec_podcast"
             }
         ];
 
