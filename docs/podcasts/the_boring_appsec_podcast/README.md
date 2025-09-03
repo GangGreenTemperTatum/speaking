@@ -21,9 +21,11 @@
 
 - 🎧 **Spotify Episode (Listen)** [The Boring AppSec Podcast - AI Security Deep Dive](https://open.spotify.com/episode/1GHef4viw4wdeEQHQy8MhQ?si=kp5i28N3RDaZVoj8EO3ioA&nd=1&dlsi=21f0c2bed04a4b6b)
 - 📣 **Podcast Show** [The Boring AppSec Podcast](https://open.spotify.com/show/5pMjAm8KJJeAcBfatcv8sZ)
-- 🗞️ **Social Post** [TBC](TBC) | [TBC](TBC)
+- 🗞️ **Social Post** [LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7368975592014200832/)
+- 🍿 **Watch on YouTube** [The Boring AppSec Podcast - AI Security Deep Dive](https://www.youtube.com/watch?v=1Qkm9jPw4g8)
 
 ![The Boring AppSec Podcast Episode](boringappsecpodep.png)
 ![The Boring AppSec Podcast Episode on Spotify Mobile](boringappsecpodcell.png)
+![The Boring AppSec Podcast Episode on YouTube](boringappsecpodyt.png)
 
 ----------------------------------------
