@@ -24,5 +24,6 @@
 - 🗞️ **Social Post** [TBC](TBC) | [TBC](TBC)
 
 ![The Boring AppSec Podcast Episode](boringappsecpodep.png)
+![The Boring AppSec Podcast Episode on Spotify Mobile](boringappsecpodcell.png)
 
 ----------------------------------------
