@@ -24,7 +24,7 @@ Whether you're starting fresh or looking for a faster, more efficient replacemen
 
 We encourage anyone to bring their laptops!
 
-- 📄 **Slides (PDF):** [TBC](TBC)
+- 📄 **Slides (PDF):** [Here](https://github.com/GangGreenTemperTatum/speaking/blob/310c4a1e4c0a9c5617dc68100f98cb6626d6ea9f/docs/conferences/owasp/owasp-toronto/2025/september/Becoming%20a%20Caido%20Power%20User_%20From%20Recon%20to%20Root%20-%20Ads%20Dawson%20-%20OWASP%20Toronto%20-%20September%2017%202025.pdf)
 - 🍿 **YouTube Recording** [OWASP Toronto - Becoming a Caido Power User: From Recon to Root](https://www.youtube.com/watch?v=HeIvqjnezvI)
 - 📣 **Speaker card:**
 - 🗣️ **Social links:** [OWASP LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7367351239124135936/)
