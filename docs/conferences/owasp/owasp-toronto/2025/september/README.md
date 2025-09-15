@@ -4,6 +4,7 @@
   - Wednesday, September 17, 2025 6:30 PM to 8:30 PM EDT
   - **Abstract:**
 
+<img width="200" height="200" alt="image" src="https://github.com/GangGreenTemperTatum/speaking/blob/2a2fae17b17c4fa6ff9c6571c7027db40cd16311/docs/conferences/owasp/owasp-toronto/2025/september/ads-caido-chatgpt-avatar-anime-3.png" />
 <img width="200" height="200" alt="image" src="https://github.com/user-attachments/assets/344de58a-5c69-49fe-bb16-15b8dfb2f84a" />
 
 Note: In-person attendance is limited to 70 people, in a first-come, first-serve basis.
