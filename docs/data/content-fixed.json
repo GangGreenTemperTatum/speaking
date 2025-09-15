@@ -33,6 +33,14 @@
       "description": "BugCrowd x Dreadnode Crucible: Rhode Island College Cyber Range"
     },
     {
+      "id": "bugcrowd-2025-october-wraven-2025",
+      "name": "WRAVEN x BugCrowd",
+      "path": "bugcrowd/2025/october/wraven",
+      "year": "2025",
+      "icon": "fas fa-bug",
+      "description": "Bug Bounty Student Training by Bugcrowd"
+    },
+    {
       "id": "dc604-2023",
       "name": "DC604",
       "path": "dc604",

@@ -19,7 +19,7 @@ const content = {
 const conferenceOrgs = [
   { id: "apidays", years: ["2023"] },
   { id: "apisec", years: ["2023"] },
-  { id: "bugcrowd", subDirs: ["2025/july/bugboss", "2025/july/rhic"], years: ["2025"] },
+  { id: "bugcrowd", subDirs: ["2025/july/bugboss", "2025/july/rhic", "2025/october/wraven"], years: ["2025"] },
   { id: "dc604", years: ["2023"] },
   { id: "defcon", subPaths: [{path: "2025/august/bb_village", year: "2025"}] },
   { id: "in-cyber-forum", years: ["2024"] },
@@ -131,6 +131,9 @@ conferenceOrgs.forEach(org => {
         } else if (subDir.includes('rhic')) {
           orgName = 'RHIC';
           description = 'BugCrowd x Dreadnode Crucible: Rhode Island College Cyber Range';
+        } else if (subDir.includes('wraven')) {
+          orgName = 'WRAVEN x BugCrowd';
+          description = 'Bug Bounty Student Training by Bugcrowd';
         } else {
           orgName = subDir.toUpperCase();
           description = 'Talks on AI/ML Security and LLM Application Safety';
