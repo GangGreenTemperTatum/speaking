@@ -38,6 +38,6 @@ This educational session aligns with BugCrowd's commitment to training the next 
 
 🎓 **Educational Impact:** Training the next generation of cybersecurity professionals through practical bug bounty methodologies
 
-- 📄 **Slides (PDF):** [TBC](TBC)
+- 📄 **Slides (PDF):** [Here](https://github.com/GangGreenTemperTatum/speaking/blob/2a2fae17b17c4fa6ff9c6571c7027db40cd16311/docs/conferences/bugcrowd/2025/september/edprotect/A%20Bug%20Hunter's%20Journey%20from%20CTFs%20to%20Cash%20-%20Ads%20Dawson%20and%20Tati%20Uklist%20-%20EdProtect_%20An%20Edtech%20Security%20Symposium%20-%20September%2019%202025.pdf)
 - 📣 **Speaker card:** [Hacker Spotlight: Ads Dawson](https://www.bugcrowd.com/blog/hacker-spotlight-ads-dawson/)
 - 🗣️ **Social links:** [Here](tbc) | [Here](tbc)
