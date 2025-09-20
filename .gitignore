@@ -5,6 +5,9 @@
 Icon
 ._*
 
+# powerpoint slides
+*.pptx
+
 # Python virtual environments
 env/
 .env
