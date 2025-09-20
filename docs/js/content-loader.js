@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const conferences = [
             {
                 name: "API Days",
+                displayName: "API Days 2023 - AI/ML Security at the API level",
                 year: "2023",
                 icon: "fas fa-cloud",
                 description: "Talks on AI/ML Security at API level",
@@ -27,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             {
                 name: "APISec",
+                displayName: "APISec 2023 - Securing LLM and NLP APIs",
                 year: "2023",
                 icon: "fas fa-shield-alt",
                 description: "Securing LLM and NLP APIs",
@@ -36,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             {
                 name: "DC604",
+                displayName: "DC604 2023 - Hacker Summer Camp - Poisoning Web Training Data",
                 year: "2023",
                 icon: "fas fa-users",
                 description: "Hacker Summer Camp - Poisoning Web Training Data",
@@ -45,6 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             {
                 name: "In-Cyber Forum",
+                displayName: "In-Cyber Forum 2024 - Language AI Security at the API level",
                 year: "2024",
                 icon: "fas fa-globe",
                 description: "Language AI Security at the API level",
@@ -54,6 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             {
                 name: "ISACA",
+                displayName: "ISACA Application Security Sector Day",
                 year: "2024",
                 icon: "fas fa-certificate",
                 description: "Application Security Sector Day",
@@ -63,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             {
                 name: "OWASP",
-                displayName: "OWASP Toronto",
+                displayName: "OWASP Toronto - OWASP Top 10 for LLM Applications",
                 year: "2024",
                 icon: "fas fa-shield-virus",
                 description: "OWASP Top 10 for LLM Applications",
@@ -73,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             {
                 name: "OWASP",
-                displayName: "OWASP Toronto (March)",
+                displayName: "OWASP Toronto (March) - Shiny Rocks in Offensive AI",
                 year: "2025",
                 icon: "fas fa-shield-virus",
                 description: "Shiny Rocks in Offensive AI",
@@ -83,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             {
                 name: "OWASP",
-                displayName: "OWASP Toronto (September)",
+                displayName: "OWASP Toronto (September)- Becoming a Caido Power User: From Recon to Root",
                 year: "2025",
                 icon: "fas fa-shield-virus",
                 description: "Becoming a Caido Power User: From Recon to Root",
@@ -93,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             {
                 name: "OWASP",
-                displayName: "OWASP Vancouver",
+                displayName: "OWASP Vancouver - Language AI Security at the API level",
                 year: "2023",
                 icon: "fas fa-shield-virus",
                 description: "Language AI Security at the API level",
@@ -103,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             {
                 name: "RSA Conference",
-                displayName: "RSA Conference 2024",
+                displayName: "RSA Conference 2024 - Keynote on AI/ML Security",
                 year: "2024",
                 icon: "fas fa-lock",
                 description: "Keynote on AI/ML Security",
@@ -123,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             {
                 name: "OWASP",
-                displayName: "OWASP Atlanta",
+                displayName: "OWASP Atlanta - Harnessing AI for Offensive Security",
                 year: "2025",
                 icon: "fas fa-shield-virus",
                 description: "Harnessing AI for Offensive Security",
@@ -133,6 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             {
                 name: "ISC2",
+                displayName: "ISC2 Behind the Prompt: Exposing and Mitigating the Top LLM Vulnerabilities",
                 year: "2025",
                 icon: "fas fa-certificate",
                 description: "Behind the Prompt: Exposing and Mitigating the Top LLM Vulnerabilities",
@@ -142,6 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             {
                 name: "Interface",
+                displayName: "INTERFACE ApiSec 2023 - Language AI Security at the API level",
                 year: "2023",
                 icon: "fas fa-cloud",
                 description: "Language AI Security at the API level",
@@ -150,6 +157,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             {
                 name: "Lakera",
+                displayName: "Lakera December 2023 - How to Secure AI Applications",
                 year: "2023",
                 icon: "fas fa-shield-alt",
                 description: "How to Secure AI Applications: Lessons from OWASP's Top 10 for LLMs",
@@ -159,6 +167,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             {
                 name: "Lakera",
+                displayName: "Lakera April 2024 - Decoding OWASP LLMSVS",
                 year: "2024",
                 icon: "fas fa-shield-alt",
                 description: "Decoding OWASP Large Language Model Security Verification Standard (LLMSVS)",
@@ -168,6 +177,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             {
                 name: "Mako Lab",
+                displayName: "Mako Lab 2025 - Mastering AI chatbot security",
                 year: "2025",
                 icon: "fas fa-flask",
                 description: "Mastering AI chatbot security",
@@ -176,6 +186,8 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             {
                 name: "MLOps Community",
+                displayName: "MLOps Community Conference - AI in Production",
+                description: "MLOps Community Conference - AI in Production",
                 year: "2024",
                 icon: "fas fa-cogs",
                 description: "AI in Production",
@@ -185,7 +197,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             {
                 name: "OWASP",
-                displayName: "OWASP LLM Apps",
+                displayName: "OWASP LLM Apps - Sandboxing AI Models with Dyana & OWASP Top 10 for LLM Apps - Ep.4",
                 year: "2025",
                 icon: "fas fa-shield-virus",
                 description: "Sandboxing AI Models with Dyana & OWASP Top 10 for LLM Apps - Ep.4",
@@ -194,7 +206,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             {
                 name: "RSA Conference",
-                displayName: "RSA Conference 2025",
+                displayName: "RSA USA Conference 2025 - OWASP AI Security Summit",
                 year: "2025",
                 icon: "fas fa-lock",
                 description: "OWASP AI Security Summit — Safeguarding GenAI & Agentic Apps, Top 10 Risks in 2025",
@@ -204,18 +216,20 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             {
                 name: "BugCrowd",
+                displayName: "BugCrowd x BugBoss v3 Show n Tell - July 2025",
                 year: "2025",
                 icon: "fas fa-bug",
-                description: "BugBoss Show n Tell - July 2025",
+                description: "BugCrowd x BugBoss Show n Tell - July 2025",
                 path: "bugcrowd",
                 subdir: "july/bugboss",
                 localPath: "conferences/bugcrowd/2025/july/bugboss"
             },
             {
                 name: "BugCrowd",
+                displayName: "BugCrowd x Rhode Island College RHIC - July 2025",
                 year: "2025",
                 icon: "fas fa-bug",
-                description: "BugCrowd x Dreadnode Crucible: Rhode Island College RHIC - July 2025",
+                description: "BugCrowd x Rhode Island College RHIC - July 2025",
                 path: "bugcrowd",
                 subdir: "july/rhic",
                 localPath: "conferences/bugcrowd/2025/july/rhic"
@@ -232,7 +246,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             {
                 name: "BugCrowd",
-                displayName: "Rochester Institute of Technology - LLM AI AppSec Workshop",
+                displayName: "RITSEC Rochester Institute of Technology - LLM AI AppSec Workshop",
                 year: "2025",
                 icon: "fas fa-bug",
                 description: "LLM AI Application Security hacking presentation and workshop for RIT College Program students",
@@ -242,6 +256,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             {
                 name: "Off By One Security",
+                displayName: "Building and Deploying Offensive Security Agents with Dreadnode",
                 year: "2025",
                 icon: "fas fa-bug",
                 description: "Building and Deploying Offensive Security Agents with Dreadnode",
@@ -251,6 +266,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             {
                 name: "DEFCON",
+                displayName: "Bug Bounty Village: Misaligned: AI Jailbreaking Panel with Basi Team Six (BT6) & Jason Haddix",
                 year: "2025",
                 icon: "fas fa-skull-crossbones",
                 description: "Bug Bounty Village: Misaligned: AI Jailbreaking Panel with Basi Team Six (BT6) & Jason Haddix",
@@ -260,6 +276,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             {
                 name: "PromptorGTFO",
+                displayName: "PromptorGTFO 2025 - Deploying Offensive AI with Modular Agents",
                 year: "2025",
                 icon: "fas fa-terminal",
                 description: "Dreadnode: Deploying Offensive AI with Modular Agents",
