@@ -368,6 +368,10 @@ document.addEventListener('DOMContentLoaded', function() {
             "conferences/isc2/2025/july": {
                 files: ["ISACA 2025 Ads and Steve - Behind the Prompt_ Exposing and Mitigating the Top LLM Vulnerabilities - ISC2's Spotlight on AI virtual conference.pdf", "behind_the_prompt_exposing_and_mitigating_the_top_llm_vulnerabilities-isc2-july-2025.png"],
                 titles: ["Behind the Prompt - ISC2 Spotlight on AI (PDF)", "Presentation Slide (PNG)"]
+            },
+            "conferences/owasp/owasp-llm-apps/2025/october": {
+                files: ["speaker-card.png", "agenda-snippet.png"],
+                titles: ["Speaker Card (PNG)", "Event Agenda Snippet (PNG)"]
             }
         };
 

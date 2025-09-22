@@ -201,8 +201,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 year: "2025",
                 icon: "fas fa-shield-virus",
                 description: "Sandboxing AI Models with Dyana & OWASP Top 10 for LLM Apps - Ep.4",
-                path: "owasp/owasp-llm-apps",
-                subdir: "2025/march",
+                path: "owasp/owasp-llm-apps/2025",
+                subdir: "march",
                 localPath: "conferences/owasp/owasp-llm-apps/2025/march"
             },
             {
@@ -211,8 +211,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 year: "2025",
                 icon: "fas fa-shield-virus",
                 description: "Breakout: The Stochastic Shall Inherit the Earth (But Let's Secure It First), Top 10 Risk for LLMs and GenAI",
-                path: "owasp/owasp-llm-apps",
-                subdir: "2025/october",
+                path: "owasp/owasp-llm-apps/2025",
+                subdir: "october",
                 localPath: "conferences/owasp/owasp-llm-apps/2025/october"
             },
             {

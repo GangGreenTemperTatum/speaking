@@ -1,8 +1,8 @@
 # [OWASP](https://www.owasp.org)
 ## [Gen AI Application Security & Risk - The Official Cybersecurity Summit](https://cybersecuritysummit.com/summit/owasp-appsec/)
 
-![speaker card](speaker-card.png)
-![agenda snippet](agenda-snippet.png)
+![speaker card](https://github.com/GangGreenTemperTatum/speaking/blob/eb9362d74d36b96b44fb9fe3da87257f02a45f6b/docs/conferences/owasp/owasp-llm-apps/2025/october/speaker-card.png)
+![agenda snippet](https://github.com/GangGreenTemperTatum/speaking/blob/eb9362d74d36b96b44fb9fe3da87257f02a45f6b/docs/conferences/owasp/owasp-llm-apps/2025/october/agenda-snippet.png)
 
 - **Talk title:** "Breakout: The Stochastic Shall Inherit the Earth (But Let's Secure It First), Top 10 Risk for LLMs and GenAI"
   - Thursday, October 9, 2025 · 11:00 AM - 4:00 PM EST
