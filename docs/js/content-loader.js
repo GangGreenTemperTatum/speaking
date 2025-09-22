@@ -202,7 +202,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 icon: "fas fa-shield-virus",
                 description: "Sandboxing AI Models with Dyana & OWASP Top 10 for LLM Apps - Ep.4",
                 path: "owasp/owasp-llm-apps",
-                localPath: "conferences/owasp/owasp-llm-apps"
+                subdir: "2025/march",
+                localPath: "conferences/owasp/owasp-llm-apps/2025/march"
+            },
+            {
+                name: "OWASP",
+                displayName: "Gen AI Application Security & Risk Summit - The Stochastic Shall Inherit the Earth",
+                year: "2025",
+                icon: "fas fa-shield-virus",
+                description: "Breakout: The Stochastic Shall Inherit the Earth (But Let's Secure It First), Top 10 Risk for LLMs and GenAI",
+                path: "owasp/owasp-llm-apps",
+                subdir: "2025/october",
+                localPath: "conferences/owasp/owasp-llm-apps/2025/october"
             },
             {
                 name: "RSA Conference",

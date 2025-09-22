@@ -185,9 +185,9 @@
       "description": "Talks on AI/ML Security and LLM Application Safety"
     },
     {
-      "id": "owasp/owasp-llm-apps-2025",
+      "id": "owasp/owasp-llm-apps-2025-march",
       "name": "OWASP LLM Apps Project",
-      "path": "owasp/owasp-llm-apps",
+      "path": "owasp/owasp-llm-apps/2025/march",
       "year": "2025",
       "icon": "fas fa-shield-virus",
       "description": "Sandboxing AI Models with Dyana & OWASP Top 10 for LLM Apps"
@@ -207,6 +207,14 @@
       "year": "2025",
       "icon": "fas fa-lock",
       "description": "Talks on AI/ML Security and LLM Application Safety"
+    },
+    {
+      "id": "owasp-gen-ai-security-summit-2025",
+      "name": "Gen AI Application Security & Risk Summit",
+      "path": "owasp/owasp-llm-apps/2025/october",
+      "year": "2025",
+      "icon": "fas fa-shield-virus",
+      "description": "Breakout: The Stochastic Shall Inherit the Earth (But Let's Secure It First), Top 10 Risk for LLMs and GenAI"
     }
   ],
   "podcasts": [
