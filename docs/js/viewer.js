@@ -370,8 +370,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 titles: ["Behind the Prompt - ISC2 Spotlight on AI (PDF)", "Presentation Slide (PNG)"]
             },
             "conferences/owasp/owasp-llm-apps/2025/october": {
-                files: ["speaker-card.png", "agenda-snippet.png"],
-                titles: ["Speaker Card (PNG)", "Event Agenda Snippet (PNG)"]
+                files: ["speaker-card.png", "agenda-snippet.png", "Ads Dawson – The Official Cybersecurity Summit - Speaker Card.pdf", "Gen AI Application Security & Risk – The Official Cybersecurity Summit - Agenda.pdf"],
+                titles: ["Speaker Card (PNG)", "Event Agenda Snippet (PNG)", "Speaker Card (PDF)", "Event Agenda (PDF)"]
             }
         };
 
