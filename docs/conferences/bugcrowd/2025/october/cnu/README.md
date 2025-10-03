@@ -13,6 +13,6 @@
 
 ---
 
-- 📄 **Slides (PDF):** [Here]()
+- 📄 **Slides (PDF):** [Here](https://github.com/GangGreenTemperTatum/speaking/blob/2805ff22e2614db76fd2ac2e686b7ab02f75dfcd/docs/conferences/bugcrowd/2025/october/cnu/Ads%20Dawson%20x%20BugCrowd_%20Prompt%20to%20Pwn_%20Offensive%20AI%20Security%20-%20CNU%20CyberClub%20-%20October%207,%202025.pdf)
 - 📣 **Speaker card:** [Hacker Spotlight: Ads Dawson](https://www.bugcrowd.com/blog/hacker-spotlight-ads-dawson/)
 - 🍿 **YouTube Recording** [TBC](TBC)
