@@ -1,12 +1,12 @@
-# [CNU CyberClub](https://cnu.edu/academics/programs/cybersecurity.html)
+# [University of Texas - Austin University Cybersecurity Education](https://www.cs.utexas.edu/concentrations/cybersecurity)
 ## BugCrowd College Program Educational Event
 
-- **Institution:** CNU CyberClub
+- **Institution:** Austin University Cybersecurity Education
 - **Program:** BugCrowd College Program
 - **Session Type:** Internal Educational Event
-- **Duration:** 60 minutes
+- **Duration:** 120 minutes
 - **Format:** Technical demonstration and practical workshop
-- **Date and Time:** Oct 22 - 18:00-20:00pm ET
+- **Date and Time:** Oct 7 - 12:30-13:30pm ET
 
 ### Speaker Bio
 
@@ -14,6 +14,6 @@
 
 ---
 
-- 📄 **Slides (PDF):** [Here](https://github.com/GangGreenTemperTatum/speaking/blob/2805ff22e2614db76fd2ac2e686b7ab02f75dfcd/docs/conferences/bugcrowd/2025/october/cnu/Ads%20Dawson%20x%20BugCrowd_%20Prompt%20to%20Pwn_%20Offensive%20AI%20Security%20-%20CNU%20CyberClub%20-%20October%207,%202025.pdf)
+- 📄 **Slides (PDF):** [TBC]()
 - 📣 **Speaker card:** [Hacker Spotlight: Ads Dawson](https://www.bugcrowd.com/blog/hacker-spotlight-ads-dawson/)
 - 🍿 **YouTube Recording** [TBC](TBC)

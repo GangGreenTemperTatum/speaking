@@ -1,9 +1,14 @@
-# WRAVEN x BugCrowd
-## TBC
+# [WRAVEN WMU Cybersecurity](https://wraven.org/)
+## BugCrowd College Program Educational Event
 
+- **Institution:** WRAVEN
+- **Program:** BugCrowd College Program
 - **Event:** Remote online talk: A Bug Hunter's Journey from CTFs to Cash
-- **Date:** Friday, October 20, 2025 · 6pm - 8pm EDT
-- **Organizer:** WRAVEN in partnership with BugCrowd
+- **Session Type:** Internal Educational Event
+- **Duration:** 60 minutes
+- **Format:** Technical demonstration and practical workshop
+- **Date and Time:** Oct 22 - 18:00-20:00pm ET
+
 
 ### About the Event
 

@@ -33,12 +33,44 @@
       "description": "BugCrowd x Dreadnode Crucible: Rhode Island College Cyber Range"
     },
     {
+      "id": "bugcrowd-2025-september-edprotect-2025",
+      "name": "EdProtect",
+      "path": "bugcrowd/2025/september/edprotect",
+      "year": "2025",
+      "icon": "fas fa-bug",
+      "description": "Bug Bounty Student Training by Bugcrowd at UC Berkeley"
+    },
+    {
+      "id": "bugcrowd-2025-september-rit-2025",
+      "name": "RITSEC Rochester Institute of Technology",
+      "path": "bugcrowd/2025/september/rit",
+      "year": "2025",
+      "icon": "fas fa-bug",
+      "description": "LLM AI Application Security hacking presentation and workshop"
+    },
+    {
       "id": "bugcrowd-2025-october-wraven-2025",
       "name": "WRAVEN x BugCrowd",
       "path": "bugcrowd/2025/october/wraven",
       "year": "2025",
       "icon": "fas fa-bug",
       "description": "Bug Bounty Student Training by Bugcrowd"
+    },
+    {
+      "id": "bugcrowd-2025-october-ut-2025",
+      "name": "University of Texas - Austin",
+      "path": "bugcrowd/2025/october/ut",
+      "year": "2025",
+      "icon": "fas fa-bug",
+      "description": "BugCrowd College Program Educational Event"
+    },
+    {
+      "id": "bugcrowd-2025-october-cnu-2025",
+      "name": "CNU CyberClub",
+      "path": "bugcrowd/2025/october/cnu",
+      "year": "2025",
+      "icon": "fas fa-bug",
+      "description": "BugCrowd College Program Educational Event"
     },
     {
       "id": "dc604-2023",
@@ -185,12 +217,20 @@
       "description": "Talks on AI/ML Security and LLM Application Safety"
     },
     {
-      "id": "owasp/owasp-llm-apps-2025-march",
+      "id": "owasp-owasp-llm-apps-2025-march",
       "name": "OWASP LLM Apps Project",
       "path": "owasp/owasp-llm-apps/2025/march",
       "year": "2025",
       "icon": "fas fa-shield-virus",
       "description": "Sandboxing AI Models with Dyana & OWASP Top 10 for LLM Apps"
+    },
+    {
+      "id": "owasp-gen-ai-security-summit-2025",
+      "name": "Gen AI Application Security & Risk Summit",
+      "path": "owasp/owasp-llm-apps/2025/october",
+      "year": "2025",
+      "icon": "fas fa-shield-virus",
+      "description": "Breakout: The Stochastic Shall Inherit the Earth (But Let's Secure It First), Top 10 Risk for LLMs and GenAI"
     },
     {
       "id": "rsa-usa-2024",
@@ -207,14 +247,6 @@
       "year": "2025",
       "icon": "fas fa-lock",
       "description": "Talks on AI/ML Security and LLM Application Safety"
-    },
-    {
-      "id": "owasp-gen-ai-security-summit-2025",
-      "name": "Gen AI Application Security & Risk Summit",
-      "path": "owasp/owasp-llm-apps/2025/october",
-      "year": "2025",
-      "icon": "fas fa-shield-virus",
-      "description": "Breakout: The Stochastic Shall Inherit the Earth (But Let's Secure It First), Top 10 Risk for LLMs and GenAI"
     }
   ],
   "podcasts": [

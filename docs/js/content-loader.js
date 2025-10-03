@@ -266,6 +266,36 @@ document.addEventListener('DOMContentLoaded', function() {
                 localPath: "conferences/bugcrowd/2025/september/rit"
             },
             {
+                name: "BugCrowd",
+                displayName: "University of Texas - Austin",
+                year: "2025",
+                icon: "fas fa-bug",
+                description: "BugCrowd College Program Educational Event",
+                path: "bugcrowd",
+                subdir: "october/ut",
+                localPath: "conferences/bugcrowd/2025/october/ut"
+            },
+            {
+                name: "BugCrowd",
+                displayName: "WRAVEN x BugCrowd - A Bug Hunter's Journey from CTFs to Cash",
+                year: "2025",
+                icon: "fas fa-bug",
+                description: "Bug Bounty Student Training by Bugcrowd",
+                path: "bugcrowd",
+                subdir: "october/wraven",
+                localPath: "conferences/bugcrowd/2025/october/wraven"
+            },
+            {
+                name: "BugCrowd",
+                displayName: "CNU CyberClub - Prompt to Pwn: Offensive AI Security",
+                year: "2025",
+                icon: "fas fa-bug",
+                description: "BugCrowd College Program Educational Event",
+                path: "bugcrowd",
+                subdir: "october/cnu",
+                localPath: "conferences/bugcrowd/2025/october/cnu"
+            },
+            {
                 name: "Off By One Security",
                 displayName: "Building and Deploying Offensive Security Agents with Dreadnode",
                 year: "2025",

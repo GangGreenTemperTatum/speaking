@@ -19,7 +19,7 @@ const content = {
 const conferenceOrgs = [
   { id: "apidays", years: ["2023"] },
   { id: "apisec", years: ["2023"] },
-  { id: "bugcrowd", subDirs: ["2025/july/bugboss", "2025/july/rhic", "2025/october/wraven"], years: ["2025"] },
+  { id: "bugcrowd", subDirs: ["2025/july/bugboss", "2025/july/rhic", "2025/september/edprotect", "2025/september/rit", "2025/october/wraven", "2025/october/ut", "2025/october/cnu"], years: ["2025"] },
   { id: "dc604", years: ["2023"] },
   { id: "defcon", subPaths: [{path: "2025/august/bb_village", year: "2025"}] },
   { id: "in-cyber-forum", years: ["2024"] },
@@ -30,7 +30,7 @@ const conferenceOrgs = [
   { id: "mako-lab", years: ["2023", "2024"] },
   { id: "mlopscommunity", years: ["2024"] },
   { id: "offbyonesecurity", subPaths: [{path: "2025/july", year: "2025"}] },
-  { id: "owasp", subDirs: [{name: "owasp-cairo", years: ["2025"]}, {name: "owasp-toronto", subPaths: [{path: "2024/june", year: "2024"}, {path: "2025/march", year: "2025"}, {path: "2025/september", year: "2025"}]}, {name: "owasp-vancouver", years: ["2023"]}, {name: "owasp-atlanta", years: ["2025"]}, {name: "owasp-llm-apps", years: ["2025"]}] },
+  { id: "owasp", subDirs: [{name: "owasp-cairo", years: ["2025"]}, {name: "owasp-toronto", subPaths: [{path: "2024/june", year: "2024"}, {path: "2025/march", year: "2025"}, {path: "2025/september", year: "2025"}]}, {name: "owasp-vancouver", years: ["2023"]}, {name: "owasp-atlanta", years: ["2025"]}, {name: "owasp-llm-apps", subPaths: [{path: "2025/march", year: "2025"}, {path: "2025/october", year: "2025"}]}] },
   { id: "rsa-usa", years: ["2024", "2025"] }
 ];
 
@@ -68,8 +68,16 @@ conferenceOrgs.forEach(org => {
           let orgName, description;
 
           if (subDir === 'owasp-llm-apps') {
-            orgName = 'OWASP LLM Apps Project';
-            description = 'Sandboxing AI Models with Dyana & OWASP Top 10 for LLM Apps';
+            if (subPath.path.includes('march')) {
+              orgName = 'OWASP LLM Apps Project';
+              description = 'Sandboxing AI Models with Dyana & OWASP Top 10 for LLM Apps';
+            } else if (subPath.path.includes('october')) {
+              orgName = 'Gen AI Application Security & Risk Summit';
+              description = 'Breakout: The Stochastic Shall Inherit the Earth (But Let\'s Secure It First), Top 10 Risk for LLMs and GenAI';
+            } else {
+              orgName = 'OWASP LLM Apps Project';
+              description = 'Sandboxing AI Models with Dyana & OWASP Top 10 for LLM Apps';
+            }
           } else {
             orgName = subDir.replace('owasp-', 'OWASP ').toUpperCase();
             // Add month-specific descriptions
@@ -82,8 +90,14 @@ conferenceOrgs.forEach(org => {
             }
           }
 
+          // Special ID handling for Gen AI Summit
+          let confId = `${orgPath.replace(/\//g, '-')}`;
+          if (subDir === 'owasp-llm-apps' && subPath.path.includes('october')) {
+            confId = 'owasp-gen-ai-security-summit-2025';
+          }
+
           content.conferences.push({
-            id: `${orgPath.replace(/\//g, '-')}`,
+            id: confId,
             name: orgName,
             path: orgPath,
             year: subPath.year,
@@ -131,9 +145,21 @@ conferenceOrgs.forEach(org => {
         } else if (subDir.includes('rhic')) {
           orgName = 'RHIC';
           description = 'BugCrowd x Dreadnode Crucible: Rhode Island College Cyber Range';
+        } else if (subDir.includes('edprotect')) {
+          orgName = 'EdProtect';
+          description = 'Bug Bounty Student Training by Bugcrowd at UC Berkeley';
+        } else if (subDir.includes('rit')) {
+          orgName = 'RITSEC Rochester Institute of Technology';
+          description = 'LLM AI Application Security hacking presentation and workshop';
         } else if (subDir.includes('wraven')) {
           orgName = 'WRAVEN x BugCrowd';
           description = 'Bug Bounty Student Training by Bugcrowd';
+        } else if (subDir.includes('ut')) {
+          orgName = 'University of Texas - Austin';
+          description = 'BugCrowd College Program Educational Event';
+        } else if (subDir.includes('cnu')) {
+          orgName = 'CNU CyberClub';
+          description = 'BugCrowd College Program Educational Event';
         } else {
           orgName = subDir.toUpperCase();
           description = 'Talks on AI/ML Security and LLM Application Safety';
