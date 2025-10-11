@@ -405,6 +405,16 @@
       "year": "2023"
     },
     {
+      "id": "bugcrowd-ai-agi-asi",
+      "title": "From Jeopardy! to The Terminator: AI vs. AGI vs. ASI",
+      "publisher": "BugCrowd",
+      "description": "I’ll be back (but first, let’s win Jeopardy!)",
+      "url": "https://www.bugcrowd.com/blog/from-jeopardy-to-the-terminator-ai-vs-agi-vs-asi/",
+      "icon": "fas fa-bug",
+      "external": true,
+      "year": "2025"
+    },
+    {
       "id": "bugcrowd-hacked-my-way",
       "title": "How I hacked my way to the big leagues: Fat bounties, interviews on NASDAQ, and advisory boards",
       "publisher": "BugCrowd",

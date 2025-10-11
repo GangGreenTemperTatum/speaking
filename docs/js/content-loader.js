@@ -596,6 +596,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 year: "2023"
             },
             {
+                title: "From Jeopardy! to The Terminator: AI vs. AGI vs. ASI",
+                publisher: "BugCrowd",
+                description: "I’ll be back (but first, let’s win Jeopardy!)",
+                url: "https://www.bugcrowd.com/blog/from-jeopardy-to-the-terminator-ai-vs-agi-vs-asi/",
+                icon: "fas fa-bug",
+                year: "2025"
+            },
+            {
                 title: "What Mission Impossible taught us about AI: The hacker roots of a face swap",
                 publisher: "BugCrowd",
                 description: "Is Tom Cruise the original deep fake hacker?",
