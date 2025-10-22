@@ -73,6 +73,30 @@
       "description": "BugCrowd College Program Educational Event"
     },
     {
+      "id": "bugcrowd-2025-october-merritcollege-2025",
+      "name": "Merritt College",
+      "path": "bugcrowd/2025/october/merritcollege",
+      "year": "2025",
+      "icon": "fas fa-bug",
+      "description": "A Bug Hunter's Journey from CTFs to Cash"
+    },
+    {
+      "id": "bugcrowd-2025-november-ubmc-2025",
+      "name": "UMBC CyberDawgs",
+      "path": "bugcrowd/2025/november/ubmc",
+      "year": "2025",
+      "icon": "fas fa-bug",
+      "description": "A Bug Hunter's Journey from CTFs to Cash"
+    },
+    {
+      "id": "bugcrowd-2025-november-unb-2025",
+      "name": "University of New Brunswick (UNB)",
+      "path": "bugcrowd/2025/november/unb",
+      "year": "2025",
+      "icon": "fas fa-bug",
+      "description": "BugCrowd College Program Educational Event"
+    },
+    {
       "id": "dc604-2023",
       "name": "DC604",
       "path": "dc604",

@@ -296,6 +296,36 @@ document.addEventListener('DOMContentLoaded', function() {
                 localPath: "conferences/bugcrowd/2025/october/cnu"
             },
             {
+                name: "BugCrowd",
+                displayName: "Merritt College - A Bug Hunter's Journey from CTFs to Cash",
+                year: "2025",
+                icon: "fas fa-bug",
+                description: "Shifting to the Bug Bounty Hunter's Methodology",
+                path: "bugcrowd",
+                subdir: "october/merritcollege",
+                localPath: "conferences/bugcrowd/2025/october/merritcollege"
+            },
+            {
+                name: "BugCrowd",
+                displayName: "UMBC CyberDawgs - A Bug Hunter's Journey from CTFs to Cash",
+                year: "2025",
+                icon: "fas fa-bug",
+                description: "BugCrowd College Program Educational Event",
+                path: "bugcrowd",
+                subdir: "november/ubmc",
+                localPath: "conferences/bugcrowd/2025/november/ubmc"
+            },
+            {
+                name: "BugCrowd",
+                displayName: "University of New Brunswick (UNB)",
+                year: "2025",
+                icon: "fas fa-bug",
+                description: "BugCrowd College Program Educational Event",
+                path: "bugcrowd",
+                subdir: "november/unb",
+                localPath: "conferences/bugcrowd/2025/november/unb"
+            },
+            {
                 name: "Off By One Security",
                 displayName: "Building and Deploying Offensive Security Agents with Dreadnode",
                 year: "2025",
