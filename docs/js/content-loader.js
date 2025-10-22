@@ -668,6 +668,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 year: "2024"
             },
             {
+                title: "Lakera 2025 GenAI Security Readiness Report",
+                publisher: "Lakera",
+                description: "Contributing advisor to the Lakera 2025 GenAI Security Readiness Report",
+                url: "https://www.lakera.ai/genai-security-report-2025",
+                icon: "fas fa-shield-alt",
+                year: "2025"
+            },
+            {
                 title: "OWASP Top 10 for LLM Applications",
                 publisher: "OWASP",
                 description: "Contributing author to the OWASP Top 10 for LLM Applications guide",
