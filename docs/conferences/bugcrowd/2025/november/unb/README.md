@@ -1,6 +1,8 @@
 # [University of New Brunswick (UNB)](https://www.unb.ca/)
 ## BugCrowd College Program Educational Event
 
+![alt text](image.png)
+
 - **Institution:** University of New Brunswick (UNB)
 - **Program:** BugCrowd College Program
 - **Session Type:** Educational Event
@@ -14,6 +16,7 @@
 
 ---
 
-- =� **Slides (PDF):** [TBC]()
-- =� **Speaker card:** [Hacker Spotlight: Ads Dawson](https://www.bugcrowd.com/blog/hacker-spotlight-ads-dawson/)
-- < **YouTube Recording** [TBC](TBC)
+- 📄 **Slides (PDF):** [TBC]()
+- 📣 **Speaker card:** [Hacker Spotlight: Ads Dawson](https://www.bugcrowd.com/blog/hacker-spotlight-ads-dawson/)
+- 🗞️ **Social Post**: [Here](https://www.linkedin.com/posts/unbcybersec_bugcrowd-unb-cybersecurity-activity-7388926821540548608-ZokB?utm_source=share&utm_medium=member_android&rcm=ACoAAA1p028B5AHnJgHCbLKDdcDTNnvyDWkUwzE)
+- 🍿 **YouTube Recording** [TBC](TBC)
