@@ -282,6 +282,16 @@ const publications = [
     year: "2025"
   },
   {
+    id: "arxiv-maif",
+    title: "arXiv:2511.15097 - MAIF: Enforcing AI Trust and Provenance with an Artifact-Centric Agentic Paradigm",
+    publisher: "arXiv",
+    description: "Academic paper on enforcing AI trust and provenance through an artifact-centric agentic paradigm for robust AI system accountability.",
+    url: "https://arxiv.org/abs/2511.15097",
+    icon: "fas fa-file-alt",
+    external: true,
+    year: "2025"
+  },
+  {
     id: "arxiv-airtbench",
     title: "arXiv:2506.14682 - AIRTBench: Measuring Autonomous AI Red Teaming Capabilities in Language Models",
     publisher: "arXiv",
