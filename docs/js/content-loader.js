@@ -354,6 +354,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 path: "promptorgtfo",
                 subdir: "august",
                 localPath: "conferences/promptorgtfo/2025/august"
+            },
+            {
+                name: "CyberToronto",
+                displayName: "CyberToronto 2025 - Community Leaders Panel",
+                year: "2025",
+                icon: "fas fa-users",
+                description: "Community Leaders Panel - Advancing Cybersecurity Through Community Leadership",
+                path: "cyber-toronto",
+                subdir: "december",
+                localPath: "conferences/cyber-toronto/2025/december"
             }
         ];
 

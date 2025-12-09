@@ -271,6 +271,14 @@
       "year": "2025",
       "icon": "fas fa-lock",
       "description": "Talks on AI/ML Security and LLM Application Safety"
+    },
+    {
+      "id": "cyber-toronto-2025",
+      "name": "CyberToronto",
+      "path": "cyber-toronto/2025/december",
+      "year": "2025",
+      "icon": "fas fa-users",
+      "description": "Community Leaders Panel - Advancing Cybersecurity Through Community Leadership"
     }
   ],
   "podcasts": [
