@@ -42,7 +42,7 @@ const conferences = [
         description: "Hacker Summer Camp - Poisoning Web Training Data",
         path: "dc604",
         subdir: "hacker-summer-camp-23",
-        localPath: "conferences/dc604/2023/hacker-summer-camp-23",
+        localPath: "conferences/dc604/hacker-summer-camp-23",
         type: "conference",
         date: "2023-08-15",
         featured: true

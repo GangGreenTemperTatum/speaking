@@ -265,16 +265,45 @@
             contentPath = `television/${org}`;
         }
 
+        // Try multiple possible paths for content
+        async function tryFetch(paths) {
+            for (const path of paths) {
+                try {
+                    const response = await fetch(path);
+                    if (response.ok) {
+                        return { response, path };
+                    }
+                } catch (e) {
+                    // Continue to next path
+                }
+            }
+            throw new Error('Content not found');
+        }
+
         // Load content
         async function loadContent() {
             try {
-                const readmeUrl = `${contentPath}/README.md`;
-                const response = await fetch(readmeUrl);
+                // Build possible paths to try
+                const possiblePaths = [];
                 
-                if (!response.ok) {
-                    throw new Error('Content not found');
+                if (type === 'conference') {
+                    // Try with year/subdir structure first
+                    if (subdir) {
+                        possiblePaths.push(`conferences/${org}/${year}/${subdir}/README.md`);
+                    }
+                    possiblePaths.push(`conferences/${org}/${year}/README.md`);
+                    possiblePaths.push(`conferences/${org}/README.md`);
+                    // Try subdir directly under org (for cases like dc604/hacker-summer-camp-23)
+                    if (subdir) {
+                        possiblePaths.push(`conferences/${org}/${subdir}/README.md`);
+                    }
+                } else if (type === 'podcast') {
+                    possiblePaths.push(`podcasts/${org}/README.md`);
+                } else if (type === 'television') {
+                    possiblePaths.push(`television/${org}/README.md`);
                 }
 
+                const { response, path } = await tryFetch(possiblePaths);
                 const markdown = await response.text();
                 
                 // Parse markdown (simple version)
