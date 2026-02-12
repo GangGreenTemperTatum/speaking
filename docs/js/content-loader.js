@@ -878,6 +878,15 @@ document.addEventListener('DOMContentLoaded', function() {
     function loadTelevision() {
         const television = [
             {
+                name: "CyberNews",
+                year: "2025",
+                icon: "fas fa-skull-crossbones",
+                description: "The Dangerous Evolution of AI Hacking",
+                path: "cybernews",
+                date: "2025",
+                videoUrl: "https://www.youtube.com/watch?v=-um9zKf1V30"
+            },
+            {
                 name: "NASDAQ TradeTalks",
                 year: "2025",
                 icon: "fas fa-chart-line",
