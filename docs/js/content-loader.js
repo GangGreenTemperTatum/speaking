@@ -590,6 +590,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 year: "2024"
             },
             {
+                title: "Inside the Mind of a Hacker 2026",
+                publisher: "BugCrowd",
+                description: "Bugcrowd's annual report analyzing how today's hackers think and work, covering hacker motivations, team-based hacking trends, and AI adoption in vulnerability discovery",
+                url: "https://www.bugcrowd.com/resources/report/inside-the-mind-of-a-hacker/",
+                icon: "fas fa-bug",
+                image: "publications/bugcrowd/itmoah-2026/itmoah-2026-ads-dawson.png",
+                year: "2026"
+            },
+            {
                 title: "Inside the Mind of a Hacker 2024 Edition",
                 publisher: "BugCrowd",
                 description: "Analysis of hacker motivations, methods, and impact in the evolving security landscape",
@@ -868,6 +877,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function loadTelevision() {
         const television = [
+            {
+                name: "CyberNews",
+                year: "2026",
+                icon: "fas fa-skull-crossbones",
+                description: "The Dangerous Evolution of AI Hacking",
+                path: "cybernews",
+                date: "2026",
+                videoUrl: "https://www.youtube.com/watch?v=-um9zKf1V30"
+            },
             {
                 name: "NASDAQ TradeTalks",
                 year: "2025",
