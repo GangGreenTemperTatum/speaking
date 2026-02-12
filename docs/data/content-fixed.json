@@ -335,6 +335,17 @@
       "year": "2025"
     },
     {
+      "id": "bugcrowd-itmoah-2026",
+      "title": "Inside the Mind of a Hacker 2026",
+      "publisher": "BugCrowd",
+      "description": "Bugcrowd's annual report analyzing how today's hackers think and work, covering hacker motivations, team-based hacking trends, and AI adoption in vulnerability discovery",
+      "url": "https://www.bugcrowd.com/resources/report/inside-the-mind-of-a-hacker/",
+      "icon": "fas fa-bug",
+      "external": true,
+      "year": "2026",
+      "image": "publications/bugcrowd/itmoah-2026/itmoah-2026-ads-dawson.png"
+    },
+    {
       "id": "arxiv-maif",
       "title": "arXiv:2511.15097 - MAIF: Enforcing AI Trust and Provenance with an Artifact-Centric Agentic Paradigm",
       "publisher": "arXiv",
