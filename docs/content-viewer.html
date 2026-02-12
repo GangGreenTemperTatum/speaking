@@ -3,53 +3,369 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Content Viewer</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Content Viewer | Ads Dawson</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto+Mono:wght@400;700&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .header {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 20px;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: #764ba2;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        /* Content Card */
+        .content-card {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            min-height: 400px;
+        }
+
+        .content-meta {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .meta-tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .content-body {
+            color: #333;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .content-body h2 {
+            color: #2c3e50;
+            margin: 30px 0 15px 0;
+            font-size: 24px;
+        }
+
+        .content-body h3 {
+            color: #667eea;
+            margin: 25px 0 10px 0;
+            font-size: 20px;
+        }
+
+        .content-body p {
+            margin-bottom: 15px;
+        }
+
+        .content-body ul, .content-body ol {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+
+        .content-body li {
+            margin-bottom: 8px;
+        }
+
+        .content-body a {
+            color: #667eea;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .content-body a:hover {
+            border-bottom-color: #667eea;
+        }
+
+        /* Loading */
+        .loading {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .loading i {
+            font-size: 48px;
+            color: #667eea;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Error */
+        .error {
+            text-align: center;
+            padding: 60px 20px;
+            color: #e74c3c;
+        }
+
+        .error i {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        /* Files List */
+        .files-list {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 2px solid #eee;
+        }
+
+        .files-list h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .file-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            text-decoration: none;
+            color: #333;
+            transition: background 0.3s;
+        }
+
+        .file-item:hover {
+            background: #e9ecef;
+        }
+
+        .file-item i {
+            color: #667eea;
+            font-size: 20px;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .header, .content-card {
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="comic-container">
-        <!-- Header Panel -->
-        <header class="comic-panel intro-panel">
-            <div class="panel-content">
-                <h1 id="view-title" class="glitch-text">Loading Content...</h1>
-                <div id="view-subtitle" class="subtitle"></div>
-                <a href="./" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Home</a>
-            </div>
-        </header>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <a href="./" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Portfolio
+            </a>
+            <h1 id="view-title">Loading Content...</h1>
+            <p id="view-subtitle"></p>
+        </div>
 
-        <!-- Main Content -->
-        <main class="comic-grid">
-            <section id="content-container" class="content-section active">
-                <div class="comic-panel">
-                    <div class="panel-content">
-                        <div class="loading-indicator">
-                            <i class="fas fa-spinner fa-spin"></i> Loading content...
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <!-- Footer -->
-        <footer class="comic-panel footer-panel">
-            <div class="panel-content">
-                <div class="social-links">
-                    <a href="https://github.com/GangGreenTemperTatum" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/adamdawson0" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://arxiv.org/search/cs?searchtype=author&query=Dawson,+A" target="_blank"><i class="fas fa-graduation-cap"></i></a>
-                    <a href="https://bugcrowd.com/h/0xmoose" target="_blank" title="Bugcrowd Profile"><i class="fas fa-bug"></i></a>
-                    <a href="https://hackerone.com/0xmoose" target="_blank" title="HackerOne Profile"><i class="fas fa-user-secret"></i></a>
-                </div>
-                <p>&copy; <span id="year">2024</span> Ads Dawson. All rights reserved.</p>
+        <!-- Content -->
+        <div class="content-card">
+            <div class="content-meta" id="content-meta">
+                <!-- Meta tags inserted here -->
             </div>
-        </footer>
+            
+            <div class="content-body" id="content-body">
+                <div class="loading">
+                    <i class="fas fa-spinner"></i>
+                    <p>Loading content...</p>
+                </div>
+            </div>
+
+            <div class="files-list" id="files-list" style="display: none;">
+                <h3><i class="fas fa-folder-open"></i> Files & Resources</h3>
+                <div id="files-container"></div>
+            </div>
+        </div>
     </div>
 
-    <script src="js/debug.js"></script>
-    <script src="js/viewer.js"></script>
+    <script>
+        // Parse URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const type = urlParams.get('type');
+        const org = urlParams.get('org');
+        const year = urlParams.get('year');
+        const subdir = urlParams.get('subdir');
+
+        // Content type display names
+        const typeNames = {
+            conference: 'Conference',
+            podcast: 'Podcast',
+            publication: 'Publication',
+            volunteering: 'Volunteering',
+            television: 'Television'
+        };
+
+        // Build the path
+        let contentPath = '';
+        if (type === 'conference') {
+            contentPath = `conferences/${org}/${year}`;
+            if (subdir) contentPath += `/${subdir}`;
+        } else if (type === 'podcast') {
+            contentPath = `podcasts/${org}`;
+        } else if (type === 'television') {
+            contentPath = `television/${org}`;
+        }
+
+        // Load content
+        async function loadContent() {
+            try {
+                const readmeUrl = `${contentPath}/README.md`;
+                const response = await fetch(readmeUrl);
+                
+                if (!response.ok) {
+                    throw new Error('Content not found');
+                }
+
+                const markdown = await response.text();
+                
+                // Parse markdown (simple version)
+                const lines = markdown.split('\n');
+                let title = '';
+                let description = '';
+                let body = '';
+                
+                lines.forEach((line, index) => {
+                    if (index === 0 && line.startsWith('#')) {
+                        title = line.replace('#', '').trim();
+                    } else if (index === 1 && line.startsWith('##')) {
+                        description = line.replace('##', '').trim();
+                    } else {
+                        body += line + '\n';
+                    }
+                });
+
+                // Update page
+                document.getElementById('view-title').textContent = title || 'Content';
+                document.getElementById('view-subtitle').textContent = description || '';
+                document.title = `${title || 'Content'} | Ads Dawson`;
+
+                // Add meta tags
+                const metaContainer = document.getElementById('content-meta');
+                metaContainer.innerHTML = `
+                    <span class="meta-tag">${typeNames[type] || type}</span>
+                    <span class="meta-tag">${year}</span>
+                `;
+
+                // Render markdown-like content
+                const contentBody = document.getElementById('content-body');
+                contentBody.innerHTML = renderMarkdown(body);
+
+                // Look for files in the directory
+                await loadFiles(contentPath);
+
+            } catch (error) {
+                document.getElementById('content-body').innerHTML = `
+                    <div class="error">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <h3>Content Not Found</h3>
+                        <p>Unable to load the requested content.</p>
+                        <p style="font-size: 14px; color: #999; margin-top: 10px;">${error.message}</p>
+                    </div>
+                `;
+            }
+        }
+
+        // Simple markdown renderer
+        function renderMarkdown(text) {
+            return text
+                .replace(/^### (.*$)/gim, '<h3>$1</h3>')
+                .replace(/^## (.*$)/gim, '<h2>$1</h2>')
+                .replace(/^# (.*$)/gim, '<h1>$1</h1>')
+                .replace(/\*\*(.*)\*\*/gim, '<strong>$1</strong>')
+                .replace(/\*(.*)\*/gim, '<em>$1</em>')
+                .replace(/\[([^\]]+)\]\(([^)]+)\)/gim, '<a href="$2" target="_blank">$1</a>')
+                .replace(/^\* (.*$)/gim, '<li>$1</li>')
+                .replace(/(<li>.*<\/li>)/s, '<ul>$1</ul>')
+                .replace(/\n/gim, '<br>');
+        }
+
+        // Load files from directory
+        async function loadFiles(path) {
+            // This is a simplified version - in reality you'd need a server-side API
+            // to list directory contents, or maintain a manifest file
+            const filesList = document.getElementById('files-list');
+            const filesContainer = document.getElementById('files-container');
+            
+            // Common file types to look for
+            const filePatterns = [
+                { ext: 'pdf', icon: 'fa-file-pdf', name: 'Presentation Slides (PDF)' },
+                { ext: 'png', icon: 'fa-image', name: 'Image' },
+                { ext: 'jpg', icon: 'fa-image', name: 'Image' }
+            ];
+
+            // Try to guess common files based on directory
+            if (type === 'conference') {
+                filesContainer.innerHTML = `
+                    <a href="${path}/" class="file-item" target="_blank">
+                        <i class="fas fa-folder"></i>
+                        <span>View Directory Contents</span>
+                    </a>
+                `;
+                filesList.style.display = 'block';
+            }
+        }
+
+        // Load content when page loads
+        loadContent();
+    </script>
 </body>
 </html>
