@@ -410,17 +410,19 @@
             html = html.replace(/__(.*?)__/g, '<strong>$1</strong>');
             html = html.replace(/_(.*?)_/g, '<em>$1</em>');
             
-            // Convert images - handle both markdown and HTML img tags
-            // Markdown images: ![alt](url)
+            // Process markdown images: ![alt](url) - convert to placeholders first
+            const imagePlaceholders = [];
             html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (match, alt, src) => {
                 // Make relative paths absolute
                 if (!src.startsWith('http') && !src.startsWith('//')) {
                     src = `${contentPath}/${src}`;
                 }
-                return `<img src="${src}" alt="${alt}" style="max-width:100%;height:auto;border-radius:8px;margin:20px 0;box-shadow:0 4px 12px rgba(0,0,0,0.1);">`;
+                const placeholder = `<!--IMAGE_${imagePlaceholders.length}-->`;
+                imagePlaceholders.push(`<img src="${src}" alt="${alt}" style="max-width:100%;height:auto;border-radius:8px;margin:20px 0;box-shadow:0 4px 12px rgba(0,0,0,0.1);">`);
+                return placeholder;
             });
             
-            // HTML img tags - fix relative paths
+            // Process existing HTML img tags - fix relative paths
             html = html.replace(/<img([^>]*)src=["']([^"']+)["']([^>]*)>/gi, (match, before, src, after) => {
                 if (!src.startsWith('http') && !src.startsWith('//') && !src.startsWith('data:')) {
                     src = `${contentPath}/${src}`;
@@ -447,6 +449,11 @@
             html = html.replace(/^---+$/gim, '<hr>');
             html = html.replace(/^___+$/gim, '<hr>');
             html = html.replace(/^\*\*\*+$/gim, '<hr>');
+            
+            // Restore image placeholders
+            imagePlaceholders.forEach((imgHtml, index) => {
+                html = html.replace(`<!--IMAGE_${index}-->`, imgHtml);
+            });
             
             // Restore code blocks
             codeBlocks.forEach((block, index) => {
