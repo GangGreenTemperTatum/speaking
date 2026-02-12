@@ -53,11 +53,13 @@
             font-size: 32px;
             color: #2c3e50;
             margin-bottom: 10px;
+            line-height: 1.3;
         }
 
         .header p {
             color: #666;
             font-size: 16px;
+            line-height: 1.5;
         }
 
         /* Content Card */
@@ -91,6 +93,13 @@
             font-size: 16px;
         }
 
+        .content-body h1 {
+            color: #2c3e50;
+            margin: 0 0 20px 0;
+            font-size: 28px;
+            line-height: 1.3;
+        }
+
         .content-body h2 {
             color: #2c3e50;
             margin: 30px 0 15px 0;
@@ -121,10 +130,38 @@
             text-decoration: none;
             border-bottom: 2px solid transparent;
             transition: border-color 0.3s;
+            font-weight: 500;
         }
 
         .content-body a:hover {
             border-bottom-color: #667eea;
+        }
+
+        .content-body img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .content-body blockquote {
+            border-left: 4px solid #667eea;
+            padding-left: 20px;
+            margin: 20px 0;
+            color: #555;
+            font-style: italic;
+        }
+
+        .content-body hr {
+            border: none;
+            border-top: 2px solid #eee;
+            margin: 30px 0;
+        }
+
+        .content-body strong {
+            font-weight: 700;
+            color: #2c3e50;
         }
 
         /* Loading */
@@ -254,16 +291,8 @@
             television: 'Television'
         };
 
-        // Build the path
-        let contentPath = '';
-        if (type === 'conference') {
-            contentPath = `conferences/${org}/${year}`;
-            if (subdir) contentPath += `/${subdir}`;
-        } else if (type === 'podcast') {
-            contentPath = `podcasts/${org}`;
-        } else if (type === 'television') {
-            contentPath = `television/${org}`;
-        }
+        // Track the actual path we found content at
+        let actualContentPath = '';
 
         // Try multiple possible paths for content
         async function tryFetch(paths) {
@@ -271,6 +300,8 @@
                 try {
                     const response = await fetch(path);
                     if (response.ok) {
+                        // Store the directory path (remove README.md)
+                        actualContentPath = path.replace('/README.md', '');
                         return { response, path };
                     }
                 } catch (e) {
@@ -314,9 +345,9 @@
                 
                 lines.forEach((line, index) => {
                     if (index === 0 && line.startsWith('#')) {
-                        title = line.replace('#', '').trim();
+                        title = line.replace(/^#\s*/, '').trim();
                     } else if (index === 1 && line.startsWith('##')) {
-                        description = line.replace('##', '').trim();
+                        description = line.replace(/^##\s*/, '').trim();
                     } else {
                         body += line + '\n';
                     }
@@ -325,7 +356,7 @@
                 // Update page
                 document.getElementById('view-title').textContent = title || 'Content';
                 document.getElementById('view-subtitle').textContent = description || '';
-                document.title = `${title || 'Content'} | Ads Dawson`;
+                document.title = `${title.replace(/<[^>]*>/g, '') || 'Content'} | Ads Dawson`;
 
                 // Add meta tags
                 const metaContainer = document.getElementById('content-meta');
@@ -334,12 +365,12 @@
                     <span class="meta-tag">${year}</span>
                 `;
 
-                // Render markdown-like content
+                // Render markdown content
                 const contentBody = document.getElementById('content-body');
-                contentBody.innerHTML = renderMarkdown(body);
+                contentBody.innerHTML = renderMarkdown(body, actualContentPath);
 
                 // Look for files in the directory
-                await loadFiles(contentPath);
+                await loadFiles(actualContentPath);
 
             } catch (error) {
                 document.getElementById('content-body').innerHTML = `
@@ -353,24 +384,99 @@
             }
         }
 
-        // Simple markdown renderer
-        function renderMarkdown(text) {
-            return text
-                .replace(/^### (.*$)/gim, '<h3>$1</h3>')
-                .replace(/^## (.*$)/gim, '<h2>$1</h2>')
-                .replace(/^# (.*$)/gim, '<h1>$1</h1>')
-                .replace(/\*\*(.*)\*\*/gim, '<strong>$1</strong>')
-                .replace(/\*(.*)\*/gim, '<em>$1</em>')
-                .replace(/\[([^\]]+)\]\(([^)]+)\)/gim, '<a href="$2" target="_blank">$1</a>')
-                .replace(/^\* (.*$)/gim, '<li>$1</li>')
-                .replace(/(<li>.*<\/li>)/s, '<ul>$1</ul>')
-                .replace(/\n/gim, '<br>');
+        // Enhanced markdown renderer
+        function renderMarkdown(text, contentPath) {
+            if (!contentPath) contentPath = '';
+            
+            let html = text;
+            
+            // Handle code blocks first (preserve them)
+            const codeBlocks = [];
+            html = html.replace(/```[\s\S]*?```/g, (match) => {
+                codeBlocks.push(match);
+                return `<!--CODE_BLOCK_${codeBlocks.length - 1}-->`;
+            });
+            
+            // Convert headers
+            html = html.replace(/^#### (.*$)/gim, '<h4>$1</h4>');
+            html = html.replace(/^### (.*$)/gim, '<h3>$1</h3>');
+            html = html.replace(/^## (.*$)/gim, '<h2>$1</h2>');
+            html = html.replace(/^# (.*$)/gim, '<h1>$1</h1>');
+            
+            // Convert bold and italic
+            html = html.replace(/\*\*\*(.*?)\*\*\*/g, '<strong><em>$1</em></strong>');
+            html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+            html = html.replace(/\*(.*?)\*/g, '<em>$1</em>');
+            html = html.replace(/__(.*?)__/g, '<strong>$1</strong>');
+            html = html.replace(/_(.*?)_/g, '<em>$1</em>');
+            
+            // Convert images - handle both markdown and HTML img tags
+            // Markdown images: ![alt](url)
+            html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (match, alt, src) => {
+                // Make relative paths absolute
+                if (!src.startsWith('http') && !src.startsWith('//')) {
+                    src = `${contentPath}/${src}`;
+                }
+                return `<img src="${src}" alt="${alt}" style="max-width:100%;height:auto;border-radius:8px;margin:20px 0;box-shadow:0 4px 12px rgba(0,0,0,0.1);">`;
+            });
+            
+            // HTML img tags - fix relative paths
+            html = html.replace(/<img([^>]*)src=["']([^"']+)["']([^>]*)>/gi, (match, before, src, after) => {
+                if (!src.startsWith('http') && !src.startsWith('//') && !src.startsWith('data:')) {
+                    src = `${contentPath}/${src}`;
+                }
+                return `<img${before}src="${src}"${after} style="max-width:100%;height:auto;border-radius:8px;margin:20px 0;box-shadow:0 4px 12px rgba(0,0,0,0.1);">`;
+            });
+            
+            // Convert links - handle markdown links [text](url)
+            html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+            
+            // Convert unordered lists
+            html = html.replace(/^\* (.*$)/gim, '<li>$1</li>');
+            html = html.replace(/(<li>.*<\/li>\n?)+/g, '<ul>$&</ul>');
+            html = html.replace(/<\/ul>\s*<ul>/g, '');
+            
+            // Convert ordered lists
+            html = html.replace(/^\d+\.\s+(.*$)/gim, '<li>$1</li>');
+            
+            // Convert blockquotes
+            html = html.replace(/^> (.*$)/gim, '<blockquote>$1</blockquote>');
+            html = html.replace(/<\/blockquote>\s*<blockquote>/g, '<br>');
+            
+            // Convert horizontal rules
+            html = html.replace(/^---+$/gim, '<hr>');
+            html = html.replace(/^___+$/gim, '<hr>');
+            html = html.replace(/^\*\*\*+$/gim, '<hr>');
+            
+            // Restore code blocks
+            codeBlocks.forEach((block, index) => {
+                const code = block.replace(/```(\w+)?\n?/, '').replace(/```$/, '');
+                html = html.replace(`<!--CODE_BLOCK_${index}-->`, `<pre style="background:#f5f5f5;padding:15px;border-radius:8px;overflow-x:auto;"><code>${escapeHtml(code)}</code></pre>`);
+            });
+            
+            // Convert remaining newlines to <br> (but not inside tags)
+            html = html.replace(/\n/g, '<br>');
+            
+            // Clean up excessive <br> tags
+            html = html.replace(/(<br>\s*){3,}/g, '<br><br>');
+            
+            return html;
+        }
+
+        // Escape HTML special characters
+        function escapeHtml(text) {
+            const map = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#039;'
+            };
+            return text.replace(/[&<>"']/g, (m) => map[m]);
         }
 
         // Load files from directory
         async function loadFiles(path) {
-            // This is a simplified version - in reality you'd need a server-side API
-            // to list directory contents, or maintain a manifest file
             const filesList = document.getElementById('files-list');
             const filesContainer = document.getElementById('files-container');
             
@@ -378,17 +484,47 @@
             const filePatterns = [
                 { ext: 'pdf', icon: 'fa-file-pdf', name: 'Presentation Slides (PDF)' },
                 { ext: 'png', icon: 'fa-image', name: 'Image' },
-                { ext: 'jpg', icon: 'fa-image', name: 'Image' }
+                { ext: 'jpg', icon: 'fa-image', name: 'Image' },
+                { ext: 'jpeg', icon: 'fa-image', name: 'Image' }
             ];
 
-            // Try to guess common files based on directory
-            if (type === 'conference') {
-                filesContainer.innerHTML = `
+            // Try to find actual files by attempting to fetch them
+            const foundFiles = [];
+            
+            for (const pattern of filePatterns) {
+                const testPath = `${path}/file.${pattern.ext}`;
+                try {
+                    const response = await fetch(testPath, { method: 'HEAD' });
+                    if (response.ok) {
+                        foundFiles.push({ ...pattern, path: testPath });
+                    }
+                } catch (e) {
+                    // File doesn't exist, continue
+                }
+            }
+
+            if (foundFiles.length > 0 || type === 'conference' || type === 'podcast' || type === 'television') {
+                let filesHtml = '';
+                
+                // Add found files
+                foundFiles.forEach(file => {
+                    filesHtml += `
+                        <a href="${file.path}" class="file-item" target="_blank">
+                            <i class="fas ${file.icon}"></i>
+                            <span>${file.name}</span>
+                        </a>
+                    `;
+                });
+                
+                // Add link to browse directory
+                filesHtml += `
                     <a href="${path}/" class="file-item" target="_blank">
-                        <i class="fas fa-folder"></i>
-                        <span>View Directory Contents</span>
+                        <i class="fas fa-folder-open"></i>
+                        <span>Browse Directory</span>
                     </a>
                 `;
+                
+                filesContainer.innerHTML = filesHtml;
                 filesList.style.display = 'block';
             }
         }
