@@ -882,6 +882,18 @@ const publications = [
         type: "publication",
         date: "2023-08-01",
         featured: true
+    },
+    {
+        id: "bugcrowd-itmoah-2026",
+        title: "Inside the Mind of a Hacker 2026",
+        publisher: "Bugcrowd",
+        description: "Bugcrowd's annual report analyzing how today's hackers think and work, covering hacker motivations, team-based hacking trends, and AI adoption in vulnerability discovery.",
+        url: "https://www.bugcrowd.com/resources/report/inside-the-mind-of-a-hacker/",
+        icon: "fas fa-bug",
+        year: "2026",
+        type: "publication",
+        date: "2026-01-01",
+        featured: true
     }
 ];
 
@@ -956,6 +968,18 @@ const television = [
         path: "nasdaq-tradetalks",
         date: "2025-01-15",
         videoUrl: "https://www.youtube.com/watch?v=kWJyrbWsRNk",
+        type: "television",
+        featured: true
+    },
+    {
+        id: "cybernews-2026",
+        name: "CyberNews",
+        year: "2026",
+        icon: "fas fa-newspaper",
+        description: "The Dangerous Evolution of AI Hacking - YouTube Documentary Feature exploring vibe hacking and AI-driven cyberattacks",
+        path: "cybernews",
+        date: "2026-01-31",
+        videoUrl: "https://www.youtube.com/watch?v=-um9zKf1V30",
         type: "television",
         featured: true
     }
