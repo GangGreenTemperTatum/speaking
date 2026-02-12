@@ -468,15 +468,15 @@ const conferences = [
         featured: false
     },
     {
-        id: "bugcrowd-umbc-2025",
+        id: "bugcrowd-ubmc-2025",
         name: "BugCrowd",
         displayName: "UMBC CyberDawgs",
         year: "2025",
         icon: "fas fa-bug",
         description: "BugCrowd College Program Educational Event",
         path: "bugcrowd",
-        subdir: "november/umbc",
-        localPath: "conferences/bugcrowd/2025/november/umbc",
+        subdir: "november/ubmc",
+        localPath: "conferences/bugcrowd/2025/november/ubmc",
         type: "conference",
         date: "2025-11-01",
         featured: false
