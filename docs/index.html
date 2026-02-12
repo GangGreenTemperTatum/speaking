@@ -3,151 +3,421 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
-    <meta name="description" content="Ads Dawson - AI/ML Security Researcher. Interactive portfolio featuring speaking engagements, publications, and podcast appearances.">
-    <meta name="theme-color" content="#0d0221">
-    <title>Ads Dawson | AI/ML Security Researcher</title>
+    <meta name="description" content="Ads Dawson - AI/ML Security Researcher">
+    <title>Ads Dawson | Play Flappy Bird</title>
     
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Styles -->
-    <link rel="stylesheet" href="css/game.css">
-    <link rel="stylesheet" href="css/modal.css">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐛</text></svg>">
-    
     <style>
-        /* Critical CSS for initial load */
-        body {
+        * {
             margin: 0;
             padding: 0;
-            background-color: #0d0221;
-            font-family: 'Roboto Mono', monospace;
-            overflow: hidden;
+            box-sizing: border-box;
         }
-        
-        #loading-screen {
-            position: fixed;
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #2c3e50;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        .site-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .site-header h1 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 24px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 0 rgba(0,0,0,0.3);
+        }
+
+        .site-header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .social-links {
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 20px;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.2);
+        }
+
+        /* Main Layout */
+        .main-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Game Section */
+        .game-section {
+            flex: 2;
+            min-width: 320px;
+            max-width: 600px;
+        }
+
+        .game-wrapper {
+            position: relative;
+            background: #4EC0CA;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            border: 4px solid #fff;
+        }
+
+        #game-canvas {
+            display: block;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 3/4;
+            cursor: pointer;
+        }
+
+        .game-overlay {
+            position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
-            background: #0d0221;
+            right: 0;
+            bottom: 0;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            z-index: 9999;
-            transition: opacity 0.5s ease;
-        }
-        
-        #loading-screen.hidden {
-            opacity: 0;
+            background: rgba(0,0,0,0.6);
+            color: white;
+            font-family: 'Press Start 2P', cursive;
+            text-align: center;
             pointer-events: none;
         }
-        
-        .loading-bird {
-            font-size: 48px;
-            animation: bounce 1s infinite;
+
+        .game-overlay.hidden {
+            display: none;
         }
-        
-        .loading-text {
-            color: #2de2e6;
-            margin-top: 20px;
+
+        .game-overlay h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 0 #000;
+            color: #fff;
+        }
+
+        .game-overlay p {
+            font-size: 12px;
+            line-height: 1.8;
+            max-width: 80%;
+        }
+
+        .game-stats {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Press Start 2P', cursive;
+            font-size: 36px;
+            color: white;
+            text-shadow: 2px 2px 0 #000;
+            z-index: 10;
+        }
+
+        /* Content Section */
+        .content-section {
+            flex: 3;
+            min-width: 320px;
+        }
+
+        .content-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 600;
             font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border: 2px solid rgba(255,255,255,0.2);
         }
-        
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
+
+        .tab-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .tab-btn.active {
+            background: #4EC0CA;
+            border-color: #4EC0CA;
+            color: white;
+        }
+
+        .tab-btn i {
+            font-size: 16px;
+        }
+
+        /* Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+            max-height: 600px;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            border-left: 4px solid #4EC0CA;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .content-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .content-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .content-card-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: white;
+        }
+
+        .content-card-year {
+            background: #e0e0e0;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #666;
+        }
+
+        .content-card h3 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            line-height: 1.3;
+        }
+
+        .content-card p {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+
+        .content-card-meta {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .content-card-tag {
+            background: #f0f0f0;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 11px;
+            color: #666;
+        }
+
+        /* Filters */
+        .filters {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .filters input, .filters select {
+            padding: 10px 15px;
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 25px;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            font-size: 14px;
+            flex: 1;
+        }
+
+        .filters input::placeholder {
+            color: rgba(255,255,255,0.6);
+        }
+
+        .filters select {
+            max-width: 120px;
+            cursor: pointer;
+        }
+
+        .filters select option {
+            background: #2c3e50;
+            color: white;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 968px) {
+            .main-container {
+                flex-direction: column;
+            }
+
+            .game-section {
+                max-width: 100%;
+            }
+
+            .site-header h1 {
+                font-size: 18px;
+            }
+
+            .game-overlay h2 {
+                font-size: 20px;
+            }
+
+            .content-tabs {
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                padding-bottom: 10px;
+            }
+
+            .tab-btn {
+                flex-shrink: 0;
+                padding: 10px 16px;
+                font-size: 12px;
+            }
+        }
+
+        /* Scrollbar styling */
+        .content-grid::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .content-grid::-webkit-scrollbar-track {
+            background: rgba(255,255,255,0.1);
+            border-radius: 4px;
+        }
+
+        .content-grid::-webkit-scrollbar-thumb {
+            background: rgba(255,255,255,0.3);
+            border-radius: 4px;
+        }
+
+        .content-grid::-webkit-scrollbar-thumb:hover {
+            background: rgba(255,255,255,0.5);
+        }
+
+        /* Empty state */
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .empty-state i {
+            font-size: 48px;
+            margin-bottom: 15px;
+            display: block;
         }
     </style>
 </head>
 <body>
-    <!-- Loading Screen -->
-    <div id="loading-screen">
-        <div class="loading-bird">🐛</div>
-        <div class="loading-text">Loading Portfolio...</div>
-    </div>
+    <!-- Header -->
+    <header class="site-header">
+        <h1>🎮 ADS DAWSON</h1>
+        <p>AI/ML Security Researcher | Play Flappy Bird & Explore My Work</p>
+        <div class="social-links">
+            <a href="https://github.com/GangGreenTemperTatum" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/adamdawson0" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://bugcrowd.com/h/0xmoose" target="_blank"><i class="fas fa-bug"></i></a>
+        </div>
+    </header>
 
-    <!-- Game Container -->
-    <div id="game-container">
-        <canvas id="game-canvas"></canvas>
-        
-        <!-- Archive Button -->
-        <button id="archive-btn" class="archive-btn" aria-label="View full archive">
-            <i class="fas fa-archive"></i>
-            <span>Archive</span>
-        </button>
-        
-        <!-- Score Display -->
-        <div id="score-display" class="score-display" aria-label="Score">0</div>
-        
-        <!-- Content Discovered Counter -->
-        <div id="content-counter" class="content-counter" aria-label="Content discovered">
-            <span class="bug-icon" aria-hidden="true">🐛</span>
-            <span id="collected-count">0</span>
-        </div>
-        
-        <!-- Zone Indicator -->
-        <div id="zone-indicator" class="zone-indicator" aria-label="Current zone">
-            <span id="current-zone">Conference Zone</span>
-        </div>
-    </div>
-    
-    <!-- Content Card Modal -->
-    <div id="content-modal" class="modal-overlay" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="card-title">
-        <div class="content-card" role="document">
-            <div class="card-header">
-                <i id="card-icon" class="fas fa-microphone-alt" aria-hidden="true"></i>
-                <span id="card-year" class="year-badge">2025</span>
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Game Section -->
+        <section class="game-section">
+            <div class="game-wrapper">
+                <canvas id="game-canvas" width="600" height="800"></canvas>
+                <div id="game-start" class="game-overlay">
+                    <h2>FLAPPY BIRD</h2>
+                    <p>Click, Tap, or Press SPACE to fly<br>Avoid the green pipes!<br><br>High Score: <span id="high-score">0</span></p>
+                </div>
+                <div id="game-over" class="game-overlay hidden">
+                    <h2>GAME OVER</h2>
+                    <p>Score: <span id="final-score">0</span><br>Best: <span id="best-score">0</span><br><br>Click to Play Again</p>
+                </div>
+                <div class="game-stats" id="score">0</div>
             </div>
-            <h2 id="card-title">Content Title</h2>
-            <p id="card-description">Description goes here...</p>
-            <div class="card-actions">
-                <button id="btn-view-details" class="btn-primary">View Details</button>
-                <button id="btn-continue" class="btn-secondary">Continue Flying</button>
+        </section>
+
+        <!-- Content Section -->
+        <section class="content-section">
+            <div class="content-tabs">
+                <button class="tab-btn active" data-tab="conferences">
+                    <i class="fas fa-microphone-alt"></i> Conferences
+                </button>
+                <button class="tab-btn" data-tab="podcasts">
+                    <i class="fas fa-podcast"></i> Podcasts
+                </button>
+                <button class="tab-btn" data-tab="publications">
+                    <i class="fas fa-book"></i> Publications
+                </button>
+                <button class="tab-btn" data-tab="volunteering">
+                    <i class="fas fa-hands-helping"></i> Volunteering
+                </button>
+                <button class="tab-btn" data-tab="television">
+                    <i class="fas fa-tv"></i> TV
+                </button>
             </div>
-        </div>
-    </div>
-    
-    <!-- Archive Modal -->
-    <div id="archive-modal" class="modal-overlay archive-modal" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="archive-heading">
-        <div class="archive-container" role="document">
-            <header class="archive-header">
-                <h1 id="archive-heading">📚 Full Archive</h1>
-                <button id="btn-close-archive" class="btn-close" aria-label="Close archive">
-                    <i class="fas fa-times" aria-hidden="true"></i>
-                </button>
-            </header>
-            
-            <nav class="archive-tabs" role="tablist" aria-label="Content categories">
-                <button class="tab-btn active" data-tab="conferences" role="tab" aria-selected="true" aria-controls="archive-content">
-                    <i class="fas fa-microphone-alt" aria-hidden="true"></i> Conferences
-                </button>
-                <button class="tab-btn" data-tab="podcasts" role="tab" aria-selected="false" aria-controls="archive-content">
-                    <i class="fas fa-podcast" aria-hidden="true"></i> Podcasts
-                </button>
-                <button class="tab-btn" data-tab="publications" role="tab" aria-selected="false" aria-controls="archive-content">
-                    <i class="fas fa-book" aria-hidden="true"></i> Publications
-                </button>
-                <button class="tab-btn" data-tab="volunteering" role="tab" aria-selected="false" aria-controls="archive-content">
-                    <i class="fas fa-hands-helping" aria-hidden="true"></i> Volunteering
-                </button>
-                <button class="tab-btn" data-tab="television" role="tab" aria-selected="false" aria-controls="archive-content">
-                    <i class="fas fa-tv" aria-hidden="true"></i> TV
-                </button>
-            </nav>
-            
-            <div class="archive-filters">
-                <input type="search" id="archive-search" placeholder="Search content..." aria-label="Search archive">
-                <select id="year-filter" aria-label="Filter by year">
+
+            <div class="filters">
+                <input type="search" id="search-input" placeholder="Search content...">
+                <select id="year-filter">
                     <option value="all">All Years</option>
                     <option value="2026">2026</option>
                     <option value="2025">2025</option>
@@ -155,50 +425,439 @@
                     <option value="2023">2023</option>
                 </select>
             </div>
-            
-            <div id="archive-content" class="archive-content" role="tabpanel">
-                <!-- Content injected via JavaScript -->
+
+            <div id="content-grid" class="content-grid">
+                <!-- Content loaded by JavaScript -->
             </div>
-            
-            <button id="btn-back-to-game" class="btn-back">
-                <i class="fas fa-gamepad" aria-hidden="true"></i> Back to Game
-            </button>
-        </div>
+        </section>
     </div>
 
-    <!-- Scripts -->
     <script src="js/content-data.js"></script>
-    <script src="js/modal.js"></script>
-    <script src="js/game.js"></script>
-    
     <script>
-        // Hide loading screen when everything is loaded
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                const loadingScreen = document.getElementById('loading-screen');
-                if (loadingScreen) {
-                    loadingScreen.classList.add('hidden');
-                    setTimeout(function() {
-                        loadingScreen.style.display = 'none';
-                    }, 500);
-                }
-            }, 1000);
-        });
+        // ============================================
+        // FLAPPY BIRD GAME ENGINE
+        // ============================================
         
-        // Prevent zoom on double tap (mobile)
-        let lastTouchEnd = 0;
-        document.addEventListener('touchend', function(e) {
-            const now = Date.now();
-            if (now - lastTouchEnd <= 300) {
-                e.preventDefault();
+        const canvas = document.getElementById('game-canvas');
+        const ctx = canvas.getContext('2d');
+        const scoreEl = document.getElementById('score');
+        const startScreen = document.getElementById('game-start');
+        const gameOverScreen = document.getElementById('game-over');
+        const finalScoreEl = document.getElementById('final-score');
+        const bestScoreEl = document.getElementById('best-score');
+        const highScoreEl = document.getElementById('high-score');
+
+        // Game settings
+        const GRAVITY = 0.25;
+        const JUMP = -6;
+        const PIPE_SPEED = 2;
+        const PIPE_GAP = 160;
+        const PIPE_SPAWN_RATE = 120;
+
+        // Game state
+        let gameState = 'start'; // start, playing, gameover
+        let score = 0;
+        let highScore = parseInt(localStorage.getItem('flappyHighScore')) || 0;
+        let frames = 0;
+
+        // Bird
+        const bird = {
+            x: 100,
+            y: canvas.height / 2,
+            velocity: 0,
+            width: 40,
+            height: 30,
+            rotation: 0,
+            color: '#f4d03f',
+            eyeColor: '#fff',
+            pupilColor: '#000',
+            beakColor: '#e67e22'
+        };
+
+        // Pipes
+        let pipes = [];
+
+        // Ground
+        const ground = {
+            y: canvas.height - 80,
+            height: 80,
+            color: '#ded895',
+            stripeColor: '#d4c76a'
+        };
+
+        // Initialize high score display
+        highScoreEl.textContent = highScore;
+
+        function resetGame() {
+            bird.y = canvas.height / 2;
+            bird.velocity = 0;
+            bird.rotation = 0;
+            pipes = [];
+            score = 0;
+            frames = 0;
+            scoreEl.textContent = score;
+        }
+
+        function jump() {
+            if (gameState === 'start') {
+                gameState = 'playing';
+                startScreen.classList.add('hidden');
+            } else if (gameState === 'gameover') {
+                resetGame();
+                gameState = 'playing';
+                gameOverScreen.classList.add('hidden');
+            } else if (gameState === 'playing') {
+                bird.velocity = JUMP;
             }
-            lastTouchEnd = now;
-        }, { passive: false });
-        
-        // Prevent context menu on canvas (mobile)
-        document.getElementById('game-canvas').addEventListener('contextmenu', function(e) {
+        }
+
+        // Input handling
+        canvas.addEventListener('mousedown', jump);
+        canvas.addEventListener('touchstart', (e) => {
             e.preventDefault();
+            jump();
+        }, { passive: false });
+        document.addEventListener('keydown', (e) => {
+            if (e.code === 'Space' || e.code === 'ArrowUp') {
+                e.preventDefault();
+                jump();
+            }
         });
+
+        // Prevent context menu
+        canvas.addEventListener('contextmenu', (e) => e.preventDefault());
+
+        function updateBird() {
+            bird.velocity += GRAVITY;
+            bird.y += bird.velocity;
+            bird.rotation = Math.min(Math.PI / 4, Math.max(-Math.PI / 4, bird.velocity * 0.1));
+
+            // Floor collision
+            if (bird.y + bird.height / 2 >= ground.y) {
+                bird.y = ground.y - bird.height / 2;
+                gameOver();
+            }
+
+            // Ceiling collision
+            if (bird.y - bird.height / 2 <= 0) {
+                bird.y = bird.height / 2;
+                bird.velocity = 0;
+            }
+        }
+
+        function spawnPipe() {
+            const minHeight = 60;
+            const maxHeight = canvas.height - ground.height - PIPE_GAP - minHeight;
+            const topHeight = Math.floor(Math.random() * (maxHeight - minHeight) + minHeight);
+
+            pipes.push({
+                x: canvas.width,
+                topHeight: topHeight,
+                passed: false
+            });
+        }
+
+        function updatePipes() {
+            if (frames % PIPE_SPAWN_RATE === 0) {
+                spawnPipe();
+            }
+
+            for (let i = pipes.length - 1; i >= 0; i--) {
+                const pipe = pipes[i];
+                pipe.x -= PIPE_SPEED;
+
+                // Check collision
+                if (
+                    bird.x + bird.width / 2 > pipe.x &&
+                    bird.x - bird.width / 2 < pipe.x + 60
+                ) {
+                    if (
+                        bird.y - bird.height / 2 < pipe.topHeight ||
+                        bird.y + bird.height / 2 > pipe.topHeight + PIPE_GAP
+                    ) {
+                        gameOver();
+                    }
+                }
+
+                // Score
+                if (!pipe.passed && pipe.x + 60 < bird.x) {
+                    pipe.passed = true;
+                    score++;
+                    scoreEl.textContent = score;
+                }
+
+                // Remove off-screen pipes
+                if (pipe.x + 60 < 0) {
+                    pipes.splice(i, 1);
+                }
+            }
+        }
+
+        function gameOver() {
+            gameState = 'gameover';
+            if (score > highScore) {
+                highScore = score;
+                localStorage.setItem('flappyHighScore', highScore);
+            }
+            finalScoreEl.textContent = score;
+            bestScoreEl.textContent = highScore;
+            gameOverScreen.classList.remove('hidden');
+        }
+
+        function drawBird() {
+            ctx.save();
+            ctx.translate(bird.x, bird.y);
+            ctx.rotate(bird.rotation);
+
+            // Body
+            ctx.fillStyle = bird.color;
+            ctx.beginPath();
+            ctx.ellipse(0, 0, bird.width / 2, bird.height / 2, 0, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Outline
+            ctx.strokeStyle = '#d4ac0d';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            // Wing
+            ctx.fillStyle = '#f7dc6f';
+            ctx.beginPath();
+            ctx.ellipse(-8, 5, 12, 8, 0, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.strokeStyle = '#d4ac0d';
+            ctx.stroke();
+
+            // Eye
+            ctx.fillStyle = bird.eyeColor;
+            ctx.beginPath();
+            ctx.arc(10, -6, 8, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Pupil
+            ctx.fillStyle = bird.pupilColor;
+            ctx.beginPath();
+            ctx.arc(12, -6, 3, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Beak
+            ctx.fillStyle = bird.beakColor;
+            ctx.beginPath();
+            ctx.moveTo(15, 2);
+            ctx.lineTo(28, 6);
+            ctx.lineTo(15, 10);
+            ctx.fill();
+
+            ctx.restore();
+        }
+
+        function drawPipes() {
+            ctx.fillStyle = '#73BF2E';
+            ctx.strokeStyle = '#558B2F';
+            ctx.lineWidth = 3;
+
+            pipes.forEach(pipe => {
+                // Top pipe
+                ctx.fillRect(pipe.x, 0, 60, pipe.topHeight);
+                ctx.strokeRect(pipe.x, 0, 60, pipe.topHeight);
+                
+                // Top pipe cap
+                ctx.fillStyle = '#558B2F';
+                ctx.fillRect(pipe.x - 3, pipe.topHeight - 30, 66, 30);
+                ctx.strokeRect(pipe.x - 3, pipe.topHeight - 30, 66, 30);
+                ctx.fillStyle = '#73BF2E';
+
+                // Bottom pipe
+                const bottomY = pipe.topHeight + PIPE_GAP;
+                const bottomHeight = canvas.height - ground.height - bottomY;
+                ctx.fillRect(pipe.x, bottomY, 60, bottomHeight);
+                ctx.strokeRect(pipe.x, bottomY, 60, bottomHeight);
+
+                // Bottom pipe cap
+                ctx.fillStyle = '#558B2F';
+                ctx.fillRect(pipe.x - 3, bottomY, 66, 30);
+                ctx.strokeRect(pipe.x - 3, bottomY, 66, 30);
+                ctx.fillStyle = '#73BF2E';
+            });
+        }
+
+        function drawBackground() {
+            // Sky gradient
+            const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+            gradient.addColorStop(0, '#4EC0CA');
+            gradient.addColorStop(1, '#87CEEB');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Clouds
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.6)';
+            drawCloud(100, 100, 40);
+            drawCloud(400, 150, 50);
+            drawCloud(250, 80, 35);
+        }
+
+        function drawCloud(x, y, size) {
+            ctx.beginPath();
+            ctx.arc(x, y, size, 0, Math.PI * 2);
+            ctx.arc(x + size * 0.8, y, size * 0.9, 0, Math.PI * 2);
+            ctx.arc(x + size * 1.5, y, size * 0.7, 0, Math.PI * 2);
+            ctx.fill();
+        }
+
+        function drawGround() {
+            // Ground base
+            ctx.fillStyle = ground.color;
+            ctx.fillRect(0, ground.y, canvas.width, ground.height);
+
+            // Ground stripes
+            ctx.fillStyle = ground.stripeColor;
+            for (let x = -(frames * PIPE_SPEED) % 40; x < canvas.width; x += 40) {
+                ctx.beginPath();
+                ctx.moveTo(x, ground.y);
+                ctx.lineTo(x + 20, ground.y + 40);
+                ctx.lineTo(x + 40, ground.y);
+                ctx.fill();
+            }
+
+            // Grass top
+            ctx.fillStyle = '#73BF2E';
+            ctx.fillRect(0, ground.y, canvas.width, 15);
+            ctx.strokeStyle = '#558B2F';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(0, ground.y);
+            ctx.lineTo(canvas.width, ground.y);
+            ctx.stroke();
+        }
+
+        function gameLoop() {
+            if (gameState === 'playing') {
+                frames++;
+                updateBird();
+                updatePipes();
+            }
+
+            drawBackground();
+            drawPipes();
+            drawGround();
+            drawBird();
+
+            requestAnimationFrame(gameLoop);
+        }
+
+        // Start game loop
+        gameLoop();
+
+        // ============================================
+        // CONTENT DISPLAY
+        // ============================================
+
+        const contentGrid = document.getElementById('content-grid');
+        const searchInput = document.getElementById('search-input');
+        const yearFilter = document.getElementById('year-filter');
+        const tabBtns = document.querySelectorAll('.tab-btn');
+
+        let currentTab = 'conferences';
+
+        // Tab switching
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                tabBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentTab = btn.dataset.tab;
+                renderContent();
+            });
+        });
+
+        // Search and filter
+        searchInput.addEventListener('input', renderContent);
+        yearFilter.addEventListener('change', renderContent);
+
+        function getColorForType(type) {
+            const colors = {
+                conference: '#3498db',
+                podcast: '#9b59b6',
+                publication: '#27ae60',
+                volunteering: '#e67e22',
+                television: '#e74c3c'
+            };
+            return colors[type] || '#3498db';
+        }
+
+        function renderContent() {
+            const search = searchInput.value.toLowerCase();
+            const year = yearFilter.value;
+            
+            let content = window.ContentData ? window.ContentData[currentTab] : [];
+            
+            // Filter by search
+            if (search) {
+                content = content.filter(item => {
+                    const text = (item.name || item.title || item.organization || '') + ' ' + item.description;
+                    return text.toLowerCase().includes(search);
+                });
+            }
+
+            // Filter by year
+            if (year !== 'all') {
+                content = content.filter(item => item.year === year);
+            }
+
+            // Sort by date (newest first)
+            content.sort((a, b) => new Date(b.date || b.dateStart) - new Date(a.date || a.dateStart));
+
+            contentGrid.innerHTML = '';
+
+            if (content.length === 0) {
+                contentGrid.innerHTML = `
+                    <div class="empty-state" style="grid-column: 1/-1;">
+                        <i class="fas fa-search"></i>
+                        <p>No items found</p>
+                    </div>
+                `;
+                return;
+            }
+
+            content.forEach(item => {
+                const card = document.createElement('a');
+                card.className = 'content-card';
+                card.style.borderLeftColor = getColorForType(item.type);
+                
+                let url;
+                if (item.url) {
+                    url = item.url;
+                    card.target = '_blank';
+                } else {
+                    const subdir = item.subdir || '';
+                    url = `content-viewer.html?type=${item.type}&org=${item.path}&year=${item.year}`;
+                    if (subdir) url += `&subdir=${subdir}`;
+                }
+                card.href = url;
+
+                const title = item.displayName || item.title || item.name || item.organization;
+                const icon = item.icon || 'fas fa-star';
+
+                card.innerHTML = `
+                    <div class="content-card-header">
+                        <div class="content-card-icon" style="background: ${getColorForType(item.type)}">
+                            <i class="${icon}"></i>
+                        </div>
+                        <span class="content-card-year">${item.year}</span>
+                    </div>
+                    <h3>${title}</h3>
+                    <p>${item.description}</p>
+                    <div class="content-card-meta">
+                        ${item.publisher ? `<span class="content-card-tag">${item.publisher}</span>` : ''}
+                        ${item.type ? `<span class="content-card-tag" style="background: ${getColorForType(item.type)}20; color: ${getColorForType(item.type)}">${item.type}</span>` : ''}
+                    </div>
+                `;
+
+                contentGrid.appendChild(card);
+            });
+        }
+
+        // Initial render
+        renderContent();
     </script>
 </body>
 </html>
