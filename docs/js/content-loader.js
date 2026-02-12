@@ -879,11 +879,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const television = [
             {
                 name: "CyberNews",
-                year: "2025",
+                year: "2026",
                 icon: "fas fa-skull-crossbones",
                 description: "The Dangerous Evolution of AI Hacking",
                 path: "cybernews",
-                date: "2025",
+                date: "2026",
                 videoUrl: "https://www.youtube.com/watch?v=-um9zKf1V30"
             },
             {

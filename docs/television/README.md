@@ -6,7 +6,7 @@ This directory contains information about various television appearances related
 
 ## Appearances
 
-- [CyberNews](./cybernews/README.md) - 2025 - The Dangerous Evolution of AI Hacking
+- [CyberNews](./cybernews/README.md) - 2026 - The Dangerous Evolution of AI Hacking
   - [YouTube Recording](https://www.youtube.com/watch?v=-um9zKf1V30)
 - [NASDAQ TradeTalks](./nasdaq-tradetalks/README.md) - 2025 - The Ever-Changing Landscape of AI Safety
   - [YouTube Recording](https://www.youtube.com/watch?v=kWJyrbWsRNk)
