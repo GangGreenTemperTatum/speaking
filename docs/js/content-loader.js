@@ -364,6 +364,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 path: "cyber-toronto",
                 subdir: "december",
                 localPath: "conferences/cyber-toronto/2025/december"
+            },
+            {
+                name: "TAICO",
+                displayName: "TAICO - Toronto AI and Cybersecurity Organization",
+                year: "2026",
+                icon: "fas fa-brain",
+                description: "First TAICO meetup of 2026 featuring Q\u0026A, steganography talk, and lightning talks",
+                path: "taico",
+                subdir: "february",
+                localPath: "conferences/taico/2026/february"
             }
         ];
 

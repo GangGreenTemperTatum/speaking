@@ -31,7 +31,8 @@ const conferenceOrgs = [
   { id: "mlopscommunity", years: ["2024"] },
   { id: "offbyonesecurity", subPaths: [{path: "2025/july", year: "2025"}] },
   { id: "owasp", subDirs: [{name: "owasp-cairo", years: ["2025"]}, {name: "owasp-toronto", subPaths: [{path: "2024/june", year: "2024"}, {path: "2025/march", year: "2025"}, {path: "2025/september", year: "2025"}]}, {name: "owasp-vancouver", years: ["2023"]}, {name: "owasp-atlanta", years: ["2025"]}, {name: "owasp-llm-apps", subPaths: [{path: "2025/march", year: "2025"}, {path: "2025/october", year: "2025"}]}] },
-  { id: "rsa-usa", years: ["2024", "2025"] }
+  { id: "rsa-usa", years: ["2024", "2025"] },
+  { id: "taico", subPaths: [{path: "2026/february", year: "2026"}] }
 ];
 
 // Map directory names to display names and icons
@@ -51,7 +52,8 @@ const contentMap = {
   "offbyonesecurity": { name: "Off By One Security", icon: "fas fa-bug" },
   "owasp": { name: "OWASP", icon: "fas fa-shield-virus" },
   "packt": { name: "Packt Publishing", icon: "fas fa-book" },
-  "rsa-usa": { name: "RSA Conference", icon: "fas fa-lock" }
+  "rsa-usa": { name: "RSA Conference", icon: "fas fa-lock" },
+  "taico": { name: "TAICO", icon: "fas fa-brain" }
 };
 
 // Create conference entries
@@ -189,6 +191,8 @@ conferenceOrgs.forEach(org => {
         }
       } else if (org.id === 'defcon') {
         description = "Misaligned: AI Jailbreaking Panel with Basi Team Six (BT6) & Jason Haddix";
+      } else if (org.id === 'taico') {
+        description = "Toronto AI and Cybersecurity Organization - First meetup of 2026 featuring Q&A, steganography talk, and lightning talks";
       }
 
       content.conferences.push({

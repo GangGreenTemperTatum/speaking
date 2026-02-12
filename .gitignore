@@ -66,3 +66,4 @@ yarn-error.log*
 
 # Jupyter Notebook
 .ipynb_checkpoints
+CLAUDE.md
