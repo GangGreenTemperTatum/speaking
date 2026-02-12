@@ -2,156 +2,203 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ads Dawson | Staff AI/ML Security Researcher</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+    <meta name="description" content="Ads Dawson - AI/ML Security Researcher. Interactive portfolio featuring speaking engagements, publications, and podcast appearances.">
+    <meta name="theme-color" content="#0d0221">
+    <title>Ads Dawson | AI/ML Security Researcher</title>
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto+Mono:wght@400;700&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
-    <script>
-        // Error handler for better debugging
-        window.addEventListener('error', function(e) {
-            console.error('Global error:', e.message, e);
-            const errorDiv = document.createElement('div');
-            errorDiv.style.position = 'fixed';
-            errorDiv.style.top = '0';
-            errorDiv.style.left = '0';
-            errorDiv.style.right = '0';
-            errorDiv.style.backgroundColor = '#ffdddd';
-            errorDiv.style.color = '#ff0000';
-            errorDiv.style.padding = '10px';
-            errorDiv.style.zIndex = '10000';
-            errorDiv.textContent = `Error: ${e.message}`;
-            document.body.appendChild(errorDiv);
-            setTimeout(() => errorDiv.remove(), 5000);
-        });
-
-        // Set copyright year
-        document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('year').textContent = new Date().getFullYear();
-        });
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/modal.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐛</text></svg>">
+    
+    <style>
+        /* Critical CSS for initial load */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0d0221;
+            font-family: 'Roboto Mono', monospace;
+            overflow: hidden;
+        }
+        
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0d0221;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+        
+        #loading-screen.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .loading-bird {
+            font-size: 48px;
+            animation: bounce 1s infinite;
+        }
+        
+        .loading-text {
+            color: #2de2e6;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+    </style>
 </head>
 <body>
-    <div class="comic-container">
-        <!-- Header Panel -->
-        <header class="comic-panel intro-panel homepage-header">
-            <div class="github-corner">
-                <a href="https://github.com/GangGreenTemperTatum/speaking" target="_blank" title="View on GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-            </div>
-            <div class="panel-content">
-                <h1 class="glitch-text">Ads Dawson</h1>
-                <div class="subtitle">AI/ML Staff Security Researcher</div>
-                <div class="titles-container">
-                    <div class="title-row">
-                        <a href="https://offsecmoose.xyz/" target="_blank" class="title-badge clickable">Founder & Lead Security Consultant (OffSecMoose)</a>
-                        <a href="https://www.bugcrowd.com/" target="_blank" class="title-badge clickable">BugCrowd Bench Security Researcher | Freelance Penetration Tester</a>
-                    </div>
-                    <div class="title-row">
-                        <a href="https://hackerone.com/leaderboard/up_and_comers?year=2025&quarter=4&owasp=a1&country=US&assetType=WEB_APP&tab=bbp&userTypeTab=individual" target="_blank" class="title-badge clickable" style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: #000; font-weight: bold;">🏆 #1 HackerOne Up & Comer Q4 2025</a>
-                        <a href="https://www.bugcrowd.com/blog/what-is-bugcrowds-hacker-advisory-board/" target="_blank" class="title-badge clickable">BugCrowd Hacker Advisory Board Member</a>
-                        <a href="https://caido.io/" target="_blank" class="title-badge clickable">Caido Hacker Ambassador</a>
-                        <a href="https://www.packtpub.com/en-ca/product/ai-native-llm-security-9781836203742" target="_blank" class="title-badge clickable">AI Native LLM Security Book Author</a>
-                    </div>
-                    <div class="title-row">
-                        <a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/" target="_blank" class="title-badge clickable">OWASP GenAI Security & LLM Applications Board Member and Technical Lead</a>
-                        <a href="https://www.meetup.com/owasp-toronto/" target="_blank" class="title-badge clickable">OWASP Toronto Chapter Lead</a>
-                    </div>
-                </div>
-                <div class="speech-bubble">
-                    <p>Breaking apps for fun and profit, jailbreaking AI, and teaching the world how to hack responsibly.</p>
-                </div>
-                <div class="portfolio-link">
-                    <a href="https://ganggreentempertatum.github.io/" target="_blank" class="btn-portfolio">
-                        <i class="fas fa-laptop-code"></i> View Tech Portfolio
-                    </a>
-                </div>
-            </div>
-        </header>
-
-        <!-- Navigation -->
-        <nav class="comic-nav">
-            <div class="nav-item active" data-target="conferences">
-                <i class="fas fa-microphone-alt"></i> Conferences
-            </div>
-            <div class="nav-item" data-target="podcasts">
-                <i class="fas fa-podcast"></i> Podcasts
-            </div>
-            <div class="nav-item" data-target="publications">
-                <i class="fas fa-book"></i> Publications
-            </div>
-            <div class="nav-item" data-target="volunteering">
-                <i class="fas fa-hands-helping"></i> Volunteering
-            </div>
-            <div class="nav-item" data-target="television">
-                <i class="fas fa-tv"></i> Television
-            </div>
-        </nav>
-
-        <!-- Main Content -->
-        <main class="comic-grid">
-            <!-- Conferences Section -->
-            <section id="conferences" class="content-section active">
-                <h2 class="section-title"><span class="highlight">Conference & Events Talks</span></h2>
-                <div class="loading-indicator">
-                    <i class="fas fa-spinner fa-spin"></i> Loading conferences...
-                </div>
-            </section>
-
-            <!-- Podcasts Section -->
-            <section id="podcasts" class="content-section">
-                <h2 class="section-title"><span class="highlight">Podcast Appearances</span></h2>
-                <div class="loading-indicator">
-                    <i class="fas fa-spinner fa-spin"></i> Loading podcasts...
-                </div>
-            </section>
-
-            <!-- Publications Section -->
-            <section id="publications" class="content-section">
-                <h2 class="section-title"><span class="highlight">Publications</span></h2>
-                <div class="loading-indicator">
-                    <i class="fas fa-spinner fa-spin"></i> Loading publications...
-                </div>
-            </section>
-
-            <!-- Volunteering Section -->
-            <section id="volunteering" class="content-section">
-                <h2 class="section-title"><span class="highlight">Volunteering Experience</span></h2>
-                <div class="loading-indicator">
-                    <i class="fas fa-spinner fa-spin"></i> Loading volunteering experience...
-                </div>
-            </section>
-
-            <!-- Television Section -->
-            <section id="television" class="content-section">
-                <h2 class="section-title"><span class="highlight">Television Appearances</span></h2>
-                <div class="loading-indicator">
-                    <i class="fas fa-spinner fa-spin"></i> Loading television appearances...
-                </div>
-            </section>
-        </main>
-
-        <!-- Footer -->
-        <footer class="comic-panel footer-panel">
-            <div class="panel-content">
-                <div class="social-links">
-                    <a href="https://github.com/GangGreenTemperTatum" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/adamdawson0" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://arxiv.org/search/cs?searchtype=author&query=Dawson,+A" target="_blank"><i class="fas fa-graduation-cap"></i></a>
-                    <a href="https://bugcrowd.com/h/0xmoose" target="_blank" title="Bugcrowd Profile"><i class="fas fa-bug"></i></a>
-                    <a href="https://hackerone.com/0xmoose" target="_blank" title="HackerOne Profile"><i class="fas fa-user-secret"></i></a>
-                </div>
-                <p>&copy; <span id="year"></span> Ads Dawson. All rights reserved.</p>
-            </div>
-        </footer>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-bird">🐛</div>
+        <div class="loading-text">Loading Portfolio...</div>
     </div>
 
-    <!-- Scripts - Add defer to ensure they load properly -->
-    <script defer src="js/content-loader.js"></script>
-    <script defer src="js/debug.js"></script>
-    <script defer src="js/file-copier.js"></script>
+    <!-- Game Container -->
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+        
+        <!-- Archive Button -->
+        <button id="archive-btn" class="archive-btn" aria-label="View full archive">
+            <i class="fas fa-archive"></i>
+            <span>Archive</span>
+        </button>
+        
+        <!-- Score Display -->
+        <div id="score-display" class="score-display" aria-label="Score">0</div>
+        
+        <!-- Content Discovered Counter -->
+        <div id="content-counter" class="content-counter" aria-label="Content discovered">
+            <span class="bug-icon" aria-hidden="true">🐛</span>
+            <span id="collected-count">0</span>
+        </div>
+        
+        <!-- Zone Indicator -->
+        <div id="zone-indicator" class="zone-indicator" aria-label="Current zone">
+            <span id="current-zone">Conference Zone</span>
+        </div>
+    </div>
+    
+    <!-- Content Card Modal -->
+    <div id="content-modal" class="modal-overlay" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="card-title">
+        <div class="content-card" role="document">
+            <div class="card-header">
+                <i id="card-icon" class="fas fa-microphone-alt" aria-hidden="true"></i>
+                <span id="card-year" class="year-badge">2025</span>
+            </div>
+            <h2 id="card-title">Content Title</h2>
+            <p id="card-description">Description goes here...</p>
+            <div class="card-actions">
+                <button id="btn-view-details" class="btn-primary">View Details</button>
+                <button id="btn-continue" class="btn-secondary">Continue Flying</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Archive Modal -->
+    <div id="archive-modal" class="modal-overlay archive-modal" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="archive-heading">
+        <div class="archive-container" role="document">
+            <header class="archive-header">
+                <h1 id="archive-heading">📚 Full Archive</h1>
+                <button id="btn-close-archive" class="btn-close" aria-label="Close archive">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+            </header>
+            
+            <nav class="archive-tabs" role="tablist" aria-label="Content categories">
+                <button class="tab-btn active" data-tab="conferences" role="tab" aria-selected="true" aria-controls="archive-content">
+                    <i class="fas fa-microphone-alt" aria-hidden="true"></i> Conferences
+                </button>
+                <button class="tab-btn" data-tab="podcasts" role="tab" aria-selected="false" aria-controls="archive-content">
+                    <i class="fas fa-podcast" aria-hidden="true"></i> Podcasts
+                </button>
+                <button class="tab-btn" data-tab="publications" role="tab" aria-selected="false" aria-controls="archive-content">
+                    <i class="fas fa-book" aria-hidden="true"></i> Publications
+                </button>
+                <button class="tab-btn" data-tab="volunteering" role="tab" aria-selected="false" aria-controls="archive-content">
+                    <i class="fas fa-hands-helping" aria-hidden="true"></i> Volunteering
+                </button>
+                <button class="tab-btn" data-tab="television" role="tab" aria-selected="false" aria-controls="archive-content">
+                    <i class="fas fa-tv" aria-hidden="true"></i> TV
+                </button>
+            </nav>
+            
+            <div class="archive-filters">
+                <input type="search" id="archive-search" placeholder="Search content..." aria-label="Search archive">
+                <select id="year-filter" aria-label="Filter by year">
+                    <option value="all">All Years</option>
+                    <option value="2026">2026</option>
+                    <option value="2025">2025</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                </select>
+            </div>
+            
+            <div id="archive-content" class="archive-content" role="tabpanel">
+                <!-- Content injected via JavaScript -->
+            </div>
+            
+            <button id="btn-back-to-game" class="btn-back">
+                <i class="fas fa-gamepad" aria-hidden="true"></i> Back to Game
+            </button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/content-data.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/game.js"></script>
+    
+    <script>
+        // Hide loading screen when everything is loaded
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                const loadingScreen = document.getElementById('loading-screen');
+                if (loadingScreen) {
+                    loadingScreen.classList.add('hidden');
+                    setTimeout(function() {
+                        loadingScreen.style.display = 'none';
+                    }, 500);
+                }
+            }, 1000);
+        });
+        
+        // Prevent zoom on double tap (mobile)
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', function(e) {
+            const now = Date.now();
+            if (now - lastTouchEnd <= 300) {
+                e.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, { passive: false });
+        
+        // Prevent context menu on canvas (mobile)
+        document.getElementById('game-canvas').addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+    </script>
 </body>
 </html>
