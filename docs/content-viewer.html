@@ -353,10 +353,17 @@
                     }
                 });
 
+                // Render title and description markdown (inline elements only)
+                const renderedTitle = renderInlineMarkdown(title);
+                const renderedDescription = renderInlineMarkdown(description);
+                
                 // Update page
-                document.getElementById('view-title').textContent = title || 'Content';
-                document.getElementById('view-subtitle').textContent = description || '';
-                document.title = `${title.replace(/<[^>]*>/g, '') || 'Content'} | Ads Dawson`;
+                document.getElementById('view-title').innerHTML = renderedTitle || 'Content';
+                document.getElementById('view-subtitle').innerHTML = renderedDescription || '';
+                
+                // Strip HTML tags for browser title
+                const stripTags = (html) => html.replace(/<[^>]*>/g, '');
+                document.title = `${stripTags(renderedTitle) || 'Content'} | Ads Dawson`;
 
                 // Add meta tags
                 const metaContainer = document.getElementById('content-meta');
@@ -384,7 +391,23 @@
             }
         }
 
-        // Enhanced markdown renderer
+        // Render inline markdown (for titles and descriptions - no block elements)
+        function renderInlineMarkdown(text) {
+            if (!text) return '';
+            
+            let html = text;
+            
+            // Convert links - handle markdown links [text](url)
+            html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+            
+            // Note: We intentionally don't process bold/italic here to avoid
+            // breaking URLs with underscores (e.g., target="_blank" or URL params).
+            // Titles/descriptions rarely use formatting anyway.
+            
+            return html;
+        }
+
+        // Enhanced markdown renderer (for body content)
         function renderMarkdown(text, contentPath) {
             if (!contentPath) contentPath = '';
             
