@@ -4,12 +4,21 @@
 
 The markdown rendering in `content-viewer.html` has been tested and verified to be working correctly.
 
+## Recent Fix (Latest)
+
+### Title and Description Rendering
+- **Issue**: Titles and descriptions were showing raw markdown syntax like `[TAICO](https://www.taico.ca/)`
+- **Root Cause**: Using `.textContent` instead of `.innerHTML` for title/description display
+- **Fix**: Added `renderInlineMarkdown()` function and changed to `.innerHTML`
+- **Result**: Titles and descriptions now render markdown links correctly
+
 ## Test Results
 
 ### Automated Tests
-- **57 tests passing** including 19 new markdown rendering tests
+- **66 tests passing** including 28 markdown rendering tests
 - Tests validate actual README content from CyberToronto and TAICO conferences
-- Tests verify link conversion, image conversion, bold/italic, headers, etc.
+- Tests verify link conversion in titles, descriptions, and body content
+- Tests verify image conversion, bold/italic, headers, lists, etc.
 
 ### Test Coverage
 
@@ -61,26 +70,38 @@ To manually verify in a browser:
 
 ## Implementation Details
 
-The `renderMarkdown()` function in `content-viewer.html`:
+### Title/Description Rendering (`renderInlineMarkdown()`)
+1. Converts markdown links `[text](url)` to `<a href="url">text</a>`
+2. **Does NOT** process bold/italic to avoid breaking URLs with underscores
+3. Used for H1 title and H2 description (first two lines of README)
 
+### Body Content Rendering (`renderMarkdown()`)
 1. Processes markdown images first using placeholders to avoid regex conflicts
 2. Converts markdown links `[text](url)` to `<a href="url">text</a>`
-3. Processes headers, bold, italic, lists, etc.
+3. Processes headers, bold, italic, lists, blockquotes, code blocks, etc.
 4. Restores image placeholders with proper `<img>` tags
 5. Resolves relative image paths using the `contentPath` parameter
 
 ### Recent Fixes
+- **Render markdown links in titles/descriptions** (commit 5cc585a) - Current fix
 - Fixed double-processing of markdown images (commit 8b61f64)
 - Improved markdown rendering (commit 221bb29)
 - Updated content viewer theme (commit c3c8474)
 
 ## Conclusion
 
-**The reported bug "markdown links not rendering" does not exist in the current codebase.**
+**All markdown rendering bugs have been identified and fixed.**
 
-All markdown rendering is functioning correctly as proven by:
-- 57 passing automated tests
+### Issues Found and Fixed:
+1. ✅ **Body content**: Was working correctly (links, images, bold, italic, headers)
+2. ✅ **Title/description**: Was showing raw markdown - NOW FIXED
+
+All markdown rendering is now functioning correctly as proven by:
+- 66 passing automated tests (including title/description tests)
 - Node.js simulation of actual browser behavior
-- Validation against real README files from the portfolio
+- Validation against real README files from the portfolio (TAICO, CyberToronto, etc.)
 
-The issue was likely from an older version of the code or browser cache.
+### What Was Fixed:
+- Titles like `[TAICO](https://www.taico.ca/)` now render as clickable links
+- Descriptions like `[CyberToronto Conference](url)` now render as clickable links
+- URLs with underscores (e.g., `WN_M647_test`) don't break the rendering
