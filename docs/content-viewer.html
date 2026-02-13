@@ -397,19 +397,6 @@
                 return `<!--CODE_BLOCK_${codeBlocks.length - 1}-->`;
             });
             
-            // Convert headers
-            html = html.replace(/^#### (.*$)/gim, '<h4>$1</h4>');
-            html = html.replace(/^### (.*$)/gim, '<h3>$1</h3>');
-            html = html.replace(/^## (.*$)/gim, '<h2>$1</h2>');
-            html = html.replace(/^# (.*$)/gim, '<h1>$1</h1>');
-            
-            // Convert bold and italic
-            html = html.replace(/\*\*\*(.*?)\*\*\*/g, '<strong><em>$1</em></strong>');
-            html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-            html = html.replace(/\*(.*?)\*/g, '<em>$1</em>');
-            html = html.replace(/__(.*?)__/g, '<strong>$1</strong>');
-            html = html.replace(/_(.*?)_/g, '<em>$1</em>');
-            
             // Process markdown images: ![alt](url) - convert to placeholders first
             const imagePlaceholders = [];
             html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (match, alt, src) => {
@@ -430,8 +417,22 @@
                 return `<img${before}src="${src}"${after} style="max-width:100%;height:auto;border-radius:8px;margin:20px 0;box-shadow:0 4px 12px rgba(0,0,0,0.1);">`;
             });
             
-            // Convert links - handle markdown links [text](url)
+            // Convert links - handle markdown links [text](url) BEFORE headers
+            // This ensures links in headers like # [Title](url) work correctly
             html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+            
+            // Convert headers (after links so header links work)
+            html = html.replace(/^#### (.*$)/gim, '<h4>$1</h4>');
+            html = html.replace(/^### (.*$)/gim, '<h3>$1</h3>');
+            html = html.replace(/^## (.*$)/gim, '<h2>$1</h2>');
+            html = html.replace(/^# (.*$)/gim, '<h1>$1</h1>');
+            
+            // Convert bold and italic
+            html = html.replace(/\*\*\*(.*?)\*\*\*/g, '<strong><em>$1</em></strong>');
+            html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+            html = html.replace(/\*(.*?)\*/g, '<em>$1</em>');
+            html = html.replace(/__(.*?)__/g, '<strong>$1</strong>');
+            html = html.replace(/_(.*?)_/g, '<em>$1</em>');
             
             // Convert unordered lists
             html = html.replace(/^\* (.*$)/gim, '<li>$1</li>');
