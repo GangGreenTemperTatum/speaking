@@ -247,7 +247,7 @@
     <div class="container">
         <!-- Header -->
         <div class="header">
-            <a href="./" class="back-link">
+            <a href="/speaking/" class="back-link">
                 <i class="fas fa-arrow-left"></i> Back to Portfolio
             </a>
             <h1 id="view-title">Loading Content...</h1>
@@ -547,11 +547,12 @@
                     `;
                 });
                 
-                // Add link to browse directory
+                // Add link to browse directory on GitHub
+                const githubPath = `https://github.com/GangGreenTemperTatum/speaking/tree/main/docs/${path}`;
                 filesHtml += `
-                    <a href="${path}/" class="file-item" target="_blank">
-                        <i class="fas fa-folder-open"></i>
-                        <span>Browse Directory</span>
+                    <a href="${githubPath}" class="file-item" target="_blank">
+                        <i class="fab fa-github"></i>
+                        <span>Browse on GitHub</span>
                     </a>
                 `;
                 
