@@ -29,7 +29,7 @@ jobs:
       - name: Generate PR Description
         id: description
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: |
           DESCRIPTION=$(uv run --no-project .github/scripts/rigging_pr_decorator.py origin/${{ github.base_ref }})
           echo "description<<EOF" >> $GITHUB_OUTPUT
