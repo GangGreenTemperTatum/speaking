@@ -1,0 +1,246 @@
+/**
+ * Flappy Portfolio - Game Styles
+ * Canvas game and UI styling
+ */
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Roboto Mono', monospace;
+    background-color: #0d0221;
+}
+
+/* Game container */
+#game-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #0d0221 0%, #1a1a2e 100%);
+}
+
+/* Canvas */
+#game-canvas {
+    display: block;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    box-shadow: 0 0 30px rgba(45, 226, 230, 0.3);
+}
+
+/* Archive button */
+.archive-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #ff3864 0%, #e11d48 100%);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 100;
+    box-shadow: 0 4px 15px rgba(255, 56, 100, 0.4);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.archive-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 56, 100, 0.6);
+    background: linear-gradient(135deg, #ff4d79 0%, #f43f5e 100%);
+}
+
+.archive-btn:active {
+    transform: translateY(0);
+}
+
+/* Score display */
+.score-display {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 48px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Content counter */
+.content-counter {
+    position: fixed;
+    top: 80px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 8px 16px;
+    border-radius: 20px;
+    z-index: 100;
+}
+
+.bug-icon {
+    font-size: 20px;
+}
+
+#collected-count {
+    font-size: 18px;
+    font-weight: bold;
+    color: #f6f740;
+}
+
+/* Zone indicator */
+.zone-indicator {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 24px;
+    border-radius: 25px;
+    z-index: 100;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+#current-zone {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Animations */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 5px currentColor;
+    }
+    50% {
+        box-shadow: 0 0 20px currentColor, 0 0 40px currentColor;
+    }
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+    .archive-btn {
+        top: 10px;
+        right: 10px;
+        padding: 10px 16px;
+        font-size: 12px;
+    }
+
+    .score-display {
+        top: 10px;
+        left: 10px;
+        font-size: 36px;
+    }
+
+    .content-counter {
+        top: 60px;
+        left: 10px;
+        padding: 6px 12px;
+    }
+
+    .zone-indicator {
+        top: auto;
+        bottom: 100px;
+        padding: 8px 16px;
+    }
+
+    #current-zone {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 896px) and (orientation: landscape) {
+    #game-container {
+        padding: 10px;
+    }
+
+    .archive-btn {
+        top: 10px;
+        right: 10px;
+    }
+
+    .score-display {
+        top: 10px;
+        left: 10px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    #game-canvas {
+        max-width: 500px;
+        max-height: 750px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    #game-canvas {
+        max-width: 450px;
+        max-height: 675px;
+    }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    #game-canvas {
+        image-rendering: auto;
+    }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    .archive-btn,
+    .content-card,
+    .archive-card {
+        transition: none;
+        animation: none;
+    }
+}
+
+/* Dark mode support (always dark in this game) */
+@media (prefers-color-scheme: light) {
+    html, body {
+        background-color: #0d0221;
+    }
+}

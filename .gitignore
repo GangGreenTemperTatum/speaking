@@ -66,4 +66,10 @@ yarn-error.log*
 
 # Jupyter Notebook
 .ipynb_checkpoints
+
+# Test coverage
+coverage/
+playwright-report/
+test-results/
+
 CLAUDE.md
