@@ -57,7 +57,7 @@ def get_diff(target_ref: str, source_ref: str) -> str:
 def main(
     target_ref: str,
     source_ref: str = "HEAD",
-    generator_id: str = "openai/o3-mini",
+    generator_id: str = "groq/moonshotai/kimi-k2-instruct-0905",
     max_diff_lines: int = 1000,
 ) -> None:
     """
