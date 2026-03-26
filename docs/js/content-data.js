@@ -620,6 +620,18 @@ const podcasts = [
 // Publication data
 const publications = [
     {
+        id: "dreadnode-dyana-litellm-supply-chain",
+        title: "Packages are battlefields. Dyana stands before them.",
+        publisher: "Dreadnode",
+        description: "Co-authored with Martin Wendiggensen. Analysis of the LiteLLM supply chain attack (March 24, 2026) where TeamPCP published backdoored versions to PyPI carrying credential harvesting, encrypted exfiltration, and persistent systemd backdoors. Demonstrates how Dyana catches this kind of payload before it reaches production.",
+        url: "https://x.com/Dr_Machinavelli/status/2037298743217643636",
+        icon: "fas fa-skull-crossbones",
+        year: "2026",
+        type: "publication",
+        date: "2026-03-26",
+        featured: true
+    },
+    {
         id: "bugcrowd-author-profile",
         title: "Bugcrowd Author Profile - Ads Dawson",
         publisher: "BugCrowd",
