@@ -325,6 +325,16 @@
   ],
   "publications": [
     {
+      "id": "substack-c4-claude-code-c2",
+      "title": "C4: Command & Control over Claude Code via Natural Language",
+      "publisher": "Substack",
+      "description": "Co-authored with Michael Kouremetis. Living Off the AI: A C2 Protocol for Agentic Tools. Explores command and control techniques over Claude Code using natural language, demonstrating how agentic AI tools can be leveraged as C2 channels.",
+      "url": "https://open.substack.com/pub/0xmoose/p/c4-command-and-control-over-claude",
+      "icon": "fas fa-terminal",
+      "external": true,
+      "year": "2026"
+    },
+    {
       "id": "dreadnode-dyana-litellm-supply-chain",
       "title": "Packages are battlefields. Dyana stands before them.",
       "publisher": "Dreadnode",

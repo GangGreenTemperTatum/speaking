@@ -542,6 +542,14 @@ document.addEventListener('DOMContentLoaded', function() {
     function loadPublications() {
         const publications = [
             {
+                title: "C4: Command & Control over Claude Code via Natural Language",
+                publisher: "Substack",
+                description: "Co-authored with Michael Kouremetis. Living Off the AI: A C2 Protocol for Agentic Tools. Explores command and control techniques over Claude Code using natural language, demonstrating how agentic AI tools can be leveraged as C2 channels.",
+                url: "https://open.substack.com/pub/0xmoose/p/c4-command-and-control-over-claude",
+                icon: "fas fa-terminal",
+                year: "2026"
+            },
+            {
                 title: "Packages are battlefields. Dyana stands before them.",
                 publisher: "Dreadnode",
                 description: "Co-authored with Martin Wendiggensen. Analysis of the LiteLLM supply chain attack (March 24, 2026) where TeamPCP published backdoored versions to PyPI carrying credential harvesting, encrypted exfiltration, and persistent systemd backdoors. Demonstrates how Dyana, our open-source sandbox for profiling untrusted files, catches this kind of payload before it reaches production.",
