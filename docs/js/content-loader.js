@@ -374,6 +374,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 path: "taico",
                 subdir: "february",
                 localPath: "conferences/taico/2026/february"
+            },
+            {
+                name: "National Academies",
+                displayName: "National Academies - Securing AI Systems: New Challenges and Research Priorities",
+                year: "2026",
+                icon: "fas fa-landmark",
+                description: "Panel: Threat Modeling for AI Security - Securing AI Systems: New Challenges and Research Priorities",
+                path: "national-academies",
+                subdir: "april",
+                localPath: "conferences/national-academies/2026/april"
             }
         ];
 

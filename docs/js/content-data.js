@@ -522,6 +522,20 @@ const conferences = [
         type: "conference",
         date: "2026-02-15",
         featured: true
+    },
+    {
+        id: "national-academies-2026",
+        name: "National Academies",
+        displayName: "National Academies - Securing AI Systems: Threat Modeling for AI Security Panel",
+        year: "2026",
+        icon: "fas fa-landmark",
+        description: "Panel: Threat Modeling for AI Security - Securing AI Systems: New Challenges and Research Priorities",
+        path: "national-academies",
+        subdir: "april",
+        localPath: "conferences/national-academies/2026/april",
+        type: "conference",
+        date: "2026-04-20",
+        featured: true
     }
 ];
 

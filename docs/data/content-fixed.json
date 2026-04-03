@@ -255,6 +255,14 @@
       "year": "2026",
       "icon": "fas fa-brain",
       "description": "Toronto AI and Cybersecurity Organization - First meetup of 2026 featuring Q&A, steganography talk, and lightning talks"
+    },
+    {
+      "id": "national-academies-2026",
+      "name": "National Academies",
+      "path": "national-academies/2026/april",
+      "year": "2026",
+      "icon": "fas fa-landmark",
+      "description": "Panel: Threat Modeling for AI Security - Securing AI Systems: New Challenges and Research Priorities"
     }
   ],
   "podcasts": [
