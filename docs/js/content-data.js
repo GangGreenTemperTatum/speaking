@@ -986,6 +986,18 @@ const volunteering = [
 // Television data
 const television = [
     {
+        id: "nahamsec-2026",
+        name: "NahamSec",
+        year: "2026",
+        icon: "fas fa-bug",
+        description: "An AI Hacker Showed Me How to Exfil Data in Zero Clicks",
+        path: "nahamsec",
+        date: "2026-04-06",
+        videoUrl: "https://www.youtube.com/watch?v=BFcXTxHLaKE",
+        type: "television",
+        featured: true
+    },
+    {
         id: "nasdaq-tradetalks-2025",
         name: "NASDAQ TradeTalks",
         year: "2025",
