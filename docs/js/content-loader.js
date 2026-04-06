@@ -904,6 +904,15 @@ document.addEventListener('DOMContentLoaded', function() {
     function loadTelevision() {
         const television = [
             {
+                name: "NahamSec",
+                year: "2026",
+                icon: "fas fa-bug",
+                description: "An AI Hacker Showed Me How to Exfil Data in Zero Clicks",
+                path: "nahamsec",
+                date: "2026",
+                videoUrl: "https://www.youtube.com/watch?v=BFcXTxHLaKE"
+            },
+            {
                 name: "CyberNews",
                 year: "2026",
                 icon: "fas fa-skull-crossbones",

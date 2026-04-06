@@ -6,6 +6,8 @@ This directory contains information about various television appearances related
 
 ## Appearances
 
+- [NahamSec](./nahamsec/README.md) - 2026 - An AI Hacker Showed Me How to Exfil Data in Zero Clicks
+  - [YouTube Recording](https://www.youtube.com/watch?v=BFcXTxHLaKE)
 - [CyberNews](./cybernews/README.md) - 2026 - The Dangerous Evolution of AI Hacking
   - [YouTube Recording](https://www.youtube.com/watch?v=-um9zKf1V30)
 - [NASDAQ TradeTalks](./nasdaq-tradetalks/README.md) - 2025 - The Ever-Changing Landscape of AI Safety
