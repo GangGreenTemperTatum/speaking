@@ -634,6 +634,18 @@ const podcasts = [
 // Publication data
 const publications = [
     {
+        id: "dreadnode-compute-congress-agents-2026",
+        title: "From Compute to Congress: March Was All About Agents. And So Are We.",
+        publisher: "Dreadnode",
+        description: "Co-authored with Daria Bahrami, Raja Sekhar Rao Dheekonda, and Kate Dunn. Research on why evaluating non-deterministic agentic systems requires a fundamentally different approach to security, governance, and policy.",
+        url: "https://dreadnode.io/research/from-compute-to-congress-march-was-all-about-agents/",
+        icon: "fas fa-skull",
+        year: "2026",
+        type: "publication",
+        date: "2026-04-17",
+        featured: true
+    },
+    {
         id: "dreadnode-dyana-litellm-supply-chain",
         title: "Packages are battlefields. Dyana stands before them.",
         publisher: "Dreadnode",

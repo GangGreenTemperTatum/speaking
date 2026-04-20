@@ -280,6 +280,16 @@ podcastPaths.forEach(podcast => {
 // Process publications from README.md
 const publications = [
   {
+    id: "dreadnode-compute-congress-agents-2026",
+    title: "From Compute to Congress: March Was All About Agents. And So Are We.",
+    publisher: "Dreadnode",
+    description: "Co-authored with Daria Bahrami, Raja Sekhar Rao Dheekonda, and Kate Dunn. Research on why evaluating non-deterministic agentic systems requires a fundamentally different approach to security, governance, and policy.",
+    url: "https://dreadnode.io/research/from-compute-to-congress-march-was-all-about-agents/",
+    icon: "fas fa-skull",
+    external: true,
+    year: "2026"
+  },
+  {
     id: "substack-c4-claude-code-c2",
     title: "C4: Command & Control over Claude Code via Natural Language",
     publisher: "Substack",
