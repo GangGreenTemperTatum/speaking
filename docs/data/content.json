@@ -263,6 +263,14 @@
       "year": "2026",
       "icon": "fas fa-landmark",
       "description": "Panel: Threat Modeling for AI Security - Securing AI Systems: New Challenges and Research Priorities"
+    },
+    {
+      "id": "wallarm-2026",
+      "name": "Wallarm",
+      "path": "wallarm/2026/may",
+      "year": "2026",
+      "icon": "fas fa-shield-alt",
+      "description": "Upcoming webinar on why traditional WAFs miss AI-driven traffic and what to use instead"
     }
   ],
   "podcasts": [

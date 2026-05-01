@@ -384,6 +384,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 path: "national-academies",
                 subdir: "april",
                 localPath: "conferences/national-academies/2026/april"
+            },
+            {
+                name: "Wallarm",
+                displayName: "Wallarm Webinar - New Security Gap: Your WAF Has No Idea What Your AI Is Doing",
+                year: "2026",
+                icon: "fas fa-shield-alt",
+                description: "Upcoming webinar on why traditional WAFs miss AI-driven traffic and what to use instead",
+                path: "wallarm",
+                subdir: "may",
+                localPath: "conferences/wallarm/2026/may"
             }
         ];
 

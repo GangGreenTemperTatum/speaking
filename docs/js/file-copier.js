@@ -103,6 +103,7 @@
                         <li><a href="https://github.com/GangGreenTemperTatum/speaking/tree/main/conferences/mlopscommunity" target="_blank">MLOps Community</a></li>
                         <li><a href="https://github.com/GangGreenTemperTatum/speaking/tree/main/conferences/owasp" target="_blank">OWASP</a></li>
                         <li><a href="https://github.com/GangGreenTemperTatum/speaking/tree/main/conferences/rsa-usa" target="_blank">RSA Conference</a></li>
+                        <li><a href="https://github.com/GangGreenTemperTatum/speaking/tree/main/conferences/wallarm" target="_blank">Wallarm</a></li>
                     </ul>
                 `;
             } else if (category === 'podcasts') {

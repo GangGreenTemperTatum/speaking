@@ -536,6 +536,20 @@ const conferences = [
         type: "conference",
         date: "2026-04-20",
         featured: true
+    },
+    {
+        id: "wallarm-2026",
+        name: "Wallarm",
+        displayName: "Wallarm Webinar - New Security Gap: Your WAF Has No Idea What Your AI Is Doing",
+        year: "2026",
+        icon: "fas fa-shield-alt",
+        description: "Upcoming webinar on why traditional WAFs miss AI-driven traffic and what to use instead",
+        path: "wallarm",
+        subdir: "may",
+        localPath: "conferences/wallarm/2026/may",
+        type: "conference",
+        date: "2026-05-20",
+        featured: true
     }
 ];
 
