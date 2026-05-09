@@ -18,6 +18,8 @@ This upcoming Wallarm webinar focuses on the security blind spots traditional WA
 - A framework for making the case internally to move beyond rules-based protection
 - Concrete next steps to act on immediately
 
+![Wallarm Webinar](wallarm.png)
+
 ### Links
 
 - 📅 **Registration Page:** [Wallarm Webinar](https://www.wallarm.com/webinars/new-security-gap-your-waf-has-no-idea-what-your-ai-is-doing)
