@@ -648,6 +648,18 @@ const podcasts = [
 // Publication data
 const publications = [
     {
+        id: "wsj-mythos-bug-bounty-2026",
+        title: "Mythos Rewires the Bug-Bounty Industry",
+        publisher: "The Wall Street Journal",
+        description: "Feature by Angus Loten on how 'frontier' AI tools are reshaping bug bounty workflows, with human hunters using AI to surface higher-value security flaws. Archived locally because the live article is paywalled.",
+        url: "publications/wsj/2026/may/mythos-rewires-the-bug-bounty-industry-wsj.html",
+        icon: "fas fa-newspaper",
+        year: "2026",
+        type: "publication",
+        date: "2026-05-18",
+        featured: true
+    },
+    {
         id: "dreadnode-compute-congress-agents-2026",
         title: "From Compute to Congress: March Was All About Agents. And So Are We.",
         publisher: "Dreadnode",

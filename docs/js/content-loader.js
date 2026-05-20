@@ -562,6 +562,14 @@ document.addEventListener('DOMContentLoaded', function() {
     function loadPublications() {
         const publications = [
             {
+                title: "Mythos Rewires the Bug-Bounty Industry",
+                publisher: "The Wall Street Journal",
+                description: "Feature by Angus Loten on how 'frontier' AI tools are reshaping bug bounty workflows, with human hunters using AI to surface higher-value security flaws. Archived locally because the live article is paywalled.",
+                url: "publications/wsj/2026/may/mythos-rewires-the-bug-bounty-industry-wsj.html",
+                icon: "fas fa-newspaper",
+                year: "2026"
+            },
+            {
                 title: "C4: Command & Control over Claude Code via Natural Language",
                 publisher: "Substack",
                 description: "Co-authored with Michael Kouremetis. Living Off the AI: A C2 Protocol for Agentic Tools. Explores command and control techniques over Claude Code using natural language, demonstrating how agentic AI tools can be leveraged as C2 channels.",
