@@ -2,6 +2,16 @@
 
 ---
 
+### Brand Ambassador, US South HackerOne Club
+**HackerOne**
+*May 2026 – Present*
+**Sector:** Science & Technology
+
+Community ambassador for the US South HackerOne Club, helping grow the regional hacker community through meetups, events, collaboration, and hands-on learning.
+[US South HackerOne Club](https://h1.community/us-south-hackerone-club/)
+
+---
+
 ### Volunteer Staff
 **Greater Vancouver Food Bank**
 *Aug 2023 – Present*

@@ -964,6 +964,20 @@ const publications = [
 // Volunteering data
 const volunteering = [
     {
+        id: "hackerone-us-south-ambassador",
+        title: "Brand Ambassador, US South HackerOne Club",
+        organization: "HackerOne",
+        description: "Community ambassador for the US South HackerOne Club, helping grow the regional hacker community through meetups, events, collaboration, and hands-on learning.",
+        sector: "Science & Technology",
+        date: "May 2026 – Present",
+        dateStart: "2026-05-01",
+        icon: "fas fa-user-secret",
+        year: "2026",
+        url: "https://h1.community/us-south-hackerone-club/",
+        type: "volunteering",
+        featured: true
+    },
+    {
         id: "caido-ambassador",
         title: "Hacker Ambassador",
         organization: "Caido",

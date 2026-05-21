@@ -835,6 +835,16 @@ document.addEventListener('DOMContentLoaded', function() {
     function loadVolunteering() {
         const volunteering = [
             {
+                title: "Brand Ambassador, US South HackerOne Club",
+                organization: "HackerOne",
+                description: "Community ambassador for the US South HackerOne Club, helping grow the regional hacker community through meetups, events, collaboration, and hands-on learning.",
+                sector: "Science & Technology",
+                date: "May 2026 – Present",
+                icon: "fas fa-user-secret",
+                year: "2026",
+                url: "https://h1.community/us-south-hackerone-club/"
+            },
+            {
                 title: "Hacker Ambassador",
                 organization: "Caido",
                 description: "Hacker/community ambassador contributing feature and enhancement development work, custom plugins to bridge the gap between community web app pentesters and bug bounty hunters, untapping Caido's full potential as a forefront security testing platform.",
