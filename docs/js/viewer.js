@@ -103,8 +103,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 `;
 
-                // Convert markdown to HTML (basic conversion)
-                document.getElementById('readme-content').innerHTML = convertMarkdown(markdown);
+                // Convert markdown to HTML with base path for relative links
+                document.getElementById('readme-content').innerHTML = convertMarkdown(markdown, dirPath);
 
                 // Now add file listing
                 listDirectoryFiles(dirPath, contentContainer);
@@ -168,8 +168,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 `;
 
-                // Convert markdown to HTML (basic conversion)
-                document.getElementById('readme-content').innerHTML = convertMarkdown(markdown);
+                // Convert markdown to HTML with base path for relative links
+                document.getElementById('readme-content').innerHTML = convertMarkdown(markdown, basePath);
 
                 // Add animation to panels
                 animatePanels();
@@ -247,8 +247,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 `;
 
-                // Convert markdown to HTML (basic conversion)
-                document.getElementById('readme-content').innerHTML = convertMarkdown(markdown);
+                // Convert markdown to HTML with base path for relative links
+                document.getElementById('readme-content').innerHTML = convertMarkdown(markdown, basePath);
 
                 // Add animation to panels
                 animatePanels();
@@ -430,8 +430,17 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(animatePanels, 300);
 
     // Simple markdown to HTML converter
-    function convertMarkdown(markdown) {
+    // basePath is optional; when provided, relative URLs in images/links are prefixed with it
+    function convertMarkdown(markdown, basePath) {
         if (!markdown) return '';
+
+        // Helper to resolve relative URLs against basePath
+        function resolveUrl(url) {
+            if (!basePath) return url;
+            // Don't touch absolute URLs or protocol-relative URLs
+            if (url.match(/^(https?:\/\/|\/\/|\/|#)/)) return url;
+            return basePath + '/' + url;
+        }
 
         // Replace headers with comic styled headers
         let html = markdown
@@ -450,10 +459,14 @@ document.addEventListener('DOMContentLoaded', function() {
             .replace(/_(.*?)_/g, '<em>$1</em>');
 
         // Replace images first (before links, since images use similar syntax)
-        html = html.replace(/!\[(.*?)\]\((.*?)\)/g, '<img src="$2" alt="$1" class="comic-image" style="max-width: 100%; height: auto; border-radius: 8px; margin: 10px 0;">');
+        html = html.replace(/!\[(.*?)\]\((.*?)\)/g, function(match, alt, url) {
+            return '<img src="' + resolveUrl(url) + '" alt="' + alt + '" class="comic-image" style="max-width: 100%; height: auto; border-radius: 8px; margin: 10px 0;">';
+        });
 
         // Replace links with comic styled links
-        html = html.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" class="comic-link" target="_blank">$1</a>');
+        html = html.replace(/\[(.*?)\]\((.*?)\)/g, function(match, text, url) {
+            return '<a href="' + resolveUrl(url) + '" class="comic-link" target="_blank">' + text + '</a>';
+        });
 
         // Replace lists
         html = html.replace(/^\s*\*\s(.*$)/gm, '<li class="comic-list-item">$1</li>');
