@@ -932,6 +932,15 @@ document.addEventListener('DOMContentLoaded', function() {
     function loadTelevision() {
         const television = [
             {
+                name: "BBC World Service",
+                year: "2026",
+                icon: "fas fa-broadcast-tower",
+                description: "Ethical Hacking and AI - Panel discussion on BBC Outside Source World Service with presenter James Reynolds",
+                path: "bbc",
+                date: "2026",
+                audioUrl: "https://www.bbc.com/audio/play/w1730c6crzwpqq6"
+            },
+            {
                 name: "NahamSec",
                 year: "2026",
                 icon: "fas fa-bug",
@@ -992,7 +1001,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="tv-meta">
                         <span class="tv-date">${tv.date}</span>
                         <div class="button-group">
-                            ${tv.videoUrl ? `<a href="${tv.videoUrl}" class="btn-watch" target="_blank">Watch Recording</a>` : `<a href="${viewerLink}" class="btn-watch">View Details</a>`}
+                            ${tv.videoUrl ? `<a href="${tv.videoUrl}" class="btn-watch" target="_blank">Watch Recording</a>` : tv.audioUrl ? `<a href="${tv.audioUrl}" class="btn-watch" target="_blank">Listen to Recording</a>` : `<a href="${viewerLink}" class="btn-watch">View Details</a>`}
                             <a href="${readmeLink}" class="btn-readme" target="_blank" title="View README"><i class="fas fa-file-alt"></i></a>
                         </div>
                     </div>

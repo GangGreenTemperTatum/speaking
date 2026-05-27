@@ -1038,6 +1038,18 @@ const volunteering = [
 // Television data
 const television = [
     {
+        id: "bbc-2026",
+        name: "BBC World Service",
+        year: "2026",
+        icon: "fas fa-broadcast-tower",
+        description: "Ethical Hacking and AI - Panel discussion on BBC Outside Source World Service with presenter James Reynolds, covering ethical hacking, breaking into the field, and its relevance in the AI era",
+        path: "bbc",
+        date: "2026-05-27",
+        audioUrl: "https://www.bbc.com/audio/play/w1730c6crzwpqq6",
+        type: "television",
+        featured: true
+    },
+    {
         id: "nahamsec-2026",
         name: "NahamSec",
         year: "2026",

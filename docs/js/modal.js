@@ -336,8 +336,8 @@
             url = item.url;
         } else if (item.type === 'volunteering' && item.url) {
             url = item.url;
-        } else if (item.type === 'television' && item.videoUrl) {
-            url = item.videoUrl;
+        } else if (item.type === 'television' && (item.videoUrl || item.audioUrl)) {
+            url = item.videoUrl || item.audioUrl;
         } else {
             const subdir = item.subdir || '';
             url = `content-viewer.html?type=${item.type}&org=${item.path}&year=${year}`;

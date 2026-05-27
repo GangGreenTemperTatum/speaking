@@ -6,6 +6,8 @@ This directory contains information about various television appearances related
 
 ## Appearances
 
+- [BBC Outside Source World Service](./bbc/README.md) - 2026 - Ethical Hacking and AI
+  - [BBC Audio Recording](https://www.bbc.com/audio/play/w1730c6crzwpqq6)
 - [NahamSec](./nahamsec/README.md) - 2026 - An AI Hacker Showed Me How to Exfil Data in Zero Clicks
   - [YouTube Recording](https://www.youtube.com/watch?v=BFcXTxHLaKE)
 - [CyberNews](./cybernews/README.md) - 2026 - The Dangerous Evolution of AI Hacking
