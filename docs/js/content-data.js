@@ -1045,6 +1045,7 @@ const television = [
         description: "Ethical Hacking and AI - Panel discussion on BBC Outside Source World Service with presenter James Reynolds, covering ethical hacking, breaking into the field, and its relevance in the AI era",
         path: "bbc",
         date: "2026-05-27",
+        videoUrl: "https://www.youtube.com/watch?v=aOFYfv0r4vU",
         audioUrl: "https://www.bbc.com/audio/play/w1730c6crzwpqq6",
         type: "television",
         featured: true

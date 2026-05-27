@@ -938,7 +938,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 description: "Ethical Hacking and AI - Panel discussion on BBC Outside Source World Service with presenter James Reynolds",
                 path: "bbc",
                 date: "2026",
-                audioUrl: "https://www.bbc.com/audio/play/w1730c6crzwpqq6"
+                videoUrl: "https://www.youtube.com/watch?v=aOFYfv0r4vU"
             },
             {
                 name: "NahamSec",
