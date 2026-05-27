@@ -21,6 +21,7 @@ Panel discussion on BBC World Service's Outside Source programme featuring three
 
 - [BBC Programme Website](https://www.bbc.co.uk/programmes/w1730c6crzwpqq6)
 - [BBC Audio Recording](https://www.bbc.com/audio/play/w1730c6crzwpqq6)
+- [Local Audio Archive (MP3)](bbc-outside-source-ethical-hacking-and-ai-2026.mp3)
 
 ## Key Topics
 
