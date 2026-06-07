@@ -209,7 +209,8 @@ conferenceOrgs.forEach(org => {
         path: `${org.id}/${subPath.path}`,
         year: subPath.year,
         icon: orgConfig.icon,
-        description: description
+        description: description,
+        ...(org.id === 'defcon' ? { videoUrl: "https://www.youtube.com/watch?v=yxqGAtUR8fY" } : {})
       });
     });
   } else {

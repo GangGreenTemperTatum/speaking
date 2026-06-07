@@ -311,6 +311,7 @@ const conferences = [
         localPath: "conferences/defcon/2025/august/bb_village",
         type: "conference",
         date: "2025-08-10",
+        videoUrl: "https://www.youtube.com/watch?v=yxqGAtUR8fY",
         featured: true
     },
     {

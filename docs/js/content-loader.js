@@ -343,7 +343,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 description: "Bug Bounty Village: Misaligned: AI Jailbreaking Panel with Basi Team Six (BT6) & Jason Haddix",
                 path: "defcon",
                 subdir: "august/bb_village",
-                localPath: "conferences/defcon/2025/august/bb_village"
+                localPath: "conferences/defcon/2025/august/bb_village",
+                videoUrl: "https://www.youtube.com/watch?v=yxqGAtUR8fY"
             },
             {
                 name: "PromptorGTFO",
