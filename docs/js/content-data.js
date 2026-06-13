@@ -305,7 +305,7 @@ const conferences = [
         displayName: "DEFCON Bug Bounty Village",
         year: "2025",
         icon: "fas fa-skull-crossbones",
-        description: "Misaligned: AI Jailbreaking Panel with Basi Team Six (BT6) & Jason Haddix",
+        description: "Misaligned: AI Jailbreaking Panel with BT6 (Frontier AI Red Team) & Jason Haddix",
         path: "defcon",
         subdir: "august/bb_village",
         localPath: "conferences/defcon/2025/august/bb_village",

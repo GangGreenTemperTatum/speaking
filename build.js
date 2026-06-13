@@ -194,7 +194,7 @@ conferenceOrgs.forEach(org => {
           description = "Decoding OWASP Large Language Model Security Verification Standard (LLMSVS)";
         }
       } else if (org.id === 'defcon') {
-        description = "Misaligned: AI Jailbreaking Panel with Basi Team Six (BT6) & Jason Haddix";
+        description = "Misaligned: AI Jailbreaking Panel with BT6 (Frontier AI Red Team) & Jason Haddix";
       } else if (org.id === 'taico') {
         description = "Toronto AI and Cybersecurity Organization - First meetup of 2026 featuring Q&A, steganography talk, and lightning talks";
       } else if (org.id === 'national-academies') {
