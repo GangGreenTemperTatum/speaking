@@ -90,6 +90,14 @@
       "videoUrl": "https://www.youtube.com/watch?v=yxqGAtUR8fY"
     },
     {
+      "id": "defcon-2026",
+      "name": "DEFCON",
+      "path": "defcon/2026/august/bb_village",
+      "year": "2026",
+      "icon": "fas fa-skull-crossbones",
+      "description": "Exfil Everything: A Year of Stealing Data from AI Agents"
+    },
+    {
       "id": "in-cyber-forum-2024",
       "name": "In-Cyber Forum",
       "path": "in-cyber-forum",

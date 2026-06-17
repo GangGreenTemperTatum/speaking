@@ -347,6 +347,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 videoUrl: "https://www.youtube.com/watch?v=yxqGAtUR8fY"
             },
             {
+                name: "DEFCON",
+                displayName: "DEFCON 34 Bug Bounty Village: Exfil Everything: A Year of Stealing Data from AI Agents",
+                year: "2026",
+                icon: "fas fa-skull-crossbones",
+                description: "Exfil Everything: A Year of Stealing Data from AI Agents (30 min talk)",
+                path: "defcon",
+                subdir: "august/bb_village",
+                localPath: "conferences/defcon/2026/august/bb_village"
+            },
+            {
                 name: "PromptorGTFO",
                 displayName: "PromptorGTFO 2025 - Deploying Offensive AI with Modular Agents",
                 year: "2025",

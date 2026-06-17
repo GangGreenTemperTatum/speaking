@@ -21,7 +21,7 @@ const conferenceOrgs = [
   { id: "apisec", years: ["2023"] },
   { id: "bugcrowd", subDirs: ["2025/july/bugboss", "2025/july/rhic", "2025/september/edprotect", "2025/september/rit", "2025/october/wraven", "2025/october/ut", "2025/october/cnu"], years: ["2025"] },
   { id: "dc604", years: ["2023"] },
-  { id: "defcon", subPaths: [{path: "2025/august/bb_village", year: "2025"}] },
+  { id: "defcon", subPaths: [{path: "2025/august/bb_village", year: "2025"}, {path: "2026/august/bb_village", year: "2026"}] },
   { id: "in-cyber-forum", years: ["2024"] },
   { id: "interface", years: ["2023"] },
   { id: "isaca", years: ["2024"] },
@@ -194,7 +194,11 @@ conferenceOrgs.forEach(org => {
           description = "Decoding OWASP Large Language Model Security Verification Standard (LLMSVS)";
         }
       } else if (org.id === 'defcon') {
-        description = "Misaligned: AI Jailbreaking Panel with BT6 (Frontier AI Red Team) & Jason Haddix";
+        if (subPath.year === '2025') {
+          description = "Misaligned: AI Jailbreaking Panel with BT6 (Frontier AI Red Team) & Jason Haddix";
+        } else if (subPath.year === '2026') {
+          description = "Exfil Everything: A Year of Stealing Data from AI Agents";
+        }
       } else if (org.id === 'taico') {
         description = "Toronto AI and Cybersecurity Organization - First meetup of 2026 featuring Q&A, steganography talk, and lightning talks";
       } else if (org.id === 'national-academies') {
@@ -210,7 +214,7 @@ conferenceOrgs.forEach(org => {
         year: subPath.year,
         icon: orgConfig.icon,
         description: description,
-        ...(org.id === 'defcon' ? { videoUrl: "https://www.youtube.com/watch?v=yxqGAtUR8fY" } : {})
+        ...(org.id === 'defcon' && subPath.year === '2025' ? { videoUrl: "https://www.youtube.com/watch?v=yxqGAtUR8fY" } : {})
       });
     });
   } else {

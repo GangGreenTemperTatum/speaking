@@ -315,6 +315,20 @@ const conferences = [
         featured: true
     },
     {
+        id: "defcon-2026",
+        name: "DEFCON",
+        displayName: "DEFCON 34 Bug Bounty Village",
+        year: "2026",
+        icon: "fas fa-skull-crossbones",
+        description: "Exfil Everything: A Year of Stealing Data from AI Agents",
+        path: "defcon",
+        subdir: "august/bb_village",
+        localPath: "conferences/defcon/2026/august/bb_village",
+        type: "conference",
+        date: "2026-08-01",
+        featured: true
+    },
+    {
         id: "promptorgtfo-2025",
         name: "PromptorGTFO",
         displayName: "PromptorGTFO 2025",
