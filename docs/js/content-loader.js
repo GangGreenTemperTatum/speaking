@@ -581,10 +581,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 year: "2026"
             },
             {
+                title: "The URL Auto-Linker That Leaked Your Name",
+                publisher: "Substack",
+                description: "Write-up on abusing innerHTML plus @font-face under a mis-scoped CSP to turn CSS injection into DOM text exfiltration.",
+                url: "publications/substack/The URL Auto-Linker That Leaked Your Name (6_24_2026).html",
+                icon: "fas fa-pen-nib",
+                year: "2026"
+            },
+            {
                 title: "C4: Command & Control over Claude Code via Natural Language",
                 publisher: "Substack",
                 description: "Co-authored with Michael Kouremetis. Living Off the AI: A C2 Protocol for Agentic Tools. Explores command and control techniques over Claude Code using natural language, demonstrating how agentic AI tools can be leveraged as C2 channels.",
-                url: "https://open.substack.com/pub/0xmoose/p/c4-command-and-control-over-claude",
+                url: "publications/substack/C4： Command & Control over Claude Code via Natural Language (6_16_2026 7：40：03 PM).html",
                 icon: "fas fa-terminal",
                 year: "2026"
             },
