@@ -84,7 +84,7 @@ describe('Content Data Module', () => {
 
     test('getAllContent should return all content', () => {
         const all = contentData.getAllContent();
-        expect(Object.keys(all)).toHaveLength(5);
+        expect(Object.keys(all)).toHaveLength(6);
         expect(all.conferences.length).toBe(contentData.conferences.length);
     });
 

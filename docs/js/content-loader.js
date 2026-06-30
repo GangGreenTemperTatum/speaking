@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     loadPublications();
     loadVolunteering();
     loadTelevision();
+    loadAchievements();
 
     function loadConferences() {
         const conferences = [
@@ -1035,6 +1036,51 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Add name filter for television
         addNameFilter('television', television.map(t => t.name));
+    }
+
+    function loadAchievements() {
+        const achievements = [
+            {
+                title: "HackerOne US Leaderboard Q2 (Apr-Jun) 2026 - #5",
+                organization: "HackerOne",
+                description: "Ranked #5 on the HackerOne US Country Leaderboard for Q2 April-June 2026 in Bug Bounty Programs, Individuals category for Web Application assets.",
+                icon: "fas fa-trophy",
+                year: "2026",
+                url: "https://hackerone.com/leaderboard/country?year=2026&quarter=2&country=US&assetType=WEB_APP&tab=bbp&userTypeTab=individual",
+                localPath: "achievements/hackerone"
+            }
+        ];
+
+        const achievementsSection = document.getElementById('achievements');
+        if (!achievementsSection) return;
+
+        achievementsSection.innerHTML = '<h2 class="section-title"><span class="highlight">Achievements</span></h2>';
+
+        achievements.forEach(achievement => {
+            const panel = document.createElement('div');
+            panel.className = 'comic-panel achievement-item';
+            panel.setAttribute('data-year', achievement.year);
+
+            panel.innerHTML = `
+                <div class="panel-content">
+                    <div class="vol-logo"><i class="${achievement.icon}"></i> ${achievement.organization}</div>
+                    <h3>${achievement.title}</h3>
+                    <div class="vol-meta-header">
+                        <span class="vol-company">${achievement.organization}</span>
+                        <span class="vol-date">${achievement.year}</span>
+                    </div>
+                    <p>${achievement.description}</p>
+                    <div class="vol-meta">
+                        ${achievement.url ? `<a href="${achievement.url}" class="btn-read" target="_blank">View Leaderboard</a>` : ''}
+                        ${achievement.localPath ? `<a href="${achievement.localPath}/" class="btn-view">View Details</a>` : ''}
+                    </div>
+                </div>
+            `;
+
+            achievementsSection.appendChild(panel);
+        });
+
+        addYearFilter('achievements', achievements.map(a => a.year));
     }
 
     // Helper function to create year filters

@@ -1195,7 +1195,8 @@ function getAllContent() {
         podcasts: podcasts.sort((a, b) => new Date(b.date) - new Date(a.date)),
         publications: publications.sort((a, b) => new Date(b.date) - new Date(a.date)),
         volunteering: volunteering.sort((a, b) => new Date(b.dateStart) - new Date(a.dateStart)),
-        television: television.sort((a, b) => new Date(b.date) - new Date(a.date))
+        television: television.sort((a, b) => new Date(b.date) - new Date(a.date)),
+        achievements: achievements.sort((a, b) => new Date(b.date) - new Date(a.date))
     };
 }
 
@@ -1209,7 +1210,7 @@ function filterByYear(content, year) {
 function searchContent(query, contentType = 'all') {
     const allContent = getAllContent();
     const searchIn = contentType === 'all' ? 
-        [...allContent.conferences, ...allContent.podcasts, ...allContent.publications, ...allContent.volunteering, ...allContent.television] :
+        [...allContent.conferences, ...allContent.podcasts, ...allContent.publications, ...allContent.volunteering, ...allContent.television, ...allContent.achievements] :
         allContent[contentType];
     
     const lowerQuery = query.toLowerCase();
@@ -1219,6 +1220,23 @@ function searchContent(query, contentType = 'all') {
     });
 }
 
+// Achievements data
+const achievements = [
+    {
+        id: "hackerone-us-leaderboard-q2-2026",
+        title: "HackerOne US Leaderboard Q2 (Apr-Jun) 2026 - #5",
+        organization: "HackerOne",
+        description: "Ranked #5 on the HackerOne US Country Leaderboard for Q2 April-June 2026 in Bug Bounty Programs, Individuals category for Web Application assets.",
+        icon: "fas fa-trophy",
+        year: "2026",
+        date: "2026-06-30",
+        type: "achievement",
+        url: "https://hackerone.com/leaderboard/country?year=2026&quarter=2&country=US&assetType=WEB_APP&tab=bbp&userTypeTab=individual",
+        localPath: "achievements/hackerone",
+        featured: true
+    }
+];
+
 // Export for ES modules and global access
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
@@ -1227,6 +1245,7 @@ if (typeof module !== 'undefined' && module.exports) {
         publications,
         volunteering,
         television,
+        achievements,
         zones,
         getFeaturedContent,
         getRandomFeaturedItem,
@@ -1245,6 +1264,7 @@ if (typeof window !== 'undefined') {
         publications,
         volunteering,
         television,
+        achievements,
         zones,
         getFeaturedContent,
         getRandomFeaturedItem,

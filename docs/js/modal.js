@@ -336,6 +336,8 @@
             url = item.url;
         } else if (item.type === 'volunteering' && item.url) {
             url = item.url;
+        } else if (item.type === 'achievement' && item.url) {
+            url = item.url;
         } else if (item.type === 'television' && (item.videoUrl || item.audioUrl)) {
             url = item.videoUrl || item.audioUrl;
         } else {

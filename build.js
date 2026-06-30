@@ -12,7 +12,8 @@ fs.ensureDirSync(path.dirname(OUTPUT_FILE));
 const content = {
   conferences: [],
   podcasts: [],
-  publications: []
+  publications: [],
+  achievements: []
 };
 
 // Process conferences
@@ -509,6 +510,22 @@ const publications = [
 // Add publication entries
 content.publications = publications;
 
+// Add achievement entries
+content.achievements = [
+  {
+    id: "hackerone-us-leaderboard-q2-2026",
+    title: "HackerOne US Leaderboard Q2 (Apr-Jun) 2026 - #5",
+    organization: "HackerOne",
+    description: "Ranked #5 on the HackerOne US Country Leaderboard for Q2 April-June 2026 in Bug Bounty Programs, Individuals category for Web Application assets.",
+    icon: "fas fa-trophy",
+    year: "2026",
+    date: "2026-06-30",
+    type: "achievement",
+    url: "https://hackerone.com/leaderboard/country?year=2026&quarter=2&country=US&assetType=WEB_APP&tab=bbp&userTypeTab=individual",
+    localPath: "achievements/hackerone"
+  }
+];
+
 // Write the content to a JSON file - ensure it's valid JSON without comments
 fs.writeFileSync(OUTPUT_FILE, JSON.stringify(content, null, 2));
 
@@ -522,3 +539,4 @@ console.log(`Content JSON written to ${OUTPUT_FILE}`);
 console.log(`Found ${content.conferences.length} conferences`);
 console.log(`Found ${content.podcasts.length} podcasts`);
 console.log(`Found ${content.publications.length} publications`);
+console.log(`Found ${content.achievements.length} achievements`);

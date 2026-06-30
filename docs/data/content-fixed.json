@@ -373,17 +373,9 @@
       "title": "C4: Command & Control over Claude Code via Natural Language",
       "publisher": "Substack",
       "description": "Co-authored with Michael Kouremetis. Living Off the AI: A C2 Protocol for Agentic Tools. Explores command and control techniques over Claude Code using natural language, demonstrating how agentic AI tools can be leveraged as C2 channels.",
-      "url": "publications/substack/C4： Command & Control over Claude Code via Natural Language (6_16_2026 7：40：03 PM).html",
+      "url": "https://open.substack.com/pub/0xmoose/p/c4-command-and-control-over-claude",
       "icon": "fas fa-terminal",
-      "year": "2026"
-    },
-    {
-      "id": "substack-url-auto-linker-2026",
-      "title": "The URL Auto-Linker That Leaked Your Name",
-      "publisher": "Substack",
-      "description": "Write-up on abusing innerHTML plus @font-face under a mis-scoped CSP to turn CSS injection into DOM text exfiltration.",
-      "url": "publications/substack/The URL Auto-Linker That Leaked Your Name (6_24_2026).html",
-      "icon": "fas fa-pen-nib",
+      "external": true,
       "year": "2026"
     },
     {
@@ -572,6 +564,20 @@
       "url": "/owasp/owasp-llm-apps",
       "icon": "fas fa-shield-virus",
       "year": "2023"
+    }
+  ],
+  "achievements": [
+    {
+      "id": "hackerone-us-leaderboard-q2-2026",
+      "title": "HackerOne US Leaderboard Q2 (Apr-Jun) 2026 - #5",
+      "organization": "HackerOne",
+      "description": "Ranked #5 on the HackerOne US Country Leaderboard for Q2 April-June 2026 in Bug Bounty Programs, Individuals category for Web Application assets.",
+      "icon": "fas fa-trophy",
+      "year": "2026",
+      "date": "2026-06-30",
+      "type": "achievement",
+      "url": "https://hackerone.com/leaderboard/country?year=2026&quarter=2&country=US&assetType=WEB_APP&tab=bbp&userTypeTab=individual",
+      "localPath": "achievements/hackerone"
     }
   ]
 }
