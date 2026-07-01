@@ -1041,12 +1041,21 @@ document.addEventListener('DOMContentLoaded', function() {
     function loadAchievements() {
         const achievements = [
             {
-                title: "HackerOne US Leaderboard Q2 (Apr-Jun) 2026 - #5",
+                title: "HackerOne US BBP Leaderboard Q2 (Apr-Jun) 2026 - #4",
                 organization: "HackerOne",
-                description: "Ranked #5 on the HackerOne US Country Leaderboard for Q2 April-June 2026 in Bug Bounty Programs, Individuals category for Web Application assets.",
+                description: "Ranked #4 on the HackerOne US Country Leaderboard for Q2 April-June 2026 in Bug Bounty Programs, Individuals category for Web Application assets.",
                 icon: "fas fa-trophy",
                 year: "2026",
                 url: "https://hackerone.com/leaderboard/country?year=2026&quarter=2&country=US&assetType=WEB_APP&tab=bbp&userTypeTab=individual",
+                localPath: "achievements/hackerone"
+            },
+            {
+                title: "HackerOne US VDP Response Leaderboard 2026 - #1",
+                organization: "HackerOne",
+                description: "Ranked #1 on the HackerOne US VDP Response Leaderboard for all of 2026, Individuals category.",
+                icon: "fas fa-crown",
+                year: "2026",
+                url: "https://hackerone.com/leaderboard/country?year=2026&country=US&tab=vdp&userTypeTab=individual",
                 localPath: "achievements/hackerone"
             }
         ];
