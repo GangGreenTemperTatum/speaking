@@ -309,6 +309,16 @@ const publications = [
     year: "2026"
   },
   {
+    id: "substack-signal-over-noise-2026",
+    title: "Signal Over Noise: AI Agents and the Operator Moat",
+    publisher: "Substack",
+    description: "When agents scale the hunt, expertise decides what survives. Examines how AI agents reshape competitive dynamics and why human operational expertise becomes the primary differentiator as AI tools commoditize.",
+    url: "https://0xmoose.substack.com/p/signal-over-noise-ai-agents-and-the",
+    icon: "fas fa-pen-nib",
+    external: true,
+    year: "2026"
+  },
+  {
     id: "substack-c4-claude-code-c2",
     title: "C4: Command & Control over Claude Code via Natural Language",
     publisher: "Substack",

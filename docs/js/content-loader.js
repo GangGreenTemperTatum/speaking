@@ -582,6 +582,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 year: "2026"
             },
             {
+                title: "Signal Over Noise: AI Agents and the Operator Moat",
+                publisher: "Substack",
+                description: "When agents scale the hunt, expertise decides what survives. Examines how AI agents reshape competitive dynamics and why human operational expertise becomes the primary differentiator as AI tools commoditize.",
+                url: "https://0xmoose.substack.com/p/signal-over-noise-ai-agents-and-the",
+                icon: "fas fa-pen-nib",
+                year: "2026"
+            },
+            {
                 title: "The URL Auto-Linker That Leaked Your Name",
                 publisher: "Substack",
                 description: "Write-up on abusing innerHTML plus @font-face under a mis-scoped CSP to turn CSS injection into DOM text exfiltration.",
