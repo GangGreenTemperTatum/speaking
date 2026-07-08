@@ -1223,15 +1223,15 @@ function searchContent(query, contentType = 'all') {
 // Achievements data
 const achievements = [
     {
-        id: "hackerone-us-leaderboard-q2-2026",
-        title: "HackerOne US BBP Leaderboard Q2 (Apr-Jun) 2026 - #3",
+        id: "hackerone-us-leaderboard-2026",
+        title: "HackerOne US BBP Leaderboard 2026 - #3",
         organization: "HackerOne",
-        description: "Ranked #3 on the HackerOne US Country Leaderboard for Q2 April-June 2026 in Bug Bounty Programs, Individuals category for Web Application assets.",
+        description: "Ranked #3 on the HackerOne US Country Leaderboard for 2026 in Bug Bounty Programs, Individuals category for Web Application assets.",
         icon: "fas fa-trophy",
         year: "2026",
         date: "2026-06-30",
         type: "achievement",
-        url: "https://hackerone.com/leaderboard/country?year=2026&quarter=2&country=US&assetType=WEB_APP&tab=bbp&userTypeTab=individual",
+        url: "https://hackerone.com/leaderboard/country?year=2026&country=US&assetType=WEB_APP&tab=bbp&userTypeTab=individual",
         localPath: "achievements/hackerone",
         featured: true
     },

@@ -1,11 +1,11 @@
 # HackerOne US Leaderboard Achievements
 
-## #3 US BBP Leaderboard - Q2 (Apr-Jun) 2026
+## #3 US BBP Leaderboard - 2026
 
-**Ranked #3 on the HackerOne US Country Leaderboard** for Q2 2026 (April-June), in the Bounty > Individuals category for Web Application asset types.
+**Ranked #3 on the HackerOne US Country Leaderboard** for 2026, in the Bounty > Individuals category for Web Application asset types.
 
 - **Platform**: [HackerOne](https://hackerone.com)
-- **Leaderboard**: [US Country Leaderboard - Q2 2026](https://hackerone.com/leaderboard/country?year=2026&quarter=2&country=US&assetType=WEB_APP&tab=bbp&userTypeTab=individual)
+- **Leaderboard**: [US Country Leaderboard - 2026](https://hackerone.com/leaderboard/country?year=2026&country=US&assetType=WEB_APP&tab=bbp&userTypeTab=individual)
 - **Ranking**: #3
 - **Handle**: 0xmoose
 - **Reputation**: 3,479
