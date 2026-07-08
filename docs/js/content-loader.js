@@ -1041,9 +1041,9 @@ document.addEventListener('DOMContentLoaded', function() {
     function loadAchievements() {
         const achievements = [
             {
-                title: "HackerOne US BBP Leaderboard Q2 (Apr-Jun) 2026 - #4",
+                title: "HackerOne US BBP Leaderboard Q2 (Apr-Jun) 2026 - #3",
                 organization: "HackerOne",
-                description: "Ranked #4 on the HackerOne US Country Leaderboard for Q2 April-June 2026 in Bug Bounty Programs, Individuals category for Web Application assets.",
+                description: "Ranked #3 on the HackerOne US Country Leaderboard for Q2 April-June 2026 in Bug Bounty Programs, Individuals category for Web Application assets.",
                 icon: "fas fa-trophy",
                 year: "2026",
                 url: "https://hackerone.com/leaderboard/country?year=2026&quarter=2&country=US&assetType=WEB_APP&tab=bbp&userTypeTab=individual",
