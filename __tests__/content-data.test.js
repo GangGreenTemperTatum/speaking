@@ -25,7 +25,7 @@ describe('Content Data Module', () => {
 
     test('should have correct number of publications', () => {
         expect(contentData.publications.length).toBeGreaterThan(15);
-        expect(contentData.publications.length).toBeLessThan(30);
+        expect(contentData.publications.length).toBeLessThan(40);
     });
 
     test('should have correct number of volunteering entries', () => {

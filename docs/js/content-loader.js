@@ -582,6 +582,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 year: "2026"
             },
             {
+                title: "Beyond the Terminal: Offensive Security Evals for Embodied Reasoning",
+                publisher: "Dreadnode",
+                description: "Co-authored with Michael Kouremetis. How we built ER-Spatial tasks into instrumented multimodal evals for a tier 1 frontier model provider, moving offensive security evals past the terminal into embodied reasoning over visual artifacts like circuit boards and facility layouts.",
+                url: "https://www.dreadnode.io/research/embodied-reasoning-offensive-security-evals/",
+                icon: "fas fa-skull",
+                year: "2026"
+            },
+            {
                 title: "Signal Over Noise: AI Agents and the Operator Moat",
                 publisher: "Substack",
                 description: "When agents scale the hunt, expertise decides what survives. Examines how AI agents reshape competitive dynamics and why human operational expertise becomes the primary differentiator as AI tools commoditize.",
