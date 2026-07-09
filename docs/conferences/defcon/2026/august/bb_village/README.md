@@ -31,6 +31,8 @@
   - **Type:** Panel
   - **Village:** Bug Bounty Village
   - **Track:** BT6 Panel
+  - **Date:** Saturday, August 8, 2026
+  - **Time:** 2:30 PM - 4:00 PM
   - **Moderator:** NahamSec
   - **Panelists:** busfactor, Joey Melo, ph1r3574r73r, 0xmoose
   - **Abstract:** _`[DETAILS TBC]` -- Another DEF CON 2026 Bug Bounty Village appearance, with details forthcoming. Placeholder for now; expected to be similar in status and format to the Exfil Everything talk._
@@ -54,6 +56,6 @@
 
 ---
 
-> **Status:** CFP accepted. Talk and panel details in progress. Secrets being exfiltrated.
+> **Status:** CFP accepted. Panel schedule confirmed. Talk details in progress. Secrets being exfiltrated.
 
 ------------------------------

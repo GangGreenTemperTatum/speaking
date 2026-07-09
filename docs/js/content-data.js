@@ -325,7 +325,7 @@ const conferences = [
         subdir: "august/bb_village",
         localPath: "conferences/defcon/2026/august/bb_village",
         type: "conference",
-        date: "2026-08-01",
+        date: "2026-08-08",
         featured: true
     },
     {
