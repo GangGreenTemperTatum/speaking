@@ -198,7 +198,7 @@ conferenceOrgs.forEach(org => {
         if (subPath.year === '2025') {
           description = "Misaligned: AI Jailbreaking Panel with BT6 (Frontier AI Red Team) & Jason Haddix";
         } else if (subPath.year === '2026') {
-          description = "Exfil Everything: A Year of Stealing Data from AI Agents";
+          description = "Exfil Everything + Bots, Bounties, and Bullshit: AI in Hacking Panel";
         }
       } else if (org.id === 'taico') {
         description = "Toronto AI and Cybersecurity Organization - First meetup of 2026 featuring Q&A, steganography talk, and lightning talks";

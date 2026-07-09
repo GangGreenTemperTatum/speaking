@@ -320,7 +320,7 @@ const conferences = [
         displayName: "DEFCON 34 Bug Bounty Village",
         year: "2026",
         icon: "fas fa-skull-crossbones",
-        description: "Exfil Everything: A Year of Stealing Data from AI Agents",
+        description: "Exfil Everything + Bots, Bounties, and Bullshit: AI in Hacking Panel",
         path: "defcon",
         subdir: "august/bb_village",
         localPath: "conferences/defcon/2026/august/bb_village",
