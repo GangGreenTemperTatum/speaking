@@ -313,6 +313,16 @@ const publications = [
     year: "2026"
   },
   {
+    id: "arxiv-scopejudge-2026",
+    title: "arXiv:2607.07774 - ScopeJudge: Cost-Aware Pre-Execution Gating for Offensive Security Agents",
+    publisher: "arXiv",
+    description: "Co-authored with Shane Caldwell, Max Harley, Michael Kouremetis, Vincent Abruzzo, and Will Pearce. Introduces ScopeJudge, a pre-execution monitoring system where a cheap trusted LLM judge inspects each tool call proposed by offensive security agents, with a benchmark of ~5,000 tool calls labeled by professional pentesters.",
+    url: "https://arxiv.org/abs/2607.07774",
+    icon: "fas fa-file-alt",
+    external: true,
+    year: "2026"
+  },
+  {
     id: "dreadnode-embodied-reasoning-evals-2026",
     title: "Beyond the Terminal: Offensive Security Evals for Embodied Reasoning",
     publisher: "Dreadnode",
