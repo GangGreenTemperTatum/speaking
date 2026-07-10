@@ -19,6 +19,16 @@ document.addEventListener('DOMContentLoaded', function() {
     function loadConferences() {
         const conferences = [
             {
+                name: "Antisyphon Training",
+                displayName: "AI Cybersecurity Summit 2026",
+                year: "2026",
+                icon: "fas fa-chalkboard-teacher",
+                description: "Summit Keynote: Exfil Everything: A Year of Stealing Data from AI Agents",
+                path: "antisyphon",
+                subdir: "2026/august/ai-cybersecurity-summit",
+                localPath: "conferences/antisyphon/2026/august/ai-cybersecurity-summit"
+            },
+            {
                 name: "API Days",
                 displayName: "API Days 2023 - AI/ML Security at the API level",
                 year: "2023",

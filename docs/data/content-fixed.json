@@ -1,6 +1,14 @@
 {
   "conferences": [
     {
+      "id": "antisyphon-2026",
+      "name": "Antisyphon Training",
+      "path": "antisyphon/2026/august/ai-cybersecurity-summit",
+      "year": "2026",
+      "icon": "fas fa-chalkboard-teacher",
+      "description": "Summit Keynote: Exfil Everything: A Year of Stealing Data from AI Agents"
+    },
+    {
       "id": "apidays-2023",
       "name": "API Days",
       "path": "apidays",

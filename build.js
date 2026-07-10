@@ -18,6 +18,7 @@ const content = {
 
 // Process conferences
 const conferenceOrgs = [
+  { id: "antisyphon", subPaths: [{path: "2026/august/ai-cybersecurity-summit", year: "2026"}] },
   { id: "apidays", years: ["2023"] },
   { id: "apisec", years: ["2023"] },
   { id: "bugcrowd", subDirs: ["2025/july/bugboss", "2025/july/rhic", "2025/september/edprotect", "2025/september/rit", "2025/october/wraven", "2025/october/ut", "2025/october/cnu"], years: ["2025"] },
@@ -40,6 +41,7 @@ const conferenceOrgs = [
 
 // Map directory names to display names and icons
 const contentMap = {
+  "antisyphon": { name: "Antisyphon Training", icon: "fas fa-chalkboard-teacher" },
   "apidays": { name: "API Days", icon: "fas fa-cloud" },
   "apisec": { name: "APISec", icon: "fas fa-shield-alt" },
   "bugcrowd": { name: "BugCrowd", icon: "fas fa-bug" },
@@ -206,6 +208,8 @@ conferenceOrgs.forEach(org => {
         description = "Panel: Threat Modeling for AI Security - Securing AI Systems: New Challenges and Research Priorities";
       } else if (org.id === 'wallarm') {
         description = "Upcoming webinar on why traditional WAFs miss AI-driven traffic and what to use instead";
+      } else if (org.id === 'antisyphon') {
+        description = "Summit Keynote: Exfil Everything: A Year of Stealing Data from AI Agents";
       }
 
       content.conferences.push({

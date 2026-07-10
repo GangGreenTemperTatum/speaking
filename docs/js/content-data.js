@@ -6,6 +6,20 @@
 // Conference data
 const conferences = [
     {
+        id: "antisyphon-2026",
+        name: "Antisyphon Training",
+        displayName: "AI Cybersecurity Summit 2026",
+        year: "2026",
+        icon: "fas fa-chalkboard-teacher",
+        description: "Summit Keynote: Exfil Everything: A Year of Stealing Data from AI Agents",
+        path: "antisyphon",
+        subdir: "2026/august/ai-cybersecurity-summit",
+        localPath: "conferences/antisyphon/2026/august/ai-cybersecurity-summit",
+        type: "conference",
+        date: "2026-08-14",
+        featured: true
+    },
+    {
         id: "apidays-2023",
         name: "API Days",
         displayName: "API Days 2023 - AI/ML Security at the API level",
