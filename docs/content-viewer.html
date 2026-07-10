@@ -411,6 +411,12 @@
         function renderMarkdown(text, contentPath) {
             if (!contentPath) contentPath = '';
             
+            function resolveUrl(url) {
+                if (!contentPath) return url;
+                if (/^(https?:\/\/|\/\/|\/|#|mailto:|tel:|data:)/i.test(url)) return url;
+                return `${contentPath}/${url}`;
+            }
+
             let html = text;
             
             // Handle code blocks first (preserve them)
@@ -442,7 +448,12 @@
             
             // Convert links - handle markdown links [text](url) BEFORE headers
             // This ensures links in headers like # [Title](url) work correctly
-            html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+            const linkPlaceholders = [];
+            html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (match, text, url) => {
+                const placeholder = `<!--LINKPLACEHOLDER${linkPlaceholders.length}-->`;
+                linkPlaceholders.push(`<a href="${resolveUrl(url)}" target="_blank" rel="noopener noreferrer">${text}</a>`);
+                return placeholder;
+            });
             
             // Convert headers (after links so header links work)
             html = html.replace(/^#### (.*$)/gim, '<h4>$1</h4>');
@@ -477,6 +488,12 @@
             // Restore image placeholders
             imagePlaceholders.forEach((imgHtml, index) => {
                 html = html.replace(`<!--IMAGE_${index}-->`, imgHtml);
+            });
+
+            // Restore link placeholders after formatting so underscores in local paths
+            // do not get interpreted as emphasis.
+            linkPlaceholders.forEach((linkHtml, index) => {
+                html = html.replace(`<!--LINKPLACEHOLDER${index}-->`, linkHtml);
             });
             
             // Restore code blocks

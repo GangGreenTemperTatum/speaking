@@ -9,6 +9,12 @@ const path = require('path');
 // Copy of the renderMarkdown function from content-viewer.html
 function renderMarkdown(text, contentPath) {
     if (!contentPath) contentPath = '';
+
+    function resolveUrl(url) {
+        if (!contentPath) return url;
+        if (/^(https?:\/\/|\/\/|\/|#|mailto:|tel:|data:)/i.test(url)) return url;
+        return `${contentPath}/${url}`;
+    }
     
     let html = text;
     
@@ -40,7 +46,12 @@ function renderMarkdown(text, contentPath) {
     });
     
     // Convert links - handle markdown links [text](url) BEFORE headers
-    html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+    const linkPlaceholders = [];
+    html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (match, text, url) => {
+        const placeholder = `<!--LINKPLACEHOLDER${linkPlaceholders.length}-->`;
+        linkPlaceholders.push(`<a href="${resolveUrl(url)}" target="_blank" rel="noopener noreferrer">${text}</a>`);
+        return placeholder;
+    });
     
     // Convert headers (after links so header links work)
     html = html.replace(/^#### (.*$)/gim, '<h4>$1</h4>');
@@ -75,6 +86,10 @@ function renderMarkdown(text, contentPath) {
     // Restore image placeholders
     imagePlaceholders.forEach((imgHtml, index) => {
         html = html.replace(`<!--IMAGE_${index}-->`, imgHtml);
+    });
+
+    linkPlaceholders.forEach((linkHtml, index) => {
+        html = html.replace(`<!--LINKPLACEHOLDER${index}-->`, linkHtml);
     });
     
     // Restore code blocks
@@ -251,6 +266,14 @@ describe('Markdown Rendering Tests', () => {
             const output = renderMarkdown(input, '');
             expect(output).toContain('<a href="https://example.com"');
             expect(output).toContain('>Click Here</a>');
+        });
+
+        test('should prefix local links with content path', () => {
+            const input = '[Local PDF](defcon34-bbv-speakers-2026-page.pdf)';
+            const output = renderMarkdown(input, 'conferences/defcon/2026/august/bb_village');
+
+            expect(output).toContain('<a href="conferences/defcon/2026/august/bb_village/defcon34-bbv-speakers-2026-page.pdf"');
+            expect(output).not.toContain('<em>');
         });
 
         test('should convert multiple links', () => {

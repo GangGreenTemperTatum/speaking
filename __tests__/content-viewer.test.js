@@ -6,6 +6,12 @@ describe('Content Viewer Markdown Rendering', () => {
     // Mock the renderMarkdown function logic from content-viewer.html
     function renderMarkdown(text, contentPath) {
         if (!contentPath) contentPath = '';
+
+        function resolveUrl(url) {
+            if (!contentPath) return url;
+            if (/^(https?:\/\/|\/\/|\/|#|mailto:|tel:|data:)/i.test(url)) return url;
+            return `${contentPath}/${url}`;
+        }
         
         let html = text;
         
@@ -28,7 +34,12 @@ describe('Content Viewer Markdown Rendering', () => {
         });
         
         // Convert links - handle markdown links [text](url) BEFORE headers
-        html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+        const linkPlaceholders = [];
+        html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (match, text, url) => {
+            const placeholder = `<!--LINKPLACEHOLDER${linkPlaceholders.length}-->`;
+            linkPlaceholders.push(`<a href="${resolveUrl(url)}" target="_blank" rel="noopener noreferrer">${text}</a>`);
+            return placeholder;
+        });
         
         // Convert headers (after links so header links work)
         html = html.replace(/^#### (.*$)/gim, '<h4>$1</h4>');
@@ -52,6 +63,10 @@ describe('Content Viewer Markdown Rendering', () => {
         // Restore image placeholders
         imagePlaceholders.forEach((imgHtml, index) => {
             html = html.replace(`<!--IMAGE_${index}-->`, imgHtml);
+        });
+
+        linkPlaceholders.forEach((linkHtml, index) => {
+            html = html.replace(`<!--LINKPLACEHOLDER${index}-->`, linkHtml);
         });
         
         // Restore code blocks
@@ -154,5 +169,14 @@ describe('Content Viewer Markdown Rendering', () => {
         expect(html).toContain('<h2>The Future of Autonomous Red Teaming</h2>');
         expect(html).toContain('<strong>Episode:</strong>');
         expect(html).toContain('<a href="https://open.spotify.com/episode/1GHef4viw4wdeEQHQy8MhQ" target="_blank" rel="noopener noreferrer">Listen</a>');
+    });
+
+    test('should resolve local archive links against content path', () => {
+        const markdown = '- **Local PDF archive:** [defcon34-bbv-speakers-2026-page.pdf](defcon34-bbv-speakers-2026-page.pdf)';
+        const contentPath = 'conferences/defcon/2026/august/bb_village';
+        const html = renderMarkdown(markdown, contentPath);
+
+        expect(html).toContain('<a href="conferences/defcon/2026/august/bb_village/defcon34-bbv-speakers-2026-page.pdf" target="_blank" rel="noopener noreferrer">defcon34-bbv-speakers-2026-page.pdf</a>');
+        expect(html).not.toContain('<em>');
     });
 });
