@@ -17,6 +17,7 @@ const conferences = [
         localPath: "conferences/antisyphon/2026/august/ai-cybersecurity-summit",
         type: "conference",
         date: "2026-08-14",
+        videoUrl: "https://www.youtube.com/watch?v=oi9PMp4OkLU",
         featured: true
     },
     {

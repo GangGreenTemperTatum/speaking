@@ -18,6 +18,7 @@ This keynote covers a year of stealing data from AI agents: what worked, what fa
 ### Materials
 
 - **Slides:** Not available yet
+- **Promo video:** [YouTube](https://www.youtube.com/watch?v=oi9PMp4OkLU)
 - **Local keynote page PDF archive:** [Exfil Everything: Stealing Data From AI Agents](exfil-everything-stealing-data-from-ai-agents.pdf)
 - **Local summit page archive:** [ai-cybersecurity-summit-2026-page.html](ai-cybersecurity-summit-2026-page.html)
 
@@ -25,6 +26,7 @@ This keynote covers a year of stealing data from AI agents: what worked, what fa
 
 - **Summit page:** [AI Cybersecurity Summit 2026](https://learning.antisyphontraining.com/pages/ai-cybersecurity-summit)
 - **Keynote page:** [Summit Keynote: Exfil Everything: A Year of Stealing Data from AI Agents](https://learning.antisyphontraining.com/pages/summit-keynote-exfil-everything-a-year-of-stealing-data-from-ai-agents)
+- **Promo video:** [YouTube](https://www.youtube.com/watch?v=oi9PMp4OkLU)
 - **Local keynote page archive:** [summit-keynote-exfil-everything-a-year-of-stealing-data-from-ai-agents.html](summit-keynote-exfil-everything-a-year-of-stealing-data-from-ai-agents.html)
 
 > **Status:** Schedule confirmed. Local summit page capture, keynote page capture, keynote page PDF, and keynote graphic archived.

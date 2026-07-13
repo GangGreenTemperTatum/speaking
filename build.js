@@ -219,6 +219,7 @@ conferenceOrgs.forEach(org => {
         year: subPath.year,
         icon: orgConfig.icon,
         description: description,
+        ...(org.id === 'antisyphon' && subPath.year === '2026' ? { videoUrl: "https://www.youtube.com/watch?v=oi9PMp4OkLU" } : {}),
         ...(org.id === 'defcon' && subPath.year === '2025' ? { videoUrl: "https://www.youtube.com/watch?v=yxqGAtUR8fY" } : {})
       });
     });

@@ -26,7 +26,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 description: "Summit Keynote: Exfil Everything: A Year of Stealing Data from AI Agents",
                 path: "antisyphon",
                 subdir: "2026/august/ai-cybersecurity-summit",
-                localPath: "conferences/antisyphon/2026/august/ai-cybersecurity-summit"
+                localPath: "conferences/antisyphon/2026/august/ai-cybersecurity-summit",
+                videoUrl: "https://www.youtube.com/watch?v=oi9PMp4OkLU"
             },
             {
                 name: "API Days",
@@ -456,6 +457,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <span class="conf-date">${conf.year}</span>
                         <div class="button-group">
                             <a href="${viewerLink}" class="btn-view">View Details</a>
+                            ${conf.videoUrl ? `<a href="${conf.videoUrl}" class="btn-watch" target="_blank">Watch Promo</a>` : ''}
                             ${slideFile ? `<a href="${slideFile}" class="btn-slides" target="_blank"><i class="fas fa-file-pdf"></i></a>` : ''}
                         </div>
                     </div>
