@@ -586,7 +586,7 @@ document.addEventListener('DOMContentLoaded', function() {
             {
                 title: "FBDL Goes Agentic: AI Agents Build Your Test Environments",
                 publisher: "Meta Bug Bounty",
-                description: "Meta released an open-source MCP server and new API endpoints for FBDL, letting security researchers generate, validate, and submit FBDL scripts from their own AI agents.",
+                description: "Meta announced an open-source MCP server and API endpoints for FBDL, based on community tooling started during MBBRC 2026 and extended by Meta so researchers can manage test-environment runs from their own AI-agent workflows.",
                 url: "publications/meta/2026/july/fbdl-goes-agentic-meta-bug-bounty.html",
                 icon: "fab fa-meta",
                 year: "2026"
