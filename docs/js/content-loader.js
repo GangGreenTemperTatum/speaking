@@ -998,6 +998,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 name: "NahamSec",
                 year: "2026",
                 icon: "fas fa-bug",
+                description: "How a Researcher Hacked a Major Retailer's AI Chatbot Over DNS (Live Demo!)",
+                path: "nahamsec",
+                date: "2026",
+                videoUrl: "https://www.youtube.com/watch?v=w7cH0xZp5oc"
+            },
+            {
+                name: "NahamSec",
+                year: "2026",
+                icon: "fas fa-bug",
                 description: "An AI Hacker Showed Me How to Exfil Data in Zero Clicks",
                 path: "nahamsec",
                 date: "2026",

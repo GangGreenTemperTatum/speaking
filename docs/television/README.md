@@ -10,6 +10,10 @@ This directory contains information about various television appearances related
   - [YouTube Recording](https://www.youtube.com/watch?v=aOFYfv0r4vU)
   - [BBC Programme Website](https://www.bbc.co.uk/programmes/w1730c6crzwpqq6)
   - [BBC Audio Recording](https://www.bbc.com/audio/play/w1730c6crzwpqq6)
+- [NahamSec](./nahamsec/README.md) - 2026 - How a Researcher Hacked a Major Retailer's AI Chatbot Over DNS (Live Demo!)
+  - [YouTube Recording](https://youtu.be/w7cH0xZp5oc)
+  - [HackingHub Lab](https://app.hackinghub.io/hubs/ecorp-ai)
+  - [Local YouTube Page Archive](./nahamsec/how-a-researcher-hacked-major-retailers-ai-chatbot-over-dns-youtube.html)
 - [NahamSec](./nahamsec/README.md) - 2026 - An AI Hacker Showed Me How to Exfil Data in Zero Clicks
   - [YouTube Recording](https://www.youtube.com/watch?v=BFcXTxHLaKE)
 - [CyberNews](./cybernews/README.md) - 2026 - The Dangerous Evolution of AI Hacking

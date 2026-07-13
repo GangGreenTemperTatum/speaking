@@ -1140,6 +1140,18 @@ const television = [
         featured: true
     },
     {
+        id: "nahamsec-live-ai-hacking-ecorp-2026",
+        name: "NahamSec",
+        year: "2026",
+        icon: "fas fa-bug",
+        description: "How a Researcher Hacked a Major Retailer's AI Chatbot Over DNS (Live Demo!)",
+        path: "nahamsec",
+        date: "2026-07-13",
+        videoUrl: "https://www.youtube.com/watch?v=w7cH0xZp5oc",
+        type: "television",
+        featured: true
+    },
+    {
         id: "nahamsec-2026",
         name: "NahamSec",
         year: "2026",

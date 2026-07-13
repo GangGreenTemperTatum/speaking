@@ -1,0 +1,1472 @@
+<!--
+ Page captured with Playwright
+ url: https://learning.antisyphontraining.com/pages/summit-keynote-exfil-everything-a-year-of-stealing-data-from-ai-agents
+ saved date: Mon Jul 13 2026 07:57:26 GMT-0400 (Eastern Daylight Time)
+ page title: Exfil Everything: Stealing Data From AI Agents
+-->
+<!DOCTYPE html><html lang="en" xmlns:fb="https://ogp.me/ns/fb#"><head>
+  <title>Exfil Everything: Stealing Data From AI Agents</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="https://learning.antisyphontraining.com/pages/summit-keynote-exfil-everything-a-year-of-stealing-data-from-ai-agents">
+
+  <link href="https://media.thoughtindustries.com/v3/dist/86528-6e9a440d3538f0442ed8.css" media="all" rel="stylesheet">
+  <link href="https://media.thoughtindustries.com/v3/dist/94166-79876cdc7e0ac205eebf.css" media="all" rel="stylesheet">
+
+
+    <meta id="meta-description" name="description" content="Join Antisyphon Training for a summit keynote on a year of stealing data from AI agents, what went wrong, and what defenders need to know.">
+
+    <link rel="shortcut icon" href="https://media.thoughtindustries.com/thoughtindustries/image/upload/a_exif,c_fit,t_ti_favicon_v4/v1/course-uploads/75ce8123-d122-4e08-a81e-4f743317c8ec/lxgkwdljkd6j-AntiSyphon_31.png">
+
+      <link id="appearance-stylesheet" rel="stylesheet" href="/appearance/company/29af3353-6a53-489b-86cb-940b7b223af9--29b9a9ce1f--v2.css">
+
+  <link rel="preconnect" href="https://fontbucketti.s3.us-west-2.amazonaws.com">
+<link rel="stylesheet" href="https://fontbucketti.s3.us-west-2.amazonaws.com/fonts.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css">
+    <script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-STLPFPXX5M&amp;cx=c&amp;gtm=4e6781" nonce="cpjv24zsoxpnbot7ira8bchu"></script><script>
+  //The following script is for auto-play communication with the scorm package to the TI webpage 
+  //DO NOT DELETE OR MODIFY 
+  // -Connor :D
+  (function () {
+  const nextPage = { type: "scorm", event: "nextPage" };
+
+  function readPayload(data) {
+    if (typeof data !== "object" || data === null) return false;
+    return data.type === nextPage.type && data.event === nextPage.event;
+  }
+
+  function findNextLinkButton() {
+    // Primary selector
+    let a = document.querySelector('a[aria-label="Next Page"]');
+    if (a) return a;
+
+    // Fallback: climb from the right nav button to its ancestor <a>
+    const btn = document.querySelector('.directional__nav__button--right');
+    if (btn) {
+      let el = btn;
+      while (el && el.tagName !== 'A' && el !== document.body) el = el.parentElement;
+      if (el && el.tagName === 'A') return el;
+    }
+    return null;
+  }
+
+  function advanceNextPage() {
+    console.log("trying to find next page");
+    const next = findNextLinkButton();
+    if (next) {
+      next.click();
+      console.prinr("[tiAdvance] Next Page clicked.");
+    } else {
+      console.log("[tiAdvance] No Next Page link found.");
+    }
+  }
+
+  // Listen for postMessage with the expected payload
+  function onMessage(event) {
+    let payload = event.data;
+    if (typeof payload === "string") {
+      try { payload = JSON.parse(payload); } catch { /* ignore non-JSON strings */ }
+    }
+    if (readPayload(payload)) {
+      //Debug testing - uncomment the line before to restore autoplay
+      advanceNextPage();
+    }
+  }
+
+  // Register the listener
+  window.addEventListener("message", onMessage, false);
+
+  // Expose ONE global for optional direct calls from the SCO or console
+  
+  //For debug I disabled this. Re-Enable after testing
+  window.tiAdvanceNextPage = advanceNextPage;
+  })();
+  //DEBUG REMOVE LATER
+window.addEventListener("message", e => console.log("PARENT GOT:", e), { once:false });
+
+
+</script>
+
+<script>
+/**
+ * TI Auto-advance Version 2.0
+ * 
+ * PLEASE DO NOT DELETE - Connor :D
+ */
+(function () {
+  // ---- CONFIG ----
+  // If you have multiple Wistia videos on a page and ONLY want one to advance,
+  // set this to the wistia hashed id like: "abc123xyz9"
+  // Otherwise leave null to bind to the first/any Wistia player that becomes ready.
+  const TARGET_WISTIA_ID = null;
+
+  // Optional: delay before clicking next (helps if TI needs a beat to mark completion)
+  const ADVANCE_DELAY_MS = 250;
+
+  // ---- TI "Next Page" finder/clicker ----
+  function findNextLinkOrButton() {
+    // 1) Most direct: aria-label link
+    let el =
+      document.querySelector('a[aria-label="Next Page"]') ||
+      document.querySelector('button[aria-label="Next Page"]');
+    if (el) return el;
+
+    // 2) TI directional right nav button (common in TI themes)
+    el = document.querySelector(".directional__nav__button--right");
+    if (el) {
+      // Sometimes the clickable is the button itself; sometimes it's an ancestor <a>
+      // Try the nearest anchor first:
+      const a = el.closest("a");
+      if (a) return a;
+      return el;
+    }
+
+    // 3) Other reasonable fallbacks seen in TI themes
+    el =
+      document.querySelector('[data-automation="next"]') ||
+      document.querySelector('[data-testid="next"]') ||
+      document.querySelector('.directional__nav a[rel="next"]') ||
+      document.querySelector('a[rel="next"]') ||
+      document.querySelector('button[rel="next"]');
+    if (el) return el;
+
+    return null;
+  }
+
+  function advanceNextPage(reason) {
+    console.log(`[tiAdvance] attempting next page (${reason || "no reason"})`);
+    const next = findNextLinkOrButton();
+    if (next) {
+      // Some TI UI elements are disabled until completion; attempt click anyway
+      next.click();
+      console.log("[tiAdvance] Next Page clicked.");
+    } else {
+      console.warn("[tiAdvance] No Next Page control found.");
+    }
+  }
+
+  // Expose for manual testing
+  window.tiAdvanceNextPage = () => advanceNextPage("manual");
+
+  // ---- Wistia binding ----
+  function bindToWistiaPlayer() {
+    // Wistia API queue
+    window._wq = window._wq || [];
+
+    const cfg = {
+      // If TARGET_WISTIA_ID is null, we can bind to all and only act once.
+      id: TARGET_WISTIA_ID || "_all",
+      onReady: function (video) {
+        // If targeting a specific ID but Wistia calls onReady for others, ignore.
+        if (TARGET_WISTIA_ID && video.hashedId && video.hashedId() !== TARGET_WISTIA_ID) {
+          return;
+        }
+
+        const vidId = video.hashedId ? video.hashedId() : "(unknown)";
+        console.log(`[tiAdvance] Wistia ready: ${vidId}`);
+
+        // Avoid double-binding if TI rehydrates DOM
+        if (video._tiAdvanceBound) return;
+        video._tiAdvanceBound = true;
+
+        video.bind("end", function () {
+          console.log(`[tiAdvance] Wistia ended: ${vidId}`);
+          setTimeout(() => advanceNextPage("wistia-end"), ADVANCE_DELAY_MS);
+        });
+      },
+    };
+
+    window._wq.push(cfg);
+  }
+
+  
+  bindToWistiaPlayer();
+})();
+</script>
+
+
+<script>
+/*(function () {
+  const KEY = "ti_theme"; // "dark" | "light"
+  const saved = localStorage.getItem(KEY);
+
+  const prefersDark =
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  // Default: OS preference unless user explicitly chose
+  const shouldBeDark = saved ? (saved === "dark") : prefersDark;
+
+  if (shouldBeDark) document.documentElement.classList.add("theme-dark");
+
+  window.TITheme = {
+    set(mode) {
+      const isDark = mode === "dark";
+      document.documentElement.classList.toggle("theme-dark", isDark);
+      localStorage.setItem(KEY, mode);
+      // notify any listeners
+      window.dispatchEvent(new CustomEvent("ti-theme-changed", { detail: { mode } }));
+    },
+    toggle() {
+      const isDark = document.documentElement.classList.toggle("theme-dark");
+      const mode = isDark ? "dark" : "light";
+      localStorage.setItem(KEY, mode);
+      window.dispatchEvent(new CustomEvent("ti-theme-changed", { detail: { mode } }));
+      return mode;
+    },
+    get() {
+      return document.documentElement.classList.contains("theme-dark") ? "dark" : "light";
+    }
+  };
+})();
+*/
+(function () {
+
+  // --- DO NOT AUTO ENABLE DARK MODE ---
+  document.documentElement.classList.remove("theme-dark");
+
+  // --- Dev helper API ---
+  window.TIDevTheme = {
+    on() {
+      document.documentElement.classList.add("theme-dark");
+      console.log("Dark mode ON");
+    },
+    off() {
+      document.documentElement.classList.remove("theme-dark");
+      console.log("Dark mode OFF");
+    },
+    toggle() {
+      const isDark = document.documentElement.classList.toggle("theme-dark");
+      console.log("Dark mode:", isDark ? "ON" : "OFF");
+      return isDark;
+    },
+    status() {
+      return document.documentElement.classList.contains("theme-dark")
+        ? "dark"
+        : "light";
+    }
+  };
+
+  console.log("Dark mode disabled. Use TIDevTheme.on(), off(), or toggle() in console.");
+
+})();
+
+</script>
+<script>
+//IMPORTANT - This is for modifying gift checkout to include this default messaging
+const interval = setInterval(function() {
+  const giftMessage = document.getElementById('gift-message');
+  if (giftMessage) {
+    giftMessage.value = 'Enjoy your training!';
+    clearInterval(interval);
+  }
+}, 200);
+</script>
+
+
+
+    
+  <script nonce="cpjv24zsoxpnbot7ira8bchu" src="https://www.googletagmanager.com/gtag/js?id=G-Z5PJYT14TV" async=""></script><script nonce="cpjv24zsoxpnbot7ira8bchu">
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          window.gtag = window.gtag || gtag;
+          gtag('js', new Date());
+
+          // Internal GA4 tracking configuration
+          gtag('config', 'G-Z5PJYT14TV', {
+          'user_properties': {
+              'subdomain': 'antisyphontraining'
+          }
+          });
+
+            // Customer GA4 tracking configuration
+            gtag('config', 'G-STLPFPXX5M');
+        </script><script nonce="cpjv24zsoxpnbot7ira8bchu">
+      // Internal GA tracking helper function - only defined when tracking is enabled
+      (function() {
+        if (!window.trackInternalGA) {
+          window.trackInternalGA = function(eventName, eventData) {
+            eventData = eventData || {};
+            if (window.gtag && window.CONF && window.CONF.internalGA4MeasurementId) {
+              window.gtag('event', eventName, {
+                send_to: window.CONF.internalGA4MeasurementId,
+                ...eventData
+              });
+            }
+          };
+        }
+        // Customer GA tracking helper function - targets only customer GA4 property
+        if (!window.trackCustomerGA) {
+          window.trackCustomerGA = function(eventName, eventData) {
+            eventData = eventData || {};
+            if (window.gtag && window.CONF && window.CONF.customerGA4MeasurementId) {
+              window.gtag('event', eventName, {
+                send_to: window.CONF.customerGA4MeasurementId,
+                ...eventData
+              });
+            }
+          };
+        }
+      })();
+    </script><script nonce="cpjv24zsoxpnbot7ira8bchu">!(window.CSS && window.CSS.supports && window.CSS.supports('--a', 0)) && document.write('<script src="https://media.thoughtindustries.com/css-vars-ponyfill-ti.2.4.2.min.js"><\/script><script nonce="cpjv24zsoxpnbot7ira8bchu">cssVars({silent: false});<\/script>');</script><meta class="foundation-data-attribute-namespace"><meta class="foundation-mq-xxlarge"><meta class="foundation-mq-xlarge-only"><meta class="foundation-mq-xlarge"><meta class="foundation-mq-large-only"><meta class="foundation-mq-large"><meta class="foundation-mq-medium-only"><meta class="foundation-mq-medium"><meta class="foundation-mq-small-only"><meta class="foundation-mq-small"><style></style><style type="text/css">[data-sonner-toaster][dir=ltr],html[dir=ltr]{--toast-icon-margin-start:-3px;--toast-icon-margin-end:4px;--toast-svg-margin-start:-1px;--toast-svg-margin-end:0px;--toast-button-margin-start:auto;--toast-button-margin-end:0;--toast-close-button-start:0;--toast-close-button-end:unset;--toast-close-button-transform:translate(-35%, -35%)}[data-sonner-toaster][dir=rtl],html[dir=rtl]{--toast-icon-margin-start:4px;--toast-icon-margin-end:-3px;--toast-svg-margin-start:0px;--toast-svg-margin-end:-1px;--toast-button-margin-start:0;--toast-button-margin-end:auto;--toast-close-button-start:unset;--toast-close-button-end:0;--toast-close-button-transform:translate(35%, -35%)}[data-sonner-toaster]{position:fixed;width:var(--width);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;--gray1:hsl(0, 0%, 99%);--gray2:hsl(0, 0%, 97.3%);--gray3:hsl(0, 0%, 95.1%);--gray4:hsl(0, 0%, 93%);--gray5:hsl(0, 0%, 90.9%);--gray6:hsl(0, 0%, 88.7%);--gray7:hsl(0, 0%, 85.8%);--gray8:hsl(0, 0%, 78%);--gray9:hsl(0, 0%, 56.1%);--gray10:hsl(0, 0%, 52.3%);--gray11:hsl(0, 0%, 43.5%);--gray12:hsl(0, 0%, 9%);--border-radius:8px;box-sizing:border-box;padding:0;margin:0;list-style:none;outline:0;z-index:999999999;transition:transform .4s ease}@media (hover:none) and (pointer:coarse){[data-sonner-toaster][data-lifted=true]{transform:none}}[data-sonner-toaster][data-x-position=right]{right:var(--offset-right)}[data-sonner-toaster][data-x-position=left]{left:var(--offset-left)}[data-sonner-toaster][data-x-position=center]{left:50%;transform:translateX(-50%)}[data-sonner-toaster][data-y-position=top]{top:var(--offset-top)}[data-sonner-toaster][data-y-position=bottom]{bottom:var(--offset-bottom)}[data-sonner-toast]{--y:translateY(100%);--lift-amount:calc(var(--lift) * var(--gap));z-index:var(--z-index);position:absolute;opacity:0;transform:var(--y);touch-action:none;transition:transform .4s,opacity .4s,height .4s,box-shadow .2s;box-sizing:border-box;outline:0;overflow-wrap:anywhere}[data-sonner-toast][data-styled=true]{padding:16px;background:var(--normal-bg);border:1px solid var(--normal-border);color:var(--normal-text);border-radius:var(--border-radius);box-shadow:0 4px 12px rgba(0,0,0,.1);width:var(--width);font-size:13px;display:flex;align-items:center;gap:6px}[data-sonner-toast]:focus-visible{box-shadow:0 4px 12px rgba(0,0,0,.1),0 0 0 2px rgba(0,0,0,.2)}[data-sonner-toast][data-y-position=top]{top:0;--y:translateY(-100%);--lift:1;--lift-amount:calc(1 * var(--gap))}[data-sonner-toast][data-y-position=bottom]{bottom:0;--y:translateY(100%);--lift:-1;--lift-amount:calc(var(--lift) * var(--gap))}[data-sonner-toast][data-styled=true] [data-description]{font-weight:400;line-height:1.4;color:#3f3f3f}[data-rich-colors=true][data-sonner-toast][data-styled=true] [data-description]{color:inherit}[data-sonner-toaster][data-sonner-theme=dark] [data-description]{color:#e8e8e8}[data-sonner-toast][data-styled=true] [data-title]{font-weight:500;line-height:1.5;color:inherit}[data-sonner-toast][data-styled=true] [data-icon]{display:flex;height:16px;width:16px;position:relative;justify-content:flex-start;align-items:center;flex-shrink:0;margin-left:var(--toast-icon-margin-start);margin-right:var(--toast-icon-margin-end)}[data-sonner-toast][data-promise=true] [data-icon]>svg{opacity:0;transform:scale(.8);transform-origin:center;animation:sonner-fade-in .3s ease forwards}[data-sonner-toast][data-styled=true] [data-icon]>*{flex-shrink:0}[data-sonner-toast][data-styled=true] [data-icon] svg{margin-left:var(--toast-svg-margin-start);margin-right:var(--toast-svg-margin-end)}[data-sonner-toast][data-styled=true] [data-content]{display:flex;flex-direction:column;gap:2px}[data-sonner-toast][data-styled=true] [data-button]{border-radius:4px;padding-left:8px;padding-right:8px;height:24px;font-size:12px;color:var(--normal-bg);background:var(--normal-text);margin-left:var(--toast-button-margin-start);margin-right:var(--toast-button-margin-end);border:none;font-weight:500;cursor:pointer;outline:0;display:flex;align-items:center;flex-shrink:0;transition:opacity .4s,box-shadow .2s}[data-sonner-toast][data-styled=true] [data-button]:focus-visible{box-shadow:0 0 0 2px rgba(0,0,0,.4)}[data-sonner-toast][data-styled=true] [data-button]:first-of-type{margin-left:var(--toast-button-margin-start);margin-right:var(--toast-button-margin-end)}[data-sonner-toast][data-styled=true] [data-cancel]{color:var(--normal-text);background:rgba(0,0,0,.08)}[data-sonner-toaster][data-sonner-theme=dark] [data-sonner-toast][data-styled=true] [data-cancel]{background:rgba(255,255,255,.3)}[data-sonner-toast][data-styled=true] [data-close-button]{position:absolute;left:var(--toast-close-button-start);right:var(--toast-close-button-end);top:0;height:20px;width:20px;display:flex;justify-content:center;align-items:center;padding:0;color:var(--gray12);background:var(--normal-bg);border:1px solid var(--gray4);transform:var(--toast-close-button-transform);border-radius:50%;cursor:pointer;z-index:1;transition:opacity .1s,background .2s,border-color .2s}[data-sonner-toast][data-styled=true] [data-close-button]:focus-visible{box-shadow:0 4px 12px rgba(0,0,0,.1),0 0 0 2px rgba(0,0,0,.2)}[data-sonner-toast][data-styled=true] [data-disabled=true]{cursor:not-allowed}[data-sonner-toast][data-styled=true]:hover [data-close-button]:hover{background:var(--gray2);border-color:var(--gray5)}[data-sonner-toast][data-swiping=true]::before{content:'';position:absolute;left:-100%;right:-100%;height:100%;z-index:-1}[data-sonner-toast][data-y-position=top][data-swiping=true]::before{bottom:50%;transform:scaleY(3) translateY(50%)}[data-sonner-toast][data-y-position=bottom][data-swiping=true]::before{top:50%;transform:scaleY(3) translateY(-50%)}[data-sonner-toast][data-swiping=false][data-removed=true]::before{content:'';position:absolute;inset:0;transform:scaleY(2)}[data-sonner-toast][data-expanded=true]::after{content:'';position:absolute;left:0;height:calc(var(--gap) + 1px);bottom:100%;width:100%}[data-sonner-toast][data-mounted=true]{--y:translateY(0);opacity:1}[data-sonner-toast][data-expanded=false][data-front=false]{--scale:var(--toasts-before) * 0.05 + 1;--y:translateY(calc(var(--lift-amount) * var(--toasts-before))) scale(calc(-1 * var(--scale)));height:var(--front-toast-height)}[data-sonner-toast]>*{transition:opacity .4s}[data-sonner-toast][data-x-position=right]{right:0}[data-sonner-toast][data-x-position=left]{left:0}[data-sonner-toast][data-expanded=false][data-front=false][data-styled=true]>*{opacity:0}[data-sonner-toast][data-visible=false]{opacity:0;pointer-events:none}[data-sonner-toast][data-mounted=true][data-expanded=true]{--y:translateY(calc(var(--lift) * var(--offset)));height:var(--initial-height)}[data-sonner-toast][data-removed=true][data-front=true][data-swipe-out=false]{--y:translateY(calc(var(--lift) * -100%));opacity:0}[data-sonner-toast][data-removed=true][data-front=false][data-swipe-out=false][data-expanded=true]{--y:translateY(calc(var(--lift) * var(--offset) + var(--lift) * -100%));opacity:0}[data-sonner-toast][data-removed=true][data-front=false][data-swipe-out=false][data-expanded=false]{--y:translateY(40%);opacity:0;transition:transform .5s,opacity .2s}[data-sonner-toast][data-removed=true][data-front=false]::before{height:calc(var(--initial-height) + 20%)}[data-sonner-toast][data-swiping=true]{transform:var(--y) translateY(var(--swipe-amount-y,0)) translateX(var(--swipe-amount-x,0));transition:none}[data-sonner-toast][data-swiped=true]{user-select:none}[data-sonner-toast][data-swipe-out=true][data-y-position=bottom],[data-sonner-toast][data-swipe-out=true][data-y-position=top]{animation-duration:.2s;animation-timing-function:ease-out;animation-fill-mode:forwards}[data-sonner-toast][data-swipe-out=true][data-swipe-direction=left]{animation-name:swipe-out-left}[data-sonner-toast][data-swipe-out=true][data-swipe-direction=right]{animation-name:swipe-out-right}[data-sonner-toast][data-swipe-out=true][data-swipe-direction=up]{animation-name:swipe-out-up}[data-sonner-toast][data-swipe-out=true][data-swipe-direction=down]{animation-name:swipe-out-down}@keyframes swipe-out-left{from{transform:var(--y) translateX(var(--swipe-amount-x));opacity:1}to{transform:var(--y) translateX(calc(var(--swipe-amount-x) - 100%));opacity:0}}@keyframes swipe-out-right{from{transform:var(--y) translateX(var(--swipe-amount-x));opacity:1}to{transform:var(--y) translateX(calc(var(--swipe-amount-x) + 100%));opacity:0}}@keyframes swipe-out-up{from{transform:var(--y) translateY(var(--swipe-amount-y));opacity:1}to{transform:var(--y) translateY(calc(var(--swipe-amount-y) - 100%));opacity:0}}@keyframes swipe-out-down{from{transform:var(--y) translateY(var(--swipe-amount-y));opacity:1}to{transform:var(--y) translateY(calc(var(--swipe-amount-y) + 100%));opacity:0}}@media (max-width:600px){[data-sonner-toaster]{position:fixed;right:var(--mobile-offset-right);left:var(--mobile-offset-left);width:100%}[data-sonner-toaster][dir=rtl]{left:calc(var(--mobile-offset-left) * -1)}[data-sonner-toaster] [data-sonner-toast]{left:0;right:0;width:calc(100% - var(--mobile-offset-left) * 2)}[data-sonner-toaster][data-x-position=left]{left:var(--mobile-offset-left)}[data-sonner-toaster][data-y-position=bottom]{bottom:var(--mobile-offset-bottom)}[data-sonner-toaster][data-y-position=top]{top:var(--mobile-offset-top)}[data-sonner-toaster][data-x-position=center]{left:var(--mobile-offset-left);right:var(--mobile-offset-right);transform:none}}[data-sonner-toaster][data-sonner-theme=light]{--normal-bg:#fff;--normal-border:var(--gray4);--normal-text:var(--gray12);--success-bg:hsl(143, 85%, 96%);--success-border:hsl(145, 92%, 87%);--success-text:hsl(140, 100%, 27%);--info-bg:hsl(208, 100%, 97%);--info-border:hsl(221, 91%, 93%);--info-text:hsl(210, 92%, 45%);--warning-bg:hsl(49, 100%, 97%);--warning-border:hsl(49, 91%, 84%);--warning-text:hsl(31, 92%, 45%);--error-bg:hsl(359, 100%, 97%);--error-border:hsl(359, 100%, 94%);--error-text:hsl(360, 100%, 45%)}[data-sonner-toaster][data-sonner-theme=light] [data-sonner-toast][data-invert=true]{--normal-bg:#000;--normal-border:hsl(0, 0%, 20%);--normal-text:var(--gray1)}[data-sonner-toaster][data-sonner-theme=dark] [data-sonner-toast][data-invert=true]{--normal-bg:#fff;--normal-border:var(--gray3);--normal-text:var(--gray12)}[data-sonner-toaster][data-sonner-theme=dark]{--normal-bg:#000;--normal-bg-hover:hsl(0, 0%, 12%);--normal-border:hsl(0, 0%, 20%);--normal-border-hover:hsl(0, 0%, 25%);--normal-text:var(--gray1);--success-bg:hsl(150, 100%, 6%);--success-border:hsl(147, 100%, 12%);--success-text:hsl(150, 86%, 65%);--info-bg:hsl(215, 100%, 6%);--info-border:hsl(223, 43%, 17%);--info-text:hsl(216, 87%, 65%);--warning-bg:hsl(64, 100%, 6%);--warning-border:hsl(60, 100%, 9%);--warning-text:hsl(46, 87%, 65%);--error-bg:hsl(358, 76%, 10%);--error-border:hsl(357, 89%, 16%);--error-text:hsl(358, 100%, 81%)}[data-sonner-toaster][data-sonner-theme=dark] [data-sonner-toast] [data-close-button]{background:var(--normal-bg);border-color:var(--normal-border);color:var(--normal-text)}[data-sonner-toaster][data-sonner-theme=dark] [data-sonner-toast] [data-close-button]:hover{background:var(--normal-bg-hover);border-color:var(--normal-border-hover)}[data-rich-colors=true][data-sonner-toast][data-type=success]{background:var(--success-bg);border-color:var(--success-border);color:var(--success-text)}[data-rich-colors=true][data-sonner-toast][data-type=success] [data-close-button]{background:var(--success-bg);border-color:var(--success-border);color:var(--success-text)}[data-rich-colors=true][data-sonner-toast][data-type=info]{background:var(--info-bg);border-color:var(--info-border);color:var(--info-text)}[data-rich-colors=true][data-sonner-toast][data-type=info] [data-close-button]{background:var(--info-bg);border-color:var(--info-border);color:var(--info-text)}[data-rich-colors=true][data-sonner-toast][data-type=warning]{background:var(--warning-bg);border-color:var(--warning-border);color:var(--warning-text)}[data-rich-colors=true][data-sonner-toast][data-type=warning] [data-close-button]{background:var(--warning-bg);border-color:var(--warning-border);color:var(--warning-text)}[data-rich-colors=true][data-sonner-toast][data-type=error]{background:var(--error-bg);border-color:var(--error-border);color:var(--error-text)}[data-rich-colors=true][data-sonner-toast][data-type=error] [data-close-button]{background:var(--error-bg);border-color:var(--error-border);color:var(--error-text)}.sonner-loading-wrapper{--size:16px;height:var(--size);width:var(--size);position:absolute;inset:0;z-index:10}.sonner-loading-wrapper[data-visible=false]{transform-origin:center;animation:sonner-fade-out .2s ease forwards}.sonner-spinner{position:relative;top:50%;left:50%;height:var(--size);width:var(--size)}.sonner-loading-bar{animation:sonner-spin 1.2s linear infinite;background:var(--gray11);border-radius:6px;height:8%;left:-10%;position:absolute;top:-3.9%;width:24%}.sonner-loading-bar:first-child{animation-delay:-1.2s;transform:rotate(.0001deg) translate(146%)}.sonner-loading-bar:nth-child(2){animation-delay:-1.1s;transform:rotate(30deg) translate(146%)}.sonner-loading-bar:nth-child(3){animation-delay:-1s;transform:rotate(60deg) translate(146%)}.sonner-loading-bar:nth-child(4){animation-delay:-.9s;transform:rotate(90deg) translate(146%)}.sonner-loading-bar:nth-child(5){animation-delay:-.8s;transform:rotate(120deg) translate(146%)}.sonner-loading-bar:nth-child(6){animation-delay:-.7s;transform:rotate(150deg) translate(146%)}.sonner-loading-bar:nth-child(7){animation-delay:-.6s;transform:rotate(180deg) translate(146%)}.sonner-loading-bar:nth-child(8){animation-delay:-.5s;transform:rotate(210deg) translate(146%)}.sonner-loading-bar:nth-child(9){animation-delay:-.4s;transform:rotate(240deg) translate(146%)}.sonner-loading-bar:nth-child(10){animation-delay:-.3s;transform:rotate(270deg) translate(146%)}.sonner-loading-bar:nth-child(11){animation-delay:-.2s;transform:rotate(300deg) translate(146%)}.sonner-loading-bar:nth-child(12){animation-delay:-.1s;transform:rotate(330deg) translate(146%)}@keyframes sonner-fade-in{0%{opacity:0;transform:scale(.8)}100%{opacity:1;transform:scale(1)}}@keyframes sonner-fade-out{0%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(.8)}}@keyframes sonner-spin{0%{opacity:1}100%{opacity:.15}}@media (prefers-reduced-motion){.sonner-loading-bar,[data-sonner-toast],[data-sonner-toast]>*{transition:none!important;animation:none!important}}.sonner-loader{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);transform-origin:center;transition:opacity .2s,transform .2s}.sonner-loader[data-visible=false]{opacity:0;transform:scale(.8) translate(-50%,-50%)}</style><style></style><style></style><style></style><style></style><style></style><script src="https://browser.sentry-cdn.com/9.6.1/bundle.min.js" crossorigin="anonymous" integrity="sha384-kbRmCeIl7Uxr+vT9YhSAdguCdd4L5QPRj7jzQTanorUVVlw/Y5X9vtzVyOEHLfpH"></script></head>
+
+
+        
+        
+    
+
+
+
+  
+
+
+<body class="ember-application  home page">
+
+<!--[if lt IE 11]>
+  <div class="alert-box alert-box--large alert-box--centered alert">
+    Sorry, your browser is not supported. Please upgrade to <a style="text-decoration: underline" href="https://www.google.com/chrome/">Chrome</a>, <a style="text-decoration: underline" href="https://www.getfirefox.com/">Firefox</a>, or a newer version of <a style="text-decoration: underline" href="https://windows.microsoft.com/en-us/internet-explorer/products/ie/home/">Internet Explorer</a>.
+  </div>
+<![endif]-->
+
+<noscript>
+  <div class="alert-box alert-box--centered alert">
+    You need to <a style="text-decoration: underline" href="https://support.google.com/adsense/answer/12654?hl=en">enable javascript</a> to view this website.
+  </div>
+</noscript>
+
+  <div id="learner">
+    <div id="lms" class="ember-application"><div id="ember1868" class="ember-view application"><script id="metamorph-1-start" type="text/x-placeholder"></script>
+  <a class="absolute z-10 bg-white px-3 py-2 -left-[9999px] focus_left-0" href="#main-content">Skip to main content</a>
+  <script id="metamorph-2-start" type="text/x-placeholder"></script>
+    <script id="metamorph-3-start" type="text/x-placeholder"></script>
+      <script id="metamorph-4-start" type="text/x-placeholder"></script><script id="metamorph-4-end" type="text/x-placeholder"></script>
+    <script id="metamorph-3-end" type="text/x-placeholder"></script>
+  <script id="metamorph-2-end" type="text/x-placeholder"></script>
+<script id="metamorph-1-end" type="text/x-placeholder"></script>
+<div style="display: none" class="transition-loader"><div id="ember1932" class="ember-view loading__spinner"><div class="loading__spinner__bounce1"></div>
+<div class="loading__spinner__bounce2"></div>
+<div class="loading__spinner__bounce3"></div>
+</div></div>
+<div id="ember1939" class="ember-view" style="display:none;"><div class="panel panel--secondary flex py-2 px-4 rounded">
+  <i class="icon-info text-2xl mr-2" aria-label="info"></i>
+  <span class="text-sm flex justify-center flex-col mr-2"><script id="metamorph-5-start" type="text/x-placeholder"></script>You are currently acting as a learner.<script id="metamorph-5-end" type="text/x-placeholder"></script></span>
+  <button class="btn btn--link btn--secondary underline" data-ember-action="1940">
+    <span id="i18n-0">Return to Management</span>
+  </button>
+</div></div>
+<script id="metamorph-6-start" type="text/x-placeholder"></script><script id="metamorph-10-start" type="text/x-placeholder"></script><script id="metamorph-12-start" type="text/x-placeholder"></script>
+  <script id="metamorph-13-start" type="text/x-placeholder"></script><script id="metamorph-13-end" type="text/x-placeholder"></script>
+<script id="metamorph-12-end" type="text/x-placeholder"></script>
+<div class="container">
+  <header id="ember2018" class="ember-view header header--microsite" role="banner"><div class="header__inner">
+  <nav class="nav nav--top" aria-label="Header">
+    <ul>
+      <li>
+        <script id="metamorph-14-start" type="text/x-placeholder"></script>
+          <script id="metamorph-15-start" type="text/x-placeholder"></script>
+            <a href="https://learning.antisyphontraining.com/learn/"><span id="i18n-1">Sign In</span></a>
+          <script id="metamorph-15-end" type="text/x-placeholder"></script>
+        <script id="metamorph-14-end" type="text/x-placeholder"></script>
+      </li>
+      <script id="metamorph-16-start" type="text/x-placeholder"></script>
+        <script id="metamorph-17-start" type="text/x-placeholder"></script>
+          <li>
+            <button class="btn btn--bare btn--inherit-font" id="cart-button" data-ember-action="2023">
+              <span id="i18n-2">Cart</span>
+
+              <span class="badge">(<script id="metamorph-18-start" type="text/x-placeholder"></script>0<script id="metamorph-18-end" type="text/x-placeholder"></script>)</span>
+            </button>
+          </li>
+        <script id="metamorph-17-end" type="text/x-placeholder"></script>
+      <script id="metamorph-16-end" type="text/x-placeholder"></script>
+    </ul>
+  </nav>
+
+  <script id="metamorph-19-start" type="text/x-placeholder"></script>
+    <script id="metamorph-20-start" type="text/x-placeholder"></script><div style="width: 100%; background-color: var(--theme-active); position: fixed; left: 0; top: 0; color: white; display: flex; justify-content: center; align-items: center; padding: 2px;"><p style="text-align: center; margin: 0 2% 0 0"><strong>Sign up for our free Infosec: Age of AI Summit August 14</strong></p><a style="font-size: .8rem" class="button-secondary" href="https://learning.antisyphontraining.com/pages/ai-cybersecurity-summit">REGISTER HERE</a></div>
+<header class="visible-for-medium-up" style="margin-top: 35px;">
+  <a href="https://antisyphontraining.thoughtindustries.com/" class="at-logo-header">
+    <img src="https://media.thoughtindustries.com/course-uploads/75ce8123-d122-4e08-a81e-4f743317c8ec/2s4w40ehoset-logo-antisyphon-horizontal-013x.webp"></a>
+  <nav class="navbar">
+    <ul class="nav-links">
+      
+      <li class="dropdown">
+        <a href="#">Training Solutions</a>
+        <div class="dropdown-menu split-layout">
+    <ul class="dropdown-sidebar">
+      <li><a href="#" class="side-link active" data-target="od-training-content">On-Demand Training</a></li>
+      <li><a href="#" class="side-link" data-target="live-training-content">Live Training</a></li>
+      <li><a href="#" class="side-link" data-target="private-training-content">Private Training</a></li>
+      <li><a href="#" class="side-link" data-target="summit-content">Summits</a></li>
+      <li><a href="https://antisyphontraining.thoughtindustries.com/pages/cyber-range" class="side-link" data-target="cyber-range-content">Cyber Range</a></li>
+      <li><a href="#" class="side-link" data-target="govt-content">Government/Military</a></li>
+    </ul>
+
+    <div class="dropdown-content">
+      <div id="live-training-content" class="sub-menu-block">
+        <div class="sub-group">
+          <p class="sub-group-info">Performed before a live-student audience! From 4-hour workshops to multi-day trainings. </p>
+          <hr>
+          <ul>
+            <li><a href="https://antisyphontraining.thoughtindustries.com/pages/training-calendar">Training Calendar</a></li>
+            <li><a href="https://antisyphontraining.thoughtindustries.com/pages/pay-what-you-can-cybersecurity-training">Pay What You Can Training</a></li>
+            
+            <li><a href="https://wildwesthackinfest.com/" rel="noopener" target="_blank">Wild West Hackin' Fest</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="pwyc-training-content" class="sub-menu-block">
+        <div class="sub-group">
+           <p class="sub-group-info">Quality cybersecurity training on your budget. The gates are open!</p>
+           <hr>
+          <ul>
+            <li><a href="https://antisyphontraining.thoughtindustries.com/pages/workshops">Workshops</a></li>
+            <li><a href="https://antisyphontraining.thoughtindustries.com/pages/pay-what-you-can-live-training">Live Training</a></li>
+            <li><a href="https://antisyphontraining.thoughtindustries.com/pages/pay-what-you-can-training">About Pay What You Can Training</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div id="private-training-content" class="sub-menu-block">
+        <div class="sub-group">
+           <p class="sub-group-info">Add a new page to your team's training manual and get on it together. We come to you or provide virtual private options. </p>
+          <hr>
+          <div class="flex-column">
+              <div class="flex-row with-background-blue">
+                <div class="flex-column icon-container">
+                  <i class="ph ph-user" style="font-size: 45px"></i>
+                  <br>
+                  <p><strong>Live</strong> - Get live instruction, in-person or virtually</p>
+                </div>
+                <div class="flex-column icon-container">
+                  <i class="ph ph-laptop" style="font-size: 45px"></i>
+                  <br>
+                  <p><strong>On-Demand</strong> - Go at your own pace, available 24/7</p>
+                </div>
+                <div class="flex-column icon-container">
+                  <i class="ph ph-coins" style="font-size: 45px"></i>
+                  <br>
+                  <p>Customized training for any budget</p>
+                </div>
+              </div>
+                <br>
+              <a class="button-primary" href="https://antisyphontraining.thoughtindustries.com/pages/contact-us">FIND OUT HOW</a>
+            </div>
+        </div>
+      </div>
+     
+      <div id="od-training-content" class="sub-menu-block active">
+        <div class="sub-group">
+          <p class="sub-group-info">Learn at your own pace with infinite replays! Over 40 courses, covering offensive and defensive infosec. </p>
+          <hr>
+          <ul>
+            <li><a href="https://learning.antisyphontraining.com/bundles/antisyphon-on-demand-catalog">On-Demand Catalog Subscription</a></li>
+            <li><a href="https://antisyphontraining.thoughtindustries.com/pages/on-demand-course-catalog">On-Demand Course Catalog</a></li>
+            <li><a href="https://antisyphontraining.thoughtindustries.com/pages/red-team-training">Red Team Training</a></li>
+            <li><a href="https://antisyphontraining.thoughtindustries.com/pages/blue-team-training">Blue Team Training</a></li>
+            <li><a href="https://antisyphontraining.thoughtindustries.com/pages/cis-controls-mastery-for-msps">CIS Controls Mastery for Enterprises</a></li>
+          </ul>
+        </div>
+      </div>
+     
+      <div id="vault-content" class="sub-menu-block">
+        <div class="sub-group">
+          <p class="sub-group-info">Cut down on red tape and communication tennis. Easy access to training for your team without the budget hassle. </p>
+          <hr>
+          <div class="flex-column">
+            <br>
+            <i style="font-size: 84px;" class="ph ph-vault"></i>
+            <br>
+            <a class="button-primary" href="https://antisyphontraining.thoughtindustries.com/pages/vault-training-funds">LEARN MORE</a>
+          </div>
+        </div>
+      </div>
+      
+      <div id="cyber-range-content" class="sub-menu-block">
+        <div class="sub-group">
+          <p class="sub-group-info">Tiered training challenges to benchmark and advance cyber skills.</p>
+          <hr>
+          <div class="flex-column">
+            <p>Brought to you by SkillBit</p>
+            <div class="flex-row with-background-blue">
+              <div class="flex-column icon-container">
+              <i class="ph ph-target" style="font-size: 45px"></i>
+              <br>
+              <p>Demonstrate your expertise</p>
+              </div>
+              <div class="flex-column icon-container">
+              <i class="ph ph-barbell" style="font-size: 45px"></i>
+              <br>
+              <p>Challenge yourself</p>
+              </div>
+              <div class="flex-column icon-container">
+              <i class="ph ph-certificate" style="font-size: 45px"></i>
+              <br>
+              <p>10 certification levels</p>
+              </div>
+            </div>
+            <br>
+            <a href="https://antisyphontraining.thoughtindustries.com/pages/cyber-range" class="button-primary-light">LEARN MORE</a>
+          </div>
+        </div>
+      </div>
+      
+      <div id="govt-content" class="sub-menu-block">
+        <div class="sub-group">
+          <p class="sub-group-info">Training tailored to the specific needs of .gov and .mil teams, such as NIST/NICE and DOD 8140. </p>
+          <hr>
+          <ul>
+            <li><a href="https://antisyphontraining.thoughtindustries.com/pages/training-by-role">NIST/NICE Framework</a></li>
+            <li><a href="https://antisyphontraining.thoughtindustries.com/pages/us-department-of-defense-8140-mandate">US Department of Defense Mandate 8140</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div id="summit-content" class="sub-menu-block">
+        <div class="sub-group">
+          <p class="sub-group-info">Community driven talks and training events from industry experts covering topics in offensive and defensive cybersecurity.</p>
+          <hr>
+          <span style="color: #818285">Upcoming Summits</span>
+          <ul>
+            <li><a href="https://learning.antisyphontraining.com/pages/ai-cybersecurity-summit">Infosec: Age of AI Summit</a></li>
+          </ul>
+          <br>
+          <span style="color: #818285">Past Summits</span>
+          <ul>
+            <li><a href="https://learning.antisyphontraining.com/pages/threat-hunting-summit">Threat Hunting Summit</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+      </li>
+
+      <li class="dropdown">
+        <a href="#">Free Resources</a>
+        <div class="dropdown-menu split-layout">
+          <ul class="dropdown-sidebar">
+            <li><a class="side-link active" data-target="blogs-content" href="https://antisyphontraining.thoughtindustries.com/pages/blogs">Blogs</a></li>
+            <li><a class="side-link" data-target="podcasts-content" href="#">Podcasts</a></li>
+            <li><a class="side-link" data-target="cyber-tools-content" href="#">Cybersecurity Tools</a></li>
+            <li><a class="side-link" data-target="roadmaps-content" href="#">Roadmaps and Labs</a></li>
+            <li><a class="side-link" data-target="rekcah-content" href="#">REKCAH!</a></li>
+            <li><a class="side-link" data-target="survival-guides-content" href="#">Survival Guides</a></li>
+            <li><a class="side-link" data-target="prompt-content" href="#">#PROMPT</a></li>
+          </ul>
+          <div class="dropdown-content">
+            <div id="webcasts-content" class="sub-menu-block">
+              <div class="sub-group">
+                <p class="sub-group-info">From current goings-on in infosec to bite-sized training to thoughts of industry leaders, get all your casts here!</p>
+                <hr>
+                <ul>
+            <li><a href="https://antisyphontraining.thoughtindustries.com/pages/anti-casts">Anti Casts</a></li>
+            <li><a href="https://www.youtube.com/@AntisyphonTraining" rel="noopener" target="_blank">Antisyphon YouTube Channel</a></li>
+            <li><a href="https://events.zoom.us/eo/AqZceUFfoY13HGSXujLymbABWGRslgy_uYu4TrJHbsmiQm-uPw9R~AggLXsr32QYFjq8BlYLZ5I06Dg" rel="noopener" target="_blank">BHIS Security Stadium</a></li>
+          </ul>
+              </div>
+            </div>
+            <div id="blogs-content" class="sub-menu-block active">
+              <div class="sub-group">
+                <p class="sub-group-info">In-depth articles on current TTPs and other helpful cybersecurity information. </p>
+                <hr>
+                <ul>
+            <li><a href="https://www.blackhillsinfosec.com/blog/" rel="noopener" target="_blank">Black Hills Information Security Blogs</a></li>
+            <li><a href="https://www.activecountermeasures.com/blog/" rel="noopener" target="_blank">Active Counter Measure Blogs</a></li>
+            </ul>
+              </div>
+            </div>
+            <div id="podcasts-content" class="sub-menu-block">
+              <div class="sub-group">
+                <p class="sub-group-info">We love to share our knowledge with those that want to learn and share their knowledge with others. Find our podcasts on your favorite player.</p>
+                <hr>
+                <ul>
+            <li><a href="https://bhispodcasts.transistor.fm/" rel="noopener" target="_blank">Black Hills Information Security Podcasts</a></li>
+            <div style="margin-top: 10px" class="flex-row">
+              <img src="https://media.thoughtindustries.com/course-uploads/75ce8123-d122-4e08-a81e-4f743317c8ec/y2j1menmvhwh-bhis-podcast.webp" style="width: 30%; border-radius: 5px; opacity: .95;">
+              <img src="https://media.thoughtindustries.com/course-uploads/75ce8123-d122-4e08-a81e-4f743317c8ec/5firnjdwjchv-bhis-podcast-2.webp" style="width: 30%; border-radius: 5px; opacity: .95;">
+              <img src="https://media.thoughtindustries.com/course-uploads/75ce8123-d122-4e08-a81e-4f743317c8ec/ugil8b33v0z4-bhis-podcast-3.webp" style="width: 30%; border-radius: 5px; opacity: .95;">
+            </div>
+          </ul>
+              </div>
+            </div>
+            <div id="cyber-tools-content" class="sub-menu-block">
+              <div class="sub-group">
+                <p class="sub-group-info">Free cybersecurity tools</p>
+                <hr>
+                <ul>
+                  <li><a href="https://github.com/activecm/rita" rel="noopener" target="_blank">RITA</a></li>
+                  <li><a href="https://github.com/blackhillsinfosec/WifiForge" rel="noopener" target="_blank">Wi-Fi Forge</a></li>
+                  <li><a href="https://github.com/blackhillsinfosec/skyhook" rel="noopener" target="_blank">Skyhook</a></li>
+                </ul>
+                <br>
+                <div class="flex-column">
+                <a href="https://antisyphontraining.thoughtindustries.com/pages/cybersecurity-tools" class="button-primary-light">VIEW ALL</a>
+                </div>
+              </div>
+            </div>
+            <div id="roadmaps-content" class="sub-menu-block">
+              <div class="sub-group">
+                <p class="sub-group-info">Cybersecurity roadmaps and free labs</p>
+                <hr>
+                <ul>
+            <li><a href="https://antisyphontraining.thoughtindustries.com/pages/beginners-guide-to-entry-level-cybersecurity">Beginner's Guide to Entry-Level Cybersecurity</a></li>
+            <li><a href="https://antisyphontraining.thoughtindustries.com/pages/free-lab-fridays">Free Lab Fridays</a></li>
+              </ul></div>
+            </div>
+            <div id="rekcah-content" class="sub-menu-block">
+              <div class="sub-group">
+                <p class="sub-group-info">The comic-book and zine arm of the infosec community around BHIS. It blends professional hacker culture with storytelling, creating visually engaging comics that explore tech, cyberwarfare, and future scenarios in ways both fans and security pros will enjoy. </p>
+                <hr>
+                <div class="flex-column">
+                  <p>Their flagship series, The Future Is ******, is a long-form sci-fi cyberpunk epic that combines high-quality art and writing with hacker-themed capture the flag (CTF) challenges and insights, aiming to inspire and entertain anyone interested in information security and beyond.</p>
+                  <div style="align-items: center; padding: 0 15%;" class="flex-row">
+                   <img class="dropdown-logo-large" alt="REKCAH Logo" src="https://media.thoughtindustries.com/course-uploads/75ce8123-d122-4e08-a81e-4f743317c8ec/1vmyvrq8if45-Rekcah-Logo--Shield-2-Colour-CMYK-T.png">
+                   <br>
+                   <a class="button-primary-medium" style="height: min-content;" href="https://www.blackhillsinfosec.com/rekcah/">LEARN MORE</a>
+                   </div>
+                </div>  
+            </div>
+            </div>
+            <div id="survival-guides-content" class="sub-menu-block">
+              <div class="sub-group">
+                <p class="sub-group-info">Free beginner-friendly guides to the world of infosec, filled with tips, tricks, and real-world advice from the community.</p>
+                <hr>
+                <div class="flex-row">
+                  <a rel="noopener" href="https://spearphish-general-store.myshopify.com/collections/infosec-survival-guides/products/the-infosec-survival-guide-second-volume" target="_blank">
+                   <img class="sg-image" alt="InfoSec Survival Guide Yellow" src="https://media.thoughtindustries.com/course-uploads/75ce8123-d122-4e08-a81e-4f743317c8ec/uv6gv9230w60-ISG_Yellow.webp">
+                   </a>
+                   <a rel="noopener" href="https://spearphish-general-store.myshopify.com/collections/infosec-survival-guides/products/the-infosec-survival-guide-third-volume-1" target="_blank">
+                   <img class="sg-image" alt="InfoSec Survival Guide Green" src="https://media.thoughtindustries.com/course-uploads/75ce8123-d122-4e08-a81e-4f743317c8ec/xp2eb1uy6ed3-ISG_Green.webp">
+                   </a>
+                   <a rel="noopener" href="https://spearphish-general-store.myshopify.com/collections/infosec-survival-guides/products/the-infosec-survival-guide-orange-book-incident-response" target="_blank">
+                   <img class="sg-image" alt="InfoSec Survival Guide Orange" src="https://media.thoughtindustries.com/course-uploads/75ce8123-d122-4e08-a81e-4f743317c8ec/ljumfgzqj4yp-ISG_Orange.webp">
+                   </a>
+                </div>  
+                   <br>
+                   <div class="flex-column">
+                   <a rel="noopener" href="https://spearphish-general-store.myshopify.com/collections/infosec-survival-guides" class="button-primary-medium" target="_blank">SHOP NOW</a>
+                   </div>
+            </div>
+          </div>
+            <div id="prompt-content" class="sub-menu-block">
+              <div class="sub-group">
+                <p class="sub-group-info">Creative and technical come together in this free infosec zine about what’s cool and interesting across our industry.</p>
+                <hr>
+                <div class="flex-row">
+                  <div style="width: 32%">
+                  <a rel="noopener" href="https://www.blackhillsinfosec.com/prompt-zine/choose-wisely/" target="_blank">
+                   <img class="sg-image" alt="InfoSec Survival Guide Yellow" src="https://media.thoughtindustries.com/course-uploads/75ce8123-d122-4e08-a81e-4f743317c8ec/2ifzhfkeugwf-prompt1.webp">
+                   </a>
+                   </div>
+                  <div style="width: 32%">
+
+                   <a rel="noopener" href="https://www.blackhillsinfosec.com/prompt-zine/better-together/" target="_blank">
+                   <img class="sg-image" alt="InfoSec Survival Guide Green" src="https://media.thoughtindustries.com/course-uploads/75ce8123-d122-4e08-a81e-4f743317c8ec/s75dgtz9sfys-prompt2.webp">
+                   </a>
+                   </div>
+                  <div style="width: 32%">
+
+                   <a rel="noopener" href="https://www.blackhillsinfosec.com/prompt-zine/soc-issue/" target="_blank">
+                   <img class="sg-image" alt="InfoSec Survival Guide Orange" src="https://media.thoughtindustries.com/course-uploads/75ce8123-d122-4e08-a81e-4f743317c8ec/sg09y2fwox7k-prompt3.webp">
+                   </a>
+                   </div>
+                </div>  
+                   <br>
+                   <div class="flex-column">
+                   <a rel="noopener" href="https://www.blackhillsinfosec.com/prompt-zine/" class="button-primary-medium" target="_blank">EXPLORE ZINES</a>
+                   </div>
+            </div>
+        </div>
+      </div></div></li>
+
+      <li class="dropdown">
+        <a href="#">About Us</a>
+        <div class="dropdown-menu split-layout">
+          <ul class="dropdown-sidebar">
+            <li><a href="#" class="side-link active" data-target="about-content">About Antisyphon</a></li>
+            <li><a href="https://antisyphontraining.thoughtindustries.com/pages/contact-us" class="side-link" data-target="contact-content">Contact Us</a></li>
+            <li><a href="#" class="side-link" data-target="team-content">Meet the Team</a></li>
+            <li><a href="https://antisyphontraining.thoughtindustries.com/pages/faq" class="side-link" data-target="faq-content">Support</a></li>
+          </ul>
+          <div class="dropdown-content">
+            <div id="about-content" class="sub-menu-block active">
+              <div class="sub-group">
+                  <p class="sub-group-info">We are an information security training company in the BHIS family. Engaging, immediately useful instruction for beginners and experts. </p>
+                  <hr>
+                  <ul>
+            <li><a href="https://antisyphontraining.thoughtindustries.com/pages/about-us">About Antisyphon Training</a></li>
+            <li><a href="https://antisyphontraining.thoughtindustries.com/pages/giving-back">Giving Back</a></li>
+            <li><a href="https://antisyphontraining.thoughtindustries.com/pages/community">Community</a></li>
+            </ul>
+              </div>
+            </div>
+            <div id="contact-content" class="sub-menu-block">
+              <div class="sub-group">
+                  <p class="sub-group-info">Get in touch with us!</p>
+                  <hr>
+                  <div class="flex-column">
+                    <a class="button-primary-light" href="https://antisyphontraining.thoughtindustries.com/pages/contact-us">CONTACT US HERE</a>
+                    <br>
+                    <div style="width: 70%;">
+                    <a href="https://infosec.exchange/@Antisy_Training" class="social-link-icon"><i class="ph ph-mastodon-logo"></i></a>
+                    <a href="https://x.com/Antisy_Training" class="social-link-icon"><i class="ph ph-x-logo"></i></a>
+                    <a href="https://www.linkedin.com/company/80104444/" class="social-link-icon"><i class="ph ph-linkedin-logo"></i></a>
+                    <a href="https://www.youtube.com/c/AntisyphonTraining" class="social-link-icon"><i class="ph ph-youtube-logo"></i></a>
+                    <a href="https://discord.gg/antisyphon" class="social-link-icon"><i class="ph ph-discord-logo"></i></a>
+                    <a href="https://www.facebook.com/antisyphontraining" class="social-link-icon"><i class="ph ph-facebook-logo"></i></a>
+              
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div id="team-content" class="sub-menu-block">
+              <div class="sub-group">
+                  <p class="sub-group-info">The Antisyphon rouges gallery of staff and instructors. Batman would be so lucky. </p>
+                  <hr>
+                  <ul>
+                    <li><a href="https://antisyphontraining.thoughtindustries.com/pages/meet-the-team">Antisyphon Team Members</a></li>
+                    <li><a href="https://antisyphontraining.thoughtindustries.com/pages/our-instructors">Our Instructors</a></li>
+                  </ul>
+              </div>
+            </div>
+            <div id="faq-content" class="sub-menu-block">
+              <div class="sub-group">
+                  <p class="sub-group-info">Looking for immediate answers to our most common questions? Check here.</p>
+                  <hr>
+                  <ul>
+                    <li><a href="https://antisyphontraining.thoughtindustries.com/pages/faq">FAQs</a><p>Get anwers to general questions about Antisyphon Training</p></li>
+                    <li><a href="https://learning.antisyphontraining.com/support">Learning Platform Support</a><p>Get answers to questions about your courses, account, payments, and more</p></li>
+                  </ul>
+              </div>
+            </div>
+            <div id="faq-content" class="sub-menu-block">
+              <div class="sub-group">
+                <h4>Careers at Antisyphon Training</h4>
+                  <p>jobs</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+     
+      <li class="dropdown">
+        <a href="#">Certification</a>
+        <div class="dropdown-menu split-layout">
+          <ul class="dropdown-sidebar">
+            <li><a href="https://antisyphontraining.thoughtindustries.com/pages/ace-t-core" class="side-link active" data-target="acet-core-content">ACE-T Core</a></li>
+            <li><a href="https://antisyphontraining.thoughtindustries.com/pages/ace-t-specializations" class="side-link" data-target="acet-spec-content">ACE-T Specializations</a></li>
+          </ul>
+          <div class="dropdown-content">
+            <div id="acet-core-content" class="sub-menu-block active">
+              <div class="sub-group">
+                <p class="sub-group-info">Hands-on proof of understanding in core cybersecurity disciplines.</p>
+                  <hr>
+                  <ul>
+            <li><a href="https://antisyphontraining.thoughtindustries.com/pages/ace-t-core">ACE-T Core Certification</a></li>
+          </ul>
+              </div>
+            </div>
+            <div id="acet-spec-content" class="sub-menu-block">
+              <div class="sub-group">
+                <p class="sub-group-info">Demonstration of deeper ability in specific infosec domains. </p>
+                  <hr>
+                  <ul>
+            <li><a href="https://antisyphontraining.thoughtindustries.com/pages/ace-t-specializations">ACE-T Specializations</a></li>
+          </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="dropdown dropdown-brands">
+        <a href="#">Our Brands</a>
+        <div class="dropdown-menu custom-dropdown-content">
+          <a href="https://www.blackhillsinfosec.com/" class="company-link">
+          <div class="company-info">
+            <img class="dropdown-logo" alt="BHIS Company Logo" src="https://media.thoughtindustries.com/course-uploads/75ce8123-d122-4e08-a81e-4f743317c8ec/xiq286pa9mf7-BHIS-Logo_COLOR-1.png">
+            <div class="text-container">
+              <span class="company-name">Black Hills Information Security</span>
+              <p class="company-desc">We harden and strengthen organization's cybersecurity posture with expert penetration testing, collaborative consulting, and defensive services including a full SOC. </p>
+            </div>
+          </div>
+          </a>
+          <a href="https://spearphish-general-store.myshopify.com/" class="company-link" rel="noopener" target="_blank">
+          <div class="company-info">
+            <img class="dropdown-logo" alt="SGS Company Logo" src="https://media.thoughtindustries.com/course-uploads/75ce8123-d122-4e08-a81e-4f743317c8ec/m8ruf3q21iua-BHIS_Spearphish_NewLogo-1.png">
+            <div class="text-container">
+              <span class="company-name">Spearphish General Store</span>
+              <p class="company-desc">Merchandise for the BHIS family of companies. Shirts, Comics, Card games, and more.</p>
+            </div>
+          </div>
+          </a>
+          <a href="https://www.activecountermeasures.com//" class="company-link" rel="noopener" target="_blank">
+          <div class="company-info">
+            <img class="dropdown-logo" alt="ACM Company Logo" src="https://media.thoughtindustries.com/course-uploads/75ce8123-d122-4e08-a81e-4f743317c8ec/vq7utzi4ke4n-ac_logo.svg">
+            <div class="text-container">
+              <span class="company-name">Active Counter Measures</span>
+              <p class="company-desc">Creators of, and trainers in, open-source and commercial cybersecurity tools that are useful, tested, and for the community, by the community.</p>
+            </div>
+          </div>
+          </a>
+          <a href="https://www.blackhillsinfosec.com/rekcah/" class="company-link" rel="noopener" target="_blank">
+          <div class="company-info">
+            <img class="dropdown-logo" alt="REKCAH Logo" src="https://media.thoughtindustries.com/course-uploads/75ce8123-d122-4e08-a81e-4f743317c8ec/1vmyvrq8if45-Rekcah-Logo--Shield-2-Colour-CMYK-T.png">
+            <div class="text-container">
+              <span class="company-name">REKCAH! Publishing</span>
+              <p class="company-desc">Visually appealing and easily digestible windows into the world of information security - in the now and the beyond. Home of "The Future Is ******" </p>
+            </div>
+          </div>
+          </a>
+          <a href="https://wildwesthackinfest.com/" class="company-link" rel="noopener" target="_blank">
+          <div class="company-info">
+            <img class="dropdown-logo" alt="WWHF Logo" src="https://media.thoughtindustries.com/course-uploads/75ce8123-d122-4e08-a81e-4f743317c8ec/26f3tvyxwn30-WWHF_Final_3.18.21-nobackdrop41.png">
+            <div class="text-container">
+              <span class="company-name">Wild West Hackin' Fest</span>
+              <p class="company-desc">A conference for the infosec community to share ideas, train, and engage face-to-face (or digitally). Come join us in Denver or Deadwood! </p>
+            </div>
+          </div>
+          </a>
+          <a href="https://antisyphontraining.thoughtindustries.com/" class="company-link" rel="noopener" target="_blank">
+          <div class="company-info">
+            <img class="dropdown-logo" alt="Antisyphon Training Logo" src="https://media.thoughtindustries.com/course-uploads/75ce8123-d122-4e08-a81e-4f743317c8ec/508io7psuip2-AntiSyphon_31.png">
+            <div class="text-container">
+              <span class="company-name">Antisyphon Training</span>
+              <p class="company-desc">Antisyphon Training is here to disrupt the traditional training industry by providing high-quality and cutting-edge education to everyone, regardless of their financial position. </p>
+            </div>
+          </div>
+          </a>
+          <a href="https://www.blackhillsinfosec.com/tools/backdoorsandbreaches/" class="company-link" rel="noopener" target="_blank">
+          <div class="company-info">
+            <img class="dropdown-logo" alt="Backdoors and Breaches Logo" src="https://media.thoughtindustries.com/course-uploads/75ce8123-d122-4e08-a81e-4f743317c8ec/hzbt6av3130e-BNB_LOGO_2021_DICE_transparent.svg">
+            <div class="text-container">
+              <span class="company-name">Backdoors &amp; Breaches</span>
+              <p class="company-desc">Our non-boring tabletop offering! Run through professional scenarios and pull in other teams in your organization to spread security awareness in an engaging, understandable format. B&amp;B Competitive version is also available! </p>
+            </div>
+          </div>
+          </a>
+        </div>
+      </li>
+
+      <li class="dropdown">
+        <a href="https://learning.antisyphontraining.com/catalog">Course Catalog</a>
+        <div class="dropdown-menu">
+          <div class="dropdown-content">
+            <div id="catalog-main-content" class="sub-menu-block active">
+              <div class="sub-group">
+            <p class="sub-group-info">Explore the Red, Blue, and Purple team training available from industry veterans and working professionals. </p>
+            <hr>
+            <div class="flex-column">
+              <div class="flex-row with-background-blue">
+                <div class="flex-column icon-container">
+                  <i class="ph ph-user" style="font-size: 45px"></i>
+                  <br>
+                  <p>Live - Get instruction in real time</p>
+                </div>
+                <div class="flex-column icon-container">
+                  <i class="ph ph-laptop" style="font-size: 45px"></i>
+                  <br>
+                  <p>On-Demand - Go at your own pace, available 24/7</p>
+                </div>
+                <div class="flex-column icon-container">
+                  <i class="ph ph-coins" style="font-size: 45px"></i>
+                  <br>
+                  <p>Cybersecurity training that doesn't break the bank</p>
+                </div>
+              </div>
+                <br>
+              <a class="button-primary" href="https://antisyphontraining.thoughtindustries.com/catalog">View Course Catalog</a>
+            </div>
+          </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="https://antisyphontraining.thoughtindustries.com/pages/cyber-range">Cyber Range</a>
+        <div class="dropdown-menu">
+          <div class="dropdown-content cyber-range">
+            <div class="sub-menu-block active" id="cyber-range-content">
+              <div class="sub-group">
+            <p class="sub-group-info">Learn more about the Cyber Range and Free Lab Fridays!</p>
+            <hr>
+            <ul>
+              <li><a href="https://antisyphontraining.thoughtindustries.com/pages/cyber-range">Cyber Range</a></li>
+              <li><a href="https://antisyphontraining.thoughtindustries.com/pages/free-lab-fridays">Free Lab Fridays</a></li>
+            </ul>
+          </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+
+<header style="margin-top: 35px;" class="hidden-for-medium-up mobile-header">
+  <div class="mobile-nav-bar">
+    <a class="at-logo-header" href="https://antisyphontraining.thoughtindustries.com/">
+      <img src="https://media.thoughtindustries.com/course-uploads/75ce8123-d122-4e08-a81e-4f743317c8ec/2s4w40ehoset-logo-antisyphon-horizontal-013x.webp" alt="Logo">
+    </a>
+    
+    <a class="menu-toggle" aria-label="Open Menu">
+      <i class="icon-list" aria-label="list"></i>
+    </a>
+  </div>
+
+  <nav class="mobile-nav-menu">
+    <ul class="mobile-nav-list">
+      
+      <li class="mobile-dropdown">
+        <button class="mobile-trigger">Training Solutions</button>
+        <ul class="mobile-submenu">
+          <li>
+            <ul>
+            <li><a href="https://antisyphontraining.thoughtindustries.com/catalog">Course Catalog</a></li>
+            </ul>
+            <span class="submenu-category">Live Training</span>
+            <ul>
+              <li><a href="https://antisyphontraining.thoughtindustries.com/pages/training-calendar">Training Calendar</a></li>
+              <li><a href="https://antisyphontraining.thoughtindustries.com/pages/threat-hunting-summit">Threat Hunting Summit</a></li>
+              <li><a href="https://wildwesthackinfest.com/" rel="noopener" target="_blank">Wild West Hackin' Fest</a></li>
+            </ul>
+          </li>
+          <li>
+            <span class="submenu-category">On-Demand</span>
+            <ul>
+              <li><a href="https://antisyphontraining.thoughtindustries.com/pages/on-demand-course-catalog">On-Demand Course Catalog</a></li>
+              <li><a href="https://antisyphontraining.thoughtindustries.com/pages/red-team-training">Red Team Training</a></li>
+              <li><a href="https://antisyphontraining.thoughtindustries.com/pages/blue-team-training">Blue Team Training</a></li>
+              <li><a href="https://antisyphontraining.thoughtindustries.com/pages/cis-controls-mastery-for-msps">CIS Controls Mastery for Enterprises</a></li>
+            </ul>
+          </li>
+          <li>
+            <span class="submenu-category">Private Training</span>
+            <ul>
+              <li><a href="https://antisyphontraining.thoughtindustries.com/pages/contact-us">Contact Us</a></li>
+            </ul>
+          </li>
+          <li>
+            <span class="submenu-category">Government/Military</span>
+            <ul>
+              <li><a href="https://antisyphontraining.thoughtindustries.com/pages/us-department-of-defense-8140-mandate">US Department of Defense Mandate 8140</a></li>
+              <li><a href="https://antisyphontraining.thoughtindustries.com/pages/training-by-role">NIST/NICE</a></li>
+            </ul>
+          </li>
+
+          </ul>
+      </li>
+
+      <li class="mobile-dropdown">
+        <button class="mobile-trigger">Free Resources</button>
+        <ul class="mobile-submenu">
+          <li><a href="https://bhispodcasts.transistor.fm/">Podcasts</a></li>
+          <li><a href="https://antisyphontraining.thoughtindustries.com/pages/cybersecurity-tools">Cybersecurity Tools</a></li>
+          <li><a href="https://antisyphontraining.thoughtindustries.com/pages/beginners-guide-to-entry-level-cybersecurity">Beginner's Guide to Entry-Level Cybersecurity</a></li>
+          <li><a href="https://www.blackhillsinfosec.com/rekcah/">REKCAH</a></li>
+          <li><a href="https://spearphish-general-store.myshopify.com/collections/infosec-survival-guides">Survival Guides</a></li>
+          <li><a href="https://www.blackhillsinfosec.com/prompt-zine/">#PROMPT</a></li>
+        </ul>
+      </li>
+      
+      <li class="mobile-dropdown">
+        <button class="mobile-trigger">About Us</button>
+        <ul class="mobile-submenu">
+          <li><a href="https://antisyphontraining.thoughtindustries.com/pages/about-us">About Antisyphon Training</a></li>
+          <li><a href="https://antisyphontraining.thoughtindustries.com/pages/contact-us">Contact Us</a></li>
+          <li><a href="https://antisyphontraining.thoughtindustries.com/pages/faq">FAQs</a></li>
+          <li><a href="https://antisyphontraining.thoughtindustries.com/support">Support</a></li>
+          <li><a href="https://antisyphontraining.thoughtindustries.com/pages/giving-back">Giving Back</a></li>
+          <li><a href="https://antisyphontraining.thoughtindustries.com/pages/community">Community</a></li>
+          <li><a href="https://antisyphontraining.thoughtindustries.com/pages/meet-the-team">Meet the Team</a></li>
+          <li><a href="https://antisyphontraining.thoughtindustries.com/pages/our-instructors">Our Instructors</a></li>
+        </ul>
+      </li>
+
+      <li class="mobile-dropdown">
+        <button class="mobile-trigger">Certification</button>
+        <ul class="mobile-submenu">
+          <li><a href="https://antisyphontraining.thoughtindustries.com/pages/ace-t-core">ACE-T Core</a></li>
+          <li><a href="https://antisyphontraining.thoughtindustries.com/pages/ace-t-specializations">ACE-T Specializations</a></li>
+         
+        </ul>
+      </li>
+
+      <li class="mobile-dropdown">
+        <button class="mobile-trigger">Our Brands</button>
+        <ul class="mobile-submenu brands-grid">
+          <li><a href="https://www.blackhillsinfosec.com/" rel="noopener" target="_blank">Black Hills Information Security</a></li>
+          <li><a href="https://wildwesthackinfest.com/" rel="noopener" target="_blank">Wild West Hackin' Fest</a></li>
+          <li><a href="https://www.activecountermeasures.com/" rel="noopener" target="_blank">Active Counter Measures</a></li>
+          <li><a href="https://spearphish-general-store.myshopify.com/" rel="noopener" target="_blank">Spearphish General Store</a></li>
+          <li><a href="https://www.blackhillsinfosec.com/rekcah/" rel="noopener" target="_blank">REKCAH! Publishing</a></li>
+          <li><a href="https://www.blackhillsinfosec.com/tools/backdoorsandbreaches/" rel="noopener" target="_blank">Backdoors &amp; Breaches</a></li>
+          <li><a href="https://antisyphontraining.thoughtindustries.com/">Antisyphon Training</a></li>
+          
+        </ul>
+      </li>
+
+      <li><a href="https://antisyphontraining.thoughtindustries.com/pages/cyber-range" style="font-size: 1.1rem; padding: 15px 20px; font-weight: bold;">Cyber Range</a></li>
+    </ul>
+  </nav>
+</header><script id="metamorph-20-end" type="text/x-placeholder"></script>
+  <script id="metamorph-19-end" type="text/x-placeholder"></script>
+</div></header>
+
+  <div id="main-content" class="home__content" role="main">
+    <script id="metamorph-21-start" type="text/x-placeholder"></script><script id="metamorph-30-start" type="text/x-placeholder"></script><div id="ember2099" class="ember-view layout__content--summit-keynote-exfil-everything-a-year-of-stealing-data-from-ai-agents layout__content"><script id="metamorph-37-start" type="text/x-placeholder"></script><script id="metamorph-31-start" type="text/x-placeholder"></script>
+  <div id="ember2125" class="ember-view row widget widget--two-column widget--two-column_standard flex-row-center"><div id="ember2130" class="ember-view"><div id="ember2137" class="ember-view"><script id="metamorph-38-start" type="text/x-placeholder"></script><script id="metamorph-38-end" type="text/x-placeholder"></script></div>
+
+
+  <div class="row">
+    <div class="medium-6 columns">
+      <div id="ember2146" class="ember-view editor-content indent-list"><script id="metamorph-39-start" type="text/x-placeholder"></script>
+  <script id="metamorph-40-start" type="text/x-placeholder"></script><p><img src="https://media.thoughtindustries.com/course-uploads/75ce8123-d122-4e08-a81e-4f743317c8ec/m67geobjof1v-AI-Summit_Keynote-Graphic_1080-x-1920_Mike-Takahashi_Ads-Dawson.avif" data-image="isfa6kyxtod3" alt=""></p><script id="metamorph-40-end" type="text/x-placeholder"></script>
+<script id="metamorph-39-end" type="text/x-placeholder"></script>
+
+</div>
+    </div>
+    <div class="medium-6 columns">
+      <div id="ember2148" class="ember-view editor-content indent-list"><script id="metamorph-41-start" type="text/x-placeholder"></script>
+  <script id="metamorph-42-start" type="text/x-placeholder"></script><h1 style="text-align: center;">Summit Keynote: Exfil Everything: A Year of Stealing Data from AI Agents</h1>
+<p style="text-align: center;"><span style="font-size: 24px;">With Ads Dawson and Mike Takahashi</span></p>
+<p style="text-align: center;"><span style="font-size: 24px;"><strong>August 14 @ 10:00 am – 10:50 am ET</strong></span></p>
+<p><a class="button-primary" style="margin: 0 auto;"><span style="font-size: 18px;">REGISTER HERE</span></a></p><script id="metamorph-42-end" type="text/x-placeholder"></script>
+<script id="metamorph-41-end" type="text/x-placeholder"></script>
+
+</div>
+    </div>
+  </div>
+
+
+<script id="metamorph-43-start" type="text/x-placeholder"></script><script id="metamorph-43-end" type="text/x-placeholder"></script></div>
+</div>
+<script id="metamorph-31-end" type="text/x-placeholder"></script><script id="metamorph-32-start" type="text/x-placeholder"></script>
+  <div id="ember2151" class="ember-view row widget widget--one-column widget--one-column_standard"><div id="ember2152" class="ember-view"><div id="ember2153" class="ember-view"><script id="metamorph-44-start" type="text/x-placeholder"></script><script id="metamorph-44-end" type="text/x-placeholder"></script></div>
+
+
+  <div class="row">
+    <div class="medium-12 columns">
+      <div id="ember2156" class="ember-view editor-content indent-list"><script id="metamorph-45-start" type="text/x-placeholder"></script>
+  <script id="metamorph-46-start" type="text/x-placeholder"></script><p><span style="font-size: 18px;">Your AI agent has the same trust boundary problem your browser had in 2005. Are you sure it’s fixed?</span></p>
+<p><span style="font-size: 18px;">Join Ads Dawson of Dreadnode and Mike Takahashi of Zenity — ranked among the top bug bounty hunters on HackerOne and Mozilla’s AI programs — as they break down a year’s worth of data exfiltration bugs found across production AI applications, showing how the same primitive behind XSS now lets attackers steal PII, business data, and private messages through AI agents.</span></p>
+<p><span style="font-size: 18px; ">In under an hour, you’ll see real attack chains from bug bounty reports, learn bypass techniques for every common mitigation, and walk away with a repeatable hunting methodology you can point at any AI target with a bug bounty program.</span></p>
+<p><span style="font-size: 18px; display: flex; align-items: center;">If you’ve ever exploited a trust boundary in a browser, you already have the instincts. This talk shows you where to point them next.</span></p>
+<p><span style="font-size: 18px; display: flex; align-items: center;"><em style="margin-right: 5px; font-size: 20px;" class="ph ph-discord-logo"></em>Chat with your fellow AI Summit attendees in the Antisyphon Discord server: <a href="https://discord.gg/antisyphon" target="_blank" rel="noreferrer noopener">https://discord.gg/antisyphon</a></span></p><script id="metamorph-46-end" type="text/x-placeholder"></script>
+<script id="metamorph-45-end" type="text/x-placeholder"></script>
+
+</div>
+    </div>
+  </div>
+
+
+<script id="metamorph-47-start" type="text/x-placeholder"></script><script id="metamorph-47-end" type="text/x-placeholder"></script></div>
+</div>
+<script id="metamorph-32-end" type="text/x-placeholder"></script><script id="metamorph-33-start" type="text/x-placeholder"></script>
+  <div id="ember2159" class="ember-view row widget widget--hr widget--hr_standard"><script id="metamorph-48-start" type="text/x-placeholder"></script><script id="metamorph-48-end" type="text/x-placeholder"></script>
+<script id="metamorph-49-start" type="text/x-placeholder"></script><script id="metamorph-49-end" type="text/x-placeholder"></script>
+
+<hr>
+</div>
+<script id="metamorph-33-end" type="text/x-placeholder"></script><script id="metamorph-34-start" type="text/x-placeholder"></script>
+  <div id="ember2162" class="ember-view row widget widget--one-column widget--one-column_standard"><div id="ember2163" class="ember-view"><div id="ember2164" class="ember-view"><script id="metamorph-50-start" type="text/x-placeholder"></script><script id="metamorph-50-end" type="text/x-placeholder"></script></div>
+
+
+  <div class="row">
+    <div class="medium-12 columns">
+      <div id="ember2167" class="ember-view editor-content indent-list"><script id="metamorph-51-start" type="text/x-placeholder"></script>
+  <script id="metamorph-52-start" type="text/x-placeholder"></script><p style="text-align: center;"><span style="font-size: 18px;">This talk is part of <strong>Antisyphon Training’s Infosec: Age of AI Summit</strong>, a free, six-hour, live virtual event designed to give you a practical, real-world look at how cyber experts are using AI and what security professionals need to know as adoption grows.</span></p>
+<p style="text-align: center;"><span style="font-size: 18px;">For those who want to go further, high-quality, affordable hands-on workshops are available Aug. 17-18 to help you learn AI security concepts, techniques, and tactics.</span></p>
+<p><a class="button-primary" style="margin: 0 auto;" href="https://learning.antisyphontraining.com/pages/ai-cybersecurity-summit">Learn more about the AI Summit</a></p>
+<p style="text-align: center;"><span style="font-size: 18px;">See the entire <a href="https://learning.antisyphontraining.com/catalog">Antisyphon Training Course Catalog</a> for affordable cybersecurity training!</span></p><script id="metamorph-52-end" type="text/x-placeholder"></script>
+<script id="metamorph-51-end" type="text/x-placeholder"></script>
+
+</div>
+    </div>
+  </div>
+
+
+<script id="metamorph-53-start" type="text/x-placeholder"></script><script id="metamorph-53-end" type="text/x-placeholder"></script></div>
+</div>
+<script id="metamorph-34-end" type="text/x-placeholder"></script><script id="metamorph-35-start" type="text/x-placeholder"></script>
+  <div id="ember2170" class="ember-view row widget widget--hr widget--hr_standard"><script id="metamorph-54-start" type="text/x-placeholder"></script><script id="metamorph-54-end" type="text/x-placeholder"></script>
+<script id="metamorph-55-start" type="text/x-placeholder"></script><script id="metamorph-55-end" type="text/x-placeholder"></script>
+
+<hr>
+</div>
+<script id="metamorph-35-end" type="text/x-placeholder"></script><script id="metamorph-36-start" type="text/x-placeholder"></script>
+  <div id="ember2173" class="ember-view row widget widget--two-column widget--two-column_standard"><div id="ember2174" class="ember-view"><div id="ember2175" class="ember-view"><script id="metamorph-56-start" type="text/x-placeholder"></script>
+  <script id="metamorph-57-start" type="text/x-placeholder"></script>
+    <script id="metamorph-58-start" type="text/x-placeholder"></script>
+      <h3 class="h2 widget__title"><script id="metamorph-59-start" type="text/x-placeholder"></script>ABOUT THE INSTRUCTORS<script id="metamorph-59-end" type="text/x-placeholder"></script></h3>
+    <script id="metamorph-58-end" type="text/x-placeholder"></script>
+    <script id="metamorph-60-start" type="text/x-placeholder"></script><script id="metamorph-60-end" type="text/x-placeholder"></script>
+  <script id="metamorph-57-end" type="text/x-placeholder"></script>
+<script id="metamorph-56-end" type="text/x-placeholder"></script></div>
+
+
+  <div class="row">
+    <div class="medium-6 columns">
+      <div id="ember2181" class="ember-view editor-content indent-list"><script id="metamorph-61-start" type="text/x-placeholder"></script>
+  <script id="metamorph-62-start" type="text/x-placeholder"></script><div style="display: flex; flex-direction: column; align-items: center"><p><img style="width: 300px; border-radius: 10%" src="https://media.thoughtindustries.com/course-uploads/75ce8123-d122-4e08-a81e-4f743317c8ec/6kykv9shzxds-Ads-Dawson-headshot-scaled-edited.avif" data-image="x62x1c3d2v24"></p>
+<h3><strong>Ads Dawson</strong></h3>
+<h3><strong>Bio</strong></h3>
+<p style="text-align: center;">Ads Dawson has spent the past year stealing data from AI agents in production — through bug bounty programs. A Staff AI Security Researcher at Dreadnode and member of BT6, the frontier AI red team, he specializes in web application security, adversarial machine learning exploitation, and autonomous red teaming. Ranked #2 in Canada on HackerOne (2026) and #1 Up and Comer (Q4 2025), Ads is a HackerOne Ambassador (US South), BugCrowd Hacker Advisory Board member, and selected for Meta’s MBBRC live hacking event. He founded the OWASP GenAI Security Project — the fastest project to reach OWASP flagship status — and is lead author of AIRTBench (arXiv), the first AI/ML red teaming benchmark for LLMs. His work includes red teaming frontier models for Google DeepMind and shaping the EU AI Act Code of Practice. </p>
+<div style="display: flex; justify-content: center">
+<p><a style="margin-right: 20px" href="https://www.linkedin.com/in/adam-dawson0" target="_blank" rel="noopener"><em style="font-size: 38px" class="ph ph-linkedin-logo"></em></a></p><a href="https://linktr.ee/adsdawson" target="_blank" rel="noopener"><em style="font-size: 38px" class="ph ph-linktree-logo"></em></a>
+<p></p></div></div><script id="metamorph-62-end" type="text/x-placeholder"></script>
+<script id="metamorph-61-end" type="text/x-placeholder"></script>
+
+</div>
+    </div>
+    <div class="medium-6 columns">
+      <div id="ember2183" class="ember-view editor-content indent-list"><script id="metamorph-63-start" type="text/x-placeholder"></script>
+  <script id="metamorph-64-start" type="text/x-placeholder"></script><div style="display: flex; flex-direction: column; align-items: center"><p><img style="width: 300px; border-radius: 10%;" src="https://media.thoughtindustries.com/course-uploads/75ce8123-d122-4e08-a81e-4f743317c8ec/9hzfftue1ob1-Mike-Takahashi-headshot.avif" data-image="dqo17w0xdyrj" alt=""></p><h3><strong>Mike Takahashi</strong></h3>
+<h3><strong>Bio</strong></h3>
+<p style="text-align: center;">Mike Takahashi, aka TakSec, is an AI Red Team Researcher at Zenity, BT6 member, and Bug Bounty Hunter focused on breaking AI systems. He has submitted 400+ vulnerabilities across major bug bounty programs and top ranking on both Anthropic’s Safety Bug Bounty Program on HackerOne and Mozilla’s 0din GenAI Bug Bounty Program. His work targets prompt injection, data exfiltration, and AI agent security.</p></div><script id="metamorph-64-end" type="text/x-placeholder"></script>
+<script id="metamorph-63-end" type="text/x-placeholder"></script>
+
+</div>
+    </div>
+  </div>
+
+
+<script id="metamorph-65-start" type="text/x-placeholder"></script><script id="metamorph-65-end" type="text/x-placeholder"></script></div>
+</div>
+<script id="metamorph-36-end" type="text/x-placeholder"></script><script id="metamorph-37-end" type="text/x-placeholder"></script>
+
+<script id="metamorph-66-start" type="text/x-placeholder"></script><script id="metamorph-66-end" type="text/x-placeholder"></script></div><script id="metamorph-30-end" type="text/x-placeholder"></script><script id="metamorph-21-end" type="text/x-placeholder"></script>
+  </div>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer__inner">
+      <div class="footer__company__info">
+        ©
+        <script id="metamorph-22-start" type="text/x-placeholder"></script>2026<script id="metamorph-22-end" type="text/x-placeholder"></script>
+        <span class="footer__company__name">
+          <script id="metamorph-23-start" type="text/x-placeholder"></script>
+            <script id="metamorph-24-start" type="text/x-placeholder"></script>Antisyphon Training<script id="metamorph-24-end" type="text/x-placeholder"></script>
+          <script id="metamorph-23-end" type="text/x-placeholder"></script>
+        </span>
+        <script id="metamorph-25-start" type="text/x-placeholder"></script><script id="metamorph-25-end" type="text/x-placeholder"></script>
+      </div>
+
+      <script id="metamorph-26-start" type="text/x-placeholder"></script>
+        <script id="metamorph-27-start" type="text/x-placeholder"></script><footer class="customFooter">
+    <div class="container">
+        <nav>
+            <div class="box">
+                <a href="https://antisyphontraining.thoughtindustries.com/">
+                <img src="https://media.thoughtindustries.com/course-uploads/75ce8123-d122-4e08-a81e-4f743317c8ec/xe07jmcanl23-logo-antisyphon-powered-by-bhis-combined-013x.webp" class="ftLogo"></a>
+            </div>
+            <div class="box">
+                <ul>
+                    <li><a href="https://antisyphontraining.thoughtindustries.com/catalog">Course Catalog</a></li>
+                    <li><a href="https://antisyphontraining.thoughtindustries.com/pages/training-calendar">Live Training Calendar</a></li>
+                    <li><a href="https://antisyphontraining.thoughtindustries.com/pages/free-lab-fridays">Free Lab Fridays</a></li>
+                 
+                </ul>
+            </div>
+            <div class="box">
+                <ul>
+                    <li><a href="https://antisyphontraining.thoughtindustries.com/pages/about-us">About</a></li>
+                    <li><a href="https://antisyphontraining.thoughtindustries.com/pages/contact-us">Contact</a></li>
+                    <li><a href="https://antisyphontraining.thoughtindustries.com/support">Support</a></li>
+                    <li><a href="https://antisyphontraining.thoughtindustries.com/pages/privacy-policy">Privacy Policy</a></li>
+                    <li><a href="https://antisyphontraining.thoughtindustries.com/pages/terms-of-service">Terms of Service</a></li>
+                </ul>
+            </div>
+            
+        </nav>
+        
+        <div class="copySocialLnks">
+            <div class="box">
+                <span class="copy">© 2020 Copyright</span>
+                <span class="powered">Powered By Thought Industries</span>
+            </div>
+            <div class="box">
+                <ul>
+                    <li><a href="https://antisyphontraining.thoughtindustries.com/pages/privacy-policy">Privacy Policy</a></li>
+                    <li><a href="https://antisyphontraining.thoughtindustries.com/pages/terms-of-service">Terms of Use</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+            </div>
+            <div class="box">
+                <ul>
+                    <li><a href="https://infosec.exchange/@Antisy_Training"><i class="ph ph-mastodon-logo"></i></a></li>
+                    <li><a href="https://x.com/Antisy_Training"><i class="ph ph-x-logo"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/80104444/"><i class="ph ph-linkedin-logo"></i></a></li>
+                    <li><a href="https://www.youtube.com/c/AntisyphonTraining"><i class="ph ph-youtube-logo"></i></a></li>
+                    <li><a href="https://discord.gg/antisyphon"><i class="ph ph-discord-logo"></i></a></li>
+                    <li><a href="https://www.facebook.com/antisyphontraining"><i class="ph ph-facebook-logo"></i></a></li>
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+</footer><script id="metamorph-27-end" type="text/x-placeholder"></script>
+      <script id="metamorph-26-end" type="text/x-placeholder"></script>
+    </div>
+  </footer>
+</div>
+<div id="ember2036" class="ember-view"><script id="metamorph-28-start" type="text/x-placeholder"></script>
+  <script id="metamorph-29-start" type="text/x-placeholder"></script><script id="metamorph-29-end" type="text/x-placeholder"></script>
+<script id="metamorph-28-end" type="text/x-placeholder"></script>
+</div>
+<script id="metamorph-10-end" type="text/x-placeholder"></script><script id="metamorph-6-end" type="text/x-placeholder"></script>
+<script id="metamorph-7-start" type="text/x-placeholder"></script><script id="metamorph-7-end" type="text/x-placeholder"></script>
+<script id="metamorph-8-start" type="text/x-placeholder"></script><script id="metamorph-8-end" type="text/x-placeholder"></script>
+<script id="metamorph-9-start" type="text/x-placeholder"></script><script id="metamorph-9-end" type="text/x-placeholder"></script>
+<div id="ember1953" class="ember-view"></div>
+</div></div>
+  </div>
+
+<script nonce="cpjv24zsoxpnbot7ira8bchu" type="text/javascript">
+  window.audio5jsSwfPath = 'https://media.thoughtindustries.com/audio5js.swf';
+  EmberENV = {LOG_MODULE_RESOLVER: false, FEATURES: {'query-params-new': true, 'ember-routing-drop-deprecated-action-style': true}, FORCE_JQUERY: true};
+</script>
+
+<script type="text/javascript" src="https://media.thoughtindustries.com/v3/dist/vendor.gulp.bundle.211bb585.js"></script>
+
+<script type="text/javascript" src="//fast.wistia.com/assets/external/E-v1.js" async=""></script>
+
+  <script type="text/javascript" src="https://js.stripe.com/v3/"></script>
+
+<script nonce="cpjv24zsoxpnbot7ira8bchu" type="text/javascript">
+    CLDR.defaultLanguage = 'en';
+
+    window.stripePublishableKey = 'pk_live_51GQagzBCxhSiignAoS3QWM4oq1wgXdKiHT8Hu1yoEeorRxLQmgUjs8sWyo8J6plC35hdFYzJlRJ3JFYBeyJzZ7da00jT49o7c0';
+
+  Ember.I18n.translations = {"home.meta-title":"{{companyName}}","home.meta-description":"{{companyName}} online learning classes","catalog.meta-title":"Course Catalog - {{companyName}}","catalog.meta-description":"{{companyName}} online learning platform course catalog","catalog.back":"Back to Catalog","catalog.sort-by":"Sort by","catalog.sort-updated":"Last Updated","catalog.sort-created":"Most Recent","catalog.sort-title":"Title","catalog.sort-publish-date":"Publish Date","catalog.sort-course-start-date":"Start Date","catalog.sort-relevance":"Relevance","catalog.display-type-list":"List","catalog.display-type-grid":"Grid","catalog.display-type-calendar":"Calendar","catalog.location":"Location","catalog.date-time":"Date & Time","catalog.price":"Price","catalog.location-online":"Online","catalog.location-in-person":"In Person","register.meta-title":"Register - {{companyName}}","register.meta-description":"{{companyName}} online learning platform registration","register-submit":"Register","course.register-text":"Register now to gain access to this course.","course.register-button":"Register Now","support.meta-title":"Support - {{companyName}}","support.meta-description":"","support.search-title":"Search FAQs","support.search-results-title":"Search Results:","support.no-results":"Nothing found matching your query, please try again.","support.search-back-link":"Back to FAQs","course-group-detail.meta-title":"{{courseGroupName}} - {{companyName}}","course-group-detail.meta-description":"{{courseGroupDescription}}","course-group-isbn":"ISBN:","course-group-source":"Source:","course-group-authors.one":"Author:","course-group-authors.other":"Authors:","course-group-instructors.one":"Instructor:","course-group-instructors.other":"Instructors:","bundle-detail.meta-title":"{{bundleName}} - {{companyName}}","bundle-detail.meta-description":"{{bundleDescription}}","discount-group-detail.meta-title":"{{discountGroupName}} - {{companyName}}","discount-group-detail.meta-description":"{{discountGroupDescription}}","pickable-group-detail.meta-title":"{{pickableGroupName}} - {{companyName}}","pickable-group-detail.meta-description":"{{pickableGroupDescription}}","learning-path-detail.meta-title":"{{learningPathName}} - {{companyName}}","learning-path-detail.meta-description":"{{learningPathDescription}}","product-detail.meta-title":"{{productName}} - {{companyName}}","product-detail.meta-description":"{{productDescription}}","video.meta-title":"{{videoTitle}} - {{companyName}}","article.meta-title":"{{articleTitle}} - {{companyName}}","article.meta-description":"{{articleDescription}}","article.rate-this":"Rate This!","article.rated":"Rated!","article.tags.one":"Tag","article.tags.other":"Tags","article.see-tags":"See All Tags","article.related-content":"Related Items","article.search-button":"Go","article.downloads":"Downloads","article.select-download":"Select A File To Download","embed-widget.handle":"My Learning","embed-widget.course-status-heading":"Learning","embed-widget.learning-paths-status-heading":"Pathways","embed-widget.featured-content-heading":"Featured Content","embed-widget.achievements-heading":"Achievements","rating.submit":"Submit","page.forbidden-header":"You are not authorized to view this page","page.forbidden-body.one":"To access this page, you must complete the following prerequisite:","page.forbidden-body.other":"To access this page, you must complete the following prerequisites:","search":"Search","lesson":"Lesson","topic":"Page","section":"Section","select-section":"Select a Section","course":"Class","hide-menu":"Hide","audio-play":"Play Audio","audio-play-playing":"Playing Audio","audio-processing":"Audio Processing","presentation-audio-play":"Play","presentation-audio-pause":"Pause","more":"more","next.section":"Next Section","next.lesson":"Next Lesson","next.topic":"Next Page","video-continue":"Continue","continue-to.section":"Continue to Next Section","continue-to.lesson":"Continue to Next Lesson","continue-to.topic":"Continue to Next Page","prev.section":"Previous Section","prev.lesson":"Previous Lesson","prev.topic":"Previous Page","return-to.section":"Return to Previous Section","return-to.lesson":"Return to Previous Lesson","return-to.topic":"Return to Previous Page","please-wait":"Please Wait…","replace":"Replace","undo":"Undo","remove":"Remove","all":"All","not-found.title":"Not Found","not-found":"The page you are looking for could not be found","stuck.access-validating":"Please wait while we validate your access…","stuck.click-here":"Click Here","stuck.intro":"Stuck here?","student-dashboard":"My Dashboard","student-dashboard-account-details":"Account Details","student-dashboard-edit-profile":"Edit Profile","completion.course-percent-complete":"Complete","completion.course-percent-viewed":"Content Viewed","completion.course-assignments-complete":"Completed Assignments","completion.course-assessments-passed":"Passed Assessments","completion.course-topic-viewed":"Required Pages Viewed","completion.course-video-viewed":"Required Videos Viewed","completion.course-activity-complete":"Completed Activity","completion.course-meeting-attended":"Meetings Attended","completion.bongo-assignments-completed":"Completed Bongo Assignments","completion.proctored-topic-complete":"Passed Proctoring","dashboard.meta-title":"Learner Dashboard","dashboard.back":"Back to Dashboard","dashboard.profile":"Profile","dashboard.available":"Available","dashboard.started":"Started","dashboard.completed":"Completed","dashboard.bookmark":"Bookmarks","dashboard.bookmark-save":"Save","dashboard.certificates":"Certificates","dashboard.waitlisted":"Waitlisted","dashboard.credly":"Badges","dashboard.credly-badges":"Credly Badges","dashboard.credly-earned":"Earned","dashboard.credly-expired":"Expired","dashboard.credly-expires":"Expires","dashboard.credly-not-started":"Not Started","dashboard.credly-in-progress":"In Progress","dashboard.credly-completed":"% Completed","dashboard.credly-accept-badge":"Accept the Badge","dashboard.credly-view-badge":"View Badge","dashboard.current":"My Learning","dashboard.unenroll-waitlist":"Unenroll from Waitlist","dashboard.collaborations":"Collaborations","dashboard.daily-activity":"Daily Activity","dashboard.events":"Events","dashboard.hours":"Total Hours","dashboard.assignments":"Completed Assignments","dashboard.lessons":"Completed Lessons","dashboard.percent-complete":"% Complete","dashboard.certificate-granted":"Certificate Granted","dashboard.certificate-pending":"Certificate Pending","dashboard.certificate-expires":"Certificate expires","dashboard.certificate-expired":"Certificate expired on","dashboard.external-course-label":"External Course","dashboard.activity":"Activity","dashboard.nightly-hint":"This information is updated and verified as part of a nightly process.","dashboard.content-viewed-hint":"Content viewed shows progress toward a “percentage of pages viewed” course completion criterion.","dashboard.account-button-save":"Save","dashboard.account-button-saving":"Saving","dashboard.account-button-saved":"Saved","dashboard.account-title":"Account & Info","dashboard.account":"Account Info","dashboard.account-updated":"Account successfully updated","dashboard.account-profile":"Profile Info","dashboard.account-profile-updated":"Profile successfully updated","dashboard.account-current-email":"You are currently logged in as:","dashboard.account-email-updated":"Email successfully updated","dashboard.account-credit-balance":"Credit Balance","dashboard.account-credit-accounts":"Credit Accounts","dashboard.shared-credit-accounts":"Shared Credit Accounts","dashboard.credit-card":"Credit Card","dashboard.subscriptions":"Subscriptions","dashboard.purchases":"Purchases","dashboard.extended-profile":"Extended Profile","dashboard.account-access-expired":"Access Expired","dashboard.account-add-card":"Add Credit Card","dashboard.account-update-card":"Update Credit Card","dashboard.account-update-card-link":"Click here to update your credit card information.","dashboard.account-card-updated":"Credit card sucessfully updated","dashboard.account-change-card":"Change Credit Card","dashboard.account-change-password":"Click Here to Change Your Password","dashboard.account-subscriptions":"Manage Subscriptions","dashboard.account-manage-subscription":"Manage Subscription","dashboard.account-subscriptions-amount":"Amount displayed is total due at next invoice.","dashboard.account-subscription-canceled":"Canceled:","dashboard.account-subscription-active":"Active Until","dashboard.account-current-cc":"You currently have a {{cardType}} card ending in ***{{last4}} on file.","dashboard.account-multifactor-enabled":"Multifactor authentication is enabled. To disable, please contact your account administrator.","dashboard.account-multifactor-scan":"Scan this code with your multifactor application:","dashboard.account-multifactor-enter-password":"Please enter your current password to activate multifactor authentication:","dashboard.account-multifactor-enter-code":"To finalize your multifactor setup, please enter the code generated by your application:","dashboard.account-multifactor-download":"If you don't have a multifactor application, download","dashboard.archive-warning":"Would you like to continue archiving this course? Doing so will remove this from your dashboard as an In Progress item.","dashboard.reinstate-warning":"Would you like to continue reinstating this course? Doing so will move this back to being In Progress.","dashboard.archives":"Archived Content","dashboard.archived":"Archived","dashboard.waitlist":"Waitlisted","dashboard.switch-to-learner":"Switch to Learner","dashboard.required":"Required","course-unmet-prerequisites.one":"To access this course, first complete this prerequisite:","course-unmet-prerequisites.other":"To access this course, first complete these prerequisites:","view-certificate":"View Certificate","external-certificate.upload":"Upload Third-Party Certificate","external-certificate.instructions":"Upload a third-party certificate. Please provide details.","external-certificate.submit":"Submit","external-certificate.cancel":"Cancel","course-ended":"Course ended:","filter-no-courses":"Sorry, we were unable to find a match for that search term or category, please try again.","filter-active.one":"Active Filter:","filter-active.other":"Active Filters:","filter-by":"Filter by","course-completed-decal":"Completed!","view-course":"View {{contentType}}","start-course":"Start {{contentType}}","resume-course":"Resume {{contentType}}","not-completed-course":"Not Completed","continue-course":"Continue","reschedule-course":"Reschedule","course-enroll-head":"Enroll Today","course-enroll-head-free":"Enroll Today","course-price":"Price:","course-subscribe-text":"Subscribe for","course-view-details":"View Details","course-add-to-queue":"Add to Queue","course-added-to-queue":"Added to Queue","account":"Account","support":"Support","sign-in":"Sign In","sign-out":"Sign Out","status-page":"Status Page","transcript":"Transcript","transcript.title":"{{companyName}} Transcript","transcript.print":"Print Transcript","transcript.empty":"Transcript Empty","transcript.total":"Total:","transcript.view-certificate":"View","transcript.share-certificate":"Add to LinkedIn Profile","transcript.export":"Export Transcript CSV","reschedule.current":"You are currently enrolled in the following session:","reschedule.select":"Enroll in a new session:","reschedule.footer":"If you need to cancel, please contact customer service for more information.","award.your-standing":"Your Standing","award.leaderboard":"Leaderboard","award.you":"You","award.leader":"Leader","accept-invite":"Accept Invite","invite-password":"Create Password","invite-password-confirm":"Confirm Password","reset-password-title":"Reset Password","reset-password-instructions":"Please enter your new password below.","reset-password-body":"Enter your email below and we will send you a link to reset your password.","reset-password-sent":"Please check your email to continue the password reset process.","reset-password-invalid-token":"Token is incorrect. Please restart the forgot password process.","signed-out":"You are now signed out.","signed-out-inactivity":"You were signed out due to inactivity.","login-invalid-password":"Invalid email or password.","login-too-many-attempts":"You have made too many log in attempts. Please try again in 30 minutes.","login-disabled":"Your account has been disabled. Please contact your account administrator.","login-password-changed":"Your password has been changed. Please sign in below.","login-new-account":"Your account has been created. Please sign in below.","login-dunning-success":"Your card information has been successfully updated. Please sign in below.","email-address":"Email Address","password":"Password","forgot-password-question":"Forgot your password?","reset-password":"Reset Password","change-password":"Change Password","next":"Next","next-question":"Next Question","previous-question":"Previous Question","see-results":"See Results","uploading":"Uploading","add-comment":"Add a comment","add-comment-button":"Add Comment","save-comment-button":"Save Comment","replied-to":"Replied to {{name}}","attach-file":"Attach File","file-attached":"File attached","no-file-attached":"No File attached","record-upload-video":"Record/Upload Video","video-attached":"Video attached","comments-label.one":"{{count}} comment","comments-label.other":"{{count}} comments","add-thread-button":"Create Thread","save-thread-button":"Save Thread","no-threads":"Nothing here yet, get started by adding a discussion.","thread-search-placeholder":"Search discussions","no-threads-search-result":"No threads matching your search were found.","thread-posted":"Posted","add-gallery-button":"Add Gallery Item","new-gallery-item-button":"Add To Gallery","gallery-posted":"Posted:","comment.show-more":"Show More","comment.loading-more":"Loading More…","comment.reply":"Reply","comment.cancel-reply":"Cancel","comment.cancel-file":"Cancel","comment.cancel-video":"Cancel","comment.enter-comment":"Enter your comment:","recipe-directions-title":"Directions","recipe-ingredients-title":"Ingredients","recipe-nutrition-title":"Nutrition Facts","recipe-time":"Total Time:","recipe-yield":"Makes:","assignment-due-date":"Assignment Due Date","assignment-files":"Assignment Resources","assignment-submit-heading":"Assignment Submission","assignment-submit-button":"Submit Assignment","assignment-type-submission":"Type Submission","assignment-attach-submission":"Attach Submission","assignment-submitted-label":"Submitted:","assignment-no-submission":"No submission","assignment-view-link":"View Assignment","assignment-cancel":"Cancel","submission-comment":"Enter your comment:","submission-received":"Your assignment submission has been received {{date}}.","submission-received-assessment":"Your submission has been received {{date}}.","submission-grade":"Grade:","submission-grade-complete":"Completed","submission-grade-incomplete":"Incomplete","submission-grade-not-graded":"Not Graded","submission-grade-feedback":"Instructor Feedback:","bongo-passing-grade":"You must achieve a score equivalent to at least {{grade}}% in order to pass this assignment.","sidebar-notes-preview":"You will be able to store notes here.","sidebar-ask-instructor-preview":"You will be able to ask an instructor a question here.","sidebar-lessons":"Lessons","sidebar-discussions":"Discuss","sidebar-gallery":"Gallery","sidebar-workbooks":"Workbooks","sidebar-superquiz":"Quiz Builder","sidebar-meetings":"Meetings","sidebar-notes":"Notes","sidebar-resources":"Resources","sidebar-resources-empty":"There are no resources available for this course.","sidebar-files":"Files","sidebar-assignments":"Assignments","sidebar-instructor":"Ask Question","sidebar-linked-workbooks":"Workbooks","sidebar-linked-workbooks-empty":"You have not created any Workbooks yet.","general-forum-label":"General","thread-label.one":"Thread","thread-label.other":"Threads","thread-sort-by":"Sort by","thread-started-by":"Started by","thread-last-updated":"Last Updated","thread-add-new-button":"Add New Thread","thread-add-new-card":"Start a New Discussion","threads-empty-read-only":"Sorry, discussions have been closed.","threads-search-no-results":"Sorry, no discussions matching your search could be found.","forum-label":"Forums","comment-label":"Comments","discussion-label":"Discussion","back-link-lesson":"Back to Lesson","back-link-course":"Back to Course","list-expand":"Expand","list-close":"Close","list-roll-image":"Image","slideshow-prev-slide":"Prev","slideshow-next-slide":"Next Slide","slideshow-count":"Slide {{index}} of {{total}}","slideshow-skip-info":"Clicking on this arrow will navigate you away from the current page.","slideshow-skip-continue":"Do you wish to continue?","slideshow-skip-ok":"OK","slideshow-skip-cancel":"Cancel","workbook-disable-info":"Please ensure you have filled out every required question (denoted with a *)","workbook-popup-ok":"OK","quiz-summary-enable":"Hide answers until the end of the quiz","quiz-results-title":"Quiz Results","quiz-results-average-time":"Average Time Per Question","quiz-results-suggested-time":"Suggested Time Per Question","quiz-results-total-questions":"Total","quiz-results-answered-questions":"Answered","quiz-results-correct-questions":"Correct","quiz-results-unanswered-questions":"Unanswered","quiz-results-incorrect-questions":"Incorrect","quiz-results-time-limit":"Time Limit","quiz-results-total-time":"Total Time","quiz-results-questions-correct":"You got {{correct}} out of {{total}} correct","quiz-results-questions-pool-correct":"{{correct}} out of {{total}}","quiz-results-review-questions":"Review All Question Results","quiz-results-see-all-results":"See All Results","quiz-results-review-unanswered-questions":"Review All Unanswered Questions","quiz-results-review-your-answer":"Your Answer","quiz-results-review-correct-answer":"Correct Answer","quiz-results-review-incorrect-answer":"Incorrect Answer","quiz-attempts-remaining.one":"One attempt remaining","quiz-attempts-remaining.other":"{{count}} attempts remaining","question-table-add-row":"Add a Row","question-table-delete-row":"Delete a Row","test-results-title":"Test Results","tally-retake-button":"Retake Quiz","quiz-retake-button":"Retake Quiz","test-retake-button":"Retake Test","survey-retake-button":"Retake Survey","workbook-retake-button":"Retake Workbook","survey-complete-button":"Complete Survey","workbook-complete-button":"Complete Workbook","tally-start-button":"Start Quiz","quiz-start-button":"Start Quiz","test-start-button":"Start Test","survey-summary-title":"Survey Answers","workbook-summary-title":"Workbook Answers","tally-start-message":"Quiz","quiz-start-message":"Quiz","test-start-message":"Test","test-attempts-remaining.one":"One attempt remaining","test-attempts-remaining.other":"{{count}} attempts remaining","test-passing-grade":"{{grade}}% required for passing grade","test-results-passed":"You passed!","test-results-failed":"You did not pass.","test-time-limit-reached":"You ran out of time!","quiz-loading-create":"Starting the quiz…","test-loading-create":"Starting the test…","quiz-summary-heading":"Question Summary","quiz-summary-body":"By clicking on a question, you can jump directly back to it for reviewing or updating your answer. Alternatively, you can go back and review all unanswered questions or all questions from the very beginning. When you are ready, click Submit below to complete this assessment.","quiz-summary-all-questions":"Review All Questions","quiz-summary-skipped-questions":"Review Skipped Questions","test-summary-submit":"Submit","quiz-summary-review-question":"Review Question","tally-loading-create":"Starting the quiz…","survey-loading-create":"Starting the survey…","workbook-loading-create":"Starting the workbook…","quiz-loading-finish":"Crunching the numbers…","quiz-loading-finish-warning":"Please do not leave this page or your responses will not be recorded.","quiz-loading-stuck":"Stuck here?","quiz-loading-stuck-action":"Try Again","quiz-essay-answer":"Answer:","quiz-essay-response":"Your Answer","quiz-essay-answer-placeholder":"Enter your answer here.","quiz-essay-hide-answer":"Hide Answer","quiz-essay-show-answer":"Show Answer","quiz-essay-review-header":"Content to Review","quiz-essay-question-header":"Question","quiz-replace-file":"Replace File","quiz-clear-response":"Clear Response","quiz-check-answers":"Check Answers","quiz-skip-question":"Skip","quiz-submit-answer":"Submit","question-bank-instructions":"Start by selecting, a single or multiple, questions to the assessment by choosing a category followed by the questions of your choice. To finish adding, make sure to select 'Add to Page' and 'Save'.","workbook-questions.one":"{{count}} question","workbook-questions.other":"{{count}} questions","workbook-view-link":"View Workbook","workbook-view-all":"View All Workbooks","workbook-print":"Print Workbooks","workbook-email":"Email Workbooks","workbook-email-singular":"Email Workbook","workbook-no-workbooks":"No Workbooks…","workbook-no-questions":"No Questions…","workbook-no-print":"No finished workbooks to print.","workbook-complete":"Complete","workbook-incomplete":"Incomplete","linkedworkbook.label":"Label your workbook:","linkedworkbook.next":"Next","linkedworkbook.continue":"Save & Continue","linkedworkbook.reset":"Reset","linkedworkbook.reset-confirmation":"Are you sure? All progress will be reset.","linkedworkbook.new":"Create New","linkedworkbook.print":"Print","linkedworkbook.copy":"Copy","linkedworkbook.edit":"Edit","linkedworkbook.date":"Date:","linkedworkbook.delete":"Delete","linkedworkbook.delete-confirmation":"Are you sure? All answers will be deleted.","linkedworkbook.copy-prompt":"Enter a new name:","linkedworkbook.skip-to-summary":"Skip To Workbook Summary","superquiz-introduction":"Select from the quizzes below and we will build one quiz containing all unanswered or incorrect questions from your previous quiz attempts.","superquiz-selected-default":"0 Selected","superquiz-selected-zero":"{{quizzesCount}} Selected: 0 Questions","superquiz-selected-loading":"{{quizzesCount}} Selected: Loading…","superquiz-selected":"{{quizzesCount}} Selected:","superquiz-questions.one":"{{count}} question","superquiz-questions.other":"{{count}} questions","superquiz-totaltime":"Total Time:","superquiz-selectall":"Select All","superquiz-summary-enable":"Hide answers until the end","superquiz-answered-enable":"Include questions I previously got correct","superquiz-start":"Start Quiz","instructor-assessment.learner-instructions":"An instructor will complete this assessment on your behalf.","instructor-assessment.instructor-instructions":"Search for a learner to complete this assessment on behalf of a learner:","email-capture-continue":"Continue","all-notes":"All Notes","print-notes":"Print Notes","print-recipe":"Print Recipe","print-certificate":"Print Certificate","download-certificate":"Download Certificate","save-note":"Save Note","edit-note":"Edit Note","view-note":"View Note","add-note":"Add Note","delete-note":"Delete Note","delete-confirmation":"Are you sure?","view-download-file-viewer":"View / Download","view-download-audio":"Download Audio","ask-instructor-head":"Want to send a private message to an instructor? Fill in the fields and we'll get right back to you.","ask-instructor-button":"Send Message","ask-instructor-sent":"Your message has been sent.","congrats-with-user":"Congratulations, {{name}}!","congrats-no-user":"Congratulations!","you-have-completed":"You've Completed","up-next":"Up Next:","leave-feedback":"Leave us your feedback to help us improve this course.","choose-rating":"Your rating:","article-rating":"Average Rating","exit-course":"Exit Course","mark-course-completed":"Mark Course Completed","claim-awards":"Claim Awards","claim-awards-info":"Congratulations! To complete this course, select which awards you would like to claim.","claim-awards-submit":"Submit","comment-notify-me":"Notify me of replies to this thread","share-this":"Share your accomplishments with your friends","share-text":"I just completed {{sectionTitle}} on {{companyName}}","enter-two-factor-error":"Invalid verification code. Contact your account administrator if you need to have two-factor authentication disabled.","enter-two-factor-code":"2-Step Verification","enter-two-factor-code-detail":"Enter the verification code generated by your mobile application.","enter-two-factor-label":"Enter code","enter-two-factor-verify":"Verify","close":"Close","inserted-successfully":"Inserted successfully","resources-general":"General","other-courses":"Check out other courses","mobile-back-button":"Back","mobile-menu-button":"Menu","mobile-purchase-button":"Buy Now","progress-percentage-completed":"Completed","already-enrolled-sign-in":"Already Enrolled? Sign In","header-cart":"Cart","cart.instructor-access-added":"Instructor Access Added","cart.instructor-access-headline":"Would you like to add expert personal instruction to this course?","cart.instructor-access-body":"By adding premium instruction to this course you will avail of one-on-one  expert feedback, coaching and more.","cart.add-instructor-button":"Add Instructor","cart.header.one":"Your Basket ({{count}} item)","cart.header.other":"Your Basket ({{count}} items)","cart.checkout":"Checkout","cart.order-summary":"Order Summary","change-currency.header":"Change Currency","change-currency.body":"There are items in your cart that are in a different currency. Please select the same currency {{currency}} as items in your cart.","change-currency.close-button":"Go Back","coupon-apply":"Apply","bundle.learn-button":"Learn More","bundle.yearly-disclaimer":"When subscribed yearly","bundle.subscribe-button":"Subscribe","bundle.subscribe-monthly-button":"Subscribe Monthly","bundle.subscribe-yearly-button":"Subscribe Yearly","discount-group.price-free":"Free","discount-group.enroll-button":"Enroll Now","discount-group.collection-enroll-head":"Enroll in This Collection Today","discount-group.course-count.one":"Includes One Course","discount-group.course-count.other":"Includes {{count}} Courses","discount-group.learning-path-count.one":"Includes One Learning Path","discount-group.learning-path-count.other":"Includes {{count}} Learning Paths","discount-group.courses-head.one":"{{count}} Course Included in this Collection","discount-group.courses-head.other":"{{count}} Courses Included in this Collection","discount-group.learning-paths-head.one":"{{count}} Learning Path Included in this Collection","discount-group.learning-paths-head.other":"{{count}} Learning Paths Included in this Collection","discount-group.generic-head":"What's Included in this Collection","learning-path.one":"Learning Path","learning-path.other":"Learning Paths","learning-path.view":"View Learning Path","learning-path.start":"Start Learning Path","learning-path.continue":"Continue Learning Path","learning-path.completion-criteria":"Completion Criteria","learning-path.milestone.one":"Milestone","learning-path.milestone.other":"Milestones","learning-path.required":"Required","learning-path.elective":"Elective","learning-path.minimum-electives":"Minimum Electives","learning-path.required-courses":"Required Content","learning-path.enroll-head":"Enroll in this Learning Path Today","learning-group.price-free":"Free","learning-path.enroll-button":"Enroll Now","learning-path.gift":"Purchase This Learning Path For Someone Else","learning-path.select-session":"Select Session","learning-path.date-time-label":"Date and Time","learning-path.location-label":"Location","learning-path.session-select-message":"This course runs during the following dates:","learning-path.select-session-no-active-sessions":"No active enrollable sessions","learning-path.related-learning-paths-heading":"Related Content","learning-path.return-to-banner":"Return to Learning Path","pickable-group.collection-enroll-head":"Enroll in This Collection Today","pickable-group.courses-head.one":"{{count}} Course Included in this Collection","pickable-group.courses-head.other":"{{count}} Courses Included in this Collection","pickable-group.learning-paths-head.one":"{{count}} Learning Path Included in this Collection","pickable-group.learning-paths-head.other":"{{count}} Learning Paths Included in this Collection","pickable-group.enroll-button":"Enroll Now","pickable-group.gift":"Purchase This Collection For Someone Else","pickable-group.course-count.one":"{{count}} course","pickable-group.course-count.other":"{{count}} courses","pickable-group.learning-path-count.one":"{{count}} learning path","pickable-group.learning-path-count.other":"{{count}} learning paths","collection.course-link":"View Course Details","collection.learning-path-link":"View Learning Path Details","primary-bundle-intro":"All courses only","course.detail-button":"Details","course.price":"Price:","course.enroll-button":"Enroll Now","course.enroll-waitlist-button":"Join Waitlist","course.external-purchase-link":"Purchase Course Now","course.look-inside":"Free Course Preview","course.select-session":"Select session to enroll:","course.or":"or","course.per-year":"per year","course.per-month":"per month","course.subscribe":"Subscribe to all courses","course.share-text":"Check out {{course}} on {{company}}","course.runs":"Course Runs:","course.price-free":"Free","membership-price-label":"Non-Member Price:","content-access":"Content Access:","runs":"Runs:","join":"Join","course.starts":"Course Starts:","course.prerequisites":"You have not met the prerequisites.","course.purchase-session":"Show Purchasing Options","course.waitlist-text":"Notify me when this course is available for purchase:","course.waitlist-confirmation":"Thanks! We'll let you know when this course is ready.","course.email-capture-text":"Enter your email address to access this course:","course.related-courses-heading":"Related Courses","course.meetings-tab-heading":"Meetings","product.detail-button":"View Details","product.add-to-cart":"Add to basket","product.continue":"Continue Shopping","product.related-products-heading":"Related Products","product.description":"Description","product.price":"Price:","client-subscription.subscribe":"Subscribe Now","client-subscription.tier-item.one":"{{count}} seat: {{price}} / year","client-subscription.tier-item.other":"{{count}} seats: {{price}} / year","client-subscription.tier-item-admin.one":"{{count}} seat","client-subscription.tier-item-admin.other":"{{count}} seats","bulk-purchase.tier-item.one":"{{count}} seat: {{price}}","bulk-purchase.tier-item.other":"{{count}} seats: {{price}}","catalog-search-header":"Browse","catalog-search-placeholder":"Search for content","course.have-coupon":"Have a coupon?","course.gift":"Purchase This Course For Someone Else","course.enter-coupon":"Enter coupon code","product.gift":"Purchase This For Someone Else","discount-group.gift":"Purchase This Collection For Someone Else","bundle.gift":"Purchase This Subscription For Someone Else","course.includes-title":"What's Included","course.includes-item-1":"Full access to video recordings, slides, downloadable resources, and support via Discord. Recordings are available for six months after the class.","course.includes-item-2":"Hands-on labs and virtual machines to reinforce real-world skills","course.includes-item-3":"Certificate of completion","home.need-help":"Need Help?","home.contact-support":"Contact Support","home.admin-access":"Manager Access","course-already-purchased":"Already Purchased","cart.empty":"Your cart is empty.","coupon":"Coupon Code","add-coupon-code":"Add Coupon Code","cart.coupon":"Coupon:","coupon-applied":"Coupon Applied.","quantity":"Quantity:","total":"Total:","tax":"Tax:","shipping":"Shipping:","total-due-now":"Total Due Today:","purchase":"Place Your Order","variation":"Variation:","shipping-method":"Shipping Method","free":"Free","removed":"This item has been removed from your cart.","restore":"Restore item","account-setup":"Account Setup","already-member":"Already a Member?","already-registered":"You are registered. Please click below.","login":"Sign In","checkout.page-title":"Secure Checkout","payment-information":"Payment Information","free-purchase":"This purchase is free!","card-expiration":"Card Expiration","card-will-be-charged":"Your card ending in ****{{last4}} will be charged.","logged-in":"You are logged in as {{email}}","additional-information":"Additional Information","checkout.validated-address-copy":"We found some issues with the address you entered. Choose this address if you'd like to use our corrected version. Otherwise, place your order below.","checkout.no-validated-address-found-copy":"Please check your shipping address before purchasing.","checkout.corrected-address":"Our Corrected Address","checkout.choose-validated-address":"Choose Corrected Address","checkout.current-address-info":"Current Address Information","checkout.continue-to-checkout":"Continue To Checkout","checkout.confirmed":"Order Confirmed","checkout.confirmed-waitlist":"Waitlist Enrollment Confirmed!","checkout.confirmed-text":"Thank you for your order! Confirmation details are below. We have also emailed a receipt to {{email}}.","checkout.confirmed-text-waitlist":"Thank you for joining the waitlist. We will let you know once a spot becomes available with the email provided. We have also emailed a receipt to {{email}} regarding your waitlist enrollment.","checkout.confirmed-gift-text":"Thank you for your purchase! We will email the recipient on the date you specified. We have also emailed a receipt to you at {{email}}.","checkout.will-be-shipped-to":"Will be shipped to:","checkout.shipping-method-via":"via","checkout.view-courses":"View Your Courses","checkout.view-other-courses":"View Other Courses","checkout.return-to-dashboard":"Return to Dashboard","checkout.global-terms":"{{companyName}} Terms & Conditions","checkout.recipient-name":"Recipient Name","checkout.address-1":"Address 1","checkout.address-2":"Address 2","checkout.city":"City","checkout.state":"State","checkout.region":"Province/Region","checkout.zip":"Zip Code","checkout.country":"Select Country","checkout.prefecture":"Prefecture","checkout.telephone":"Phone Number","checkout.telephone-hint":"Prefix with + for international phone numbers","checkout.subscription-opt-in":"I agree to purchase a recurring subscription for {{price}} {{interval}}","checkout.subscription-opt-in-error":"Please agree to purchase the recurring subscription.","checkout.cart":"Cart","checkout.receipt":"Receipt","checkout.merchant":"Merchant","checkout.date":"Date","checkout.order-id":"Order ID","checkout.name":"Name","checkout.address":"Address","checkout.total":"Total","checkout.subtotal":"Subtotal","checkout.variation":"Variation","checkout.quantity":"Quantity","checkout.billing-information":"Billing Information","checkout.tos-agreement":"Terms of Service Agreement","checkout.in-your-order":"in your order","checkout.use-billing-address":"Use a different billing address.","checkout.sso-already-logged-in":"You are already logged in. If you'd like to complete this transaction as a different user please logout and try again.","checkout.secure-data-transfer-consent":"We make every effort to protect your personal data. By checking this box, you are consenting to securely transmitting the data entered here to the secure ecommerce servers we utilize in the United States.","checkout.secure-data-transfer-consent-display":"Consent to Secure Data Transfer","checkout.error-required-piece-missing":"required piece of information is missing.","checkout.error-required-pieces-missing":"required pieces of information are missing.","checkout.cart-error-postal-code":"We could not find that postal code.","checkout.validation-error-postal-code":"Error: Postal Code cannot be blank.","checkout.processor-response":"Processor Response","checkout.gateway-stripe-order-id":"Stripe Order ID: ","checkout.receipt-message-order":"Thank you for your order. We've emailed a copy of this receipt to your email. Please contact us if you have any questions about this transaction.","checkout.print-this-page":"Print this page","checkout.general-information":"General Information","checkout.course-included":"Included in this course:","with-instructor-access":"With Instructor Access","without-instructor-access":"Without Instructor Access","terms-and-conditions":"Terms & Conditions","terms-and-conditions-company-name":"{{companyName}} Terms & Conditions","terms-and-conditions-ti":"Thought Industries Terms & Conditions","terms-and-conditions-joiner":"and the","agree-terms":"I agree to the","newsletter-signup":"I would like to receive email updates about upcoming courses and general news.","coupon-applied-email":"Coupon Applied:","gift-header":"Recipient Information","mark-video-completed":"Mark As Watched","must-reset-password":"To gain access to your account, you will have to reset your password. Please check your email to continue the password reset process. After resetting your password, you'll be able to login.","expired-account":"Whoops! It looks like the credit card on file for your subscription has expired. Please click the button below to update your billing information so that you can continue access the school. If you feel that you are receiving this message in error feel free to contact customer service.","dunning-renew-subscriptions":"Renew subscriptions:","dunning-header":"Update Subscription","dunning-action":"Update Subscription","microsite-closed":"This school is closed right now","relatedProducts.checkout":"Recommended for you…","enter-payment-info":"Enter Payment Information","shipping-info":"Shipping Information","address-info":"Address Information","edit-address-info":"Edit Address Information","onboarding-survey":"Extended Profile","onboarding-survey-save":"Save & Continue","onboarding-survey-welcome":"Thanks for Signing Up. Please fill out the following information before you continue.","edit-onboarding-survey":"Edit Extended Profile","onboarding-survey-select-response":"Select a Response","notebook-placeholder":"Enter your note…","notebook-submit":"Save Note","notebook-saved":"Note Saved","notebook-view":"View Notes","note-saved":"Saved Notes","subscription-cancel-description":"Cancelled subscriptions remain active from date of cancellation until your next renewal date.","user-details":"Before proceeding, please fill out the following information.","update-subscription":"Update Subscription","cancel-subscription":"Cancel Subscription","subscription-updated":"Subscription Updated","manage-subscription":"Manage Your Subscription","manage-subscription.next-renewal":"Next Renewal Date","redemption-code.placeholder":"Enter Code Here","redemption-code.validate":"Validate","redemption-code.validated":"Validated!","redemption-code.validating":"Validating…","redemption-code.redeem-code":"Redeem","redemption-code.redeem-code-preloaded":"Register","redemption-code.redeem-code-manual-validated":"Congrats, your code has been validated!","redemption-code.preloaded-already-redeemed-error":"Please sign in to continue.","redemption-code.preloaded-code-not-found-error":"Sorry, we could not find what you are looking for. Please check the URL and try again.","redemption-code.manual-already-redeemed-error":"This code has already been redeemed. Please sign in to access the school.","redemption-code.manual-code-not-found-error":"Code not found. Please check your code and try again.","redemption-code.manual-code-expired":"Sorry, this code has expired and is no longer valid.","redemption-code.redeem-course-copy-not-signed-in-preloaded-code":"Fill in your details and click register to access the school.","redemption-code.redeem-course-copy-signed-in-manual-code":"Fill in a code below, click validate, and then redeem your code.","redemption-code.redeem-course-copy-not-signed-in-manual-code":"Fill in your details, validate your redemption code, and click redeem to access the school.","redemption-code.add-redemption-code":"+ Add Another Code","redemption-code.limit-reached":"Sorry, the redemption limit has been reached","redemption-code.view-codes":"View Redemption Codes","register-invalid-code-alert":"You have not validated any redemption codes. Please try again.","scorm.popup":"Open Content In New Window","scorm.launching":"Launching…","scorm.popup-launched":"Your content has been opened in a popup. When you have completed your content, please close the window.","scorm.popup-failed":"Your content window did not pop open correctly.","scorm.popup-failed-link":"Click here to open the window","scorm.popup-blocked-banner":"Your browser blocked the content window. Please allow popups for this site and try again.","scorm.viewer.launch":"Launch","scorm.viewer.relaunch":"Content is open in another window","scorm.viewer.resume":"Resume","scorm.viewer.review":"Review Content","scorm.viewer.back-to-learning-path":"Back to Learning Path","scorm.viewer.completed-heading":"You've completed this course!","scorm.viewer.completed-subtext-lp":"Return to your learning path to continue learning.","scorm.viewer.completed-subtext-dashboard":"Return to your dashboard to continue learning.","scorm.viewer.return-to-learning-path":"Return to Learning Path","scorm.viewer.return-to-dashboard":"Return to Dashboard","scorm.viewer.returning-lp-countdown":"Returning to learning path ({{count}})...","scorm.viewer.returning-dashboard-countdown":"Returning to dashboard ({{count}})...","lti.completed":"Completed!","client.one":"Panorama","client.other":"Panorama","license.one":"License","license.other":"Licenses","license-select.prompt":"Select a Dashboard","license-select.heading":"Welcome to {{clientName}}","license-select.intro":"To continue, please select the dashboard you'd like to enter below.","license-select.footer":"You will be able to navigate from dashboard to dashboard once you have entered the site","license-select.button":"Enter","license.ref1":"License Reference 1","license.ref2":"License Reference 2","license.ref3":"License Reference 3","license.ref4":"License Reference 4","license.ref5":"License Reference 5","license.ref6":"License Reference 6","license.ref7":"License Reference 7","license.ref8":"License Reference 8","license.ref9":"License Reference 9","license.ref10":"License Reference 10","master-license":"Master License","meeting":"Meeting:","topic.text":"Text","topic.slideshow":"Slideshow","topic.presentation":"Presentation","topic.image":"Interactive","topic.video":"Video","topic.quiz":"Quiz","topic.test":"Test","topic.survey":"Survey","topic.workbook":"Reflection","topic.tally":"Tally","topic.meetingInfo":"Meeting","topic.listRoll":"List Roll","topic.lti":"LTI Launch","topic.ad":"Ad","topic.embed":"HTML Embed","topic.assignment":"Assignment","topic.flipCardSet":"Flip Cards","topic.pdfViewer":"PDF Viewer","topic.notebook":"Note Book","topic.recipe":"Recipe","topic.highlightZoneSet":"Highlight Zones","topic.highlightZoneQuiz":"Highlight Zone Challenge","topic.surveyGizmo":"Alchemer","topic.discussionBoard":"Discussion Board","topic.highlightZoneQuizCorrect":"Correct!","topic.highlightZoneQuizInCorrect":"Incorrect","topic.highlightZoneQuizTryAgain":"try again.","topic.highlightZoneQuizAllCorrect":"Congratulations, you selected everything correctly!","topic.shareableContentObject":"SCORM","topic.xApiObject":"xAPI","topic.audio":"Audio","topic.matchPairSet":"Match Pairs","topic.matchPairCorrect":"Correct!","topic.matchPairIncorrect":"Incorrect Try Again","topic.matchPairSetCorrect":"Congratulations, you matched all items correctly!","topic.matchPairSetInstruction":"Select The Corresponding Match Below","topic.socialShareCardSet":"Social Share Cards","topic.bongo":"Bongo","wysiwyg.html":"HTML","wysiwyg.bold":"Bold","wysiwyg.format":"Format","wysiwyg.image":"Image","wysiwyg.table":"Table","wysiwyg.file":"File","wysiwyg.link":"Link","wysiwyg.align":"Align","wysiwyg.text-color":"Text Color","wysiwyg.text-color-text":"Text","wysiwyg.text-color-highlight":"Highlight","wysiwyg.font-size":"Size","wysiwyg.font-size-remove":"Remove Font Size","wysiwyg.alignment":"Alignment","wysiwyg.fontcolor":"Font Color","wysiwyg.backcolor":"Back Color","wysiwyg.fontsize":"Change Font Size","wysiwyg.removefontsize":"Remove Font Size","wysiwyg.italic":"Italic","wysiwyg.deleted":"Strikethrough","wysiwyg.underline":"Underline","wysiwyg.bold-abbr":"B","wysiwyg.italic-abbr":"I","wysiwyg.deleted-abbr":"S","wysiwyg.underline-abbr":"U","wysiwyg.lists":"Lists","wysiwyg.link-insert":"Insert link","wysiwyg.link-edit":"Edit link","wysiwyg.link-in-new-tab":"Open link in new tab","wysiwyg.unlink":"Unlink","wysiwyg.cancel":"Cancel","wysiwyg.close":"Close","wysiwyg.insert":"Insert","wysiwyg.save":"Save","wysiwyg.delete":"Delete","wysiwyg.text":"Text","wysiwyg.edit":"Edit","wysiwyg.title":"Title","wysiwyg.image_position":"Position","wysiwyg.paragraph":"Normal text","wysiwyg.quote":"Quote","wysiwyg.code":"Code","wysiwyg.heading1":"Heading 1","wysiwyg.heading2":"Heading 2","wysiwyg.heading3":"Heading 3","wysiwyg.heading4":"Heading 4","wysiwyg.heading5":"Heading 5","wysiwyg.heading6":"Heading 6","wysiwyg.filename":"Name","wysiwyg.optional":"optional","wysiwyg.unorderedlist":"Unordered List","wysiwyg.orderedlist":"Ordered List","wysiwyg.outdent":"Outdent","wysiwyg.indent":"Indent","wysiwyg.horizontalrule":"Insert Horizontal Rule","wysiwyg.upload-label":"Drop file here or click","wysiwyg.accessibility-help-label":"Rich text editor","wysiwyg.caption":"Caption","wysiwyg.bulletslist":"Bullets","wysiwyg.numberslist":"Numbers","wysiwyg.insert_table":"Insert Table","wysiwyg.insert_row_above":"Add Row Above","wysiwyg.insert_row_below":"Add Row Below","wysiwyg.insert_column_left":"Add Column Left","wysiwyg.insert_column_right":"Add Column Right","wysiwyg.add_head":"Add Head","wysiwyg.delete_head":"Delete Head","wysiwyg.delete_column":"Delete Column","wysiwyg.delete_row":"Delete Row","wysiwyg.delete_table":"Delete Table","wysiwyg.align-left":"Align text to the left","wysiwyg.align-center":"Center text","wysiwyg.align-right":"Align text to the right","wysiwyg.align-justify":"Justify text","wysiwyg.none":"None","wysiwyg.left":"Left","wysiwyg.center":"Center","wysiwyg.right":"Right","powered-by":"Powered By","multi-factor-verify":"Verify","survey-responses":"Survey Responses","enter-password":"Enter with password:","password-placeholder":"Password","password-enter":"Enter","multi-factor-authentication":"Multi-Factor Authentication","already-have-account":"Already have an account?","sign-in-here":"Sign in here","register-first-name":"First Name","register-last-name":"Last Name","register-email":"Email Address","register-password":"Password","register-confirm-password":"Password Confirmation","valid-email-alert":"Please enter a valid email address.","first-name-alert":"Please enter your first name.","last-name-alert":"Please enter your last name.","password-length-alert":"Please enter a password that is at least six characters long and matches the password confirmation.","agree-terms-alert":"Please agree to the terms & conditions.","drag-image-or-click":"Drag image or click","profile-bio":"A little info about yourself","profile-save":"Save Profile","profile-cancel":"Cancel","account-update-success":"Your account has been successfully updated.","account-change-email":"Change Email Address","account-signed-in-as":"You are signed in as","account-current-password":"Current Password","account-new-email":"New Email","account-update-button":"Update","account-invalid-password":"Error: The current password you provided is invalid.","account-email-exists":"A user with that email address already exists.","account-email-invalid":"The email address you provided is invalid.","account-subscription-already-canceled":"That subscription has already been canceled.","account-no-subscription":"That subscription does not exist","account-invalid-shipping":"Please ensure you filled out your shipping address properly.","account-subscription-updated":"Your subscription has been updated.","account-subscription-update-failed":"There was a problem updating your subscription. Please try again later.","account-subscription-canceled":"Your subscription has been canceled.","account-new-password":"New Password","account-confirm-password":"Confirm New Password","account-successful-password":"Your password has been changed successfully.","account-failed-cc-update":"There was a problem updating your card information, please try again.","account-invalid-stripe-token":"The token you have provided is invalid or has expired.","account-invalid-url":"Invalid URL, please sign in and try again.","account-invalid-details":"Please make sure you've properly filled out all of your details below.","return-home":"Return Home","course-detail-share-this":"Share This","ask-modal-subject-line":"Subject Line","ask-modal-message":"Message","quiz-choice-true":"True","quiz-choice-false":"False","webinar.date-message":"This {{contentType}} meets on the following dates:","webinar.join-now":"Join Now","student-dashboard.back":"back","student-dashboard.leaderboard":"Leaderboard","student-dashboard.badges":"Badges","in-person-event.meta-title":"{{eventTitle}} - {{companyName}}","in-person-event.date-label":"Date:","in-person-event.calendar":"Add To Calendar","in-person-event.join":"Join Meeting","article-video.email-body":"Check out {{title}} on {{companyName}}: {{url}}","article-video.email-subject":"{{companyName}}: {{title}}","cookies.statement":"We use necessary cookies to make our site work. By clicking 'accept', you agree that we may also set optional analytics and third party behavioral advertising cookies to help us improve our site and to provide information to third parties. For more information on how these cookies work, please see our privacy policy.","cookies.cta":"Accept","cookies.more-info":"More Info","cookies.header":"Cookie Policy","cookies.decline":"Decline","recommendation.header":"Recommendation Assessment","bookmark.new-folder":"Create New Folder","bookmark.my-bookmarks":"My Bookmarks","bookmark.save":"Save Bookmark","bookmark.update":"Update Bookmark","bookmark.remove":"Remove Bookmark","bookmark.note":"Note","bookmark.folder":"Folder","bookmark.folderName":"Folder Name","bookmark.view":"View","bookmark.cancel":"Cancel","bookmark.edit":"Edit","bookmark.delete-folder-confirmation":"This action cannot be undone and all bookmarks in this folder will be deleted.","bookmark.delete-confirmation":"Are you sure?","invoice-me":"Invoice Me","access-expires":"Access expires","balance.unit.one":"Credit","balance.unit.other":"Credits","balance.current":"Current Balance: {{count}}","balance.redeem":"Redeem","balance.confirm.one":"Are you sure? {{count}} credit will be deducted immediately.","balance.confirm.other":"Are you sure? {{count}} credits will be deducted immediately.","recommendation.retake":"Retake Assessment","recommendation.no-content":"No recommended content","recommendation.no-question":"No recommendation questions","recommendation.save":"Save & Continue","ref1":"Learner Reference 1","ref2":"Learner Reference 2","ref3":"Learner Reference 3","ref4":"Learner Reference 4","ref5":"Learner Reference 5","ref6":"Learner Reference 6","ref7":"Learner Reference 7","ref8":"Learner Reference 8","ref9":"Learner Reference 9","ref10":"Learner Reference 10","next-page":"Next Page","prev-page":"Previous Page","search.no-results":"Nothing found matching your query, please try again.","search.results-title":"Search Results","send":"Send","select-recipient":"Select Recipient","send-to-myself":"Send to Myself","send-to-a-friend":"Send to a Friend","input-email":"Input Email","add-a-note":"Add a Note","email-sent":"Email Sent","send-another-email":"Send Another Email","select-language":"SELECT LANGUAGE","updated":"Updated","archive.archive":"Archive","archive.reinstate":"Reinstate","archive.continue":"Continue","archive.cancel":"Cancel","panorama-dashboard.welcome-header":"Welcome","panorama-dashboard.welcome-subtitle":"It's great to see you!","panorama-dashboard.welcome-body":"View the list below to set up and manage your learning experience.","panorama-dashboard.todo-description":"Get started with some tasks here:","panorama-dashboard.support-header":"","panorama-dashboard.support-body":"","panorama-dashboard.support-cta-copy":"","panorama-dashboard.support-cta-link":"","archive":"Archive","reinstate":"Reinstate","continue":"Continue","download":"Download","download-codes":"Download Codes","item-type":"Item Type","access-expiration":"Access Expiration","seats":"Seats Purchased","item":"Item","items":"Items","transaction-type":"Transaction Type","transaction-date":"Transaction Date","charge":"Charge","no-purchases":"No purchases found.","content":"Content","content-type":"Content Type","archive-date":"Archive Date","filter-transactions-by":"Filter transactions by","single-subscription":"Single Subscriptions","single-non-recurring":"Single Non-Recurring","bulk-non-recurring":"Bulk Non-Recurring","bulk-subscription":"Bulk Subscription","one-time-transaction":"One-Time Transaction","full-refund":"Full Refund","partial-refund":"Partial Refund","acting-as-a-learner":"You are currently acting as a learner.","currently-a-learner":"You are currently a learner.","return-to-management":"Return to Management","charge-for-subscription":"Charge For Subscription","competency.retake-button":"Retake Assessment","competency.header":"Competency Assessment","competency.continue-to-learning-path":"Continue to Learning Path","competency.no-content":"Based on your results you have not been assigned any content. Please continue with the Learning Path","competency.assessment-results-title":"Assessment Results","competency.results-questions-correct":"You got {{correct}} out of {{total}} correct","competency.results-passed":"You passed!","competency.results-failed":"You did not pass.","competency.results-total-questions":"Total","competency.results-answered-questions":"Answered","competency.results-correct-questions":"Correct","competency.results-incorrect-questions":"Incorrect","competency.passing-grade":"{{grade}}% required for passing grade","competency.save":"Save & Continue","competency.require-assessment":"Required Assessment","competency.view-results":"View Results","competency.no-content-assigned":"No Content Assigned","competency.thank-you-for-submission":"Thanks for your submission","no":"No","yes":"Yes","show":"Show","opens":"Opens","add-a-choice":"Add a choice","add-your-choice-below":"Add your choice below","fill-in-answer":"Fill in your answer.","enter-submission-text":"Enter submission text","progress-with-percent":"Progress","progress-without-percent":"Progress","open-now":"Open Now","note.view-page":"View page in course","linked-workbook.sort-title":"Title","linked-workbook.most-recent":"Most Recent","linked-workbook.sort-relevance":"Relevance","linked-workbook.display-type-grid":"Grid","linked-workbook.display-type-list":"List","linked-workbook.search-placeholder":"Search workbooks","linked-workbook.add-new-collection":"Add New Collection","linked-workbook.collection-setting":"Collection Setting","linked-workbook.remove-from-collection":"Remove from Collection","linked-workbook.delete-workbook":"Delete Workbook","linked-workbook.view-all-workbooks":"View All Workbooks","linked-workbook.select":"Select","linked-workbook.collection-name":"Collection Name","linked-workbook.create":"Create","linked-workbook.save":"Save","linked-workbook.destroy-category-confirmation":"Are you sure you want to delete this collection?","linked-workbook.destroy-confirmation":"Are you sure you want to delete this workbook?","linked-workbook.all-workbooks":"All Workbooks","linked-workbook.no-workbooks":"Nothing here yet, get by completing a workbook","linked-workbook.collections":"Collections","linked-workbook.collection":"Collection","linked-workbook.build-date":"Build Date","linked-workbook.category-deleted":"Category deleted","thread-instance-of.one":" Instance of","thread-instance-of.other":" Instances of","scorm.close-embedded":"You may move to the next page.","scorm.close-popup":"This content has ended. You may close this window.","scorm.standalone-close-embedded":"This content has ended. You may exit.","scorm.close-asset":"This content has ended. You may close this asset.","join-waitlist":"Join Waitlist","unenroll-waitlist":"Unenroll Waitlist","additional-credit-balance-contact-admin":"Please contact your account administrator for additional credits if needed.","available-credits":"Your Available Credits","learner-credit-balance":"Current Balance","save-new-card-future-payment":"Your new card will be automatically used for any future payments including subscriptions or recurring charges.","edit-card":"Edit Card","certificate.meta-title":"Certification for {{title}} - {{companyName}}","certificate.meta-description":"","certificate.issued-to":"Issued To","certificate.company":"Organization","certificate.issued-date":"Issue Date","certificate.expiration-date":"Expiration Date","certificate.identifier":"Certification ID","certificate.add-to-profile":"Add to profile","verify-email.please-confirm":"Please Confirm Your Account","verify-email.confirmation-text":"Thank you for your order! An email has been sent with instructions to validate your email address. After you confirm your account, you will be able to sign in and access your learning.","verify-email.statement":"Thank you for your registration! An email has been sent with instructions to validate your email address. After you confirm your account, you will be able to sign in and access your learning.","verify-email.not-validated":"Account Not Validated","verify-email.not-validated-statement":"This account requires validation via email confirmation. An email has been sent to you with instructions to validate your email address. After you cofirm your account, you will be able to sign in and access your learning.","account-menu.my-account":"My Account","credits":"credits","dashboard.personal-credit-account":"My Personal Credit Account","dashboard.credit-account-redeem-content":"Your Credit Account(s) hold credits that were given directly from account administers, which can be used to redeem content that have a credit price.","choose-credit-account-to-redeem":"Please choose a Credit Account to redeem from.","redeem-with-credits":"Or, redeem with credits","redeem-with-credits.credits-only":"Redeem with credits","choose-credit-account":"Choose Credit Account","tax-details-message":"","choice-input-button-save":"Save","choice-input-placeholder":"Your Choice","pagination-info":"Showing {{nowShowing}} of {{total}} items","pagination.first-page":"Go to first page","pagination.previous-page":"Go to previous page","pagination.next-page":"Go to next page","pagination.last-page":"Go to last page","pagination.go-to-page":"Go to page {{page}}","dashboard.details-page-link":"View Details","gift":"Gift","gift-recipient-first-name-label":"Recipient First Name","gift-recipient-last-name-label":"Recipient Last Name","gift-recipient-email-label":"Recipient Email Address","gift-delivery-date-label":"Delivery Date","gift-message-label":"Message ","limit-200-characters-label":"(limit 200 characters)","star-rating":"Rated {{stars}} out of 5 stars","rate-stars":"Rate {{stars}} out of 5 stars","not-rated-yet":"not rated yet","course.no-available-seats-no-waitlist":"There are no available seats for the course {{course}}.","course.no-available-seats-join-waitlist":"There are no available seats for the course {{course}}. You have been enrolled in the waitlist.","course.exceeded-max-seats":"This action will consume {{count}} too many seats for the course {{course}}. Please reduce the number of seats or contact your manager.","course.enroll-not-available":"This session is currently not open for enrollment. Please select another session or contact your administrator.","learning-path.due":"Due:","learning-path.due-date":"Due Date:","learning-path.due-date-late":"(Overdue)","learning-path.external-purchase-link":"Purchase Learning Path Now","thread.enter.comment":"Enter your comment here","required-field-asterisk":"Asterisks (*) indicate required fields.","annotation.read-more":"Read more","annotation.see-less":"See less","content.due":"Due:","content.due-date":"Due Date:","content.due-date-late":"(Overdue)","registration-code.invalid":"One or more registration codes are invalid","redemption-code.invalid":"One or more redemption codes are invalid","registration-or-redemption-code.required":"Registration or redemption code is required","bot-protection.verification-failed":"Bot verification failed. Please try again.","bot-protection.widget-error":"Unable to load verification. Please refresh and try again.","conversational-search.title":"Conversational Search","conversational-search.description":"Search courses and topics with AI-powered conversational answers","conversational-search.open":"Conversational AI Learning","conversational-search.back":"Back","conversational-search.new-conversation":"New conversation","conversational-search.sources":"Sources","conversational-search.source-fallback":"Source {{index}}","conversational-search.searching-for":"Searching for","conversational-search.ask-placeholder":"Ask anything...","conversational-search.send":"Send message","conversational-search.search-placeholder":"Search or ask a question...","conversational-search.ai-only-placeholder":"Ask AI anything...","conversational-search.search-bar-placeholder":"Ask anything","conversational-search.search-bar-aria-label":"Ask anything","conversational-search.quick-actions":"Quick Actions","conversational-search.suggestion":"Suggestion","conversational-search.action.in-progress":"What courses do I have in progress?","conversational-search.action.dashboard":"Take me to my learning","conversational-search.action.dashboard-description":"Your Learning Dashboard","conversational-search.action.catalog":"Browse Catalog","conversational-search.action.catalog-description":"Explore available content, events, learning paths","conversational-search.settings":"Settings","conversational-search.action.transcripts":"My Transcripts","conversational-search.ask-ai":"Ask AI:","conversational-search.ask-ai-description":"Get an AI-powered answer with sources","conversational-search.error.forbidden":"You do not have access to conversational search in this context.","conversational-search.error.rate-limit":"Too many requests. Please wait a moment and try again.","conversational-search.error.generic":"Something went wrong while fetching an answer. Please try again.","conversational-search.error.processing":"Something went wrong while processing response.","conversational-search.feedback.help-us-improve":"Help us improve","conversational-search.feedback.question":"What was the main issue with these results? Select all that apply.","conversational-search.feedback.reason.not-relevant":"Not relevant","conversational-search.feedback.reason.hard-to-understand":"Hard to understand","conversational-search.feedback.reason.missing-expected":"Missing what I expected","conversational-search.feedback.reason.incomplete":"Incomplete","conversational-search.feedback.reason.incorrect-information":"Incorrect information","conversational-search.feedback.reason.other":"Other","conversational-search.feedback.description-label":"How can we improve?","conversational-search.feedback.description-optional":"(optional)","conversational-search.feedback.description-placeholder":"Your feedback...","conversational-search.feedback.submit":"Send message","conversational-search.feedback.thanks":"Thanks for the feedback","conversational-search.feedback.helpful":"Helpful","conversational-search.feedback.not-helpful":"Not helpful","conversational-search.feedback.retry":"Retry","conversational-search.searching":"Searching...","conversational-search.no-results":"No results found","conversational-search.top-results":"Top search results","conversational-search.filter.status":"Status","conversational-search.filter.type":"Type","conversational-search.filter.not-started":"Not Started","conversational-search.filters":"Filters","conversational-search.filter.clear":"Clear","conversational-search.action-card.confirm":"Confirm","conversational-search.action-card.cancel":"Cancel","conversational-search.action-card.retry":"Retry","conversational-search.action-card.enroll":"Enroll","conversational-search.action-card.unknown-action":"This action is not supported.","conversational-search.action-card.enrollment-cancelled":"Enrollment cancelled","conversational-search.action-card.plan-cancelled":"Learning plan cancelled","conversational-search.action-card.courses-to-enroll":"Courses to enroll","conversational-search.action-card.plan-courses":"Plan courses","conversational-search.action-card.no-thanks":"No thanks","conversational-search.action-card.dismiss":"Dismiss","conversational-search.action-card.action-failed":"Action Failed","conversational-search.action-card.enrollment-success":"Enrollment Complete","conversational-search.action-card.courses-enrolled-count":"{{count}} courses enrolled","conversational-search.action-card.plan-created":"Learning Plan Created","conversational-search.action-card.plan-subtitle":"{{count}} courses","conversational-search.action-card.view-plan":"View Learning Plan","conversational-search.action-card.confirm-create-plan":"Confirm: Create Learning Plan","conversational-search.action-card.confirm-and-create":"Confirm & Create","conversational-search.action-card.hours":"Hours","conversational-search.action-card.prerequisite-course":"Prerequisite course","conversational-search.action-card.enroll-prerequisite":"Enroll in Prerequisite","conversational-search.action-card.loading-delight-1":"Julienning...","conversational-search.action-card.loading-delight-2":"Sautéing your data...","conversational-search.action-card.loading-delight-3":"Wrangling the pixels...","conversational-search.action-card.loading-delight-4":"Untangling the threads...","conversational-search.action-card.previous-question":"Previous question","conversational-search.action-card.next-question":"Next question","conversational-search.action-card.of":"of","conversational-search.action-card.something-else":"Something else","conversational-search.action-card.skip":"Skip","conversational-search.action-card.submit-answer":"Submit answer","conversational-search.action-card.try-without-course":"Try Without That Course","conversational-search.action-card.nudge-confirmed":"Nudge Scheduled","conversational-search.action-card.nudge-cancelled":"Nudge cancelled","conversational-search.action-card.nudge-frequency-daily":"Daily reminders","conversational-search.action-card.nudge-frequency-weekly":"Weekly reminders","conversational-search.action-card.nudge-frequency-biweekly":"Biweekly reminders","conversational-search.action-card.nudge-next-at":"Next nudge: {{date}}","conversational-search.action-card.nudge-total":"{{count}} reminders scheduled","conversational-search.action-card.nudges-to-cancel":"{{count}} reminders to cancel","conversational-search.action-card.cancel-nudge-confirm":"Cancel Nudge","conversational-search.action-card.cancel-nudge-confirmed":"Nudge Cancelled","conversational-search.action-card.cancel-nudge-dismissed":"Kept nudge active","conversational-search.action-card.nudges-deleted-count":"{{count}} reminders cancelled","conversational-search.action-card.seats-full":"This Course is Full","conversational-search.action-card.join-waitlist":"Join Waitlist","conversational-search.action-card.waitlist-success":"You've been added to the waitlist","conversational-search.action-card.enrollment-intro":"Here's a course you can enroll in:","conversational-search.action-card.learning-plan-intro":"Here's a learning plan for you.","conversational-search.action-card.nudge-intro":"Here's a nudge schedule for you to confirm.","conversational-search.action-card.cancel-nudge-intro":"Here are the nudges to cancel.","conversational-search.action-card.requires-purchase":"Purchase Required","conversational-search.action-card.view-course":"View Course","conversational-search.first-visit-tooltip":"New! Ask anything about your learning.","conversational-search.first-visit-dismiss":"Dismiss"};
+
+  window.CONF = {
+    commit: '1ae324fa8c4ac831cfe02162c49498d779b9b468',
+    region: 'us-east-1',
+      regionIsUS: true,
+      regionIsEU: false,
+    rusticiRegistrationCheckerEndpoint: '',
+    cloudinaryUploadEndpoint: '',
+    cloudinaryName: '',
+    cloudinaryFilePreviewsFolder: '',
+    cloudinaryCourseUploadsFolder: '',
+    cloudinaryMigratedDataFolder: '',
+    pdfAPIEndpoint: 'https://nuzex26r3a.execute-api.us-east-1.amazonaws.com/latest/view-v1',
+    tiAssignmentSubmissionsBucket: '',
+    tiAudioUploadsBucket: '',
+    tiCourseUploadsBucket: '',
+    tiQuizQuestionsBucket: '',
+    tiRedemptionImportUploadsBucket: '',
+    tiStudentUploadsBucket: '',
+    tiPDFUploadsBucket: '',
+    tiPowerpointUploadsBucket: '',
+    tiScormUploadsBucket: '',
+    tiUserImportUploadsBucket: '',
+    domain: 'thoughtindustries.com',
+    rssStatusUrl: '',
+    requestId: 'bcf4ee5d-a020-4181-9ce8-eab6770eaf28',
+    cloudfrontHost: 'media.thoughtindustries.com',
+    cloudFrontSCORMHost: 'scorm-cloudfront.thoughtindustries.com',
+    analyticsEndpointUrl: '',
+    isMobile: /Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile/.test(navigator.userAgent),
+    // authToken removed for XSS protection - now sent via HttpOnly cookie
+    nonce: '',
+    cspNonce: 'cpjv24zsoxpnbot7ira8bchu',
+    ziggeoAppToken: '',
+      currencySymbol: '$',
+        internalGA4MeasurementId: 'G-Z5PJYT14TV',
+      customerGA4MeasurementId: 'G-STLPFPXX5M',
+      production:
+      true,
+    assetPath: 'https://media.thoughtindustries.com/v3/dist/',
+    preload: {
+      company: {"id":"75ce8123-d122-4e08-a81e-4f743317c8ec","name":"Antisyphon Training","copyrightName":"Antisyphon Training","features":["ecommerce","bookmarking","clientReporting","client","licenseRefs","licenseSeparation","advancedClients","child","newLabel","scormRustici","tax","gamification","embedWidget","campaigns","singleInstanceLocalization","salesforce","video_recording","xApiRustici","referralTracking","appcuesLaunchpad","articleClone","balance","centralLibrary","contentSearch","domain","homepageInsights","linkedWorkbook","scormProxy","scormUpdatedLogic","bulkPurchasing","communities","recommendationEngine","removePoweredBy","zoom","externalActivity","competencyAssessments","scormExport","panoramaContentCreation","TI3087","saml2","sso","openIdConnect","customContentTypes","learningPathDueDates","customRoles","customPanoramaRoles","customReports","scheduledReportsManager","customCode","trackingScripts","apiAccess","rotatableApiKeys","vendorApiKeys","ancillaryApiKeys","autoEnrollmentSets","wistia","clientSubscription","zapier","exposeJSONLD","c2ConversationalSearch","c2ConvAiSearchBar","c2ChatEnrollment"],"appearanceBlock":"29af3353-6a53-489b-86cb-940b7b223af9","appearanceHash":"29b9a9ce1f","catalogBlock":null,"micrositeHeaderBlock":"be68fc35-22c0-4b23-b336-e11af50dedcf","micrositeFooterBlock":"ae80700c-f7c6-4cf8-9c2b-57646ef3b90d","micrositeFeaturedCoursesBlock":"7e62fa56-bc0e-47c1-951f-eaff08e4b37a","trackingEventsBlock":"892a2e9d-0090-472f-b824-57ab80811f91","supportSidebarBlock":"b3663f2b-6336-4571-901b-0bb0bd707690","emailLayoutBlock":"d8ef6987-69e8-4975-b56c-32bbf3b8d282","subdomainWithHost":"learning.antisyphontraining.com","timeZone":"America/New_York","dfpId":null,"ssoBlock":"799035be-6488-4979-85f0-416fc4ccd2d5","learnerNavOpenOnLoad":true,"needAddress":true,"externalTermsUrl":null,"homepageRedirectUrl":null,"discussionRulesBlock":null,"awardTypesBlock":"5012a2fa-c266-4100-996f-32bf058cff39","topicGroup":"6d0f8e0f-ed14-4a83-aeef-09d2acfd8a53","skipCourseDetailWhenAvailable":false,"subdomain":"antisyphontraining","open":true,"customHost":"learning.antisyphontraining.com","primaryBundle":null,"lang":"en","schoolName":"Antisyphon Training","requestedFeatures":["postgresSync"],"cookiePopupEnabled":false,"autoTimeZoneEnabled":true,"enableExternalCertificateUploads":false,"enableCertificateSharing":false,"linkedInOrganizationName":null,"linkedInOrganizationId":null,"claimCreditsUrl":null,"languageSelectorEnabled":false,"languages":null,"languageSelectorDisplay":"light","autoFilterForSelectedLanguage":true,"defaultLanguage":null,"displayInlineNotes":false,"enableContentArchiving":false,"enableAddToQueue":false,"disableAutomaticNonessentialCookies":false,"externalCookiePolicyUrl":null,"cookiePolicyText":null,"dashboardReportType":null,"dashboardReport":"custom::looks::41334","requireEmailVerification":false,"requiresTermsOnPasswordReset":false,"botProtectionEnabled":false,"displayNewsletterSignupAtRegistration":true,"atomsStyleUrl":null,"atomsScriptUrl":null,"disabledEmails":null,"blockedCountriesForNewsletterSignup":[],"conversationalSearchBarEnabled":false},
+      currentUser: {"roles":[{"id":"guestDefault","keyName":"guest","name":"Guest","hasManagerInterfaceAccess":false,"hasAccessToAllCourses":false,"timeoutCount":1,"timeoutUnit":"year","resetPasswordCount":5,"resetPasswordUnit":"year","fixedTimePasswordResetCount":null,"fixedTimePasswordResetUnit":null,"passwordLength":6,"passwordNumbers":0,"passwordSymbols":0,"passwordUppercases":0,"permissions":{}}],"clients":[],"allocatedLicenses":[],"currentUser":{"role":"guestDefault","allocatedLicenses":[]}}
+    }
+  };
+
+  // Internal GA tracking helper function - only defined when tracking is enabled
+  if (!window.trackInternalGA) {
+    window.trackInternalGA = function(eventName, eventData) {
+      eventData = eventData || {};
+      if (window.gtag && window.CONF && window.CONF.internalGA4MeasurementId) {
+        window.gtag('event', eventName, {
+          send_to: window.CONF.internalGA4MeasurementId,
+          ...eventData
+        });
+      }
+    };
+  }
+  // Customer GA tracking helper function - targets only customer GA4 property
+  if (!window.trackCustomerGA) {
+    window.trackCustomerGA = function(eventName, eventData) {
+      eventData = eventData || {};
+      if (window.gtag && window.CONF && window.CONF.customerGA4MeasurementId) {
+        window.gtag('event', eventName, {
+          send_to: window.CONF.customerGA4MeasurementId,
+          ...eventData
+        });
+      }
+    };
+  }
+
+</script>
+
+    <script type="text/javascript" src="https://media.thoughtindustries.com/v3/dist/29905-634e67b76f71cdc70ac4.bundle.js"></script>
+    <script type="text/javascript" src="https://media.thoughtindustries.com/v3/dist/68171-c7029dd3c9ecbaf24bf6.bundle.js"></script>
+    <script type="text/javascript" src="https://media.thoughtindustries.com/v3/dist/86528-fb25e58980b48e110a31.bundle.js"></script>
+    <script type="text/javascript" src="https://media.thoughtindustries.com/v3/dist/app-0c0ac25dbe643d17748a.bundle.js"></script>
+
+
+
+  <script nonce="cpjv24zsoxpnbot7ira8bchu" type="text/javascript">
+    window.AtlasSettings = {
+      embedId: "EBUXdSVgPMarZkOq_Nc4M",
+      openStyle: "float"
+    };
+  </script>
+  <script type="text/javascript" src="https://fast.tia-ai.com/production/widget.global.js"></script>
+
+
+<script>
+    (function() {
+        "use strict";
+        document.body.addEventListener('mouseover', function(event) {
+            
+            const sideLink = event.target.closest('.side-link');
+            
+            if (sideLink) {
+                const targetId = sideLink.getAttribute('data-target');
+                const parentDropdown = sideLink.closest('.split-layout');
+    
+                if (parentDropdown) {
+                    
+                    parentDropdown.querySelectorAll('.side-link').forEach(l => l.classList.remove('active'));
+                    parentDropdown.querySelectorAll('.sub-menu-block').forEach(b => b.classList.remove('active'));
+    
+                    sideLink.classList.add('active');
+    
+                    const targetBlock = document.getElementById(targetId);
+                    if (targetBlock) {
+                        targetBlock.classList.add('active');
+                    }
+                }
+            }
+        });
+        
+        document.addEventListener('click', function(event) {
+        
+        const menuToggle = event.target.closest('.menu-toggle');
+        if (menuToggle) {
+          console.log("Mobile toggle clicked via delegation");
+          const mobileNav = document.querySelector('.mobile-nav-menu');
+          if (mobileNav) {
+            mobileNav.classList.toggle('is-open');
+          }
+          return;
+        }
+    
+        const mobileTrigger = event.target.closest('.mobile-trigger');
+        if (mobileTrigger) {
+          console.log("Submenu trigger clicked via delegation");
+          const submenu = mobileTrigger.nextElementSibling;
+          if (submenu) {
+            submenu.classList.toggle('is-open');
+          }
+        }
+      });
+        
+    
+    })();
+    </script>
+    <script>
+    (function () {
+      if (!window.TITheme) return;
+    
+      function setIcon(root) {
+        const icon = root.querySelector("[data-ti-theme-icon]");
+        if (!icon) return;
+        icon.textContent = (window.TITheme.get() === "dark") ? "☀️" : "🌙";
+      }
+    
+      function bindToggle(root) {
+        const btn = root.querySelector("[data-ti-theme-toggle]");
+        if (!btn || btn.__tiBound) return;
+        btn.__tiBound = true;
+    
+        btn.addEventListener("click", function () {
+          window.TITheme.toggle();
+          setIcon(root);
+        });
+    
+        setIcon(root);
+      }
+    
+      // Bind now
+      bindToggle(document);
+    
+      // Re-bind after SPA navigations / re-renders
+      const obs = new MutationObserver(function () {
+        bindToggle(document);
+      });
+      obs.observe(document.documentElement, { childList: true, subtree: true });
+    
+      // If something else toggles theme, update icon
+      window.addEventListener("ti-theme-changed", function () {
+        const btn = document.querySelector("[data-ti-theme-toggle]");
+        if (btn) setIcon(document);
+      });
+    })();
+    
+    // Remove internal tags for courses in panorama
+    (function() {
+      'use strict';
+    
+      const urlPattern = /^\/learn\/manager\/panorama\/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\/content$/i;
+    
+      function isPanorama() {
+        const pathname = window.location.pathname;
+        return urlPattern.test(pathname);
+      }
+    
+      function injectCssRule() {
+        if (isPanorama()) {
+          const style = document.createElement('style');
+          style.textContent = `
+            div.courses-table__container span.ember-view[id^="ember"] {
+              display: none !important;
+            }
+          `;
+          document.head.appendChild(style);
+        }
+      }
+    
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', injectCssRule);
+      } else {
+        injectCssRule();
+      }
+    })();
+    </script>
+    
+
+
+
+
+<iframe allow="gyroscope; accelerometer; fullscreen; autoplay; speaker" allowfullscreen="true" scrolling="yes" class="atlas-embed-widget" src="https://www.tia-ai.com/embed" style="overflow: auto; transition-duration: 200ms; transition-timing-function: ease-in; transition-property: none; height: 0px; width: 0px; position: fixed; border: 0px;"></iframe><style id="wistia_22_style" type="text/css" class="wistia_injected_style">
+@font-face {
+font-family: 'WistiaPlayerInterNumbersSemiBold';
+font-feature-settings: 'tnum' 1;
+src: url(data:application/x-font-woff;charset=utf-8;base64,d09GMk9UVE8AAAaMAAwAAAAACgAAAAZBAAMD1wAAAAAAAAAAAAAAAAAAAAAAAAAADYpwGhQbIBwqBmAAgTIBNgIkAzAEBgWDGgcgGykJEZWkARP8KHCbm2tEznyIN98tPTUk9Ig3oiVV3pbDIzXa+f/fZgXpALFTZhBoMVFC9cp036dXvRKVmVnsxe+D+1NDQI5lG7ikZWEINIElTeBIdnxlhauQ5GQtoLHA/wN0riVdSx5xgbxF3KTbgnjVQ4B9P7YqCx7FpEZK+6ilx0AoopUh4aExJEKmkU+0ncdr4iFfKhdSFD9y91LCRaxNbVqvi0dND3rxI7ndUDR7EiwT3bhiua9krFA0oepCy2hCjwmjnjDjKjNTDz2ZuHtN8820Wfw/l8u4w4yV/f8/6uscs5rmiN00LcP4hAofyZUSyS3WinX0RGFFtnGrjj36x6dlNa57+PLTlrUisH2n9orfgd+R34XfDd0NsWDXwfwhvKHpbs3UBni37dBlPvO4KYn/PgylilcgSdw6sjsSSxsRGfIJgqhi14bKZCHcQvjUh/+3HMotTYrGLVYCxyMFjEnYC98yTAp6atAKVxaZ9eu2NMji8WTj4w/Y34elD60PPwb5bEywLqAX/amwmUo6TBCy14N/TL44jb3sE5JdUIPXXI0RBSoGt3BUObn4agKGIxxQhlyQacbstK4fS2mZoBtFNQ1bd+4zND2vQu6anl7gWFOj8MV2DVMtU44xMhpwElrrjA7zO5IqWojd/v1Vso6cqp91zC2YrGhDOy07Iqyza2q9smDIwUYek0AWbCt/8x78QmrzayQ6xtpmqfCYsLfgU9HdeP3UqutZTTNd/9Q8k08XzXzIxSdvLPda8YaeeZnkxUwql0nDKyUYdaWZjGAy7UDLHpVqBVHTxSV0wBy21El9u/491ik2J3YkdiP2LPZL41RBeeNUWtp97Bbn0Ee1g9wr9qqV/X+4R9nlPX03743dylnaXZyNp8v58yLOsFYCbUnCVQzjN+5QhlmKccO7aMkueWJggROd4qnw2x5LydUcg/NRamE3XMlkGovpRWPKWEavP74P2O1RANM/3gIIPJj7TX+lqU2geQuaBx4B/7cWAOx0ucTiEHYJU9y5DBuUMYNIHeHZz9tn+Fw2G5EBTqUlHRfRi4eB5wNlJsRsv5k4b6HyFkhIC6BO4LzPbWhW7rbCcxubeKHOc6UaBKZBMMd4j8XuRUynOCCa4EMfF9grkI1NcTaSAVtk1nrIOwFfeEBlQw4f4phb6zHzBOm0ZZ0dBcaZRVdYIo5xYiyOMEWONwQHmjKGE//VuRBgul1QrpyxmMvF4vGj0xfuuQrNt4tVTsRhEnjY9AuKa1FVLSEneQWzFd5WbO7hasX08ONUOVQgwQuVqACFXkSoIoUgK1hJEkAgbkG5CjqBS5wrRFuY2IfVwhRnLsVyZTZpatveGR4yEbYqbE6J80nM4aa+LD7Oqmr8PdSJFUQVynmgN4lerGQV1+uLdYzdOFWHPW/iK2gIQayhizQ0NMwyvBEBlrDczRfmU40CTtAHqLQGnjQG8MYkxm1MwJuTqjHwVCu9iRJ1C8ojWGHxUYowH0c5X57zpXquvlw0wzHHGMTfufxiJ1psFJTzq6nGeDvHF4LgmHHWCUViZBaInRn+cswnBi460RBPRYg9TRUQ0CZUC5LAT0qLLu50FpdTeBhjGf7/h4dg9hE0uqsBx/saOcYRDIfnOhfzGFBHyizcJK3p2edUjWrC0rn1aGjXtfVUCHMAKKhlxV8eTEIcV2jCOdKiqahv/MisrfRQVnxPJoOU62mR6pu2ZllIzo8zOZqQB7kWJXW2/c0aihata5PcIVJKfFRgHAETmEQVTCELptGMGcyigTnMJ1voUVN6uCZS9pV2hrwl7FYMvBwtUSd7L7E5qP9t7BIPRF7EcmA9ct2nIPHrxgWajtDltbXuBLuaY6qRZGa5ZlX5anfR0lYXaHUzVSFjZa8rfdhZ8rKXFZg21LVL5LFjI5TlDIbwnFGHE2dypHs6Q50N015dpOgLONEUlOqoiQgIaeCsjMq9gITDKwRMieQgKUy9UQY1BTFYZU2KpE2SkILMIjW8IdFwIKmMaK8oClJVssAEtFnz5dQ1s+w6EZoNGtPGQfzx+aoE8ikiP8GCYOWtgB+HBdWDaxACAZInVq14dZI85RRDvZGIghyONw59KV/BBEQ02P1ER8hmNGiURT2hQP8WfAY=);
+}
+</style><iframe name="__privateStripeMetricsController9450" frameborder="0" allowtransparency="true" scrolling="no" role="presentation" allow="payment *" src="https://js.stripe.com/v3/m-outer-3437aaddcdf6922d623e172c2d6f9278.html#url=https%3A%2F%2Flearning.antisyphontraining.com%2Fpages%2Fsummit-keynote-exfil-everything-a-year-of-stealing-data-from-ai-agents&amp;title=Antisyphon%20Training&amp;referrer=&amp;muid=NA&amp;sid=NA&amp;version=6&amp;preview=false&amp;__shared_params__[version]=v3" aria-hidden="true" tabindex="-1" style="border-width: medium !important; border-style: none !important; border-color: currentcolor !important; border-image: initial !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;"></iframe></body></html>
