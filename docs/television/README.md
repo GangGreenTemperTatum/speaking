@@ -13,6 +13,7 @@ This directory contains information about various television appearances related
 - [NahamSec](./nahamsec/README.md) - 2026 - How a Researcher Hacked a Major Retailer's AI Chatbot Over DNS (Live Demo!)
   - [YouTube Recording](https://youtu.be/w7cH0xZp5oc)
   - [HackingHub Lab](https://app.hackinghub.io/hubs/ecorp-ai)
+  - [LinkedIn Announcement](https://www.linkedin.com/posts/nahamsec_had-ads-dawson-back-on-the-channel-and-he-share-7482300498327388160-CiCz/)
   - [Local YouTube Page Archive](./nahamsec/how-a-researcher-hacked-major-retailers-ai-chatbot-over-dns-youtube.html)
 - [NahamSec](./nahamsec/README.md) - 2026 - An AI Hacker Showed Me How to Exfil Data in Zero Clicks
   - [YouTube Recording](https://www.youtube.com/watch?v=BFcXTxHLaKE)
