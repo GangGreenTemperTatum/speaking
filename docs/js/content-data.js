@@ -677,6 +677,18 @@ const podcasts = [
 // Publication data
 const publications = [
     {
+        id: "meta-fbdl-goes-agentic-2026",
+        title: "FBDL Goes Agentic: AI Agents Build Your Test Environments",
+        publisher: "Meta Bug Bounty",
+        description: "Meta released an open-source MCP server and new API endpoints for FBDL, letting security researchers generate, validate, and submit FBDL scripts from their own AI agents.",
+        url: "publications/meta/2026/july/fbdl-goes-agentic-meta-bug-bounty.html",
+        icon: "fab fa-meta",
+        year: "2026",
+        type: "publication",
+        date: "2026-07-13",
+        featured: true
+    },
+    {
         id: "wsj-mythos-bug-bounty-2026",
         title: "Mythos Rewires the Bug-Bounty Industry",
         publisher: "The Wall Street Journal",

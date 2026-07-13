@@ -25,11 +25,14 @@ The real-world bug came from a major retailer with a public bug bounty program a
 - [YouTube Video](https://youtu.be/w7cH0xZp5oc)
 - [HackingHub E-Corp Outfitters Lab](https://app.hackinghub.io/hubs/ecorp-ai)
 - [NahamSec LinkedIn announcement](https://www.linkedin.com/posts/nahamsec_had-ads-dawson-back-on-the-channel-and-he-share-7482300498327388160-CiCz/)
+- [Ads Dawson LinkedIn post](https://www.linkedin.com/feed/update/urn:li:share:7482452609921114112/)
 - [Local YouTube page archive](how-a-researcher-hacked-major-retailers-ai-chatbot-over-dns-youtube.html)
 
 ## Social Post
 
 NahamSec announced the episode on LinkedIn, highlighting the live walkthrough of hacking a major retailer's AI chatbot over DNS and the companion free HackingHub lab for viewers to try.
+
+Ads also shared the episode on LinkedIn.
 
 ## Key Topics
 
