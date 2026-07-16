@@ -398,6 +398,16 @@
       "year": "2026"
     },
     {
+      "id": "dreadnode-dreadindex-offensive-security-benchmark-2026",
+      "title": "Introducing DreadIndex: An Offensive Security Benchmark for Language Models",
+      "publisher": "Dreadnode",
+      "description": "Contributor on DreadIndex, a living offensive cybersecurity evaluation index for language models. The benchmark spans 76 tasks across 10 categories, measuring model capability on real offensive security work across web app pentesting, cryptography, reversing, binary exploitation, vulnerability research, forensics, network operations, AI/ML security, and protocol analysis.",
+      "url": "https://dreadnode.io/research/introducing-dreadindex-offensive-security-benchmark-for-language-models/",
+      "icon": "fas fa-skull",
+      "external": true,
+      "year": "2026"
+    },
+    {
       "id": "dreadnode-embodied-reasoning-evals-2026",
       "title": "Beyond the Terminal: Offensive Security Evals for Embodied Reasoning",
       "publisher": "Dreadnode",
