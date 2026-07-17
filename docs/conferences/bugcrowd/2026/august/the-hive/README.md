@@ -1,6 +1,8 @@
 # [The Hive at Black Hat USA](https://www.bugcrowd.com/the-hive/)
 ## [Hacking in the Age of AI: What's Changed, What Hasn't](https://www.bugcrowd.com/the-hive/#agenda)
 
+![The Hive BugCrowd x Ads Dawson 2026 - Hacking in the Age of AI: What's Changed, What Hasn't](image.png)
+
 ![The Hive agenda screenshot showing the Hacking in the Age of AI session card](Screenshot 2026-07-17 at 17.01.56.png)
 
 - **Organizer:** Bugcrowd
