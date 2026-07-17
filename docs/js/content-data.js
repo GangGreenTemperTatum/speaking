@@ -49,6 +49,20 @@ const conferences = [
         featured: true
     },
     {
+        id: "bugcrowd-the-hive-2026",
+        name: "BugCrowd",
+        displayName: "The Hive at Black Hat USA",
+        year: "2026",
+        icon: "fas fa-bug",
+        description: "Hacking in the Age of AI: What's Changed, What Hasn't",
+        path: "bugcrowd",
+        subdir: "2026/august/the-hive",
+        localPath: "conferences/bugcrowd/2026/august/the-hive",
+        type: "conference",
+        date: "2026-08-06",
+        featured: true
+    },
+    {
         id: "dc604-2023",
         name: "DC604",
         displayName: "DC604 2023 - Hacker Summer Camp",

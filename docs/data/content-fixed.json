@@ -82,6 +82,14 @@
       "description": "BugCrowd College Program Educational Event"
     },
     {
+      "id": "bugcrowd-2026-august-the-hive",
+      "name": "BugCrowd",
+      "path": "bugcrowd/2026/august/the-hive",
+      "year": "2026",
+      "icon": "fas fa-bug",
+      "description": "Hacking in the Age of AI: What's Changed, What Hasn't"
+    },
+    {
       "id": "dc604-2023",
       "name": "DC604",
       "path": "dc604",
