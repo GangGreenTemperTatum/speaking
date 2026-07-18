@@ -12,7 +12,7 @@ module.exports = {
     reporter: 'html',
     use: {
         actionTimeout: 0,
-        baseURL: 'http://localhost:8080',
+        baseURL: 'http://localhost:8081',
         trace: 'on-first-retry',
         screenshot: 'only-on-failure'
     },
@@ -37,8 +37,8 @@ module.exports = {
         }
     ],
     webServer: {
-        command: 'npx http-server docs -p 8080',
-        port: 8080,
+        command: 'npx http-server docs -p 8081',
+        port: 8081,
         reuseExistingServer: !process.env.CI
     }
 };

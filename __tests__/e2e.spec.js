@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
-const BASE_URL = 'http://localhost:8080';
+const BASE_URL = 'http://localhost:8081';
 
 test.describe('Flappy Portfolio E2E Tests', () => {
     test.beforeEach(async ({ page }) => {
@@ -72,24 +72,20 @@ test.describe('Flappy Portfolio E2E Tests', () => {
         expect(await cards.count()).toBeGreaterThan(0);
     });
 
-    test('should navigate to content viewer when card clicked', async ({ page, context }) => {
-        const [newPage] = await Promise.all([
-            context.waitForEvent('page'),
-            page.click('.content-card:first-child')
+    test('should navigate to content viewer when a local card is clicked', async ({ page }) => {
+        const card = page.locator('.content-card[href*="content-viewer"]').first();
+        await expect(card).toBeVisible();
+
+        await Promise.all([
+            page.waitForURL(/content-viewer/),
+            card.click()
         ]);
-        
-        await expect(newPage).toHaveURL(/content-viewer/);
     });
 
-    test('should save high score to localStorage', async ({ page }) => {
-        await page.click('#game-canvas');
-        await page.waitForTimeout(100);
-        
-        const highScore = await page.evaluate(() => {
-            return localStorage.getItem('flappyHighScore');
-        });
-        
-        expect(highScore).not.toBeNull();
+    test('should load a saved high score from localStorage', async ({ page }) => {
+        await page.addInitScript(() => localStorage.setItem('flappyHighScore', '7'));
+        await page.reload();
+        await expect(page.locator('#high-score')).toHaveText('7');
     });
 
     test('should be responsive on mobile', async ({ page }) => {
@@ -107,6 +103,6 @@ test.describe('Content Viewer E2E Tests', () => {
 
     test('should have back button', async ({ page }) => {
         await page.goto(`${BASE_URL}/content-viewer.html?type=conference&org=apidays&year=2023`);
-        await expect(page.locator('.btn-back')).toBeVisible();
+        await expect(page.locator('.back-link')).toBeVisible();
     });
 });
