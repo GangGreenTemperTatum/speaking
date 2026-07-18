@@ -1,6 +1,8 @@
 # [Exfil Everything: A Year of Stealing Data from AI Agents](https://www.bugbountydefcon.com/speakers-2026)
 ## [Bug Bounty Village - DEF CON 34](https://www.bugbountydefcon.com/speakers-2026)
 
+![LinkedIn Bug Bounty Village announcement](image.png)
+
 ![DEF CON 34 Bug Bounty Village 2026 speakers page showing Ads Dawson](defcon34-bbv-speakers-2026-ads-dawson.png)
 
 ```
@@ -26,6 +28,7 @@
   - **Type:** Individual Talk (30 Minutes)
   - **Village:** Bug Bounty Village
   - **Abstract:** _`[REDACTED UNTIL SHOWTIME]` -- What happens when you spend a year finding creative ways to steal data from AI agents? You get a talk at DEF CON. Details dropping August 2026._
+  - **Social Post**: [Here](https://www.linkedin.com/posts/bugbounty-defcon-bbv-ugcPost-7480999746346569729-ULiu/?utm_source=share&utm_medium=member_android&rcm=ACoAAA1p028B5AHnJgHCbLKDdcDTNnvyDWkUwzE)
 
 - **Panel title:** "Bots, Bounties, and Bullshit: An Honest Panel on AI in Hacking"
   - **Type:** Panel
