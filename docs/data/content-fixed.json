@@ -367,6 +367,16 @@
   ],
   "publications": [
     {
+      "id": "black-hills-ai-pen-testing-webcast-2026",
+      "title": "John Strand — Webcast: AI and Pen Testing: Are We Cooked?",
+      "publisher": "Black Hills Information Security",
+      "description": "Black Hills Information Security's LinkedIn post for John Strand's webcast on how AI is changing penetration testing; Ads Dawson is tagged in the post.",
+      "url": "publications/black_hills_information_security/2026/july/john-strand-webcast-ai-and-pen-testing-are-we-cooked.html",
+      "icon": "fab fa-linkedin",
+      "external": false,
+      "year": "2026"
+    },
+    {
       "id": "meta-fbdl-goes-agentic-2026",
       "title": "FBDL Goes Agentic: AI Agents Build Your Test Environments",
       "publisher": "Meta Bug Bounty",

@@ -21,7 +21,7 @@ const conferenceOrgs = [
   { id: "antisyphon", subPaths: [{path: "2026/august/ai-cybersecurity-summit", year: "2026"}] },
   { id: "apidays", years: ["2023"] },
   { id: "apisec", years: ["2023"] },
-  { id: "bugcrowd", subDirs: ["2025/july/bugboss", "2025/july/rhic", "2025/september/edprotect", "2025/september/rit", "2025/october/wraven", "2025/october/ut", "2025/october/cnu"], years: ["2025"] },
+  { id: "bugcrowd", subDirs: ["2025/july/bugboss", "2025/july/rhic", "2025/september/edprotect", "2025/september/rit", "2025/october/wraven", "2025/october/ut", "2025/october/cnu", { path: "2026/august/the-hive", year: "2026", id: "bugcrowd-2026-august-the-hive" }], years: ["2025"] },
   { id: "dc604", years: ["2023"] },
   { id: "defcon", subPaths: [{path: "2025/august/bb_village", year: "2025"}, {path: "2026/august/bb_village", year: "2026"}] },
   { id: "in-cyber-forum", years: ["2024"] },
@@ -142,8 +142,11 @@ conferenceOrgs.forEach(org => {
       }
     });
   } else if (org.id === 'bugcrowd' && org.subDirs) {
-    org.subDirs.forEach(subDir => {
-      org.years.forEach(year => {
+    org.subDirs.forEach(subDirEntry => {
+      const subDir = typeof subDirEntry === 'string' ? subDirEntry : subDirEntry.path;
+      const years = typeof subDirEntry === 'string' ? org.years : [subDirEntry.year];
+
+      years.forEach(year => {
         const orgConfig = contentMap[org.id] || { name: org.id, icon: "fas fa-microphone-alt" };
         const orgPath = `${org.id}/${subDir}`;
         let orgName, description;
@@ -169,13 +172,16 @@ conferenceOrgs.forEach(org => {
         } else if (subDir.includes('cnu')) {
           orgName = 'CNU CyberClub';
           description = 'BugCrowd College Program Educational Event';
+        } else if (subDir.includes('the-hive')) {
+          orgName = 'BugCrowd';
+          description = "Hacking in the Age of AI: What's Changed, What Hasn't";
         } else {
           orgName = subDir.toUpperCase();
           description = 'Talks on AI/ML Security and LLM Application Safety';
         }
 
         content.conferences.push({
-          id: `${orgPath.replace(/\//g, '-')}-${year}`,
+          id: subDirEntry.id || `${orgPath.replace(/\//g, '-')}-${year}`,
           name: orgName,
           path: orgPath,
           year: year,
@@ -294,6 +300,16 @@ podcastPaths.forEach(podcast => {
 
 // Process publications from README.md
 const publications = [
+  {
+    id: "black-hills-ai-pen-testing-webcast-2026",
+    title: "John Strand — Webcast: AI and Pen Testing: Are We Cooked?",
+    publisher: "Black Hills Information Security",
+    description: "Black Hills Information Security's LinkedIn post for John Strand's webcast on how AI is changing penetration testing; Ads Dawson is tagged in the post.",
+    url: "publications/black_hills_information_security/2026/july/john-strand-webcast-ai-and-pen-testing-are-we-cooked.html",
+    icon: "fab fa-linkedin",
+    external: false,
+    year: "2026"
+  },
   {
     id: "meta-fbdl-goes-agentic-2026",
     title: "FBDL Goes Agentic: AI Agents Build Your Test Environments",
@@ -594,12 +610,12 @@ content.achievements = [
 ];
 
 // Write the content to a JSON file - ensure it's valid JSON without comments
-fs.writeFileSync(OUTPUT_FILE, JSON.stringify(content, null, 2));
+fs.writeFileSync(OUTPUT_FILE, `${JSON.stringify(content, null, 2)}\n`);
 
 // Also create a backup copy with a different name to test
 fs.writeFileSync(
   path.join(path.dirname(OUTPUT_FILE), 'content-fixed.json'),
-  JSON.stringify(content, null, 2)
+  `${JSON.stringify(content, null, 2)}\n`
 );
 
 console.log(`Content JSON written to ${OUTPUT_FILE}`);

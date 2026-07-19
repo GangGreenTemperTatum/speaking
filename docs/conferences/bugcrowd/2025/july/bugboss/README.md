@@ -6,7 +6,11 @@
 
 - 📄 **Slides (PDF):** [BugBoss Show n Tell - July 2025](Ads%20Dawson%20-%20BugCrowd%20-%20BugBoss%20Show%20n%20Tell%20-%20July%202025.pdf)
 - 🍿 **YouTube Recording** [Ads Dawson’s Show & Tell: Behind his BugBoss findings](https://youtu.be/zlodGMqAuD8?feature=shared)
+- 🗂️ **YouTube HTML archive:** [Ads Dawson’s Show & Tell: Behind his BugBoss findings](ads-dawson-bugboss-show-and-tell-youtube.html)
+- 📄 **YouTube PDF archive:** [Ads Dawson’s Show & Tell: Behind his BugBoss findings](ads-dawson-bugboss-show-and-tell-youtube.pdf)
 - 📣 **Speaker card:** [Hacker Spotlight: Ads Dawson](https://www.bugcrowd.com/blog/hacker-spotlight-ads-dawson/)
 - 🗣️ **Social links:** [Here](tbc) | [Here](tbc)
+
+![YouTube thumbnail for Ads Dawson’s BugBoss Show & Tell](ads-dawson-bugboss-show-and-tell-youtube-thumbnail.png)
 
 ------------------------------
