@@ -618,6 +618,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 year: "2026"
             },
             {
+                title: "Likely Spam: Voice Phishing With an AI Red Team Harness",
+                publisher: "Substack",
+                description: "A noob's guide from zero to legitimate scammer with a few free accounts, a cloned voice, and ten bucks worth of Twilio call credits.",
+                url: "https://0xmoose.substack.com/p/likely-spam-voice-phishing-with-an",
+                icon: "fas fa-phone-volume",
+                year: "2026"
+            },
+            {
                 title: "Signal Over Noise: AI Agents and the Operator Moat",
                 publisher: "Substack",
                 description: "When agents scale the hunt, expertise decides what survives. Examines how AI agents reshape competitive dynamics and why human operational expertise becomes the primary differentiator as AI tools commoditize.",

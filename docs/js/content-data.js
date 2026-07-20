@@ -752,6 +752,18 @@ const publications = [
         featured: true
     },
     {
+        id: "substack-likely-spam-voice-phishing-2026",
+        title: "Likely Spam: Voice Phishing With an AI Red Team Harness",
+        publisher: "Substack",
+        description: "A noob's guide from zero to legitimate scammer with a few free accounts, a cloned voice, and ten bucks worth of Twilio call credits.",
+        url: "https://0xmoose.substack.com/p/likely-spam-voice-phishing-with-an",
+        icon: "fas fa-phone-volume",
+        year: "2026",
+        type: "publication",
+        date: "2026-07-21",
+        featured: true
+    },
+    {
         id: "substack-signal-over-noise-2026",
         title: "Signal Over Noise: AI Agents and the Operator Moat",
         publisher: "Substack",
