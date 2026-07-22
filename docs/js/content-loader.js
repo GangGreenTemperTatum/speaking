@@ -369,6 +369,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 localPath: "conferences/defcon/2026/august/bb_village"
             },
             {
+                name: "DEFCON",
+                displayName: "DEFCON 34 OWASP Village: AI Pentesting is not a Vibe Check",
+                year: "2026",
+                icon: "fas fa-shield-virus",
+                description: "AI Pentesting is not a Vibe Check",
+                path: "defcon",
+                subdir: "august/owasp_village",
+                localPath: "conferences/defcon/2026/august/owasp_village"
+            },
+            {
                 name: "PromptorGTFO",
                 displayName: "PromptorGTFO 2025 - Deploying Offensive AI with Modular Agents",
                 year: "2025",

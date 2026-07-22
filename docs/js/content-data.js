@@ -358,6 +358,20 @@ const conferences = [
         featured: true
     },
     {
+        id: "defcon-owasp-village-2026",
+        name: "DEFCON",
+        displayName: "DEFCON 34 OWASP Village",
+        year: "2026",
+        icon: "fas fa-shield-virus",
+        description: "AI Pentesting is not a Vibe Check",
+        path: "defcon",
+        subdir: "august/owasp_village",
+        localPath: "conferences/defcon/2026/august/owasp_village",
+        type: "conference",
+        date: "2026-08-08",
+        featured: true
+    },
+    {
         id: "promptorgtfo-2025",
         name: "PromptorGTFO",
         displayName: "PromptorGTFO 2025",

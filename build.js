@@ -23,7 +23,7 @@ const conferenceOrgs = [
   { id: "apisec", years: ["2023"] },
   { id: "bugcrowd", subDirs: ["2025/july/bugboss", "2025/july/rhic", "2025/september/edprotect", "2025/september/rit", "2025/october/wraven", "2025/october/ut", "2025/october/cnu", { path: "2026/august/the-hive", year: "2026", id: "bugcrowd-2026-august-the-hive" }], years: ["2025"] },
   { id: "dc604", years: ["2023"] },
-  { id: "defcon", subPaths: [{path: "2025/august/bb_village", year: "2025"}, {path: "2026/august/bb_village", year: "2026"}] },
+  { id: "defcon", subPaths: [{path: "2025/august/bb_village", year: "2025"}, {path: "2026/august/bb_village", year: "2026"}, {path: "2026/august/owasp_village", year: "2026", id: "defcon-owasp-village-2026"}] },
   { id: "in-cyber-forum", years: ["2024"] },
   { id: "interface", years: ["2023"] },
   { id: "isaca", years: ["2024"] },
@@ -203,10 +203,12 @@ conferenceOrgs.forEach(org => {
           description = "Decoding OWASP Large Language Model Security Verification Standard (LLMSVS)";
         }
       } else if (org.id === 'defcon') {
-        if (subPath.year === '2025') {
+        if (subPath.path.includes('bb_village') && subPath.year === '2025') {
           description = "Misaligned: AI Jailbreaking Panel with BT6 (Frontier AI Red Team) & Jason Haddix";
-        } else if (subPath.year === '2026') {
+        } else if (subPath.path.includes('bb_village') && subPath.year === '2026') {
           description = "Exfil Everything + Bots, Bounties, and Bullshit: AI in Hacking Panel";
+        } else if (subPath.path.includes('owasp_village')) {
+          description = "AI Pentesting is not a Vibe Check";
         }
       } else if (org.id === 'taico') {
         description = "Toronto AI and Cybersecurity Organization - First meetup of 2026 featuring Q&A, steganography talk, and lightning talks";
@@ -218,8 +220,11 @@ conferenceOrgs.forEach(org => {
         description = "Summit Keynote: Exfil Everything: A Year of Stealing Data from AI Agents";
       }
 
+      // Generate unique ID - use path-based ID for entries that share org+year
+      const confId = subPath.id || `${org.id}-${subPath.year}`;
+
       content.conferences.push({
-        id: `${org.id}-${subPath.year}`,
+        id: confId,
         name: orgConfig.name,
         path: `${org.id}/${subPath.path}`,
         year: subPath.year,
