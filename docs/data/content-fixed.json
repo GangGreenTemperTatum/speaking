@@ -371,6 +371,14 @@
       "year": "2023",
       "icon": "fas fa-bug",
       "description": "Discussion about AI and ML security"
+    },
+    {
+      "id": "podcasts-critical_thinking_bug_bounty_podcast-2026",
+      "name": "Critical Thinking - Bug Bounty Podcast",
+      "path": "podcasts/critical_thinking_bug_bounty_podcast",
+      "year": "2026",
+      "icon": "fas fa-brain",
+      "description": "HackerNotes Ep. 184 — Hackbots at Scale: Smaller Models, Bigger Signal"
     }
   ],
   "publications": [

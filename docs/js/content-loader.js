@@ -541,6 +541,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 icon: "fas fa-shield-alt",
                 description: "AI Security Deep Dive - Modern AI attack vectors and LLM application security",
                 path: "the_boring_appsec_podcast"
+            },
+            {
+                name: "Critical Thinking - Bug Bounty Podcast",
+                year: "2026",
+                icon: "fas fa-brain",
+                description: "HackerNotes Ep. 184 — Hackbots at Scale: Smaller Models, Bigger Signal",
+                path: "critical_thinking_bug_bounty_podcast"
             }
         ];
 

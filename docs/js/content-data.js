@@ -700,6 +700,17 @@ const podcasts = [
         type: "podcast",
         date: "2025-03-01",
         featured: true
+    },
+    {
+        id: "critical-thinking-bbp-2026",
+        name: "Critical Thinking - Bug Bounty Podcast",
+        year: "2026",
+        icon: "fas fa-brain",
+        description: "HackerNotes Ep. 184 — Hackbots at Scale: Smaller Models, Bigger Signal",
+        path: "critical_thinking_bug_bounty_podcast",
+        type: "podcast",
+        date: "2026-07-23",
+        featured: true
     }
 ];
 

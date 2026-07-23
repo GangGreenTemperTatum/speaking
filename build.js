@@ -275,7 +275,8 @@ const podcastPaths = [
   { path: 'podcasts/owasp/owasp-llm-apps-podcast', name: 'OWASP LLM Apps Podcast', icon: 'fas fa-shield-virus', year: '2024' },
   { path: 'podcasts/owasp/owasp-llm-apps-podcast', name: 'OWASP LLM Apps Podcast', icon: 'fas fa-shield-virus', year: '2025' },
   { path: 'podcasts/software_testing_and_quality_talks', name: 'Software Testing & Quality Talks', icon: 'fas fa-check-circle', year: '2024' },
-  { path: 'podcasts/synack', name: 'Synack Podcast', icon: 'fas fa-bug', year: '2023' }
+  { path: 'podcasts/synack', name: 'Synack Podcast', icon: 'fas fa-bug', year: '2023' },
+  { path: 'podcasts/critical_thinking_bug_bounty_podcast', name: 'Critical Thinking - Bug Bounty Podcast', icon: 'fas fa-brain', year: '2026' }
 ];
 
 // Add podcast entries
@@ -285,6 +286,8 @@ podcastPaths.forEach(podcast => {
     description = 'Exploring the intersection of MLOps and security';
   } else if (podcast.name.includes('ChAI')) {
     description = 'Conversations on AI ethics and security challenges';
+  } else if (podcast.name.includes('Critical Thinking')) {
+    description = 'HackerNotes Ep. 184 — Hackbots at Scale: Smaller Models, Bigger Signal';
   } else if (podcast.name.includes('OWASP')) {
     if (podcast.year === '2025') {
       description = 'Sandboxing AI Models with Dyana & OWASP Top 10 for LLM Apps - Ep.4';
