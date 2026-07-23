@@ -32,6 +32,7 @@
 - 🎧 **Listen on Spotify** [HackerNotes Ep. 184](https://open.spotify.com/episode/2QfwAwWuVgj4iDqi8Fm9WM?si=0352f6431a80460e)
 - 📄 **Episode Notes (PDF)** [hackernotes-ep184-hackbots-at-scale-ads-dawson.pdf](hackernotes-ep184-hackbots-at-scale-ads-dawson.pdf)
 - 🌐 **Episode Notes (HTML)** [hackernotes-ep184-hackbots-at-scale-ads-dawson.html](hackernotes-ep184-hackbots-at-scale-ads-dawson.html)
+- **Social Links** [https://www.linkedin.com/posts/on-episode-184-0xmoose-and-rez0-show-rhyno-share-7485997447681331200--e2n/?utm_source=share&utm_medium=member_android&rcm=ACoAAA1p028B5AHnJgHCbLKDdcDTNnvyDWkUwzE](https://www.linkedin.com/posts/on-episode-184-0xmoose-and-rez0-show-rhyno-share-7485997447681331200--e2n/?utm_source=share&utm_medium=member_android&rcm=ACoAAA1p028B5AHnJgHCbLKDdcDTNnvyDWkUwzE)
 
 ![Critical Thinking Bug Bounty Podcast - HackerNotes Ep. 184 Thumbnail](ctbb-ep184-thumbnail.png)
 
@@ -40,5 +41,7 @@
 ![Critical Thinking Bug Bounty Podcast on Spotify](ctbb-ep184-spotify-show.png)
 
 ![Critical Thinking Bug Bounty Podcast - Episode 184 on Spotify](ctbb-ep184-spotify-episode.png)
+
+![Critical Thinking Bug Bounty Podcast - LinkedIn](image.png)
 
 ----------------------------------------
