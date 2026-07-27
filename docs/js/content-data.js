@@ -711,6 +711,17 @@ const podcasts = [
         type: "podcast",
         date: "2026-07-23",
         featured: true
+    },
+    {
+        id: "bhis-talkin-bout-infosec-2026",
+        name: "BHIS - Talkin' Bout Infosec News",
+        year: "2026",
+        icon: "fas fa-broadcast-tower",
+        description: "BHIS live newscast — discussing the latest infosec news and developments",
+        path: "talkin_bout_infosec_news",
+        type: "podcast",
+        date: "2026-07-27",
+        featured: true
     }
 ];
 

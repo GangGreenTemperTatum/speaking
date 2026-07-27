@@ -548,6 +548,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 icon: "fas fa-brain",
                 description: "HackerNotes Ep. 184 — Hackbots at Scale: Smaller Models, Bigger Signal",
                 path: "critical_thinking_bug_bounty_podcast"
+            },
+            {
+                name: "BHIS - Talkin' Bout Infosec News",
+                year: "2026",
+                icon: "fas fa-broadcast-tower",
+                description: "BHIS live newscast — discussing the latest infosec news and developments",
+                path: "talkin_bout_infosec_news"
             }
         ];
 

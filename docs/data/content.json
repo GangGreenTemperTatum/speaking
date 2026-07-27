@@ -379,6 +379,14 @@
       "year": "2026",
       "icon": "fas fa-brain",
       "description": "HackerNotes Ep. 184 — Hackbots at Scale: Smaller Models, Bigger Signal"
+    },
+    {
+      "id": "podcasts-talkin_bout_infosec_news-2026",
+      "name": "BHIS - Talkin' Bout Infosec News",
+      "path": "podcasts/talkin_bout_infosec_news",
+      "year": "2026",
+      "icon": "fas fa-broadcast-tower",
+      "description": "BHIS live newscast — discussing the latest infosec news and developments"
     }
   ],
   "publications": [
