@@ -26,6 +26,14 @@
       "description": "Talks on AI/ML Security and LLM Application Safety"
     },
     {
+      "id": "blackhat-2026",
+      "name": "Black Hat USA",
+      "path": "blackhat/2026/august/briefings",
+      "year": "2026",
+      "icon": "fas fa-hat-wizard",
+      "description": "Kinetic Prompt Injection: Agent Compromise With a Physical Blast Radius"
+    },
+    {
       "id": "bugcrowd-2025-july-bugboss-2025",
       "name": "BugBoss",
       "path": "bugcrowd/2025/july/bugboss",

@@ -49,6 +49,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 localPath: "conferences/apisec/2023/december"
             },
             {
+                name: "Black Hat USA",
+                displayName: "Black Hat USA 2026 - Kinetic Prompt Injection: Agent Compromise With a Physical Blast Radius",
+                year: "2026",
+                icon: "fas fa-hat-wizard",
+                description: "Kinetic Prompt Injection: Agent Compromise With a Physical Blast Radius",
+                path: "blackhat",
+                subdir: "august/briefings",
+                localPath: "conferences/blackhat/2026/august/briefings"
+            },
+            {
                 name: "DC604",
                 displayName: "DC604 2023 - Hacker Summer Camp - Poisoning Web Training Data",
                 year: "2023",

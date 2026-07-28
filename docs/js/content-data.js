@@ -49,6 +49,20 @@ const conferences = [
         featured: true
     },
     {
+        id: "blackhat-2026",
+        name: "Black Hat USA",
+        displayName: "Black Hat USA 2026 - Kinetic Prompt Injection: Agent Compromise With a Physical Blast Radius",
+        year: "2026",
+        icon: "fas fa-hat-wizard",
+        description: "Kinetic Prompt Injection: Agent Compromise With a Physical Blast Radius",
+        path: "blackhat",
+        subdir: "august/briefings",
+        localPath: "conferences/blackhat/2026/august/briefings",
+        type: "conference",
+        date: "2026-08-06",
+        featured: true
+    },
+    {
         id: "bugcrowd-the-hive-2026",
         name: "BugCrowd",
         displayName: "The Hive at Black Hat USA",

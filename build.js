@@ -21,6 +21,7 @@ const conferenceOrgs = [
   { id: "antisyphon", subPaths: [{path: "2026/august/ai-cybersecurity-summit", year: "2026"}] },
   { id: "apidays", years: ["2023"] },
   { id: "apisec", years: ["2023"] },
+  { id: "blackhat", subPaths: [{path: "2026/august/briefings", year: "2026"}] },
   { id: "bugcrowd", subDirs: ["2025/july/bugboss", "2025/july/rhic", "2025/september/edprotect", "2025/september/rit", "2025/october/wraven", "2025/october/ut", "2025/october/cnu", { path: "2026/august/the-hive", year: "2026", id: "bugcrowd-2026-august-the-hive" }], years: ["2025"] },
   { id: "dc604", years: ["2023"] },
   { id: "defcon", subPaths: [{path: "2025/august/bb_village", year: "2025"}, {path: "2026/august/bb_village", year: "2026"}, {path: "2026/august/owasp_village", year: "2026", id: "defcon-owasp-village-2026", icon: "fas fa-shield-virus"}, {path: "2026/august/red_team_village", year: "2026", id: "defcon-red-team-village-2026", icon: "fas fa-crosshairs"}] },
@@ -44,6 +45,7 @@ const contentMap = {
   "antisyphon": { name: "Antisyphon Training", icon: "fas fa-chalkboard-teacher" },
   "apidays": { name: "API Days", icon: "fas fa-cloud" },
   "apisec": { name: "APISec", icon: "fas fa-shield-alt" },
+  "blackhat": { name: "Black Hat USA", icon: "fas fa-hat-wizard" },
   "bugcrowd": { name: "BugCrowd", icon: "fas fa-bug" },
   "dc604": { name: "DC604", icon: "fas fa-users" },
   "defcon": { name: "DEFCON", icon: "fas fa-skull-crossbones" },
@@ -220,6 +222,8 @@ conferenceOrgs.forEach(org => {
         description = "Upcoming webinar on why traditional WAFs miss AI-driven traffic and what to use instead";
       } else if (org.id === 'antisyphon') {
         description = "Summit Keynote: Exfil Everything: A Year of Stealing Data from AI Agents";
+      } else if (org.id === 'blackhat') {
+        description = "Kinetic Prompt Injection: Agent Compromise With a Physical Blast Radius";
       }
 
       // Generate unique ID - use path-based ID for entries that share org+year
