@@ -23,7 +23,7 @@ const conferenceOrgs = [
   { id: "apisec", years: ["2023"] },
   { id: "bugcrowd", subDirs: ["2025/july/bugboss", "2025/july/rhic", "2025/september/edprotect", "2025/september/rit", "2025/october/wraven", "2025/october/ut", "2025/october/cnu", { path: "2026/august/the-hive", year: "2026", id: "bugcrowd-2026-august-the-hive" }], years: ["2025"] },
   { id: "dc604", years: ["2023"] },
-  { id: "defcon", subPaths: [{path: "2025/august/bb_village", year: "2025"}, {path: "2026/august/bb_village", year: "2026"}, {path: "2026/august/owasp_village", year: "2026", id: "defcon-owasp-village-2026"}] },
+  { id: "defcon", subPaths: [{path: "2025/august/bb_village", year: "2025"}, {path: "2026/august/bb_village", year: "2026"}, {path: "2026/august/owasp_village", year: "2026", id: "defcon-owasp-village-2026", icon: "fas fa-shield-virus"}, {path: "2026/august/red_team_village", year: "2026", id: "defcon-red-team-village-2026", icon: "fas fa-crosshairs"}] },
   { id: "in-cyber-forum", years: ["2024"] },
   { id: "interface", years: ["2023"] },
   { id: "isaca", years: ["2024"] },
@@ -209,6 +209,8 @@ conferenceOrgs.forEach(org => {
           description = "Exfil Everything + Bots, Bounties, and Bullshit: AI in Hacking Panel";
         } else if (subPath.path.includes('owasp_village')) {
           description = "AI Pentesting is not a Vibe Check";
+        } else if (subPath.path.includes('red_team_village')) {
+          description = 'Opening Panel - "Is Red Teaming Dead?"';
         }
       } else if (org.id === 'taico') {
         description = "Toronto AI and Cybersecurity Organization - First meetup of 2026 featuring Q&A, steganography talk, and lightning talks";
@@ -228,7 +230,7 @@ conferenceOrgs.forEach(org => {
         name: orgConfig.name,
         path: `${org.id}/${subPath.path}`,
         year: subPath.year,
-        icon: orgConfig.icon,
+        icon: subPath.icon || orgConfig.icon,
         description: description,
         ...(org.id === 'antisyphon' && subPath.year === '2026' ? { videoUrl: "https://www.youtube.com/watch?v=oi9PMp4OkLU" } : {}),
         ...(org.id === 'defcon' && subPath.year === '2025' ? { videoUrl: "https://www.youtube.com/watch?v=yxqGAtUR8fY" } : {})

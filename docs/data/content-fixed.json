@@ -119,8 +119,16 @@
       "name": "DEFCON",
       "path": "defcon/2026/august/owasp_village",
       "year": "2026",
-      "icon": "fas fa-skull-crossbones",
+      "icon": "fas fa-shield-virus",
       "description": "AI Pentesting is not a Vibe Check"
+    },
+    {
+      "id": "defcon-red-team-village-2026",
+      "name": "DEFCON",
+      "path": "defcon/2026/august/red_team_village",
+      "year": "2026",
+      "icon": "fas fa-crosshairs",
+      "description": "Opening Panel - \"Is Red Teaming Dead?\""
     },
     {
       "id": "in-cyber-forum-2024",

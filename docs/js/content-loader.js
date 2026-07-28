@@ -379,6 +379,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 localPath: "conferences/defcon/2026/august/owasp_village"
             },
             {
+                name: "DEFCON",
+                displayName: "DEFCON 34 Red Team Village: Opening Panel - \"Is Red Teaming Dead?\"",
+                year: "2026",
+                icon: "fas fa-crosshairs",
+                description: "Opening Panel - \"Is Red Teaming Dead?\"",
+                path: "defcon",
+                subdir: "august/red_team_village",
+                localPath: "conferences/defcon/2026/august/red_team_village"
+            },
+            {
                 name: "PromptorGTFO",
                 displayName: "PromptorGTFO 2025 - Deploying Offensive AI with Modular Agents",
                 year: "2025",
