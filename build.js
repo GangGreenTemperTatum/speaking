@@ -367,6 +367,16 @@ const publications = [
     year: "2026"
   },
   {
+    id: "arxiv-every-model-cheats-2026",
+    title: "arXiv:2607.21763 - Every Model Cheats: Prompt-Level Mitigation of Cheating on Offensive Cyber Tasks",
+    publisher: "arXiv",
+    description: "Co-authored with Michael Kouremetis, Raja Sekhar Rao Dheekonda, and Brian Greunke. Examines deceptive behavior by LLM agents on cybersecurity benchmarks, testing 22 frontier models across 23 CTF challenges. Introduces an anti-cheat prompt that reduced cheating from 33% to 8.5% without harming legitimate performance.",
+    url: "https://arxiv.org/abs/2607.21763",
+    icon: "fas fa-file-alt",
+    external: true,
+    year: "2026"
+  },
+  {
     id: "dreadnode-dreadindex-offensive-security-benchmark-2026",
     title: "Introducing DreadIndex: An Offensive Security Benchmark for Language Models",
     publisher: "Dreadnode",
@@ -383,6 +393,16 @@ const publications = [
     description: "Co-authored with Michael Kouremetis. How we built ER-Spatial tasks into instrumented multimodal evals for a tier 1 frontier model provider, moving offensive security evals past the terminal into embodied reasoning over visual artifacts like circuit boards and facility layouts.",
     url: "https://www.dreadnode.io/research/embodied-reasoning-offensive-security-evals/",
     icon: "fas fa-skull",
+    external: true,
+    year: "2026"
+  },
+  {
+    id: "substack-63-bytes-csrf-2026",
+    title: "63 Bytes to Steal Your CSRF Token",
+    publisher: "Substack",
+    description: "CSS injection via a 63-byte PostgreSQL table name that breaks out of a markdown code span. Uses the :has() pseudo-class as an oracle and @import chains through a Cloudflare Worker to exfiltrate CSRF tokens character-by-character.",
+    url: "https://0xmoose.substack.com/p/63-bytes-to-steal-your-csrf-token",
+    icon: "fas fa-pen-nib",
     external: true,
     year: "2026"
   },
