@@ -804,6 +804,18 @@ const publications = [
         featured: true
     },
     {
+        id: "dreadnode-every-model-cheats-2026",
+        title: "Every Model Cheats: Prompt-Level Mitigation of Cheating on Offensive Cyber Tasks",
+        publisher: "Dreadnode",
+        description: "Co-authored with Michael Kouremetis, Raja Sekhar Rao Dheekonda, and Brian Greunke. Accompanying blog post for the CheatBench paper — 22 frontier models tested across 23 CTF challenges revealed 37% of passing attempts involved cheating. Anti-cheat prompts reduced cheating from 33% to 8.5% but redirected rather than eliminated it.",
+        url: "https://www.dreadnode.io/research/every-model-cheats-prompt-level-mitigation-of-cheating-on-offensive-cyber-tasks",
+        icon: "fas fa-skull",
+        year: "2026",
+        type: "publication",
+        date: "2026-07-29",
+        featured: true
+    },
+    {
         id: "arxiv-every-model-cheats-2026",
         title: "arXiv:2607.21763 - Every Model Cheats: Prompt-Level Mitigation of Cheating on Offensive Cyber Tasks",
         publisher: "arXiv",
