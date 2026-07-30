@@ -367,6 +367,16 @@ const publications = [
     year: "2026"
   },
   {
+    id: "arxiv-stealthbench-2026",
+    title: "arXiv:2607.26314 - StealthBench: Measuring Operational Stealth in Autonomous Offensive-Security Agents",
+    publisher: "arXiv",
+    description: "Co-authored with Adrian Wood. Introduces a benchmark for evaluating operational stealth in autonomous security agents across 14 scenarios and six OPSEC dimensions. No model exceeds 54% safe success rate when requiring both task completion and stealth compliance.",
+    url: "https://arxiv.org/abs/2607.26314",
+    icon: "fas fa-file-alt",
+    external: true,
+    year: "2026"
+  },
+  {
     id: "arxiv-scopejudge-2026",
     title: "arXiv:2607.07774 - ScopeJudge: Cost-Aware Pre-Execution Gating for Offensive Security Agents",
     publisher: "arXiv",
