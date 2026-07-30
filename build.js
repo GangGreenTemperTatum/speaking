@@ -318,6 +318,16 @@ podcastPaths.forEach(podcast => {
 // Process publications from README.md
 const publications = [
   {
+    id: "stealthbench-arxiv-2026",
+    title: "StealthBench: Measuring Operational Stealth in Autonomous Offensive-Security Agents",
+    publisher: "arXiv",
+    description: "Benchmark measuring whether autonomous agents can operate with operational stealth. 8 models, 14 tasks, 771 trajectories. No model exceeds 54% safe success rate. Co-authored with Adrian Wood.",
+    url: "https://arxiv.org/abs/2607.26314",
+    icon: "fas fa-file-alt",
+    external: true,
+    year: "2026"
+  },
+  {
     id: "black-hills-ai-pen-testing-webcast-2026",
     title: "John Strand — Webcast: AI and Pen Testing: Are We Cooked?",
     publisher: "Black Hills Information Security",

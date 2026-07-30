@@ -240,7 +240,7 @@
       "path": "owasp/owasp-toronto/2025/march",
       "year": "2025",
       "icon": "fas fa-shield-virus",
-      "description": "How to Utilize AI in Offensive Security\u2014An Intro to Offensive AI Tooling"
+      "description": "How to Utilize AI in Offensive Security—An Intro to Offensive AI Tooling"
     },
     {
       "id": "owasp-owasp-toronto-2025-september",
@@ -394,7 +394,7 @@
       "path": "podcasts/critical_thinking_bug_bounty_podcast",
       "year": "2026",
       "icon": "fas fa-brain",
-      "description": "HackerNotes Ep. 184 \u2014 Hackbots at Scale: Smaller Models, Bigger Signal"
+      "description": "HackerNotes Ep. 184 — Hackbots at Scale: Smaller Models, Bigger Signal"
     },
     {
       "id": "podcasts-talkin_bout_infosec_news-2026",
@@ -402,7 +402,7 @@
       "path": "podcasts/talkin_bout_infosec_news",
       "year": "2026",
       "icon": "fas fa-broadcast-tower",
-      "description": "BHIS live newscast \u2014 discussing the latest infosec news and developments"
+      "description": "BHIS live newscast — discussing the latest infosec news and developments"
     }
   ],
   "publications": [
@@ -418,7 +418,7 @@
     },
     {
       "id": "black-hills-ai-pen-testing-webcast-2026",
-      "title": "John Strand \u2014 Webcast: AI and Pen Testing: Are We Cooked?",
+      "title": "John Strand — Webcast: AI and Pen Testing: Are We Cooked?",
       "publisher": "Black Hills Information Security",
       "description": "Black Hills Information Security's LinkedIn post for John Strand's webcast on how AI is changing penetration testing; Ads Dawson is tagged in the post.",
       "url": "publications/black_hills_information_security/2026/july/john-strand-webcast-ai-and-pen-testing-are-we-cooked.html",
@@ -469,7 +469,7 @@
       "id": "dreadnode-every-model-cheats-2026",
       "title": "Every Model Cheats: Prompt-Level Mitigation of Cheating on Offensive Cyber Tasks",
       "publisher": "Dreadnode",
-      "description": "Co-authored with Michael Kouremetis, Raja Sekhar Rao Dheekonda, and Brian Greunke. Accompanying blog post for the CheatBench paper \u2014 22 frontier models tested across 23 CTF challenges revealed 37% of passing attempts involved cheating. Anti-cheat prompts reduced cheating from 33% to 8.5% but redirected rather than eliminated it.",
+      "description": "Co-authored with Michael Kouremetis, Raja Sekhar Rao Dheekonda, and Brian Greunke. Accompanying blog post for the CheatBench paper — 22 frontier models tested across 23 CTF challenges revealed 37% of passing attempts involved cheating. Anti-cheat prompts reduced cheating from 33% to 8.5% but redirected rather than eliminated it.",
       "url": "https://www.dreadnode.io/research/every-model-cheats-prompt-level-mitigation-of-cheating-on-offensive-cyber-tasks",
       "icon": "fas fa-skull",
       "external": true,
@@ -600,7 +600,7 @@
       "id": "dreadnode-ai-red-team-benchmark-case-study",
       "title": "AI Red Teaming Case Study: Claude 3.7 Sonnet Solves the Turtle Challenge",
       "publisher": "Dreadnode",
-      "description": "Ads reveals groundbreaking research where AI models crushed a cybersecurity challenge so brutal that 94% of human hackers fail\u2014yet three frontier AIs (Claude, Gemini, and Llama) each cracked it using wildly different strategies, from Claude's methodical 9-minute persistence to Llama's lightning-fast 1-minute creative deception. Using their AIRTBench benchmark of 70 AI/ML security challenges and their Strikes evaluation platform, Ads demonstrates that these aren't just pattern-matching machines but genuine problem-solvers adapting under pressure, marking a pivotal moment where AI offensive capabilities have officially surpassed most human experts\u2014and they're sharing the complete dataset so the security community can prepare for what's coming next.",
+      "description": "Ads reveals groundbreaking research where AI models crushed a cybersecurity challenge so brutal that 94% of human hackers fail—yet three frontier AIs (Claude, Gemini, and Llama) each cracked it using wildly different strategies, from Claude's methodical 9-minute persistence to Llama's lightning-fast 1-minute creative deception. Using their AIRTBench benchmark of 70 AI/ML security challenges and their Strikes evaluation platform, Ads demonstrates that these aren't just pattern-matching machines but genuine problem-solvers adapting under pressure, marking a pivotal moment where AI offensive capabilities have officially surpassed most human experts—and they're sharing the complete dataset so the security community can prepare for what's coming next.",
       "url": "https://dreadnode.io/blog/ai-red-teaming-case-study-claude-sonnet-solves-turtle",
       "icon": "fas fa-skull",
       "year": "2025"
