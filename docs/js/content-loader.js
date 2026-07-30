@@ -646,6 +646,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 year: "2026"
             },
             {
+                title: "Your Agent Found the Bug. Then It Burned the Engagement.",
+                publisher: "Substack",
+                description: "Accompanying blog post for the StealthBench paper. Examines whether AI agents can hack without getting caught, introducing a benchmark that measures operational stealth across offensive security tasks.",
+                url: "https://0xmoose.substack.com/p/your-agent-found-the-bug-then-it",
+                icon: "fas fa-pen-nib",
+                year: "2026"
+            },
+            {
                 title: "arXiv:2607.26314 - StealthBench: Measuring Operational Stealth in Autonomous Offensive-Security Agents",
                 publisher: "arXiv",
                 description: "Co-authored with Adrian Wood. Introduces a benchmark for evaluating operational stealth in autonomous security agents across 14 scenarios and six OPSEC dimensions. No model exceeds 54% safe success rate when requiring both task completion and stealth compliance.",

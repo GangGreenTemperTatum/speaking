@@ -367,6 +367,16 @@ const publications = [
     year: "2026"
   },
   {
+    id: "substack-stealthbench-2026",
+    title: "Your Agent Found the Bug. Then It Burned the Engagement.",
+    publisher: "Substack",
+    description: "Accompanying blog post for the StealthBench paper. Examines whether AI agents can hack without getting caught, introducing a benchmark that measures operational stealth across offensive security tasks.",
+    url: "https://0xmoose.substack.com/p/your-agent-found-the-bug-then-it",
+    icon: "fas fa-pen-nib",
+    external: true,
+    year: "2026"
+  },
+  {
     id: "arxiv-stealthbench-2026",
     title: "arXiv:2607.26314 - StealthBench: Measuring Operational Stealth in Autonomous Offensive-Security Agents",
     publisher: "arXiv",
