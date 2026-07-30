@@ -19,6 +19,8 @@
 - 🌐 **Red Team Village Schedule** [Event Schedule](https://redteamvillage.io/schedule/)
 - 📄 **Event Schedule (PDF)** [rtv-event-schedule-defcon-34.pdf](rtv-event-schedule-defcon-34.pdf)
 
+![Red Team Village - Is Red Teaming Dead? Panel - DEF CON 34](RTV.png)
+
 ![Red Team Village - Is Red Teaming Dead? Panel - DEF CON 34](rtv-schedule-is-red-teaming-dead-panel.png)
 
 ----------------------------------------
