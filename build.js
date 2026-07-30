@@ -387,6 +387,16 @@ const publications = [
     year: "2026"
   },
   {
+    id: "hf-stealthbench-2026",
+    title: "StealthBench - Hugging Face Daily Papers",
+    publisher: "Hugging Face",
+    description: "StealthBench featured on Hugging Face Daily Papers. Measures operational stealth in autonomous offensive-security agents across 14 scenarios and six OPSEC dimensions.",
+    url: "https://huggingface.co/papers/2607.26314",
+    icon: "fas fa-robot",
+    external: true,
+    year: "2026"
+  },
+  {
     id: "arxiv-scopejudge-2026",
     title: "arXiv:2607.07774 - ScopeJudge: Cost-Aware Pre-Execution Gating for Offensive Security Agents",
     publisher: "arXiv",
