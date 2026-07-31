@@ -756,6 +756,18 @@ const podcasts = [
 // Publication data
 const publications = [
     {
+        id: "dreadnode-airtbench-one-year-later-2026",
+        title: "The Scaffolding is the Red Team: AIRTBench, One Year Later",
+        publisher: "Dreadnode",
+        description: "One year after AIRTBench, open-weight and openly routed models now match frontier systems on previously unsolved security challenges when equipped with purpose-built tooling. Re-evaluation of 13 difficult Crucible tasks shows three models solving 10 of 13, demonstrating that domain expertise encoded through scaffolding is as important as base model selection.",
+        url: "https://dreadnode.io/research/the-scaffolding-is-the-red-team-airt-bench-one-year-later/",
+        icon: "fas fa-skull",
+        year: "2026",
+        type: "publication",
+        date: "2026-07-31",
+        featured: true
+    },
+    {
         id: "meta-fbdl-goes-agentic-2026",
         title: "FBDL Goes Agentic: AI Agents Build Your Test Environments",
         publisher: "Meta Bug Bounty",

@@ -318,6 +318,16 @@ podcastPaths.forEach(podcast => {
 // Process publications from README.md
 const publications = [
   {
+    id: "dreadnode-airtbench-one-year-later-2026",
+    title: "The Scaffolding is the Red Team: AIRTBench, One Year Later",
+    publisher: "Dreadnode",
+    description: "One year after AIRTBench, open-weight and openly routed models now match frontier systems on previously unsolved security challenges when equipped with purpose-built tooling. Re-evaluation of 13 difficult Crucible tasks shows three models solving 10 of 13, demonstrating that domain expertise encoded through scaffolding is as important as base model selection.",
+    url: "https://dreadnode.io/research/the-scaffolding-is-the-red-team-airt-bench-one-year-later/",
+    icon: "fas fa-skull",
+    external: true,
+    year: "2026"
+  },
+  {
     id: "stealthbench-arxiv-2026",
     title: "StealthBench: Measuring Operational Stealth in Autonomous Offensive-Security Agents",
     publisher: "arXiv",
