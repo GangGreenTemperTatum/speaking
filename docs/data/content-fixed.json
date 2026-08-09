@@ -31,7 +31,8 @@
       "path": "blackhat/2026/august/briefings",
       "year": "2026",
       "icon": "fas fa-hat-wizard",
-      "description": "Kinetic Prompt Injection: Agent Compromise With a Physical Blast Radius"
+      "description": "Kinetic Prompt Injection: Agent Compromise With a Physical Blast Radius",
+      "videoUrl": "https://www.youtube.com/watch?v=LZkdihOzfe4"
     },
     {
       "id": "blackhat-portswigger-2026",

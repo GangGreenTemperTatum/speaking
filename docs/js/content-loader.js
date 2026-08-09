@@ -56,7 +56,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 description: "Kinetic Prompt Injection: Agent Compromise With a Physical Blast Radius",
                 path: "blackhat",
                 subdir: "august/briefings",
-                localPath: "conferences/blackhat/2026/august/briefings"
+                localPath: "conferences/blackhat/2026/august/briefings",
+                videoUrl: "https://www.youtube.com/watch?v=LZkdihOzfe4"
             },
             {
                 name: "Black Hat USA",

@@ -76,4 +76,12 @@
 
 ![Exfil Everything - Bug Bounty Village DEF CON 34](signal-2026-08-09-17-52-27-185_002.jpg)
 
+![Exfil Everything - Ads & Tak on stage with closing slide](WhatsApp_Image_2026-08-08_at_14.43.56.jpeg)
+
+![Exfil Everything - Ads & Tak presenting at the podium](WhatsApp_Image_2026-08-08_at_14.43.55.jpeg)
+
+![Exfil Everything - Ads & Tak at the podium](WhatsApp_Image_2026-08-08_at_14.43.55_1.jpeg)
+
+![Exfil Everything - Ads & Tak at Bug Bounty Village](IMG_5907.jpg)
+
 ------------------------------

@@ -245,7 +245,8 @@ conferenceOrgs.forEach(org => {
         icon: subPath.icon || orgConfig.icon,
         description: description,
         ...(org.id === 'antisyphon' && subPath.year === '2026' ? { videoUrl: "https://www.youtube.com/watch?v=oi9PMp4OkLU" } : {}),
-        ...(org.id === 'defcon' && subPath.year === '2025' ? { videoUrl: "https://www.youtube.com/watch?v=yxqGAtUR8fY" } : {})
+        ...(org.id === 'defcon' && subPath.year === '2025' ? { videoUrl: "https://www.youtube.com/watch?v=yxqGAtUR8fY" } : {}),
+        ...(org.id === 'blackhat' && subPath.path.includes('briefings') ? { videoUrl: "https://www.youtube.com/watch?v=LZkdihOzfe4" } : {})
       });
     });
   } else {

@@ -60,6 +60,7 @@ const conferences = [
         localPath: "conferences/blackhat/2026/august/briefings",
         type: "conference",
         date: "2026-08-06",
+        videoUrl: "https://www.youtube.com/watch?v=LZkdihOzfe4",
         featured: true
     },
     {

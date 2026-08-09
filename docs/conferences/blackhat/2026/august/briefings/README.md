@@ -26,5 +26,12 @@
 ![Black Hat USA 2026 - Kinetic Prompt Injection Briefing](blackhat-usa-2026-kinetic-prompt-injection.png)
 
 - 📄 **Slides (PDF)** [BH'26_Kinetic_Prompt_Injection.pptx.pdf](BH'26_Kinetic_Prompt_Injection.pptx.pdf)
+- 🎥 **Video (YouTube)** [Kinetic Prompt Injection: Agent Compromise With a Physical Blast Radius](https://www.youtube.com/watch?v=LZkdihOzfe4)
+
+![YouTube - Kinetic Prompt Injection title card](youtube-kinetic-prompt-injection-title.png)
+
+![YouTube - Kinetic Prompt Injection demo](youtube-kinetic-prompt-injection-demo.png)
+
+![YouTube - Kinetic Prompt Injection speakers on stage](youtube-kinetic-prompt-injection-speakers.png)
 
 ----------------------------------------
