@@ -63,6 +63,20 @@ const conferences = [
         featured: true
     },
     {
+        id: "blackhat-portswigger-2026",
+        name: "Black Hat USA",
+        displayName: "Black Hat USA 2026 - How Gareth Heyes Made Me $22K (PortSwigger Lightning Talk)",
+        year: "2026",
+        icon: "fas fa-hat-wizard",
+        description: "How Gareth Heyes Made Me $22K (PortSwigger Booth Lightning Talk)",
+        path: "blackhat",
+        subdir: "august/portswigger",
+        localPath: "conferences/blackhat/2026/august/portswigger",
+        type: "conference",
+        date: "2026-08-06",
+        featured: true
+    },
+    {
         id: "bugcrowd-the-hive-2026",
         name: "BugCrowd",
         displayName: "The Hive at Black Hat USA",
@@ -397,6 +411,20 @@ const conferences = [
         localPath: "conferences/defcon/2026/august/red_team_village",
         type: "conference",
         date: "2026-08-07",
+        featured: true
+    },
+    {
+        id: "ai-for-security-2026",
+        name: "AI for Security",
+        displayName: "AI for Security 2026 - Likely Spam: Voice Phishing With an AI Red Team Harness | GhostLine",
+        year: "2026",
+        icon: "fas fa-phone-alt",
+        description: "Likely Spam: Voice Phishing With an AI Red Team Harness | GhostLine",
+        path: "ai-for-security",
+        subdir: "august",
+        localPath: "conferences/ai-for-security/2026/august",
+        type: "conference",
+        date: "2026-08-04",
         featured: true
     },
     {

@@ -59,6 +59,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 localPath: "conferences/blackhat/2026/august/briefings"
             },
             {
+                name: "Black Hat USA",
+                displayName: "Black Hat USA 2026 - How Gareth Heyes Made Me $22K (PortSwigger Lightning Talk)",
+                year: "2026",
+                icon: "fas fa-hat-wizard",
+                description: "How Gareth Heyes Made Me $22K (PortSwigger Booth Lightning Talk)",
+                path: "blackhat",
+                subdir: "august/portswigger",
+                localPath: "conferences/blackhat/2026/august/portswigger"
+            },
+            {
                 name: "DC604",
                 displayName: "DC604 2023 - Hacker Summer Camp - Poisoning Web Training Data",
                 year: "2023",
@@ -397,6 +407,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 path: "defcon",
                 subdir: "august/red_team_village",
                 localPath: "conferences/defcon/2026/august/red_team_village"
+            },
+            {
+                name: "AI for Security",
+                displayName: "AI for Security 2026 - Likely Spam: Voice Phishing With an AI Red Team Harness | GhostLine",
+                year: "2026",
+                icon: "fas fa-phone-alt",
+                description: "Likely Spam: Voice Phishing With an AI Red Team Harness | GhostLine",
+                path: "ai-for-security",
+                subdir: "august",
+                localPath: "conferences/ai-for-security/2026/august"
             },
             {
                 name: "PromptorGTFO",

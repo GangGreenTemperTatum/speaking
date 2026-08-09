@@ -25,4 +25,6 @@
 
 ![Black Hat USA 2026 - Kinetic Prompt Injection Briefing](blackhat-usa-2026-kinetic-prompt-injection.png)
 
+- 📄 **Slides (PDF)** [BH'26_Kinetic_Prompt_Injection.pptx.pdf](BH'26_Kinetic_Prompt_Injection.pptx.pdf)
+
 ----------------------------------------

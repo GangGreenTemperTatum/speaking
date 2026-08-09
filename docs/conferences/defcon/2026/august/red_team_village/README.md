@@ -23,4 +23,6 @@
 
 ![Red Team Village - Is Red Teaming Dead? Panel - DEF CON 34](rtv-schedule-is-red-teaming-dead-panel.png)
 
+![Is Red Teaming Dead? - Red Team Village DEF CON 34](signal-2026-08-09-17-51-55-638_002.jpg)
+
 ----------------------------------------

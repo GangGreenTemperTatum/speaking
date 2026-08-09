@@ -49,6 +49,6 @@
 
 ---
 
-> **Status:** Schedule confirmed. Vibes unchecked.
+- 📄 **Slides (PDF)** [EXTERNAL - DEF CON 34 2026 OWASP Workshop - Pentesting AI Is Not a Vibe Check - Ads Dawson.pdf](<EXTERNAL - DEF CON 34 2026 OWASP Workshop - Pentesting AI Is Not a Vibe Check - Ads Dawson.pdf>)
 
 ------------------------------

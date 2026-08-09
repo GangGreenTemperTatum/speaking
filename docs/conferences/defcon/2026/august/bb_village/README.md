@@ -72,6 +72,8 @@
 
 ---
 
-> **Status:** CFP accepted. Schedule confirmed. Secrets being exfiltrated.
+- 📄 **Slides (PDF)** [[EXTERNAL] BBV Defcon 34 - Exfil Everything_ A Year of Stealing Data from AI Agents - Ads n Tak.pdf](<[EXTERNAL] BBV Defcon 34 - Exfil Everything_ A Year of Stealing Data from AI Agents - Ads n Tak.pdf>)
+
+![Exfil Everything - Bug Bounty Village DEF CON 34](signal-2026-08-09-17-52-27-185_002.jpg)
 
 ------------------------------

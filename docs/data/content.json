@@ -34,6 +34,14 @@
       "description": "Kinetic Prompt Injection: Agent Compromise With a Physical Blast Radius"
     },
     {
+      "id": "blackhat-portswigger-2026",
+      "name": "Black Hat USA",
+      "path": "blackhat/2026/august/portswigger",
+      "year": "2026",
+      "icon": "fas fa-hat-wizard",
+      "description": "How Gareth Heyes Made Me $22K (PortSwigger Booth Lightning Talk)"
+    },
+    {
       "id": "bugcrowd-2025-july-bugboss-2025",
       "name": "BugBoss",
       "path": "bugcrowd/2025/july/bugboss",
@@ -321,6 +329,14 @@
       "year": "2026",
       "icon": "fas fa-shield-alt",
       "description": "Upcoming webinar on why traditional WAFs miss AI-driven traffic and what to use instead"
+    },
+    {
+      "id": "ai-for-security-2026",
+      "name": "AI for Security",
+      "path": "ai-for-security/2026/august",
+      "year": "2026",
+      "icon": "fas fa-phone-alt",
+      "description": "Likely Spam: Voice Phishing With an AI Red Team Harness | GhostLine"
     }
   ],
   "podcasts": [

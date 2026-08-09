@@ -21,7 +21,7 @@ const conferenceOrgs = [
   { id: "antisyphon", subPaths: [{path: "2026/august/ai-cybersecurity-summit", year: "2026"}] },
   { id: "apidays", years: ["2023"] },
   { id: "apisec", years: ["2023"] },
-  { id: "blackhat", subPaths: [{path: "2026/august/briefings", year: "2026"}] },
+  { id: "blackhat", subPaths: [{path: "2026/august/briefings", year: "2026"}, {path: "2026/august/portswigger", year: "2026", id: "blackhat-portswigger-2026"}] },
   { id: "bugcrowd", subDirs: ["2025/july/bugboss", "2025/july/rhic", "2025/september/edprotect", "2025/september/rit", "2025/october/wraven", "2025/october/ut", "2025/october/cnu", { path: "2026/august/the-hive", year: "2026", id: "bugcrowd-2026-august-the-hive" }], years: ["2025"] },
   { id: "dc604", years: ["2023"] },
   { id: "defcon", subPaths: [{path: "2025/august/bb_village", year: "2025"}, {path: "2026/august/bb_village", year: "2026"}, {path: "2026/august/owasp_village", year: "2026", id: "defcon-owasp-village-2026", icon: "fas fa-shield-virus"}, {path: "2026/august/red_team_village", year: "2026", id: "defcon-red-team-village-2026", icon: "fas fa-crosshairs"}] },
@@ -37,7 +37,8 @@ const conferenceOrgs = [
   { id: "rsa-usa", years: ["2024", "2025"] },
   { id: "taico", subPaths: [{path: "2026/february", year: "2026"}] },
   { id: "national-academies", subPaths: [{path: "2026/april", year: "2026"}] },
-  { id: "wallarm", subPaths: [{path: "2026/may", year: "2026"}] }
+  { id: "wallarm", subPaths: [{path: "2026/may", year: "2026"}] },
+  { id: "ai-for-security", subPaths: [{path: "2026/august", year: "2026"}] }
 ];
 
 // Map directory names to display names and icons
@@ -62,7 +63,8 @@ const contentMap = {
   "rsa-usa": { name: "RSA Conference", icon: "fas fa-lock" },
   "taico": { name: "TAICO", icon: "fas fa-brain" },
   "national-academies": { name: "National Academies", icon: "fas fa-landmark" },
-  "wallarm": { name: "Wallarm", icon: "fas fa-shield-alt" }
+  "wallarm": { name: "Wallarm", icon: "fas fa-shield-alt" },
+  "ai-for-security": { name: "AI for Security", icon: "fas fa-phone-alt" }
 };
 
 // Create conference entries
@@ -223,7 +225,13 @@ conferenceOrgs.forEach(org => {
       } else if (org.id === 'antisyphon') {
         description = "Summit Keynote: Exfil Everything: A Year of Stealing Data from AI Agents";
       } else if (org.id === 'blackhat') {
-        description = "Kinetic Prompt Injection: Agent Compromise With a Physical Blast Radius";
+        if (subPath.path.includes('portswigger')) {
+          description = "How Gareth Heyes Made Me $22K (PortSwigger Booth Lightning Talk)";
+        } else {
+          description = "Kinetic Prompt Injection: Agent Compromise With a Physical Blast Radius";
+        }
+      } else if (org.id === 'ai-for-security') {
+        description = "Likely Spam: Voice Phishing With an AI Red Team Harness | GhostLine";
       }
 
       // Generate unique ID - use path-based ID for entries that share org+year
