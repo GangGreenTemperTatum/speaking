@@ -34,4 +34,12 @@
 
 ![YouTube - Kinetic Prompt Injection speakers on stage](youtube-kinetic-prompt-injection-speakers.png)
 
+![BT6 on stage with the Unitree Go2 robot dog](PXL_20260806_171647118.jpg)
+
+![Live robot dog demo on stage at Black Hat](PXL_20260806_172517906.jpg)
+
+![Embodied Compute Control Authority slide with robot dog on stage](PXL_20260806_172805413.jpg)
+
+![Pliny presenting firmware analysis with BT6 and robot dog](PXL_20260806_172955027.jpg)
+
 ----------------------------------------
