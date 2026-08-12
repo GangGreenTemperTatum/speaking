@@ -15,9 +15,16 @@
 
 This keynote covers a year of stealing data from AI agents: what worked, what failed, and what the security community should take away from offensive testing against agentic systems.
 
+### LinkedIn Event
+
+[![LinkedIn event screenshot](linkedin-event-screenshot.png)](https://www.linkedin.com/posts/black-hills-information-security-is-hosting-ugcPost-7493038650297966592-tiVQ/?utm_source=share&utm_medium=member_android&rcm=ACoAAA1p028B5AHnJgHCbLKDdcDTNnvyDWkUwzE)
+
+- **LinkedIn event post:** [BHIS & Antisyphon Training Presents Infosec: Age of AI Summit](https://www.linkedin.com/posts/black-hills-information-security-is-hosting-ugcPost-7493038650297966592-tiVQ/?utm_source=share&utm_medium=member_android&rcm=ACoAAA1p028B5AHnJgHCbLKDdcDTNnvyDWkUwzE)
+- **Local LinkedIn page archive:** [linkedin-event-bhis-antisyphon-ai-summit.html](linkedin-event-bhis-antisyphon-ai-summit.html)
+
 ### Materials
 
-- **Slides:** Not available yet
+- **Slides:** [Exfil Everything: A Year of Stealing Data from AI Agents](<[EXTERNAL] AntiSyphon INFOSEC_ AGE OF AI SUMMIT - Exfil Everything_ A Year of Stealing Data from AI Agents - Ads n Tak.pdf>)
 - **Promo video:** [YouTube](https://www.youtube.com/watch?v=oi9PMp4OkLU)
 - **Local keynote page PDF archive:** [Exfil Everything: Stealing Data From AI Agents](exfil-everything-stealing-data-from-ai-agents.pdf)
 - **Local summit page archive:** [ai-cybersecurity-summit-2026-page.html](ai-cybersecurity-summit-2026-page.html)
@@ -26,7 +33,8 @@ This keynote covers a year of stealing data from AI agents: what worked, what fa
 
 - **Summit page:** [AI Cybersecurity Summit 2026](https://learning.antisyphontraining.com/pages/ai-cybersecurity-summit)
 - **Keynote page:** [Summit Keynote: Exfil Everything: A Year of Stealing Data from AI Agents](https://learning.antisyphontraining.com/pages/summit-keynote-exfil-everything-a-year-of-stealing-data-from-ai-agents)
+- **LinkedIn event post:** [BHIS & Antisyphon Training Presents Infosec: Age of AI Summit](https://www.linkedin.com/posts/black-hills-information-security-is-hosting-ugcPost-7493038650297966592-tiVQ/?utm_source=share&utm_medium=member_android&rcm=ACoAAA1p028B5AHnJgHCbLKDdcDTNnvyDWkUwzE)
 - **Promo video:** [YouTube](https://www.youtube.com/watch?v=oi9PMp4OkLU)
 - **Local keynote page archive:** [summit-keynote-exfil-everything-a-year-of-stealing-data-from-ai-agents.html](summit-keynote-exfil-everything-a-year-of-stealing-data-from-ai-agents.html)
 
-> **Status:** Schedule confirmed. Local summit page capture, keynote page capture, keynote page PDF, and keynote graphic archived.
+> **Status:** Schedule confirmed. Slides, LinkedIn event capture, local summit page capture, keynote page capture, keynote page PDF, and keynote graphic archived.
