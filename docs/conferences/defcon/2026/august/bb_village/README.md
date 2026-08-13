@@ -84,4 +84,20 @@
 
 ![Exfil Everything - Ads & Tak at Bug Bounty Village](IMG_5907.jpg)
 
+![BBV Panel - NahamSec DEF CON Vlog](nahamsec-defcon-vlog-bbv-panel.png)
+
+- 🎥 **NahamSec DEF CON Vlog:** [I Went to the World's Biggest Hacker Conference (DEFCON VLOG)](https://www.youtube.com/watch?v=4QQnW170C5g)
+
+### NahamSec Photos - Bug Bounty Village
+
+![Exfil Everything - Ads & Tak presenting on stage](day-2-nahamsec-photo.jpg)
+
+![Exfil Everything - Ads & Tak at the podium close-up](day-2-nahamsec-photo-2.jpg)
+
+![Bots, Bounties, and Bullshit panel - panelists on couches](day-2-nahamsec-photo-3.jpg)
+
+![BBV panel - Ads speaking with panelists](day-2-nahamsec-photo-6.jpg)
+
+![BBV panel - group photo with panelists](day-2-nahamsec-photo-14.jpg)
+
 ------------------------------
