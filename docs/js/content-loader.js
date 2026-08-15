@@ -787,6 +787,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 year: "2025"
             },
             {
+                title: "The Hacker Culture Manual",
+                publisher: "BugCrowd",
+                description: "Bugcrowd's Hacker Culture Manual celebrates hacker culture and includes Ads Dawson among the contributing hackers featured in the manual.",
+                url: "https://www.bugcrowd.com/blog/the-hacker-culture-manual/",
+                icon: "fas fa-bug",
+                year: "2026"
+            },
+            {
                 title: "arXiv:2511.15097 - MAIF: Enforcing AI Trust and Provenance with an Artifact-Centric Agentic Paradigm",
                 publisher: "arXiv",
                 description: "Academic paper on enforcing AI trust and provenance through an artifact-centric agentic paradigm for robust AI system accountability.",

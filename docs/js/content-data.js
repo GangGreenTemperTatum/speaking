@@ -1001,6 +1001,18 @@ const publications = [
         featured: true
     },
     {
+        id: "bugcrowd-hacker-culture-manual-2026",
+        title: "The Hacker Culture Manual",
+        publisher: "BugCrowd",
+        description: "Bugcrowd's Hacker Culture Manual celebrates hacker culture and includes Ads Dawson among the contributing hackers featured in the manual.",
+        url: "https://www.bugcrowd.com/blog/the-hacker-culture-manual/",
+        icon: "fas fa-bug",
+        year: "2026",
+        type: "publication",
+        date: "2026-08-03",
+        featured: true
+    },
+    {
         id: "arxiv-maif-2025",
         title: "arXiv:2511.15097 - MAIF: Enforcing AI Trust and Provenance",
         publisher: "arXiv",

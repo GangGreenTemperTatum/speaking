@@ -526,6 +526,16 @@ const publications = [
     year: "2025"
   },
   {
+    id: "bugcrowd-hacker-culture-manual-2026",
+    title: "The Hacker Culture Manual",
+    publisher: "BugCrowd",
+    description: "Bugcrowd's Hacker Culture Manual celebrates hacker culture and includes Ads Dawson among the contributing hackers featured in the manual.",
+    url: "https://www.bugcrowd.com/blog/the-hacker-culture-manual/",
+    icon: "fas fa-bug",
+    external: true,
+    year: "2026"
+  },
+  {
     id: "bugcrowd-itmoah-2026",
     title: "Inside the Mind of a Hacker 2026",
     publisher: "BugCrowd",
