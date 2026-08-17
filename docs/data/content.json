@@ -420,6 +420,14 @@
       "year": "2026",
       "icon": "fas fa-broadcast-tower",
       "description": "BHIS live newscast — discussing the latest infosec news and developments"
+    },
+    {
+      "id": "podcasts-in_the_wild-2026",
+      "name": "In the Wild",
+      "path": "podcasts/in_the_wild",
+      "year": "2026",
+      "icon": "fas fa-crosshairs",
+      "description": "Ep. 2: The Bungee Cord Was the Safety Plan — bug bounty, AI hacking, and building the OWASP LLM Application Cybersecurity Project"
     }
   ],
   "publications": [

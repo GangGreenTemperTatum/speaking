@@ -596,6 +596,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 icon: "fas fa-broadcast-tower",
                 description: "BHIS live newscast — discussing the latest infosec news and developments",
                 path: "talkin_bout_infosec_news"
+            },
+            {
+                name: "In the Wild",
+                year: "2026",
+                icon: "fas fa-crosshairs",
+                description: "Ep. 2: The Bungee Cord Was the Safety Plan — bug bounty, AI hacking, and building the OWASP LLM Application Cybersecurity Project",
+                path: "in_the_wild"
             }
         ];
 

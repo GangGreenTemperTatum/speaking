@@ -779,6 +779,17 @@ const podcasts = [
         type: "podcast",
         date: "2026-07-27",
         featured: true
+    },
+    {
+        id: "in-the-wild-2026",
+        name: "In the Wild",
+        year: "2026",
+        icon: "fas fa-crosshairs",
+        description: "Ep. 2: The Bungee Cord Was the Safety Plan — bug bounty, AI hacking, and building the OWASP LLM Application Cybersecurity Project",
+        path: "in_the_wild",
+        type: "podcast",
+        date: "2026-08-17",
+        featured: true
     }
 ];
 
