@@ -291,34 +291,35 @@ const podcastPaths = [
   { path: 'podcasts/owasp/owasp-llm-apps-podcast', name: 'OWASP LLM Apps Podcast', icon: 'fas fa-shield-virus', year: '2025' },
   { path: 'podcasts/software_testing_and_quality_talks', name: 'Software Testing & Quality Talks', icon: 'fas fa-check-circle', year: '2024' },
   { path: 'podcasts/synack', name: 'Synack Podcast', icon: 'fas fa-bug', year: '2023' },
-  { path: 'podcasts/critical_thinking_bug_bounty_podcast', name: 'Critical Thinking - Bug Bounty Podcast', icon: 'fas fa-brain', year: '2026' },
+  { path: 'podcasts/critical_thinking_bug_bounty_podcast', name: 'Critical Thinking - Bug Bounty Podcast', icon: 'fas fa-brain', year: '2026', description: 'HackerNotes Ep. 184 — Hackbots at Scale: Smaller Models, Bigger Signal' },
+  { path: 'podcasts/critical_thinking_bug_bounty_podcast', name: 'Critical Thinking - Bug Bounty Podcast', icon: 'fas fa-brain', year: '2026', id: 'critical-thinking-bbp-ep188-2026', description: 'Ep. 188: DEFCON 34 Hotel Room Debrief — live from DEF CON with Gr3pme, BusFactor, and 7urb01' },
   { path: 'podcasts/talkin_bout_infosec_news', name: "BHIS - Talkin' Bout Infosec News", icon: 'fas fa-broadcast-tower', year: '2026' },
   { path: 'podcasts/in_the_wild', name: 'In the Wild', icon: 'fas fa-crosshairs', year: '2026' }
 ];
 
 // Add podcast entries
 podcastPaths.forEach(podcast => {
-  let description = 'Discussion about AI and ML security';
-  if (podcast.name.includes('MLOps')) {
-    description = 'Exploring the intersection of MLOps and security';
-  } else if (podcast.name.includes('ChAI')) {
-    description = 'Conversations on AI ethics and security challenges';
-  } else if (podcast.name.includes('Critical Thinking')) {
-    description = 'HackerNotes Ep. 184 — Hackbots at Scale: Smaller Models, Bigger Signal';
-  } else if (podcast.name.includes("Talkin")) {
-    description = "BHIS live newscast — discussing the latest infosec news and developments";
-  } else if (podcast.name.includes('In the Wild')) {
-    description = 'Ep. 2: The Bungee Cord Was the Safety Plan — bug bounty, AI hacking, and building the OWASP LLM Application Cybersecurity Project';
-  } else if (podcast.name.includes('OWASP')) {
-    if (podcast.year === '2025') {
-      description = 'Sandboxing AI Models with Dyana & OWASP Top 10 for LLM Apps - Ep.4';
-    } else {
-      description = 'Security considerations for LLM applications';
+  let description = podcast.description || 'Discussion about AI and ML security';
+  if (!podcast.description) {
+    if (podcast.name.includes('MLOps')) {
+      description = 'Exploring the intersection of MLOps and security';
+    } else if (podcast.name.includes('ChAI')) {
+      description = 'Conversations on AI ethics and security challenges';
+    } else if (podcast.name.includes("Talkin")) {
+      description = "BHIS live newscast — discussing the latest infosec news and developments";
+    } else if (podcast.name.includes('In the Wild')) {
+      description = 'Ep. 2: The Bungee Cord Was the Safety Plan — bug bounty, AI hacking, and building the OWASP LLM Application Cybersecurity Project';
+    } else if (podcast.name.includes('OWASP')) {
+      if (podcast.year === '2025') {
+        description = 'Sandboxing AI Models with Dyana & OWASP Top 10 for LLM Apps - Ep.4';
+      } else {
+        description = 'Security considerations for LLM applications';
+      }
     }
   }
 
   content.podcasts.push({
-    id: `${podcast.path.replace(/\//g, '-')}-${podcast.year}`,
+    id: podcast.id || `${podcast.path.replace(/\//g, '-')}-${podcast.year}`,
     name: podcast.name,
     path: podcast.path,
     year: podcast.year,

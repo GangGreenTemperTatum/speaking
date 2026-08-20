@@ -770,6 +770,17 @@ const podcasts = [
         featured: true
     },
     {
+        id: "critical-thinking-bbp-ep188-2026",
+        name: "Critical Thinking - Bug Bounty Podcast",
+        year: "2026",
+        icon: "fas fa-brain",
+        description: "Ep. 188: DEFCON 34 Hotel Room Debrief — live from DEF CON with Gr3pme, BusFactor, and 7urb01",
+        path: "critical_thinking_bug_bounty_podcast",
+        type: "podcast",
+        date: "2026-08-20",
+        featured: true
+    },
+    {
         id: "bhis-talkin-bout-infosec-2026",
         name: "BHIS - Talkin' Bout Infosec News",
         year: "2026",

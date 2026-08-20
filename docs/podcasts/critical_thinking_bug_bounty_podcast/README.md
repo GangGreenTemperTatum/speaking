@@ -1,5 +1,32 @@
 # [Critical Thinking - Bug Bounty Podcast](https://www.youtube.com/@criticalthinkingpodcast)
 
+## Ep. 188: DEFCON 34 Hotel Room Debrief | [Episode Link](https://www.criticalthinkingpodcast.io/defcon-34-hotel-room-debrief/)
+
+- **Episode:** Episode 188 — DEFCON 34 Hotel Room Debrief
+- **Date:** August 2026
+- **Hosts:** Gr3pme, BusFactor
+- **Guests:** 7urb01, Ads Dawson
+- **Duration:** 41 min 47 sec
+- **Abstract:**
+
+  Live from DEF CON 34 — Gr3pme and BusFactor grab some hackers for a hotel room debrief to recap the event and discuss top bugs discovered, talks presented, and key takeaways from the conference.
+
+  Episode Timestamps
+
+  - **(00:00:00)** Introduction
+  - **(00:03:45)** DEFCON Event Reactions and Takeaways
+  - **(00:12:56)** Bus & Turbo Talk Overviews
+  - **(00:21:53)** Event Bugs
+
+- 🍿 **Watch on YouTube** [Ep. 188: DEFCON 34 Hotel Room Debrief](https://www.youtube.com/watch?v=MmLGWGSV8lg)
+- 🎧 **Listen on Spotify** [Ep. 188: DEFCON 34 Hotel Room Debrief](https://open.spotify.com/episode/0OsYXBZ4Cv92AhlSZvZOAD)
+- 🍎 **Listen on Apple Podcasts** [Ep. 188: DEFCON 34 Hotel Room Debrief](https://podcasts.apple.com/us/podcast/episode-188-defcon-34-hotel-room-debrief/id1663945029?i=1000784510447)
+- 🌐 **Episode Page (HTML)** [ctbb-ep188-defcon-34-hotel-room-debrief.html](ctbb-ep188-defcon-34-hotel-room-debrief.html)
+
+![Critical Thinking Bug Bounty Podcast - Episode 188 on YouTube](ctbb-ep188-youtube.png)
+
+----------------------------------------
+
 ## HackerNotes Ep. 184: Hackbots at Scale with Ads Dawson — Smaller Models, Bigger Signal | [Episode Link](https://blog.criticalthinkingpodcast.io/p/hackernotes-ep-184-hackbots-at-scale-with-ads-dawson-smaller-models-bigger-signal)
 
 - **Episode:** HackerNotes Ep. 184 — Hackbots at Scale with Ads Dawson: Smaller Models, Bigger Signal

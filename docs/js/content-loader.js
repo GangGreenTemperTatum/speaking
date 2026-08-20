@@ -591,6 +591,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 path: "critical_thinking_bug_bounty_podcast"
             },
             {
+                name: "Critical Thinking - Bug Bounty Podcast",
+                year: "2026",
+                icon: "fas fa-brain",
+                description: "Ep. 188: DEFCON 34 Hotel Room Debrief — live from DEF CON with Gr3pme, BusFactor, and 7urb01",
+                path: "critical_thinking_bug_bounty_podcast"
+            },
+            {
                 name: "BHIS - Talkin' Bout Infosec News",
                 year: "2026",
                 icon: "fas fa-broadcast-tower",
