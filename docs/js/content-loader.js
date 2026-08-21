@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 path: "antisyphon",
                 subdir: "2026/august/ai-cybersecurity-summit",
                 localPath: "conferences/antisyphon/2026/august/ai-cybersecurity-summit",
-                videoUrl: "https://www.youtube.com/watch?v=oi9PMp4OkLU"
+                videoUrl: "https://www.youtube.com/live/66xD4K6eeB0"
             },
             {
                 name: "API Days",
