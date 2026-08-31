@@ -338,6 +338,14 @@
       "year": "2026",
       "icon": "fas fa-phone-alt",
       "description": "Likely Spam: Voice Phishing With an AI Red Team Harness | GhostLine"
+    },
+    {
+      "id": "offensiveaicon-2026",
+      "name": "Offensive AI Conference",
+      "path": "offensiveaicon/2026/october",
+      "year": "2026",
+      "icon": "fas fa-robot",
+      "description": "All Models Cheat: Prompt-Level Mitigation of Cheating on Offensive Cyber Tasks"
     }
   ],
   "podcasts": [

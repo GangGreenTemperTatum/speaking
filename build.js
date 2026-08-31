@@ -38,7 +38,8 @@ const conferenceOrgs = [
   { id: "taico", subPaths: [{path: "2026/february", year: "2026"}] },
   { id: "national-academies", subPaths: [{path: "2026/april", year: "2026"}] },
   { id: "wallarm", subPaths: [{path: "2026/may", year: "2026"}] },
-  { id: "ai-for-security", subPaths: [{path: "2026/august", year: "2026"}] }
+  { id: "ai-for-security", subPaths: [{path: "2026/august", year: "2026"}] },
+  { id: "offensiveaicon", subPaths: [{path: "2026/october", year: "2026"}] }
 ];
 
 // Map directory names to display names and icons
@@ -64,7 +65,8 @@ const contentMap = {
   "taico": { name: "TAICO", icon: "fas fa-brain" },
   "national-academies": { name: "National Academies", icon: "fas fa-landmark" },
   "wallarm": { name: "Wallarm", icon: "fas fa-shield-alt" },
-  "ai-for-security": { name: "AI for Security", icon: "fas fa-phone-alt" }
+  "ai-for-security": { name: "AI for Security", icon: "fas fa-phone-alt" },
+  "offensiveaicon": { name: "Offensive AI Conference", icon: "fas fa-robot" }
 };
 
 // Create conference entries
@@ -232,6 +234,8 @@ conferenceOrgs.forEach(org => {
         }
       } else if (org.id === 'ai-for-security') {
         description = "Likely Spam: Voice Phishing With an AI Red Team Harness | GhostLine";
+      } else if (org.id === 'offensiveaicon') {
+        description = "All Models Cheat: Prompt-Level Mitigation of Cheating on Offensive Cyber Tasks";
       }
 
       // Generate unique ID - use path-based ID for entries that share org+year

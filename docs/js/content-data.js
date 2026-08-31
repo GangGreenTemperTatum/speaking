@@ -429,6 +429,20 @@ const conferences = [
         featured: true
     },
     {
+        id: "offensiveaicon-2026",
+        name: "Offensive AI Conference",
+        displayName: "Offensive AI Conference 2026 - All Models Cheat: Prompt-Level Mitigation of Cheating on Offensive Cyber Tasks",
+        year: "2026",
+        icon: "fas fa-robot",
+        description: "All Models Cheat: Prompt-Level Mitigation of Cheating on Offensive Cyber Tasks",
+        path: "offensiveaicon",
+        subdir: "october",
+        localPath: "conferences/offensiveaicon/2026/october",
+        type: "conference",
+        date: "2026-10-05",
+        featured: true
+    },
+    {
         id: "promptorgtfo-2025",
         name: "PromptorGTFO",
         displayName: "PromptorGTFO 2025",

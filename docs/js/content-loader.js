@@ -420,6 +420,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 localPath: "conferences/ai-for-security/2026/august"
             },
             {
+                name: "Offensive AI Conference",
+                displayName: "Offensive AI Conference 2026 - All Models Cheat: Prompt-Level Mitigation of Cheating on Offensive Cyber Tasks",
+                year: "2026",
+                icon: "fas fa-robot",
+                description: "All Models Cheat: Prompt-Level Mitigation of Cheating on Offensive Cyber Tasks",
+                path: "offensiveaicon",
+                subdir: "october",
+                localPath: "conferences/offensiveaicon/2026/october"
+            },
+            {
                 name: "PromptorGTFO",
                 displayName: "PromptorGTFO 2025 - Deploying Offensive AI with Modular Agents",
                 year: "2025",
