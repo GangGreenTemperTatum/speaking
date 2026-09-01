@@ -31,7 +31,7 @@ const conferenceOrgs = [
   { id: "isc2", years: ["2025"] },
   { id: "lakera", subPaths: [{path: "december/2023", year: "2023"}, {path: "april/2024", year: "2024"}] },
   { id: "mako-lab", years: ["2023", "2024"] },
-  { id: "mlopscommunity", years: ["2024"] },
+  { id: "mlopscommunity", subPaths: [{path: "2024/february", year: "2024"}, {path: "2026/september", year: "2026"}] },
   { id: "offbyonesecurity", subPaths: [{path: "2025/july", year: "2025"}] },
   { id: "owasp", subDirs: [{name: "owasp-cairo", years: ["2025"]}, {name: "owasp-toronto", subPaths: [{path: "2024/june", year: "2024"}, {path: "2025/march", year: "2025"}, {path: "2025/september", year: "2025"}]}, {name: "owasp-vancouver", years: ["2023"]}, {name: "owasp-atlanta", years: ["2025"]}, {name: "owasp-llm-apps", subPaths: [{path: "2025/march", year: "2025"}, {path: "2025/october", year: "2025"}]}] },
   { id: "rsa-usa", years: ["2024", "2025"] },
@@ -236,6 +236,12 @@ conferenceOrgs.forEach(org => {
         description = "Likely Spam: Voice Phishing With an AI Red Team Harness | GhostLine";
       } else if (org.id === 'offensiveaicon') {
         description = "All Models Cheat: Prompt-Level Mitigation of Cheating on Offensive Cyber Tasks";
+      } else if (org.id === 'mlopscommunity') {
+        if (subPath.year === '2024') {
+          description = "AI in Production - MLOps Security and Privacy Panel";
+        } else if (subPath.year === '2026') {
+          description = "Coding Agents Lunch & Learn Session 23: What's New in Coding Agents?";
+        }
       }
 
       // Generate unique ID - use path-based ID for entries that share org+year
@@ -269,8 +275,6 @@ conferenceOrgs.forEach(org => {
         } else if (year === '2024') {
           description = "Decoding OWASP Large Language Model Security Verification Standard (LLMSVS)";
         }
-      } else if (org.id === 'mlopscommunity') {
-        description = "AI in Production - MLOps Security and Privacy Panel";
       }
 
       content.conferences.push({

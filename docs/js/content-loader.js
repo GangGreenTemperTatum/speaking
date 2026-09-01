@@ -229,6 +229,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 localPath: "conferences/mlopscommunity/2024/february"
             },
             {
+                name: "MLOps Community",
+                displayName: "Coding Agents Lunch & Learn Session 23: What's New in Coding Agents?",
+                year: "2026",
+                icon: "fas fa-cogs",
+                description: "Coding Agents Lunch & Learn Session 23: What's New in Coding Agents?",
+                path: "mlopscommunity",
+                subdir: "september",
+                localPath: "conferences/mlopscommunity/2026/september"
+            },
+            {
                 name: "OWASP",
                 displayName: "OWASP LLM Apps - Sandboxing AI Models with Dyana & OWASP Top 10 for LLM Apps - Ep.4",
                 year: "2025",

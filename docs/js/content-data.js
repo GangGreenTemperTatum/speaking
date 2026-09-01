@@ -260,6 +260,20 @@ const conferences = [
         featured: true
     },
     {
+        id: "mlopscommunity-2026",
+        name: "MLOps Community",
+        displayName: "Coding Agents Lunch & Learn Session 23: What's New in Coding Agents?",
+        year: "2026",
+        icon: "fas fa-cogs",
+        description: "Coding Agents Lunch & Learn Session 23: What's New in Coding Agents?",
+        path: "mlopscommunity",
+        subdir: "september",
+        localPath: "conferences/mlopscommunity/2026/september",
+        type: "conference",
+        date: "2026-09-04",
+        featured: true
+    },
+    {
         id: "owasp-toronto-march-2025",
         name: "OWASP Toronto",
         displayName: "OWASP Toronto - Shiny Rocks in Offensive AI",

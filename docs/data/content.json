@@ -214,10 +214,18 @@
     {
       "id": "mlopscommunity-2024",
       "name": "MLOps Community",
-      "path": "mlopscommunity",
+      "path": "mlopscommunity/2024/february",
       "year": "2024",
       "icon": "fas fa-cogs",
       "description": "AI in Production - MLOps Security and Privacy Panel"
+    },
+    {
+      "id": "mlopscommunity-2026",
+      "name": "MLOps Community",
+      "path": "mlopscommunity/2026/september",
+      "year": "2026",
+      "icon": "fas fa-cogs",
+      "description": "Coding Agents Lunch & Learn Session 23: What's New in Coding Agents?"
     },
     {
       "id": "offbyonesecurity-2025",
