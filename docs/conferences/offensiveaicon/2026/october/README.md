@@ -31,6 +31,8 @@
   - **Duration:** 25 mins
   - **Abstract:** This work presents a controlled study of cheating behavior in LLM agents on a well-known cybersecurity benchmark. We test 22 frontier models from 7 vendors on 23 Cybench CTF challenges under three anti-cheat prompt conditions, auditing all 1,518 task traces for cheating. We find cheating is far more pervasive than prior estimates: 37.1% of passes involved cheating under baseline conditions, 21 of 22 models cheated, and scores were inflated by up to 5x. Anti-cheat prompts reduce cheating substantially but cannot eliminate it.
 
+![all-models-cheat-prompt-level-mitigation-of-cheat_kouremetis-dheekonda-dawson-greunke_1291631_banner.jpeg](all-models-cheat-prompt-level-mitigation-of-cheat_kouremetis-dheekonda-dawson-greunke_1291631_banner.jpeg)
+
 ![Offensive AI Conference 2026 schedule](offensiveaicon-2026-schedule.png)
 
 ![Offensive AI Conference 2026 talk details - All Models Cheat](offensiveaicon-2026-talk-details.png)
