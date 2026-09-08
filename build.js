@@ -1,6 +1,7 @@
 const fs = require('fs-extra');
 const path = require('path');
 const glob = require('glob');
+const runtimeContent = require('./docs/js/content-data.js');
 
 const DOCS_DIR = path.join(__dirname, 'docs');
 const OUTPUT_FILE = path.join(DOCS_DIR, 'data', 'content.json');
@@ -13,7 +14,8 @@ const content = {
   conferences: [],
   podcasts: [],
   publications: [],
-  achievements: []
+  achievements: [],
+  cves: runtimeContent.cves
 };
 
 // Process conferences

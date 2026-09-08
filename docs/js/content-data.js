@@ -1467,6 +1467,60 @@ const television = [
     }
 ];
 
+// CVE records
+const cves = [
+    {
+        id: "cve-2026-86490",
+        cveId: "CVE-2026-86490",
+        title: "CVE-2026-86490 — JetBrains YouTrack",
+        organization: "JetBrains",
+        product: "YouTrack",
+        description: "In JetBrains YouTrack before 2026.2.18634 improper permission checks allowed overwriting of bundled apps via the app import endpoint",
+        reportContext: "The report showed that a low-privilege user with only Update Project permission could overwrite bundled JetBrains apps through POST /api/admin/apps/import at ../project-obsidian-md/bounties/jetbrains*.",
+        researcher: "Ads Dawson",
+        url: "cves.html?id=cve-2026-86490",
+        reportUrl: "https://hackerone.com/reports/3692256",
+        state: "PUBLISHED",
+        year: "2026",
+        date: "2026-09-07",
+        dateReserved: "2026-09-07T16:13:36.999Z",
+        datePublished: "2026-09-07T16:26:45.420Z",
+        dateUpdated: "2026-09-08T10:35:02.522Z",
+        affectedVersion: "before 2026.2.18634",
+        unaffectedFrom: "2026.2.18634",
+        cwe: "CWE-863",
+        cvss: {
+            version: "3.1",
+            score: 6.5,
+            severity: "MEDIUM",
+            vector: "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+            attackVector: "NETWORK",
+            attackComplexity: "LOW",
+            privilegesRequired: "LOW",
+            userInteraction: "NONE",
+            scope: "UNCHANGED",
+            confidentiality: "NONE",
+            integrity: "HIGH",
+            availability: "NONE"
+        },
+        cisaEnrichment: {
+            exploitation: "none",
+            automatable: "no",
+            technicalImpact: "partial",
+            timestamp: "2026-09-08T10:21:53.974548Z"
+        },
+        references: [
+            { label: "CVE record", url: "https://www.cve.org/CVERecord?id=CVE-2026-86490" },
+            { label: "MITRE CVE JSON", url: "https://cveawg.mitre.org/api/cve/CVE-2026-86490" },
+            { label: "JetBrains security advisories", url: "https://www.jetbrains.com/privacy-security/issues-fixed/" },
+            { label: "Original HackerOne report", url: "https://hackerone.com/reports/3692256" }
+        ],
+        icon: "fas fa-shield-halved",
+        type: "cve",
+        featured: true
+    }
+];
+
 // Zone configuration
 const zones = {
     conference: {
@@ -1510,7 +1564,8 @@ function getFeaturedContent() {
         podcasts: podcasts.filter(p => p.featured).sort(sortByDate).slice(0, 5),
         publications: publications.filter(p => p.featured).sort(sortByDate).slice(0, 8),
         volunteering: volunteering.filter(v => v.featured),
-        television: television.filter(t => t.featured)
+        television: television.filter(t => t.featured),
+        cves: cves.filter(c => c.featured).sort(sortByDate)
     };
 }
 
@@ -1524,7 +1579,7 @@ function getRandomFeaturedItem(zoneType) {
 
 // Get content by ID
 function getContentById(id) {
-    const allContent = [...conferences, ...podcasts, ...publications, ...volunteering, ...television];
+    const allContent = [...conferences, ...podcasts, ...publications, ...volunteering, ...television, ...cves];
     return allContent.find(item => item.id === id);
 }
 
@@ -1536,6 +1591,7 @@ function getAllContent() {
         publications: publications.sort((a, b) => new Date(b.date) - new Date(a.date)),
         volunteering: volunteering.sort((a, b) => new Date(b.dateStart) - new Date(a.dateStart)),
         television: television.sort((a, b) => new Date(b.date) - new Date(a.date)),
+        cves: cves.sort((a, b) => new Date(b.date) - new Date(a.date)),
         achievements: achievements.sort((a, b) => new Date(b.date) - new Date(a.date))
     };
 }
@@ -1550,7 +1606,7 @@ function filterByYear(content, year) {
 function searchContent(query, contentType = 'all') {
     const allContent = getAllContent();
     const searchIn = contentType === 'all' ? 
-        [...allContent.conferences, ...allContent.podcasts, ...allContent.publications, ...allContent.volunteering, ...allContent.television, ...allContent.achievements] :
+        [...allContent.conferences, ...allContent.podcasts, ...allContent.publications, ...allContent.volunteering, ...allContent.television, ...allContent.cves, ...allContent.achievements] :
         allContent[contentType];
     
     const lowerQuery = query.toLowerCase();
@@ -1598,6 +1654,7 @@ if (typeof module !== 'undefined' && module.exports) {
         publications,
         volunteering,
         television,
+        cves,
         achievements,
         zones,
         getFeaturedContent,
@@ -1617,8 +1674,8 @@ if (typeof window !== 'undefined') {
         publications,
         volunteering,
         television,
+        cves,
         achievements,
-        zones,
         getFeaturedContent,
         getRandomFeaturedItem,
         getContentById,

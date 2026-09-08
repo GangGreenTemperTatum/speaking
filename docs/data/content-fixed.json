@@ -857,5 +857,69 @@
       "url": "https://hackerone.com/leaderboard/country?year=2026&country=US&tab=vdp&userTypeTab=individual",
       "localPath": "achievements/hackerone"
     }
+  ],
+  "cves": [
+    {
+      "id": "cve-2026-86490",
+      "cveId": "CVE-2026-86490",
+      "title": "CVE-2026-86490 — JetBrains YouTrack",
+      "organization": "JetBrains",
+      "product": "YouTrack",
+      "description": "In JetBrains YouTrack before 2026.2.18634 improper permission checks allowed overwriting of bundled apps via the app import endpoint",
+      "reportContext": "The report showed that a low-privilege user with only Update Project permission could overwrite bundled JetBrains apps through POST /api/admin/apps/import at ../project-obsidian-md/bounties/jetbrains*.",
+      "researcher": "Ads Dawson",
+      "url": "cves.html?id=cve-2026-86490",
+      "reportUrl": "https://hackerone.com/reports/3692256",
+      "state": "PUBLISHED",
+      "year": "2026",
+      "date": "2026-09-07",
+      "dateReserved": "2026-09-07T16:13:36.999Z",
+      "datePublished": "2026-09-07T16:26:45.420Z",
+      "dateUpdated": "2026-09-08T10:35:02.522Z",
+      "affectedVersion": "before 2026.2.18634",
+      "unaffectedFrom": "2026.2.18634",
+      "cwe": "CWE-863",
+      "cvss": {
+        "version": "3.1",
+        "score": 6.5,
+        "severity": "MEDIUM",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+        "attackVector": "NETWORK",
+        "attackComplexity": "LOW",
+        "privilegesRequired": "LOW",
+        "userInteraction": "NONE",
+        "scope": "UNCHANGED",
+        "confidentiality": "NONE",
+        "integrity": "HIGH",
+        "availability": "NONE"
+      },
+      "cisaEnrichment": {
+        "exploitation": "none",
+        "automatable": "no",
+        "technicalImpact": "partial",
+        "timestamp": "2026-09-08T10:21:53.974548Z"
+      },
+      "references": [
+        {
+          "label": "CVE record",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-86490"
+        },
+        {
+          "label": "MITRE CVE JSON",
+          "url": "https://cveawg.mitre.org/api/cve/CVE-2026-86490"
+        },
+        {
+          "label": "JetBrains security advisories",
+          "url": "https://www.jetbrains.com/privacy-security/issues-fixed/"
+        },
+        {
+          "label": "Original HackerOne report",
+          "url": "https://hackerone.com/reports/3692256"
+        }
+      ],
+      "icon": "fas fa-shield-halved",
+      "type": "cve",
+      "featured": true
+    }
   ]
 }
