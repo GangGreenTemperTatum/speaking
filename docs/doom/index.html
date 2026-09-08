@@ -230,6 +230,12 @@ canvas.emscripten { border: 0px none; background-color: black; }
         controls: 'Arrow keys move/turn; Ctrl fires; Space uses; Shift runs; F fullscreen'
       });
       window.advanceTime = (milliseconds) => new Promise(resolve => setTimeout(resolve, milliseconds));
+      document.addEventListener('keydown', event => {
+        if (event.key.toLowerCase() === 'f' && window.Module?.requestFullscreen) {
+          event.preventDefault();
+          window.Module.requestFullscreen(true, true);
+        }
+      });
     </script>
   </body>
 </html>
