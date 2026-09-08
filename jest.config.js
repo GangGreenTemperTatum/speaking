@@ -10,7 +10,8 @@ module.exports = {
         '!docs/js/main.js',
         '!docs/js/viewer.js',
         '!docs/js/game.js',
-        '!docs/js/modal.js'
+        '!docs/js/modal.js',
+        '!docs/js/cves.js'
     ],
     coverageThreshold: {
         global: {

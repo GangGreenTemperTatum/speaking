@@ -35,6 +35,7 @@ test.describe('Flappy Portfolio E2E Tests', () => {
         await expect(page.locator('[data-tab="publications"]')).toBeVisible();
         await expect(page.locator('[data-tab="volunteering"]')).toBeVisible();
         await expect(page.locator('[data-tab="television"]')).toBeVisible();
+        await expect(page.locator('[data-tab="cves"]')).toBeVisible();
     });
 
     test('should switch tabs when clicked', async ({ page }) => {
@@ -43,6 +44,14 @@ test.describe('Flappy Portfolio E2E Tests', () => {
         
         await page.click('[data-tab="publications"]');
         await expect(page.locator('[data-tab="publications"]')).toHaveClass(/active/);
+    });
+
+    test('should render the CVE collection card and local detail link', async ({ page }) => {
+        await page.click('[data-tab="cves"]');
+        const card = page.locator('.content-card').first();
+        await expect(card).toBeVisible();
+        await expect(card).toHaveAttribute('href', 'cves.html?id=cve-2026-86490');
+        await expect(card).toContainText('CVE-2026-86490');
     });
 
     test('should display content cards', async ({ page }) => {
@@ -103,6 +112,25 @@ test.describe('Content Viewer E2E Tests', () => {
 
     test('should have back button', async ({ page }) => {
         await page.goto(`${BASE_URL}/content-viewer.html?type=conference&org=apidays&year=2023`);
+        await expect(page.locator('.back-link')).toBeVisible();
+    });
+});
+
+test.describe('CVE Portfolio E2E Tests', () => {
+    test('should display the published CVE case file', async ({ page }) => {
+        await page.goto(`${BASE_URL}/cves.html?id=cve-2026-86490`);
+        await expect(page.locator('h1')).toHaveText('Published CVE records');
+        await expect(page.locator('.cve-entry h2')).toHaveText('CVE-2026-86490');
+        await expect(page.locator('.badge-severity')).toContainText('MEDIUM / 6.5');
+        await expect(page.locator('.cve-entry')).toContainText('CWE-863');
+        await expect(page.locator('a[href="https://hackerone.com/reports/3692256"]').first()).toBeVisible();
+    });
+
+    test('should adapt the CVE case file to a narrow viewport', async ({ page }) => {
+        await page.setViewportSize({ width: 375, height: 667 });
+        await page.goto(`${BASE_URL}/cves.html?id=cve-2026-86490`);
+        await expect(page.locator('.cve-entry')).toBeVisible();
+        expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
         await expect(page.locator('.back-link')).toBeVisible();
     });
 });

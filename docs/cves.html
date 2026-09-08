@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Published CVE records and security research by Ads Dawson.">
+    <title>CVE Portfolio | Ads Dawson</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/cves.css">
+</head>
+<body>
+    <header class="case-header">
+        <nav class="case-nav" aria-label="Primary">
+            <a class="back-link" href="index.html"><i class="fas fa-arrow-left" aria-hidden="true"></i> Back to portfolio</a>
+            <span class="brand-mark">ADS DAWSON <span>/</span> SECURITY RESEARCH</span>
+        </nav>
+        <div class="case-header-content">
+            <p class="eyebrow">Security research / case files</p>
+            <h1>Published CVE records</h1>
+            <p class="header-dek">A precise record of vulnerabilities disclosed through coordinated reporting, with the public CVE data and supporting disclosure references kept together.</p>
+            <div class="header-meta" role="group" aria-label="Collection summary">
+                <span id="cve-count">Loading records…</span>
+                <span>Updated as records are published</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="case-main">
+        <div id="cve-list" class="cve-list" aria-busy="true"></div>
+        <noscript>
+            <p class="empty-state">JavaScript is required to load the CVE records. Return to the <a href="index.html">main portfolio</a>.</p>
+        </noscript>
+    </main>
+
+    <footer class="case-footer">
+        <a href="index.html">Ads Dawson</a>
+        <span>Public record links open the authoritative source.</span>
+    </footer>
+
+    <script src="js/content-data.js"></script>
+    <script src="js/cves.js"></script>
+</body>
+</html>

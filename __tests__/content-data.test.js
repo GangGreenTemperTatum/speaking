@@ -11,6 +11,7 @@ describe('Content Data Module', () => {
         expect(contentData.publications).toBeDefined();
         expect(contentData.volunteering).toBeDefined();
         expect(contentData.television).toBeDefined();
+        expect(contentData.cves).toBeDefined();
     });
 
     test('should have correct number of conferences', () => {
@@ -35,6 +36,24 @@ describe('Content Data Module', () => {
 
     test('should have television entries', () => {
         expect(contentData.television.length).toBeGreaterThanOrEqual(1);
+    });
+
+    test('CVE records should preserve published severity and references', () => {
+        const [cve] = contentData.cves;
+        expect(cve.cveId).toBe('CVE-2026-86490');
+        expect(cve.year).toBe('2026');
+        expect(cve.cvss.score).toBe(6.5);
+        expect(cve.cvss.vector).toBe('CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N');
+        expect(cve.references).toEqual(expect.arrayContaining([
+            expect.objectContaining({ url: 'https://www.cve.org/CVERecord?id=CVE-2026-86490' }),
+            expect.objectContaining({ url: 'https://hackerone.com/reports/3692256' })
+        ]));
+    });
+
+    test('CVE records should be discoverable through collection helpers', () => {
+        expect(contentData.getContentById('cve-2026-86490').cveId).toBe('CVE-2026-86490');
+        expect(contentData.getFeaturedContent().cves).toHaveLength(1);
+        expect(contentData.searchContent('CVE-2026-86490', 'cves')).toHaveLength(1);
     });
 
     test('each conference should have required fields', () => {
@@ -84,7 +103,7 @@ describe('Content Data Module', () => {
 
     test('getAllContent should return all content', () => {
         const all = contentData.getAllContent();
-        expect(Object.keys(all)).toHaveLength(6);
+        expect(Object.keys(all).length).toBe(7);
         expect(all.conferences.length).toBe(contentData.conferences.length);
     });
 

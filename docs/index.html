@@ -440,6 +440,9 @@
                 <button class="tab-btn" data-tab="achievements">
                     <i class="fas fa-trophy"></i> Achievements
                 </button>
+                <button class="tab-btn" data-tab="cves">
+                    <i class="fas fa-shield-halved"></i> CVEs
+                </button>
             </div>
 
             <div class="filters">
@@ -807,10 +810,20 @@
                 publication: '#27ae60',
                 volunteering: '#e67e22',
                 television: '#e74c3c',
+                cve: '#b84a39',
                 achievement: '#f1c40f'
             };
             return colors[type] || '#3498db';
         }
+        function escapeHtml(value) {
+            return String(value ?? '')
+                .replaceAll('&', '&amp;')
+                .replaceAll('<', '&lt;')
+                .replaceAll('>', '&gt;')
+                .replaceAll('"', '&quot;')
+                .replaceAll("'", '&#039;');
+        }
+
 
         function renderContent() {
             const search = searchInput.value.toLowerCase();
@@ -850,11 +863,13 @@
                 const card = document.createElement('a');
                 card.className = 'content-card';
                 card.style.borderLeftColor = getColorForType(item.type);
-                
                 let url;
                 if (item.url) {
                     url = item.url;
-                    card.target = '_blank';
+                    if (/^https?:\/\//i.test(item.url)) {
+                        card.target = '_blank';
+                        card.rel = 'noopener noreferrer';
+                    }
                 } else {
                     const subdir = item.subdir || '';
                     url = `content-viewer.html?type=${item.type}&org=${item.path}&year=${item.year}`;
@@ -868,15 +883,15 @@
                 card.innerHTML = `
                     <div class="content-card-header">
                         <div class="content-card-icon" style="background: ${getColorForType(item.type)}">
-                            <i class="${icon}"></i>
+                            <i class="${escapeHtml(icon)}"></i>
                         </div>
-                        <span class="content-card-year">${item.year}</span>
+                        <span class="content-card-year">${escapeHtml(item.year)}</span>
                     </div>
-                    <h3>${title}</h3>
-                    <p>${item.description}</p>
+                    <h3>${escapeHtml(title)}</h3>
+                    <p>${escapeHtml(item.description)}</p>
                     <div class="content-card-meta">
-                        ${item.publisher ? `<span class="content-card-tag">${item.publisher}</span>` : ''}
-                        ${item.type ? `<span class="content-card-tag" style="background: ${getColorForType(item.type)}20; color: ${getColorForType(item.type)}">${item.type}</span>` : ''}
+                        ${item.publisher ? `<span class="content-card-tag">${escapeHtml(item.publisher)}</span>` : ''}
+                        ${item.type ? `<span class="content-card-tag" style="background: ${getColorForType(item.type)}20; color: ${getColorForType(item.type)}">${escapeHtml(item.type)}</span>` : ''}
                     </div>
                 `;
 
