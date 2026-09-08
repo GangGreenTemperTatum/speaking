@@ -1,0 +1,292 @@
+.homepage {
+    background: var(--paper) !important;
+    color: var(--ink) !important;
+    font-family: "Source Sans 3", sans-serif !important;
+}
+
+.homepage .site-header {
+    background: var(--ink) !important;
+    border-bottom: 1px solid color-mix(in oklch, var(--paper) 24%, transparent);
+    box-shadow: none !important;
+    color: var(--paper) !important;
+    padding: clamp(var(--space-5), 5vw, var(--space-7)) clamp(var(--space-5), 6vw, var(--space-8)) !important;
+    text-align: left !important;
+}
+
+.homepage .site-header h1 {
+    font-family: "Barlow Condensed", sans-serif !important;
+    font-size: clamp(3.4rem, 8vw, 7rem) !important;
+    letter-spacing: -0.035em;
+    line-height: 0.9;
+    margin: 0 auto var(--space-4) !important;
+    max-width: 1180px;
+    text-shadow: none !important;
+    text-transform: uppercase;
+}
+
+.homepage .site-header h1 span {
+    color: var(--accent) !important;
+    font-family: "Source Sans 3", sans-serif !important;
+    font-size: clamp(0.95rem, 2vw, 1.35rem) !important;
+    letter-spacing: 0.08em;
+    opacity: 1 !important;
+}
+
+.homepage .site-header p {
+    color: color-mix(in oklch, var(--paper) 78%, transparent) !important;
+    font-size: 1.02rem !important;
+    line-height: 1.5;
+    margin: 0 auto !important;
+    max-width: 1180px;
+}
+
+.homepage .site-header p[style] {
+    font-size: 0.82rem !important;
+    margin-top: var(--space-3) !important;
+}
+
+.homepage .site-header a {
+    color: #e6a092 !important;
+    text-decoration-thickness: 1px !important;
+    text-underline-offset: 3px;
+}
+
+.homepage .site-header a:hover {
+    color: var(--paper) !important;
+}
+
+.homepage .social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin: var(--space-5) auto 0 !important;
+    max-width: 1180px;
+}
+
+.homepage .social-links a {
+    color: var(--paper) !important;
+    font-size: 1.1rem !important;
+    margin: 0 !important;
+    opacity: 0.8;
+}
+
+.homepage .social-links a:hover,
+.homepage .social-links a:focus-visible {
+    color: var(--signal) !important;
+    opacity: 1;
+    transform: none !important;
+}
+
+.homepage .main-container {
+    align-items: start;
+    display: grid !important;
+    gap: clamp(var(--space-6), 5vw, var(--space-8)) !important;
+    grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.45fr) !important;
+    max-width: 1280px !important;
+    padding: clamp(var(--space-6), 6vw, var(--space-8)) clamp(var(--space-5), 6vw, var(--space-8)) !important;
+}
+
+.homepage .game-section,
+.homepage .content-section {
+    min-width: 0 !important;
+    max-width: none !important;
+}
+
+.homepage .game-section::before {
+    color: var(--accent);
+    content: "Arcade break / Flappy Bird";
+    display: block;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    margin-bottom: var(--space-3);
+    text-transform: uppercase;
+}
+
+.homepage .game-wrapper {
+    background: var(--ink) !important;
+    border: 1px solid var(--rule) !important;
+    border-radius: 0 !important;
+    box-shadow: 12px 12px 0 color-mix(in oklch, var(--accent) 10%, transparent) !important;
+}
+
+.homepage .game-overlay {
+    background: color-mix(in oklch, var(--ink) 78%, transparent) !important;
+}
+
+.homepage .content-section::before {
+    color: var(--accent);
+    content: "Portfolio / published work";
+    display: block;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    margin-bottom: var(--space-3);
+    text-transform: uppercase;
+}
+
+.homepage .content-tabs {
+    border-bottom: 1px solid var(--rule);
+    gap: var(--space-2) !important;
+    margin-bottom: var(--space-5) !important;
+    padding-bottom: var(--space-3);
+}
+
+.homepage .tab-btn {
+    background: var(--white) !important;
+    border: 1px solid var(--rule) !important;
+    border-radius: 0 !important;
+    color: var(--muted) !important;
+    font-family: "Barlow Condensed", sans-serif !important;
+    font-size: 0.95rem !important;
+    letter-spacing: 0.04em;
+    padding: 10px 14px !important;
+    text-transform: uppercase;
+}
+
+.homepage .tab-btn:hover,
+.homepage .tab-btn:focus-visible {
+    border-color: var(--accent) !important;
+    box-shadow: none !important;
+    color: var(--accent-dark) !important;
+    transform: none !important;
+}
+
+.homepage .tab-btn.active {
+    background: var(--ink) !important;
+    border-color: var(--ink) !important;
+    color: var(--paper) !important;
+}
+
+.homepage .filters {
+    gap: var(--space-3) !important;
+    margin-bottom: var(--space-5) !important;
+}
+
+.homepage .filters input,
+.homepage .filters select {
+    background: var(--white) !important;
+    border: 1px solid var(--rule) !important;
+    border-radius: 0 !important;
+    color: var(--ink) !important;
+    font-family: "Source Sans 3", sans-serif !important;
+    padding: 11px 14px !important;
+}
+
+.homepage .filters input::placeholder {
+    color: var(--muted) !important;
+}
+
+.homepage .filters select option {
+    background: var(--white) !important;
+    color: var(--ink) !important;
+}
+
+.homepage .content-grid {
+    gap: var(--space-4) !important;
+    max-height: 680px !important;
+    padding-right: var(--space-2) !important;
+}
+
+.homepage .content-card {
+    background: var(--white) !important;
+    border: 1px solid var(--rule) !important;
+    border-radius: 0 !important;
+    border-top: 4px solid var(--accent) !important;
+    box-shadow: none !important;
+    color: var(--ink) !important;
+    padding: var(--space-5) !important;
+}
+
+.homepage .content-card:hover,
+.homepage .content-card:focus-visible {
+    border-color: var(--accent) !important;
+    box-shadow: 6px 6px 0 color-mix(in oklch, var(--accent) 14%, transparent) !important;
+    transform: translateY(-2px) !important;
+}
+
+.homepage .content-card-icon {
+    border-radius: 0 !important;
+    width: 38px !important;
+    height: 38px !important;
+}
+
+.homepage .content-card-year,
+.homepage .content-card-tag {
+    background: var(--paper-deep) !important;
+    border-radius: 0 !important;
+    color: var(--muted) !important;
+}
+
+.homepage .content-card h3 {
+    color: var(--ink) !important;
+    font-family: "Barlow Condensed", sans-serif !important;
+    font-size: 1.5rem !important;
+    letter-spacing: 0.01em;
+    line-height: 1.05 !important;
+    text-transform: uppercase;
+}
+
+.homepage .content-card p {
+    color: var(--muted) !important;
+    font-size: 0.98rem !important;
+    line-height: 1.5 !important;
+}
+
+.homepage .empty-state {
+    color: var(--muted) !important;
+}
+
+.homepage .content-grid::-webkit-scrollbar-track {
+    background: var(--paper-deep) !important;
+    border-radius: 0 !important;
+}
+
+.homepage .content-grid::-webkit-scrollbar-thumb {
+    background: var(--rule) !important;
+    border-radius: 0 !important;
+}
+
+.homepage a:focus-visible,
+.homepage button:focus-visible,
+.homepage input:focus-visible,
+.homepage select:focus-visible {
+    outline: 3px solid var(--signal);
+    outline-offset: 3px;
+}
+
+@media (max-width: 968px) {
+    .homepage .main-container {
+        grid-template-columns: 1fr !important;
+    }
+
+    .homepage .game-section {
+        max-width: 600px !important;
+        width: 100%;
+    }
+}
+
+@media (max-width: 560px) {
+    .homepage .site-header h1 {
+        font-size: clamp(2.8rem, 14vw, 4.5rem) !important;
+    }
+
+    .homepage .filters {
+        flex-direction: column;
+    }
+
+    .homepage .filters select {
+        max-width: none !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .homepage *,
+    .homepage *::before,
+    .homepage *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
