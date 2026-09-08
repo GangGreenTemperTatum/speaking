@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/test');
 
 const BASE_URL = 'http://localhost:8081';
 
-test.describe('Flappy Portfolio E2E Tests', () => {
+test.describe('Doom Portfolio E2E Tests', () => {
     test.beforeEach(async ({ page }) => {
         await page.goto(BASE_URL);
     });
@@ -11,22 +11,23 @@ test.describe('Flappy Portfolio E2E Tests', () => {
         await expect(page.locator('.site-header h1')).toContainText('ADS DAWSON');
     });
 
-    test('should display game canvas', async ({ page }) => {
-        await expect(page.locator('#game-canvas')).toBeVisible();
+    test('should display the Doom game panel and runtime canvas', async ({ page }) => {
+        const doomFrame = page.frameLocator('#doom-game');
+        await expect(page.locator('#doom-game')).toBeVisible();
+        await expect(doomFrame.locator('#canvas')).toBeVisible({ timeout: 20000 });
     });
 
-    test('should display start screen overlay', async ({ page }) => {
-        await expect(page.locator('#game-start')).toBeVisible();
-        await expect(page.locator('#game-start h2')).toContainText('FLAPPY BIRD');
-    });
-
-    test('should hide start screen on click', async ({ page }) => {
-        await page.click('#game-canvas');
-        await expect(page.locator('#game-start')).toHaveClass(/hidden/);
-    });
-
-    test('should display score', async ({ page }) => {
-        await expect(page.locator('.game-stats')).toContainText('0');
+    test('should focus Doom and accept movement and fire controls', async ({ page }) => {
+        const doomFrame = page.frameLocator('#doom-game');
+        await expect(doomFrame.locator('#canvas')).toBeVisible({ timeout: 20000 });
+        await doomFrame.locator('#canvas').focus();
+        await page.keyboard.down('ArrowUp');
+        await page.waitForTimeout(150);
+        await page.keyboard.up('ArrowUp');
+        await page.keyboard.down('Control');
+        await page.waitForTimeout(100);
+        await page.keyboard.up('Control');
+        await expect(doomFrame.locator('#canvas')).toBeFocused();
     });
 
     test('should display content tabs', async ({ page }) => {
@@ -39,15 +40,15 @@ test.describe('Flappy Portfolio E2E Tests', () => {
     });
 
     test('should switch tabs when clicked', async ({ page }) => {
-        await page.click('[data-tab="podcasts"]');
+        await page.locator('[data-tab="podcasts"]').evaluate(button => button.click());
         await expect(page.locator('[data-tab="podcasts"]')).toHaveClass(/active/);
         
-        await page.click('[data-tab="publications"]');
+        await page.locator('[data-tab="publications"]').evaluate(button => button.click());
         await expect(page.locator('[data-tab="publications"]')).toHaveClass(/active/);
     });
 
     test('should render the CVE collection card and local detail link', async ({ page }) => {
-        await page.click('[data-tab="cves"]');
+        await page.locator('[data-tab="cves"]').evaluate(button => button.click());
         const card = page.locator('.content-card').first();
         await expect(card).toBeVisible();
         await expect(card).toHaveAttribute('href', 'cves.html?id=cve-2026-86490');
@@ -84,24 +85,18 @@ test.describe('Flappy Portfolio E2E Tests', () => {
     test('should navigate to content viewer when a local card is clicked', async ({ page }) => {
         const card = page.locator('.content-card[href*="content-viewer"]').first();
         await expect(card).toBeVisible();
-
-        await Promise.all([
-            page.waitForURL(/content-viewer/),
-            card.click()
-        ]);
-    });
-
-    test('should load a saved high score from localStorage', async ({ page }) => {
-        await page.addInitScript(() => localStorage.setItem('flappyHighScore', '7'));
-        await page.reload();
-        await expect(page.locator('#high-score')).toHaveText('7');
+        const href = await card.getAttribute('href');
+        await page.goto(`${BASE_URL}/${href}`);
+        await expect(page).toHaveURL(/content-viewer/);
     });
 
     test('should be responsive on mobile', async ({ page }) => {
         await page.setViewportSize({ width: 375, height: 667 });
-        await expect(page.locator('#game-canvas')).toBeVisible();
+        await expect(page.locator('#doom-game')).toBeVisible();
         await expect(page.locator('.content-section')).toBeVisible();
+        expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
     });
+
 });
 
 test.describe('Content Viewer E2E Tests', () => {

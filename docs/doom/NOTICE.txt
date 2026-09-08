@@ -1,0 +1,9 @@
+This directory contains a browser build of Chocolate Doom with the DOOM shareware data set.
+
+Runtime artifacts sourced from:
+https://github.com/Antriksh1984/Doom1
+
+The Chocolate Doom engine is distributed under the GNU General Public License.
+The original Doom source is distributed under the GNU General Public License.
+The DOOM1.WAD shareware data is distributed by id Software for non-commercial use.
+See the source repository and its README for the complete attribution and licensing context.

@@ -290,3 +290,37 @@
         transition-duration: 0.01ms !important;
     }
 }
+
+.homepage .game-section::before {
+    content: "Arcade break / Doom";
+}
+
+.homepage .doom-wrapper {
+    aspect-ratio: 3 / 4;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.homepage #doom-game {
+    background: #0d0b0a;
+    border: 0;
+    display: block;
+    flex: 1;
+    min-height: 0;
+    width: 100%;
+}
+
+.homepage .doom-controls {
+    background: var(--ink);
+    border-top: 1px solid color-mix(in oklch, var(--paper) 24%, transparent);
+    color: color-mix(in oklch, var(--paper) 72%, transparent);
+    flex: 0 0 auto;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    line-height: 1.2;
+    padding: 9px 12px;
+    text-align: center;
+    text-transform: uppercase;
+}
