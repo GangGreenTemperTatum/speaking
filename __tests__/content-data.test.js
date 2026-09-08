@@ -50,6 +50,12 @@ describe('Content Data Module', () => {
         ]));
     });
 
+    test('CVE records should be discoverable through collection helpers', () => {
+        expect(contentData.getContentById('cve-2026-86490').cveId).toBe('CVE-2026-86490');
+        expect(contentData.getFeaturedContent().cves).toHaveLength(1);
+        expect(contentData.searchContent('CVE-2026-86490', 'cves')).toHaveLength(1);
+    });
+
     test('each conference should have required fields', () => {
         contentData.conferences.forEach(conf => {
             expect(conf.id).toBeDefined();
