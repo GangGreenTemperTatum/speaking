@@ -1579,7 +1579,7 @@ function getRandomFeaturedItem(zoneType) {
 
 // Get content by ID
 function getContentById(id) {
-    const allContent = [...conferences, ...podcasts, ...publications, ...volunteering, ...television, ...cves];
+    const allContent = [...conferences, ...podcasts, ...publications, ...volunteering, ...television, ...cves, ...achievements];
     return allContent.find(item => item.id === id);
 }
 

@@ -114,6 +114,42 @@ test.describe('Content Viewer E2E Tests', () => {
         await page.goto(`${BASE_URL}/content-viewer.html?type=conference&org=apidays&year=2023`);
         await expect(page.locator('.back-link')).toBeVisible();
     });
+
+    test('should render a conference case file with archived content', async ({ page }) => {
+        await page.goto(`${BASE_URL}/content-viewer.html?type=conference&id=blackhat-2026`);
+        await expect(page.locator('.content-entry')).toBeVisible();
+        await expect(page.locator('#view-title')).toContainText('Black Hat USA');
+        await expect(page.locator('#content-body')).toContainText('Kinetic Prompt Injection');
+        await expect(page.locator('#files-list')).toBeVisible();
+    });
+
+    test('should render podcast, television, publication, and volunteering records', async ({ page }) => {
+        const records = [
+            ['podcast', 'critical-thinking-bbp-ep188-2026', 'Critical Thinking'],
+            ['television', 'bbc-2026', 'BBC World Service'],
+            ['publication', 'meta-fbdl-goes-agentic-2026', 'FBDL Goes Agentic'],
+            ['volunteering', 'hackerone-us-south-ambassador', 'Brand Ambassador']
+        ];
+
+        for (const [type, id, title] of records) {
+            await page.goto(`${BASE_URL}/content-viewer.html?type=${type}&id=${id}`);
+            await expect(page.locator('.content-entry')).toBeVisible();
+            await expect(page.locator('#view-title')).toContainText(title);
+        }
+    });
+
+    test('should keep unified viewer content within a narrow viewport', async ({ page }) => {
+        await page.setViewportSize({ width: 375, height: 667 });
+        await page.goto(`${BASE_URL}/content-viewer.html?type=television&id=bbc-2026`);
+        await expect(page.locator('.content-entry')).toBeVisible();
+        expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+    });
+
+    test('should show a recoverable state for an unknown record', async ({ page }) => {
+        await page.goto(`${BASE_URL}/content-viewer.html?type=publication&id=missing-record`);
+        await expect(page.locator('.content-error')).toContainText('Content not found');
+        await expect(page.locator('.content-error a[href="index.html"]')).toBeVisible();
+    });
 });
 
 test.describe('CVE Portfolio E2E Tests', () => {
