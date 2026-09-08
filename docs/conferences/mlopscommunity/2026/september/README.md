@@ -35,9 +35,14 @@
 
 ![Coding Agents Session 23 - Speakers](mlops-coding-agents-session23-speakers.png)
 
+![YouTube Snip - Coding Agents Lunch & Learn Session 23: AI Agent Security & the Hugging Face Incident](image.png)
+
+- [YouTube archive](<Coding Agents Lunch & Learn Session 23： AI Agent Security & the Hugging Face Incident - YouTube (2026-09-07 8：36：51 p.m.).html>)
+
 - **Official links:**
   - [Event page](https://home.mlops.community/public/events/coding-agents-lunch-and-learn-session-23-whats-new-in-coding-agents-ig8sug5bk5)
   - [Agentic AI Foundation](https://home.mlops.community/)
+  - [YouTube Recap:  Coding Agents Lunch & Learn Session 23: AI Agent Security & the Hugging Face Incident ](https://www.youtube.com/watch?v=9DFySrYrqgo&list=PL3vkEKxWd-utz7ew8QmiuTFNjjkvvM_xM&index=23)
 
 - **Local archives:**
   - [Event page capture](<Coding Agents Lunch & Learn Session 23： What's New in Coding Agents？ - Event ｜ Agentic AI Foundation (9_1_2026 8：54：33 AM).html>)
