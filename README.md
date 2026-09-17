@@ -11,6 +11,7 @@ Visit the [GitHub Pages site](https://ganggreentempertatum.github.io/speaking/) 
     - [Adding a Podcast Appearance](#adding-a-podcast-appearance)
     - [Adding a Publication](#adding-a-publication)
     - [Adding a Television Appearance](#adding-a-television-appearance)
+    - [Adding a CVE](#adding-a-cve)
   - [Development](#development)
     - [Local Development](#local-development)
     - [Testing Locally](#testing-locally)
@@ -22,6 +23,7 @@ Visit the [GitHub Pages site](https://ganggreentempertatum.github.io/speaking/) 
 - **Podcasts**: Information about podcast appearances with links to episodes
 - **Publications**: Links to articles, papers, and other publications
 - **Television**: TV and video appearances related to AI/ML security
+- **CVEs**: Published CVE records from coordinated vulnerability disclosures — browse at [cves.html](https://ganggreentempertatum.github.io/speaking/cves.html)
 
 ## Adding New Content
 
@@ -107,6 +109,22 @@ Visit the [GitHub Pages site](https://ganggreentempertatum.github.io/speaking/) 
 2. Create a README.md file with details about the appearance
 3. Add any screenshots, promotional materials, or links to the recording
 4. Update the `docs/data/content.json` file to include your new TV appearance
+
+### Adding a CVE
+
+CVE records are stored in the `cves` array in `docs/js/content-data.js` and rendered on `docs/cves.html`.
+
+1. Fetch the authoritative CVE data from `https://cveawg.mitre.org/api/cve/CVE-XXXX-XXXXX`
+2. Add an entry to the `cves` array in `docs/js/content-data.js` with all required fields:
+   - `id`, `cveId`, `title`, `organization`, `product`, `description`
+   - `reportContext` (researcher-provided context from the HackerOne report)
+   - `reportUrl` (link to the original HackerOne report)
+   - `cvss` object (score, severity, vector, individual metrics)
+   - `cisaEnrichment` if available
+   - `references` array with links to CVE record, MITRE JSON, vendor advisories, and original report
+   - `featured: true` to show on the homepage
+3. Run `npm run build` to regenerate content.json
+4. Run `npm test` and update test assertions if the expected CVE count changed (see `__tests__/content-data.test.js`)
 
 ## Development
 
