@@ -733,6 +733,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 year: "2026"
             },
             {
+                title: "arXiv:2609.30325 - ScopeBench: Do Agents Preserve Engagement Boundaries Under Goal Pressure?",
+                publisher: "arXiv",
+                description: "Co-authored with Shane Caldwell, Max Harley, Michael Kouremetis, Vincent Abruzzo, and Will Pearce. Introduces ScopeBench, a benchmark evaluating whether autonomous agents maintain scope restrictions under goal pressure, comprising 30 security-focused tasks across eight models. Accepted at AISec 2026. Released 2,160 ATIF trajectories for reproducibility.",
+                url: "https://arxiv.org/abs/2609.30325",
+                icon: "fas fa-file-alt",
+                year: "2026"
+            },
+            {
                 title: "arXiv:2607.07774 - ScopeJudge: Cost-Aware Pre-Execution Gating for Offensive Security Agents",
                 publisher: "arXiv",
                 description: "Co-authored with Shane Caldwell, Max Harley, Michael Kouremetis, Vincent Abruzzo, and Will Pearce. Introduces ScopeJudge, a pre-execution monitoring system where a cheap trusted LLM judge inspects each tool call proposed by offensive security agents, with a benchmark of ~5,000 tool calls labeled by professional pentesters.",
