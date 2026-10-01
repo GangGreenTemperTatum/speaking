@@ -354,6 +354,14 @@
       "year": "2026",
       "icon": "fas fa-robot",
       "description": "All Models Cheat: Prompt-Level Mitigation of Cheating on Offensive Cyber Tasks"
+    },
+    {
+      "id": "unpromptedcon-2026",
+      "name": "[un]prompted Conference",
+      "path": "unpromptedcon/2026/october",
+      "year": "2026",
+      "icon": "fas fa-user-secret",
+      "description": "StealthBench: Can Autonomous Security Agents Do OPSEC Like An Experienced Operator?"
     }
   ],
   "podcasts": [

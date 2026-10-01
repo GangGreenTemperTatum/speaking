@@ -681,6 +681,20 @@ const conferences = [
         featured: true
     },
     {
+        id: "unpromptedcon-2026",
+        name: "[un]prompted Conference",
+        displayName: "[un]promptedcon 2026 - StealthBench: Can Autonomous Security Agents Do OPSEC Like An Experienced Operator?",
+        year: "2026",
+        icon: "fas fa-user-secret",
+        description: "StealthBench: Can Autonomous Security Agents Do OPSEC Like An Experienced Operator?",
+        path: "unpromptedcon",
+        subdir: "october",
+        localPath: "conferences/unpromptedcon/2026/october",
+        type: "conference",
+        date: "2026-10-27",
+        featured: true
+    },
+    {
         id: "wallarm-2026",
         name: "Wallarm",
         displayName: "Wallarm Webinar - New Security Gap: Your WAF Has No Idea What Your AI Is Doing",

@@ -41,7 +41,8 @@ const conferenceOrgs = [
   { id: "national-academies", subPaths: [{path: "2026/april", year: "2026"}] },
   { id: "wallarm", subPaths: [{path: "2026/may", year: "2026"}] },
   { id: "ai-for-security", subPaths: [{path: "2026/august", year: "2026"}] },
-  { id: "offensiveaicon", subPaths: [{path: "2026/october", year: "2026"}] }
+  { id: "offensiveaicon", subPaths: [{path: "2026/october", year: "2026"}] },
+  { id: "unpromptedcon", subPaths: [{path: "2026/october", year: "2026"}] }
 ];
 
 // Map directory names to display names and icons
@@ -68,7 +69,8 @@ const contentMap = {
   "national-academies": { name: "National Academies", icon: "fas fa-landmark" },
   "wallarm": { name: "Wallarm", icon: "fas fa-shield-alt" },
   "ai-for-security": { name: "AI for Security", icon: "fas fa-phone-alt" },
-  "offensiveaicon": { name: "Offensive AI Conference", icon: "fas fa-robot" }
+  "offensiveaicon": { name: "Offensive AI Conference", icon: "fas fa-robot" },
+  "unpromptedcon": { name: "[un]prompted Conference", icon: "fas fa-user-secret" }
 };
 
 // Create conference entries
@@ -238,6 +240,8 @@ conferenceOrgs.forEach(org => {
         description = "Likely Spam: Voice Phishing With an AI Red Team Harness | GhostLine";
       } else if (org.id === 'offensiveaicon') {
         description = "All Models Cheat: Prompt-Level Mitigation of Cheating on Offensive Cyber Tasks";
+      } else if (org.id === 'unpromptedcon') {
+        description = "StealthBench: Can Autonomous Security Agents Do OPSEC Like An Experienced Operator?";
       } else if (org.id === 'mlopscommunity') {
         if (subPath.year === '2024') {
           description = "AI in Production - MLOps Security and Privacy Panel";

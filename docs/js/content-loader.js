@@ -480,6 +480,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 localPath: "conferences/national-academies/2026/april"
             },
             {
+                name: "[un]prompted Conference",
+                displayName: "[un]promptedcon 2026 - StealthBench: Can Autonomous Security Agents Do OPSEC Like An Experienced Operator?",
+                year: "2026",
+                icon: "fas fa-user-secret",
+                description: "StealthBench: Can Autonomous Security Agents Do OPSEC Like An Experienced Operator?",
+                path: "unpromptedcon",
+                subdir: "october",
+                localPath: "conferences/unpromptedcon/2026/october"
+            },
+            {
                 name: "Wallarm",
                 displayName: "Wallarm Webinar - New Security Gap: Your WAF Has No Idea What Your AI Is Doing",
                 year: "2026",

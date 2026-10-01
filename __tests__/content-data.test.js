@@ -16,7 +16,7 @@ describe('Content Data Module', () => {
 
     test('should have correct number of conferences', () => {
         expect(contentData.conferences.length).toBeGreaterThan(30);
-        expect(contentData.conferences.length).toBeLessThan(50);
+        expect(contentData.conferences.length).toBeLessThan(55);
     });
 
     test('should have correct number of podcasts', () => {
