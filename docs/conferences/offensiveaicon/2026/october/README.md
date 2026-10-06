@@ -37,6 +37,9 @@
 
 ![Offensive AI Conference 2026 talk details - All Models Cheat](offensiveaicon-2026-talk-details.png)
 
+- **Speaker slides:**
+  - [All Models Cheat - OAIC.pptx.pdf](<All Models Cheat - OAIC.pptx.pdf>)
+
 - **Official links:**
   - [Offensive AI Conference 2026](https://www.offensiveaicon.com/)
   - [Schedule](https://www.offensiveaicon.com/schedule#sz-tab-46299)
