@@ -362,6 +362,14 @@
       "year": "2026",
       "icon": "fas fa-user-secret",
       "description": "StealthBench: Can Autonomous Security Agents Do OPSEC Like An Experienced Operator?"
+    },
+    {
+      "id": "aisecu-2026",
+      "name": "AI Security University",
+      "path": "aisecu/2026/november/ai-pen-testing-conference",
+      "year": "2026",
+      "icon": "fas fa-graduation-cap",
+      "description": "AI Pen-Testing Conference — Panel: AI Red Teaming"
     }
   ],
   "podcasts": [

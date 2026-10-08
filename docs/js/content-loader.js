@@ -490,6 +490,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 localPath: "conferences/unpromptedcon/2026/october"
             },
             {
+                name: "AI Security University",
+                displayName: "AI Pen-Testing Conference — Panel: AI Red Teaming",
+                year: "2026",
+                icon: "fas fa-graduation-cap",
+                description: "AI Pen-Testing Conference — Panel: AI Red Teaming",
+                path: "aisecu",
+                subdir: "2026/november/ai-pen-testing-conference",
+                localPath: "conferences/aisecu/2026/november/ai-pen-testing-conference"
+            },
+            {
                 name: "Wallarm",
                 displayName: "Wallarm Webinar - New Security Gap: Your WAF Has No Idea What Your AI Is Doing",
                 year: "2026",

@@ -42,7 +42,8 @@ const conferenceOrgs = [
   { id: "wallarm", subPaths: [{path: "2026/may", year: "2026"}] },
   { id: "ai-for-security", subPaths: [{path: "2026/august", year: "2026"}] },
   { id: "offensiveaicon", subPaths: [{path: "2026/october", year: "2026"}] },
-  { id: "unpromptedcon", subPaths: [{path: "2026/october", year: "2026"}] }
+  { id: "unpromptedcon", subPaths: [{path: "2026/october", year: "2026"}] },
+  { id: "aisecu", subPaths: [{path: "2026/november/ai-pen-testing-conference", year: "2026"}] }
 ];
 
 // Map directory names to display names and icons
@@ -70,7 +71,8 @@ const contentMap = {
   "wallarm": { name: "Wallarm", icon: "fas fa-shield-alt" },
   "ai-for-security": { name: "AI for Security", icon: "fas fa-phone-alt" },
   "offensiveaicon": { name: "Offensive AI Conference", icon: "fas fa-robot" },
-  "unpromptedcon": { name: "[un]prompted Conference", icon: "fas fa-user-secret" }
+  "unpromptedcon": { name: "[un]prompted Conference", icon: "fas fa-user-secret" },
+  "aisecu": { name: "AI Security University", icon: "fas fa-graduation-cap" }
 };
 
 // Create conference entries
@@ -242,6 +244,8 @@ conferenceOrgs.forEach(org => {
         description = "All Models Cheat: Prompt-Level Mitigation of Cheating on Offensive Cyber Tasks";
       } else if (org.id === 'unpromptedcon') {
         description = "StealthBench: Can Autonomous Security Agents Do OPSEC Like An Experienced Operator?";
+      } else if (org.id === 'aisecu') {
+        description = "AI Pen-Testing Conference — Panel: AI Red Teaming";
       } else if (org.id === 'mlopscommunity') {
         if (subPath.year === '2024') {
           description = "AI in Production - MLOps Security and Privacy Panel";

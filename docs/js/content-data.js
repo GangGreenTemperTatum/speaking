@@ -695,6 +695,20 @@ const conferences = [
         featured: true
     },
     {
+        id: "aisecu-2026",
+        name: "AI Security University",
+        displayName: "AI Pen-Testing Conference — Panel: AI Red Teaming",
+        year: "2026",
+        icon: "fas fa-graduation-cap",
+        description: "AI Pen-Testing Conference — Panel: AI Red Teaming",
+        path: "aisecu",
+        subdir: "2026/november/ai-pen-testing-conference",
+        localPath: "conferences/aisecu/2026/november/ai-pen-testing-conference",
+        type: "conference",
+        date: "2026-11-03",
+        featured: true
+    },
+    {
         id: "wallarm-2026",
         name: "Wallarm",
         displayName: "Wallarm Webinar - New Security Gap: Your WAF Has No Idea What Your AI Is Doing",
