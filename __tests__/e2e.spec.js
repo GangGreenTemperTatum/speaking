@@ -137,10 +137,15 @@ test.describe('Doom Portfolio E2E Tests', () => {
 
         // the engine cannot survive a lost context, so the panel has to offer a restart
         const frame = page.frames().find(candidate => candidate.url().includes('/doom/'));
+        const contextLossUnavailable = await frame.evaluate(() => {
+            const gl = document.getElementById('canvas').getContext('webgl');
+            if (!gl) return 'Doom is using a 2D canvas, so there is no WebGL context to lose';
+            return gl.getExtension('WEBGL_lose_context') ? null : 'WEBGL_lose_context is not exposed by this browser';
+        });
+        test.skip(contextLossUnavailable !== null, contextLossUnavailable);
+
         await frame.evaluate(() => {
-            const canvas = document.getElementById('canvas');
-            const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
-            gl.getExtension('WEBGL_lose_context').loseContext();
+            document.getElementById('canvas').getContext('webgl').getExtension('WEBGL_lose_context').loseContext();
         });
 
         await expect(page.locator('#doom-start')).toBeVisible();
