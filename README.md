@@ -24,6 +24,7 @@ Visit the [GitHub Pages site](https://ganggreentempertatum.github.io/speaking/) 
 - **Publications**: Links to articles, papers, and other publications
 - **Television**: TV and video appearances related to AI/ML security
 - **CVEs**: Published CVE records from coordinated vulnerability disclosures — browse at [cves.html](https://ganggreentempertatum.github.io/speaking/cves.html)
+- **Arcade break**: a playable Doom shareware episode embedded in the homepage — opt-in, nothing downloads until you press Play
 
 ## Adding New Content
 

@@ -92,27 +92,11 @@
     max-width: none !important;
 }
 
-.homepage .game-section::before {
-    color: var(--accent);
-    content: "Arcade break / Flappy Bird";
-    display: block;
-    font-family: "Barlow Condensed", sans-serif;
-    font-size: 0.9rem;
-    font-weight: 700;
-    letter-spacing: 0.09em;
-    margin-bottom: var(--space-3);
-    text-transform: uppercase;
-}
-
 .homepage .game-wrapper {
     background: var(--ink) !important;
     border: 1px solid var(--rule) !important;
     border-radius: 0 !important;
     box-shadow: 12px 12px 0 color-mix(in oklch, var(--accent) 10%, transparent) !important;
-}
-
-.homepage .game-overlay {
-    background: color-mix(in oklch, var(--ink) 78%, transparent) !important;
 }
 
 .homepage .content-section::before {
@@ -302,13 +286,79 @@
     overflow: hidden;
 }
 
+.homepage .doom-stage {
+    flex: 1;
+    min-height: 0;
+    position: relative;
+}
+
 .homepage #doom-game {
     background: #0d0b0a;
     border: 0;
     display: block;
-    flex: 1;
-    min-height: 0;
+    height: 100%;
     width: 100%;
+}
+
+.homepage .game-overlay {
+    align-items: center;
+    background: color-mix(in oklch, var(--ink) 78%, transparent) !important;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    inset: 0;
+    justify-content: center;
+    padding: var(--space-5);
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+}
+
+.homepage .game-overlay h2 {
+    color: var(--accent) !important;
+    font-family: "Barlow Condensed", sans-serif !important;
+    font-size: 2.4rem !important;
+    letter-spacing: 0.08em;
+    margin: 0 !important;
+    text-transform: uppercase;
+}
+
+.homepage .game-overlay p {
+    color: color-mix(in oklch, var(--paper) 78%, transparent) !important;
+    font-size: 0.85rem !important;
+    line-height: 1.5;
+    margin: 0 !important;
+    max-width: 28ch;
+}
+
+.homepage #doom-play {
+    background: var(--accent) !important;
+    border: 1px solid transparent !important;
+    border-radius: 0 !important;
+    color: var(--white) !important;
+    cursor: pointer;
+    font-family: "Barlow Condensed", sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 13px 24px !important;
+    text-transform: uppercase;
+}
+
+.homepage #doom-play:hover,
+.homepage #doom-play:focus-visible {
+    background: var(--signal) !important;
+    border-color: var(--ink) !important;
+    color: var(--ink) !important;
+}
+
+.homepage #doom-play[disabled] {
+    cursor: default;
+    opacity: 0.55;
+}
+
+.homepage .doom-started .game-overlay {
+    display: none;
 }
 
 .homepage .doom-controls {

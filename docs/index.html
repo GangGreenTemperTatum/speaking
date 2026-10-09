@@ -87,60 +87,6 @@
             border: 4px solid #fff;
         }
 
-        #game-canvas {
-            display: block;
-            width: 100%;
-            height: auto;
-            aspect-ratio: 3/4;
-            cursor: pointer;
-        }
-
-        .game-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background: rgba(0,0,0,0.6);
-            color: white;
-            font-family: 'Press Start 2P', cursive;
-            text-align: center;
-            pointer-events: none;
-        }
-
-        .game-overlay.hidden {
-            display: none;
-        }
-
-        .game-overlay h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-            text-shadow: 3px 3px 0 #000;
-            color: #fff;
-        }
-
-        .game-overlay p {
-            font-size: 12px;
-            line-height: 1.8;
-            max-width: 80%;
-        }
-
-        .game-stats {
-            position: absolute;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-family: 'Press Start 2P', cursive;
-            font-size: 36px;
-            color: white;
-            text-shadow: 2px 2px 0 #000;
-            z-index: 10;
-        }
-
         /* Content Section */
         .content-section {
             flex: 3;
@@ -315,10 +261,6 @@
                 font-size: 18px;
             }
 
-            .game-overlay h2 {
-                font-size: 20px;
-            }
-
             .content-tabs {
                 overflow-x: auto;
                 flex-wrap: nowrap;
@@ -408,8 +350,15 @@
         <!-- Game Section -->
         <section class="game-section">
             <div class="game-wrapper doom-wrapper">
-                <iframe id="doom-game" title="Playable Doom shareware episode" src="doom/index.html" loading="eager"></iframe>
-                <div class="doom-controls">Click the game to focus · Arrows move · Ctrl fires · Space uses · F fullscreen</div>
+                <div class="doom-stage">
+                    <iframe id="doom-game" title="Playable Doom shareware episode" data-src="doom/index.html" allow="fullscreen"></iframe>
+                    <div id="doom-start" class="game-overlay">
+                        <h2>Doom</h2>
+                        <p id="doom-start-copy" aria-live="polite">Shareware episode, loaded on demand. Arrows move · Ctrl fires · Space uses · F toggles fullscreen.</p>
+                        <button type="button" id="doom-play">Play</button>
+                    </div>
+                </div>
+                <div class="doom-controls">Click the game to focus · Arrows move · Ctrl fires · Space uses · F toggles fullscreen</div>
             </div>
         </section>
 
@@ -582,6 +531,66 @@
 
         // Initial render
         renderContent();
+
+        // ============================================
+        // DOOM PANEL
+        // ============================================
+        // The runtime (engine + shareware WAD) is fetched only after the visitor presses Play.
+        // Booting it on page load would start the game unprompted and push it fullscreen.
+
+        const DOOM_BOOT_TIMEOUT_MS = 60000;
+
+        const doomFrame = document.getElementById('doom-game');
+        const doomWrapper = doomFrame.closest('.doom-wrapper');
+        const doomCopy = document.getElementById('doom-start-copy');
+        const doomPlay = document.getElementById('doom-play');
+
+        let doomBootTimer = 0;
+        let doomStartedWithKeyboard = false;
+        let doomFailed = false;
+
+        function showDoomPoster(copy, { retry = true } = {}) {
+            clearTimeout(doomBootTimer);
+            doomWrapper.classList.remove('doom-started');
+            doomCopy.textContent = copy;
+            doomPlay.disabled = !retry;
+        }
+
+        doomPlay.addEventListener('click', event => {
+            doomStartedWithKeyboard = event.detail === 0; // Enter/Space fire a click with no mouse detail
+            doomFailed = false;
+            doomPlay.disabled = true;
+            doomCopy.textContent = 'Loading Doom…';
+            doomFrame.src = doomFrame.dataset.src; // re-assigning the src also retries a failed load
+            clearTimeout(doomBootTimer);
+            doomBootTimer = setTimeout(
+                () => showDoomPoster('Doom is taking longer than expected. Check your connection, then press Play to try again.'),
+                DOOM_BOOT_TIMEOUT_MS
+            );
+        });
+
+        // The game reports its state once the engine is running (or aborting); the poster reacts.
+        window.addEventListener('message', event => {
+            if (event.origin !== location.origin || event.source !== doomFrame.contentWindow) return;
+            if (!event.data) return;
+
+            if (event.data.type === 'doom-ready') {
+                if (doomFailed) return; // a reported failure outranks a late readiness signal
+                clearTimeout(doomBootTimer);
+                doomWrapper.classList.add('doom-started');
+                // Keyboard users just pressed Play: hand focus over so their keys reach the game.
+                if (doomStartedWithKeyboard) doomFrame.contentDocument?.getElementById('canvas')?.focus();
+            } else if (event.data.type === 'doom-error') {
+                doomFailed = true;
+                if (event.data.reason === 'webgl') {
+                    showDoomPoster('Doom needs WebGL, which this browser is not providing.', { retry: false });
+                } else if (event.data.reason === 'context-lost') {
+                    showDoomPoster('Doom lost its graphics context. Press Play to restart it.');
+                } else {
+                    showDoomPoster('Doom could not start. Check your connection, then press Play to try again.');
+                }
+            }
+        });
     </script>
 </body>
 </html>

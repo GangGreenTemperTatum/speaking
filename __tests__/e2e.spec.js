@@ -2,6 +2,30 @@ const { test, expect } = require('@playwright/test');
 
 const BASE_URL = 'http://localhost:8081';
 
+// Booting the panel costs ~12MB (wasm engine + shareware WAD) and a wasm compile, so the tests
+// that exercise it get a wider budget and share one readiness gate.
+const DOOM_BOOT_TIMEOUT = 60000;
+
+async function startDoom(page) {
+    const doomFrame = page.frameLocator('#doom-game');
+
+    await page.locator('#doom-play').click();
+    await expect(page.locator('#doom-start')).toBeHidden({ timeout: DOOM_BOOT_TIMEOUT });
+    await expect.poll(async () => {
+        const frame = page.frames().find(candidate => candidate.url().includes('/doom/'));
+        return frame ? frame.evaluate(() => Boolean(window.Module?.calledRun)) : false;
+    }, { timeout: DOOM_BOOT_TIMEOUT }).toBe(true);
+
+    return doomFrame;
+}
+
+// Focusing through the frame handle rather than a frame locator: firefox's frameLocator actionability
+// never resolves for the canvas even though it is visible, clickable and focusable.
+async function focusGameCanvas(page) {
+    const frame = page.frames().find(candidate => candidate.url().includes('/doom/'));
+    await frame.evaluate(() => document.getElementById('canvas').focus());
+}
+
 test.describe('Doom Portfolio E2E Tests', () => {
     test.beforeEach(async ({ page }) => {
         await page.goto(BASE_URL);
@@ -11,23 +35,119 @@ test.describe('Doom Portfolio E2E Tests', () => {
         await expect(page.locator('.site-header h1')).toContainText('ADS DAWSON');
     });
 
-    test('should display the Doom game panel and runtime canvas', async ({ page }) => {
-        const doomFrame = page.frameLocator('#doom-game');
-        await expect(page.locator('#doom-game')).toBeVisible();
-        await expect(doomFrame.locator('#canvas')).toBeVisible({ timeout: 20000 });
+    test('should show the Doom poster without loading the game runtime', async ({ page }) => {
+        const doomRequests = [];
+        page.on('request', request => {
+            if (request.url().includes('/doom/')) doomRequests.push(request.url());
+        });
+
+        await page.reload({ waitUntil: 'load' });
+
+        await expect(page.locator('#doom-start')).toBeVisible();
+        await expect(page.locator('#doom-play')).toBeVisible();
+        expect(await page.locator('#doom-game').getAttribute('src')).toBeNull();
+        expect(page.frames().filter(frame => frame.url().includes('/doom/'))).toHaveLength(0);
+        expect(doomRequests).toEqual([]);
+    });
+
+    test('should start Doom on request without taking over the screen', async ({ page }) => {
+        test.setTimeout(120000);
+        await startDoom(page);
+
+        // Regression: the original bug replayed Emscripten's deferred fullscreen request on the
+        // first click inside the game, so clicking it must not hand the screen to Doom.
+        const panel = await page.locator('#doom-game').boundingBox();
+        await page.mouse.click(panel.x + panel.width / 2, panel.y + panel.height / 2);
+        await page.waitForTimeout(3000);
+
+        expect(await page.evaluate(() => document.fullscreenElement)).toBeNull();
+        await expect(page.locator('.site-header h1')).toBeVisible();
+    });
+
+    test('should toggle Doom fullscreen only when asked', async ({ page }) => {
+        test.setTimeout(120000);
+        await startDoom(page);
+
+        await focusGameCanvas(page);
+        await page.keyboard.press('f');
+        await expect.poll(() => page.evaluate(() => Boolean(document.fullscreenElement)), { timeout: 15000 }).toBe(true);
+
+        await page.keyboard.press('f');
+        await expect.poll(() => page.evaluate(() => document.fullscreenElement), { timeout: 15000 }).toBeNull();
+
+        // the engine's own binding (Alt+Enter) goes through the same panel toggle
+        await focusGameCanvas(page);
+        await page.keyboard.down('Alt');
+        await page.keyboard.press('Enter');
+        await page.keyboard.up('Alt');
+        await expect.poll(() => page.evaluate(() => Boolean(document.fullscreenElement)), { timeout: 15000 }).toBe(true);
+
+        await page.keyboard.down('Alt');
+        await page.keyboard.press('Enter');
+        await page.keyboard.up('Alt');
+        await expect.poll(() => page.evaluate(() => document.fullscreenElement), { timeout: 15000 }).toBeNull();
+    });
+
+    test('should offer a retry when the game runtime cannot start', async ({ page }) => {
+        test.setTimeout(120000);
+        await page.route('**/chocolate-doom.wasm', route => route.abort('failed'));
+
+        await page.locator('#doom-play').click();
+        await expect(page.locator('#doom-start')).toBeVisible({ timeout: DOOM_BOOT_TIMEOUT });
+        await expect(page.locator('#doom-start-copy')).toContainText('could not start');
+        await expect(page.locator('#doom-play')).toBeEnabled();
+
+        // once the runtime is reachable again, the same button starts the game
+        await page.unroute('**/chocolate-doom.wasm');
+        await startDoom(page);
+    });
+
+    test('should offer a restart after the game loses its graphics context', async ({ page }) => {
+        test.setTimeout(120000);
+        await startDoom(page);
+
+        // the engine cannot survive a lost context, so the panel has to offer a restart
+        const frame = page.frames().find(candidate => candidate.url().includes('/doom/'));
+        await frame.evaluate(() => {
+            const canvas = document.getElementById('canvas');
+            const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+            gl.getExtension('WEBGL_lose_context').loseContext();
+        });
+
+        await expect(page.locator('#doom-start')).toBeVisible();
+        await expect(page.locator('#doom-start-copy')).toContainText('lost its graphics context');
+        await expect(page.locator('#doom-play')).toBeEnabled();
+
+        await startDoom(page);
     });
 
     test('should focus Doom and accept movement and fire controls', async ({ page }) => {
-        const doomFrame = page.frameLocator('#doom-game');
-        await expect(doomFrame.locator('#canvas')).toBeVisible({ timeout: 20000 });
-        await doomFrame.locator('#canvas').focus();
+        test.setTimeout(120000);
+        await startDoom(page);
+
+        await focusGameCanvas(page);
         await page.keyboard.down('ArrowUp');
         await page.waitForTimeout(150);
         await page.keyboard.up('ArrowUp');
         await page.keyboard.down('Control');
         await page.waitForTimeout(100);
         await page.keyboard.up('Control');
-        await expect(doomFrame.locator('#canvas')).toBeFocused();
+        await expect.poll(async () => {
+            const frame = page.frames().find(candidate => candidate.url().includes('/doom/'));
+            return frame ? frame.evaluate(() => document.activeElement?.id ?? null) : null;
+        }, { timeout: 5000 }).toBe('canvas');
+    });
+
+    test('should hand keyboard focus to the game when Play is activated from the keyboard', async ({ page }) => {
+        test.setTimeout(120000);
+        await page.locator('#doom-play').focus();
+        await page.keyboard.press('Enter');
+
+        await expect(page.locator('#doom-start')).toBeHidden({ timeout: DOOM_BOOT_TIMEOUT });
+        await expect.poll(async () => {
+            const frame = page.frames().find(candidate => candidate.url().includes('/doom/'));
+            return frame ? frame.evaluate(() => document.activeElement?.id ?? document.activeElement?.tagName) : null;
+        }, { timeout: DOOM_BOOT_TIMEOUT }).toBe('canvas');
     });
 
     test('should display content tabs', async ({ page }) => {
@@ -93,6 +213,7 @@ test.describe('Doom Portfolio E2E Tests', () => {
     test('should be responsive on mobile', async ({ page }) => {
         await page.setViewportSize({ width: 375, height: 667 });
         await expect(page.locator('#doom-game')).toBeVisible();
+        await expect(page.locator('#doom-play')).toBeVisible();
         await expect(page.locator('.content-section')).toBeVisible();
         expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
     });
