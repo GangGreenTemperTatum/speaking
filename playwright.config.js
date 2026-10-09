@@ -5,13 +5,12 @@ module.exports = {
     expect: {
         timeout: 5000
     },
-    // The Doom tests each boot a ~12MB wasm engine. Running a file's tests concurrently starves
-    // the browser and times the suite out, so tests run in order within each project's worker;
-    // the three browser projects still run in parallel (CI already uses a single worker).
+    // Booting the panel costs ~12MB (wasm engine + shareware WAD). Running browser projects
+    // concurrently starves Firefox, so keep all Doom tests serialized in every environment.
     fullyParallel: false,
     forbidOnly: !!process.env.CI,
     retries: process.env.CI ? 2 : 0,
-    workers: process.env.CI ? 1 : undefined,
+    workers: 1,
     reporter: 'html',
     use: {
         actionTimeout: 0,

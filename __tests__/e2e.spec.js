@@ -26,6 +26,17 @@ async function focusGameCanvas(page) {
     await frame.evaluate(() => document.getElementById('canvas').focus());
 }
 
+async function expectDoomToRemainDormant(page, doomRequests) {
+    // Allow deferred event handlers to reveal any accidental launch or fullscreen request.
+    await page.waitForTimeout(1000);
+    await expect(page.locator('#doom-start')).toBeVisible();
+    await expect(page.locator('#doom-play')).toBeVisible();
+    expect(await page.locator('#doom-game').getAttribute('src')).toBeNull();
+    expect(page.frames().filter(frame => frame.url().includes('/doom/'))).toHaveLength(0);
+    expect(doomRequests).toEqual([]);
+    expect(await page.evaluate(() => document.fullscreenElement)).toBeNull();
+}
+
 test.describe('Doom Portfolio E2E Tests', () => {
     test.beforeEach(async ({ page }) => {
         await page.goto(BASE_URL);
@@ -43,30 +54,48 @@ test.describe('Doom Portfolio E2E Tests', () => {
 
         await page.reload({ waitUntil: 'load' });
 
-        await expect(page.locator('#doom-start')).toBeVisible();
-        await expect(page.locator('#doom-play')).toBeVisible();
-        expect(await page.locator('#doom-game').getAttribute('src')).toBeNull();
-        expect(page.frames().filter(frame => frame.url().includes('/doom/'))).toHaveLength(0);
-        expect(doomRequests).toEqual([]);
+        await expectDoomToRemainDormant(page, doomRequests);
     });
 
-    test('should start Doom on request without taking over the screen', async ({ page }) => {
+    test('should not start or maximize Doom when the homepage header is clicked', async ({ page }) => {
+        const doomRequests = [];
+        page.on('request', request => {
+            if (request.url().includes('/doom/')) doomRequests.push(request.url());
+        });
+
+        await page.locator('.site-header h1').click();
+
+        await expectDoomToRemainDormant(page, doomRequests);
+    });
+
+    test('should not start or maximize Doom when the poster heading is clicked', async ({ page }) => {
+        const doomRequests = [];
+        page.on('request', request => {
+            if (request.url().includes('/doom/')) doomRequests.push(request.url());
+        });
+
+        await page.locator('#doom-start h2').click();
+
+        await expectDoomToRemainDormant(page, doomRequests);
+    });
+
+    test('should keep Doom contained until fullscreen is explicitly requested', async ({ page }) => {
         test.setTimeout(120000);
         await startDoom(page);
 
         // Regression: the original bug replayed Emscripten's deferred fullscreen request on the
         // first click inside the game, so clicking it must not hand the screen to Doom.
-        const panel = await page.locator('#doom-game').boundingBox();
-        await page.mouse.click(panel.x + panel.width / 2, panel.y + panel.height / 2);
+        // Firefox can report a visible iframe without a Playwright bounding box; read its rendered
+        // coordinates directly, then issue a real pointer click in the middle of the game panel.
+        const panel = await page.locator('#doom-game').evaluate(frame => {
+            const { x, y, width, height } = frame.getBoundingClientRect();
+            return { x: x + width / 2, y: y + height / 2 };
+        });
+        await page.mouse.click(panel.x, panel.y);
         await page.waitForTimeout(3000);
 
         expect(await page.evaluate(() => document.fullscreenElement)).toBeNull();
         await expect(page.locator('.site-header h1')).toBeVisible();
-    });
-
-    test('should toggle Doom fullscreen only when asked', async ({ page }) => {
-        test.setTimeout(120000);
-        await startDoom(page);
 
         await focusGameCanvas(page);
         await page.keyboard.press('f');
@@ -75,7 +104,7 @@ test.describe('Doom Portfolio E2E Tests', () => {
         await page.keyboard.press('f');
         await expect.poll(() => page.evaluate(() => document.fullscreenElement), { timeout: 15000 }).toBeNull();
 
-        // the engine's own binding (Alt+Enter) goes through the same panel toggle
+        // The engine's own binding (Alt+Enter) goes through the same panel toggle.
         await focusGameCanvas(page);
         await page.keyboard.down('Alt');
         await page.keyboard.press('Enter');
