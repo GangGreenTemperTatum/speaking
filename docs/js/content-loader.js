@@ -508,6 +508,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 path: "wallarm",
                 subdir: "may",
                 localPath: "conferences/wallarm/2026/may"
+            },
+            {
+                name: "BugCrowd",
+                displayName: "The Hive Exchange: Boston - Hackers + Defenders: An Unlikely Romance",
+                year: "2026",
+                icon: "fas fa-bug",
+                description: "Hackers + Defenders: An Unlikely Romance - Panel with Andrew Wilson (Bugcrowd), Vishal Chauhan (Pi Security), and Ads Dawson",
+                path: "bugcrowd",
+                subdir: "2026/november/the-hive-exchange-boston",
+                localPath: "conferences/bugcrowd/2026/november/the-hive-exchange-boston"
             }
         ];
 

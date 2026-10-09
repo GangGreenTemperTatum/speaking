@@ -24,7 +24,7 @@ const conferenceOrgs = [
   { id: "apidays", years: ["2023"] },
   { id: "apisec", years: ["2023"] },
   { id: "blackhat", subPaths: [{path: "2026/august/briefings", year: "2026"}, {path: "2026/august/portswigger", year: "2026", id: "blackhat-portswigger-2026"}] },
-  { id: "bugcrowd", subDirs: ["2025/july/bugboss", "2025/july/rhic", "2025/september/edprotect", "2025/september/rit", "2025/october/wraven", "2025/october/ut", "2025/october/cnu", { path: "2026/august/the-hive", year: "2026", id: "bugcrowd-2026-august-the-hive" }], years: ["2025"] },
+  { id: "bugcrowd", subDirs: ["2025/july/bugboss", "2025/july/rhic", "2025/september/edprotect", "2025/september/rit", "2025/october/wraven", "2025/october/ut", "2025/october/cnu", { path: "2026/august/the-hive", year: "2026", id: "bugcrowd-2026-august-the-hive" }, { path: "2026/november/the-hive-exchange-boston", year: "2026", id: "bugcrowd-the-hive-exchange-boston-2026" }], years: ["2025"] },
   { id: "dc604", years: ["2023"] },
   { id: "defcon", subPaths: [{path: "2025/august/bb_village", year: "2025"}, {path: "2026/august/bb_village", year: "2026"}, {path: "2026/august/owasp_village", year: "2026", id: "defcon-owasp-village-2026", icon: "fas fa-shield-virus"}, {path: "2026/august/red_team_village", year: "2026", id: "defcon-red-team-village-2026", icon: "fas fa-crosshairs"}] },
   { id: "in-cyber-forum", years: ["2024"] },
@@ -184,6 +184,9 @@ conferenceOrgs.forEach(org => {
         } else if (subDir.includes('cnu')) {
           orgName = 'CNU CyberClub';
           description = 'BugCrowd College Program Educational Event';
+        } else if (subDir.includes('the-hive-exchange-boston')) {
+          orgName = 'BugCrowd';
+          description = "Hackers + Defenders: An Unlikely Romance";
         } else if (subDir.includes('the-hive')) {
           orgName = 'BugCrowd';
           description = "Hacking in the Age of AI: What's Changed, What Hasn't";

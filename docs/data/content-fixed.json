@@ -107,6 +107,14 @@
       "description": "Hacking in the Age of AI: What's Changed, What Hasn't"
     },
     {
+      "id": "bugcrowd-the-hive-exchange-boston-2026",
+      "name": "BugCrowd",
+      "path": "bugcrowd/2026/november/the-hive-exchange-boston",
+      "year": "2026",
+      "icon": "fas fa-bug",
+      "description": "Hackers + Defenders: An Unlikely Romance"
+    },
+    {
       "id": "dc604-2023",
       "name": "DC604",
       "path": "dc604",
