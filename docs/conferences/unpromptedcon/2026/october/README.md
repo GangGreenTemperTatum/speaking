@@ -35,8 +35,11 @@
 
 ![unpromptedcon 2026 LinkedIn announcement - First Ten Talks](unpromptedcon-2026-linkedin-post-2.png)
 
+![unpromptedcon 2026 agenda screenshot](Screenshot%202026-10-09%20at%2020.41.57.png)
+
 - **Official links:**
   - [unpromptedcon.org](https://unpromptedcon.org/)
+  - [Agenda](https://unpromptedcon.org/agenda-10-2026/)
   - [Event page (Luma)](https://luma.com/pywdcwal)
   - [StealthBench paper (arXiv)](https://arxiv.org/abs/2607.26314)
   - [stealthbench.com](https://stealthbench.com)
