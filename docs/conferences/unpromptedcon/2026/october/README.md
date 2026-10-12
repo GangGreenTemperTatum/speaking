@@ -37,6 +37,12 @@
 
 ![unpromptedcon 2026 agenda screenshot](Screenshot%202026-10-09%20at%2020.41.57.png)
 
+![unpromptedcon 2026 First Ten Talks](unpromptedcon-2026-first-ten-talks.png)
+
+![unpromptedcon 2026 StealthBench speakers - Adrian Wood and Ads Dawson](unpromptedcon-2026-stealthbench-speakers.png)
+
+- [Speaker announcements (PDF)](unpromptedcon-2026-speaker-announcements.pdf)
+
 - **Official links:**
   - [unpromptedcon.org](https://unpromptedcon.org/)
   - [Agenda](https://unpromptedcon.org/agenda-10-2026/)
