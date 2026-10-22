@@ -29,6 +29,9 @@
 ### Links
 
 - **Event page:** [The Hive Exchange: Boston on Luma](https://lu.ma/70dspecp)
+- **LinkedIn post:** [Bugcrowd — "The Hive Exchange hits Boston this November"](https://www.linkedin.com/posts/the-hive-exchange-hits-boston-this-november-share-7518035756733521922-Kho6/)
 - **Local page archive:** [The Hive Exchange: Boston - powered by Pi Security · Luma (2026-10-09 5:20:46 a.m.).html](<The Hive Exchange： Boston - powered by Pi Security · Luma (2026-10-09 5：20：46 a.m.).html>)
 
-> **Status:** Schedule confirmed. Local HTML archive and screenshot saved.
+![Bugcrowd LinkedIn post announcing The Hive Exchange: Boston featuring Ads Dawson](linkedin-the-hive-exchange-boston.png)
+
+> **Status:** Schedule confirmed. Local HTML archive, event screenshot, and Bugcrowd LinkedIn announcement screenshot saved.
