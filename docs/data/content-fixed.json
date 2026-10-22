@@ -378,6 +378,14 @@
       "year": "2026",
       "icon": "fas fa-graduation-cap",
       "description": "AI Pen-Testing Conference — Panel: AI Red Teaming"
+    },
+    {
+      "id": "hackerone-2026",
+      "name": "HackerOne",
+      "path": "hackerone/2026/november/security-report-webinar",
+      "year": "2026",
+      "icon": "fas fa-user-secret",
+      "description": "Webinar Panel — The Vulnerability Is Validated. The Clock Is Running. Now What? (10th Annual HackerOne Security Research Report)"
     }
   ],
   "podcasts": [

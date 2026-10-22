@@ -43,7 +43,8 @@ const conferenceOrgs = [
   { id: "ai-for-security", subPaths: [{path: "2026/august", year: "2026"}] },
   { id: "offensiveaicon", subPaths: [{path: "2026/october", year: "2026"}] },
   { id: "unpromptedcon", subPaths: [{path: "2026/october", year: "2026"}] },
-  { id: "aisecu", subPaths: [{path: "2026/november/ai-pen-testing-conference", year: "2026"}] }
+  { id: "aisecu", subPaths: [{path: "2026/november/ai-pen-testing-conference", year: "2026"}] },
+  { id: "hackerone", subPaths: [{path: "2026/november/security-report-webinar", year: "2026"}] }
 ];
 
 // Map directory names to display names and icons
@@ -72,7 +73,8 @@ const contentMap = {
   "ai-for-security": { name: "AI for Security", icon: "fas fa-phone-alt" },
   "offensiveaicon": { name: "Offensive AI Conference", icon: "fas fa-robot" },
   "unpromptedcon": { name: "[un]prompted Conference", icon: "fas fa-user-secret" },
-  "aisecu": { name: "AI Security University", icon: "fas fa-graduation-cap" }
+  "aisecu": { name: "AI Security University", icon: "fas fa-graduation-cap" },
+  "hackerone": { name: "HackerOne", icon: "fas fa-user-secret" }
 };
 
 // Create conference entries
@@ -249,6 +251,8 @@ conferenceOrgs.forEach(org => {
         description = "StealthBench: Can Autonomous Security Agents Do OPSEC Like An Experienced Operator?";
       } else if (org.id === 'aisecu') {
         description = "AI Pen-Testing Conference — Panel: AI Red Teaming";
+      } else if (org.id === 'hackerone') {
+        description = "Webinar Panel — The Vulnerability Is Validated. The Clock Is Running. Now What? (10th Annual HackerOne Security Research Report)";
       } else if (org.id === 'mlopscommunity') {
         if (subPath.year === '2024') {
           description = "AI in Production - MLOps Security and Privacy Panel";
