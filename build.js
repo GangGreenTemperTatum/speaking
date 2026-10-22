@@ -314,6 +314,7 @@ const podcastPaths = [
   { path: 'podcasts/synack', name: 'Synack Podcast', icon: 'fas fa-bug', year: '2023' },
   { path: 'podcasts/critical_thinking_bug_bounty_podcast', name: 'Critical Thinking - Bug Bounty Podcast', icon: 'fas fa-brain', year: '2026', description: 'HackerNotes Ep. 184 — Hackbots at Scale: Smaller Models, Bigger Signal' },
   { path: 'podcasts/critical_thinking_bug_bounty_podcast', name: 'Critical Thinking - Bug Bounty Podcast', icon: 'fas fa-brain', year: '2026', id: 'critical-thinking-bbp-ep188-2026', description: 'Ep. 188: DEFCON 34 Hotel Room Debrief — live from DEF CON with Gr3pme, BusFactor, and 7urb01' },
+  { path: 'podcasts/critical_thinking_bug_bounty_podcast', name: 'Critical Thinking - Bug Bounty Podcast', icon: 'fas fa-brain', year: '2026', id: 'critical-thinking-bbp-ep197-2026', description: 'Ep. 197: 800 Bugs w/ DeepSeek + Local Model Hacks — local AI models, hardware optimization, and harness over model with rez0 and gr3pme' },
   { path: 'podcasts/talkin_bout_infosec_news', name: "BHIS - Talkin' Bout Infosec News", icon: 'fas fa-broadcast-tower', year: '2026' },
   { path: 'podcasts/in_the_wild', name: 'In the Wild', icon: 'fas fa-crosshairs', year: '2026' }
 ];

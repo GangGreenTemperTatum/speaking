@@ -1,5 +1,41 @@
 # [Critical Thinking - Bug Bounty Podcast](https://www.youtube.com/@criticalthinkingpodcast)
 
+## Ep. 197: 800 Bugs w/ DeepSeek + Local Model Hacks | [Episode Link](https://www.criticalthinkingpodcast.io/800-bugs-w-deepseek-local-model-hacks/)
+
+- **Episode:** Episode 197 — 800 Bugs w/ DeepSeek + Local Model Hacks
+- **Date:** October 22, 2026
+- **Hosts:** rez0 (Joseph Thacker), gr3pme (Brandyn)
+- **Guest:** Ads Dawson (0xmoose)
+- **Duration:** 1 hr 26 min 5 sec
+- **Abstract:**
+
+  Joseph, Brandyn, and Ads talk about some recent bugs, and then serve up some tips on how they're using local AI models and optimizing their hardware — harness over model. Ads breaks down hitting 800 bugs with DeepSeek-powered hackbots, the hardware and quantization tweaks behind running capable models locally, and the verifier/reflection agent design that keeps autonomous hunting signal high.
+
+  Episode Timestamps
+
+  - **(00:00:00)** Introduction
+  - **(00:04:00)** Bugs found with DeepSeek
+  - **(00:18:15)** Caido Race Conditions & Pipeline Session
+  - **(00:23:47)** Free models in OpenCode, Reset months, and Overlapping Fragments
+  - **(00:29:54)** Local Models & Hardware Optimization
+  - **(00:46:53)** Verifiers & Reflections Agents
+  - **(00:58:16)** Ohmypi, Herdr and other Harnesses
+  - **(01:09:20)** Muse Spark Open & Stealth Bench, & DreadIndex
+  - **(01:18:35)** Keeping agents from fighting
+
+- 🍿 **Watch on YouTube** [800 Bugs w/ DeepSeek + Local Model Hacks (Ep.197)](https://www.youtube.com/watch?v=gKvIjE8LRVg)
+- 🎧 **Listen on Spotify** [Ep. 197: 800 Bugs w/ DeepSeek + Local Model Hacks](https://open.spotify.com/episode/4p1S0PtlttE0nvyzJeVRxs)
+- 🍎 **Listen on Apple Podcasts** [Ep. 197: 800 Bugs w/ DeepSeek + Local Model Hacks](https://podcasts.apple.com/us/podcast/episode-197-800-bugs-w-deepseek-local-model-hacks/id1663945029?i=1000797587403)
+- 🎙️ **Podcast on Spotify (Show)** [Critical Thinking - Bug Bounty Podcast](https://open.spotify.com/show/4GiJnv8f4a4ZR6Jc6TQJ3k)
+- 🌐 **Episode Page (HTML)** [ctbb-ep197-800-bugs-deepseek-local-model-hacks.html](ctbb-ep197-800-bugs-deepseek-local-model-hacks.html)
+- 📺 **YouTube Page (HTML)** [ctbb-ep197-youtube.html](ctbb-ep197-youtube.html)
+
+![Critical Thinking Bug Bounty Podcast - Episode 197 on YouTube](ctbb-ep197-youtube.png)
+
+![Critical Thinking Bug Bounty Podcast - Episode 197 Episode Page](ctbb-ep197-episode-page.png)
+
+----------------------------------------
+
 ## Ep. 188: DEFCON 34 Hotel Room Debrief | [Episode Link](https://www.criticalthinkingpodcast.io/defcon-34-hotel-room-debrief/)
 
 - **Episode:** Episode 188 — DEFCON 34 Hotel Room Debrief
@@ -31,7 +67,7 @@
 
 - **Episode:** HackerNotes Ep. 184 — Hackbots at Scale with Ads Dawson: Smaller Models, Bigger Signal
 - **Date:** July 2026
-- **Subtitle:** 750+ Bugs in 2026 with 0xMoose
+- **Subtitle:** 750+ Bugs in 2026 with 0xmoose
 - **Abstract:**
 
   Ads joins the Critical Thinking - Bug Bounty Podcast to break down how he scaled autonomous bug hunting to 728 reports submitted in 2026 YTD (roughly 5.9x his entire 2025 output) — all part-time, primarily using open-source and smaller models rather than expensive frontier APIs.

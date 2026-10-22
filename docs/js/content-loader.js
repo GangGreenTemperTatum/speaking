@@ -648,6 +648,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 path: "critical_thinking_bug_bounty_podcast"
             },
             {
+                name: "Critical Thinking - Bug Bounty Podcast",
+                year: "2026",
+                icon: "fas fa-brain",
+                description: "Ep. 197: 800 Bugs w/ DeepSeek + Local Model Hacks — local AI models, hardware optimization, and harness over model with rez0 and gr3pme",
+                path: "critical_thinking_bug_bounty_podcast"
+            },
+            {
                 name: "BHIS - Talkin' Bout Infosec News",
                 year: "2026",
                 icon: "fas fa-broadcast-tower",
