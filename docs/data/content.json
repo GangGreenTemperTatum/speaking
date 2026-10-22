@@ -462,6 +462,14 @@
       "description": "Ep. 188: DEFCON 34 Hotel Room Debrief — live from DEF CON with Gr3pme, BusFactor, and 7urb01"
     },
     {
+      "id": "critical-thinking-bbp-ep197-2026",
+      "name": "Critical Thinking - Bug Bounty Podcast",
+      "path": "podcasts/critical_thinking_bug_bounty_podcast",
+      "year": "2026",
+      "icon": "fas fa-brain",
+      "description": "Ep. 197: 800 Bugs w/ DeepSeek + Local Model Hacks — local AI models, hardware optimization, and harness over model with rez0 and gr3pme"
+    },
+    {
       "id": "podcasts-talkin_bout_infosec_news-2026",
       "name": "BHIS - Talkin' Bout Infosec News",
       "path": "podcasts/talkin_bout_infosec_news",
