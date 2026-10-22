@@ -500,6 +500,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 localPath: "conferences/aisecu/2026/november/ai-pen-testing-conference"
             },
             {
+                name: "HackerOne",
+                displayName: "The Vulnerability Is Validated. The Clock Is Running. Now What?",
+                year: "2026",
+                icon: "fas fa-user-secret",
+                description: "Webinar Panel — The Vulnerability Is Validated. The Clock Is Running. Now What? (10th Annual HackerOne Security Research Report)",
+                path: "hackerone",
+                subdir: "2026/november/security-report-webinar",
+                localPath: "conferences/hackerone/2026/november/security-report-webinar"
+            },
+            {
                 name: "Wallarm",
                 displayName: "Wallarm Webinar - New Security Gap: Your WAF Has No Idea What Your AI Is Doing",
                 year: "2026",
