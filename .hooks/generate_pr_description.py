@@ -101,7 +101,7 @@ async def get_diff(
 def main(
     base_ref: str = "origin/main",
     source_ref: str = "HEAD",
-    generator_id: str = "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
+    generator_id: str = "openrouter/nvidia/nemotron-3.5-lightning:free",
     max_diff_lines: int = 1000,
     exclude: list[str] | None = None,
 ) -> None:
