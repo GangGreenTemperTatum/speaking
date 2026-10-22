@@ -16,6 +16,30 @@ import rigging as rg
 
 TRUNCATION_WARNING = "\n---\n**Note**: Due to the large size of this diff, some content has been truncated."
 
+# Binary/large artifacts add no signal to a PR summary and can blow past the
+# model's context window (minified HTML can be millions of tokens on one line),
+# so exclude them from the diff.
+EXCLUDED_PATHSPECS = [
+    ":(exclude)*.html",
+    ":(exclude)*.pdf",
+    ":(exclude)*.png",
+    ":(exclude)*.jpg",
+    ":(exclude)*.jpeg",
+    ":(exclude)*.gif",
+    ":(exclude)*.svg",
+    ":(exclude)*.webp",
+    ":(exclude)*.ico",
+    ":(exclude)*.mp3",
+    ":(exclude)*.mp4",
+    ":(exclude)*.woff",
+    ":(exclude)*.woff2",
+    ":(exclude)package-lock.json",
+]
+
+# Hard cap on characters sent to the model, as a safety net on top of the line
+# cap (a single minified line can still be enormous).
+MAX_DIFF_CHARS = 120_000
+
 
 @rg.prompt
 def generate_pr_description(diff: str) -> t.Annotated[str, rg.Ctx("markdown")]:  # type: ignore[empty-body]
@@ -46,7 +70,7 @@ def get_diff(target_ref: str, source_ref: str) -> str:
         check=True,
     ).stdout.strip()
     diff_text = subprocess.run(
-        ["git", "diff", merge_base],
+        ["git", "diff", merge_base, "--", ".", *EXCLUDED_PATHSPECS],
         capture_output=True,
         text=True,
         check=True,
@@ -68,6 +92,9 @@ def main(
     diff_lines = diff.split("\n")
     if len(diff_lines) > max_diff_lines:
         diff = "\n".join(diff_lines[:max_diff_lines]) + TRUNCATION_WARNING
+
+    if len(diff) > MAX_DIFF_CHARS:
+        diff = diff[:MAX_DIFF_CHARS] + TRUNCATION_WARNING
 
     description = asyncio.run(generate_pr_description.bind(generator_id)(diff))
     print(description)
