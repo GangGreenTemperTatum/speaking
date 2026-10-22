@@ -15,6 +15,28 @@ import typer
 
 TRUNCATION_WARNING = "\n---\n**Note**: Due to the large size of this diff, some content has been truncated."
 
+# Binary/large artifacts add no signal and can blow past the model's context
+# window (minified HTML can be millions of tokens on one line).
+DEFAULT_EXCLUDES = [
+    "*.html",
+    "*.pdf",
+    "*.png",
+    "*.jpg",
+    "*.jpeg",
+    "*.gif",
+    "*.svg",
+    "*.webp",
+    "*.ico",
+    "*.mp3",
+    "*.mp4",
+    "*.woff",
+    "*.woff2",
+    "package-lock.json",
+]
+
+# Hard cap on characters sent to the model, as a safety net on top of the line cap.
+MAX_DIFF_CHARS = 120_000
+
 
 @rg.prompt
 def generate_pr_description(diff: str) -> t.Annotated[str, rg.Ctx("markdown")]:  # type: ignore[empty-body]
@@ -108,10 +130,14 @@ def main(
     """
     Use rigging to generate a PR description from a git diff.
     """
-    diff = asyncio.run(get_diff(base_ref, source_ref, exclude=exclude))
+    diff = asyncio.run(
+        get_diff(base_ref, source_ref, exclude=exclude or DEFAULT_EXCLUDES)
+    )
     diff_lines = diff.split("\n")
     if len(diff_lines) > max_diff_lines:
         diff = "\n".join(diff_lines[:max_diff_lines]) + TRUNCATION_WARNING
+    if len(diff) > MAX_DIFF_CHARS:
+        diff = diff[:MAX_DIFF_CHARS] + TRUNCATION_WARNING
     description = asyncio.run(generate_pr_description.bind(generator_id)(diff))
     print(description)
 
