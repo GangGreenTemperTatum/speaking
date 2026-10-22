@@ -27,26 +27,23 @@ jobs:
           pip install uv
 
       - name: Generate PR Description
-        id: description
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: |
-          DESCRIPTION=$(uv run --no-project .github/scripts/rigging_pr_decorator.py origin/${{ github.base_ref }})
-          echo "description<<EOF" >> $GITHUB_OUTPUT
-          echo "$DESCRIPTION" >> $GITHUB_OUTPUT
-          echo "EOF" >> $GITHUB_OUTPUT
+          uv run --no-project .github/scripts/rigging_pr_decorator.py "origin/${{ github.base_ref }}" > rigging_description.md
 
       - name: Update PR Description
-        uses: nefrob/pr-description@30859d560129561327a48ec569ec3b6aa62dd2c9 # v1.3.0
-        with:
-          content: |
-            ## AI-Generated Summary
-
-            ${{ steps.description.outputs.description }}
-
-            ---
-
-            This summary was generated with ❤️ by [rigging](https://rigging.dreadnode.io/)
-          regex: ".*"
-          regexFlags: s
-          token: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          {
+            echo "## AI-Generated Summary"
+            echo
+            cat rigging_description.md
+            echo
+            echo "---"
+            echo
+            echo "This summary was generated with ❤️ by [rigging](https://rigging.dreadnode.io/)"
+          } > pr_body.md
+          gh pr edit "$PR_NUMBER" --body-file pr_body.md
