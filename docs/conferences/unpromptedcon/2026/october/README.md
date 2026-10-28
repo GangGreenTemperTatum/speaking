@@ -41,7 +41,10 @@
 
 ![unpromptedcon 2026 StealthBench speakers - Adrian Wood and Ads Dawson](unpromptedcon-2026-stealthbench-speakers.png)
 
+![StealthBench talk slide — "stelf"](stealthbench-stelf.jpg)
+
 - [Speaker announcements (PDF)](unpromptedcon-2026-speaker-announcements.pdf)
+- [StealthBench — 20-minute talk slides (PDF)](stealthbench-20-minute-talk.pdf)
 
 - **Official links:**
   - [unpromptedcon.org](https://unpromptedcon.org/)
