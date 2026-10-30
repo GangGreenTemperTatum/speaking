@@ -737,6 +737,20 @@ const conferences = [
         featured: true
     },
     {
+        id: "nahamcon-prompt2pwn-2026",
+        name: "NahamCon",
+        displayName: "NahamCon 2026 @ Prompt2Pwn - Organizer & Board Member",
+        year: "2026",
+        icon: "fas fa-skull",
+        description: "Organizer & Board Member \u2014 Prompt2Pwn: two days of live AI hacking in Oakland, with NahamCon as the conference track",
+        path: "nahamcon",
+        subdir: "2026/november/prompt2pwn",
+        localPath: "conferences/nahamcon/2026/november/prompt2pwn",
+        type: "conference",
+        date: "2026-11-20",
+        featured: true
+    },
+    {
         id: "wallarm-2026",
         name: "Wallarm",
         displayName: "Wallarm Webinar - New Security Gap: Your WAF Has No Idea What Your AI Is Doing",
@@ -1409,6 +1423,20 @@ const publications = [
 
 // Volunteering data
 const volunteering = [
+    {
+        id: "prompt2pwn-nahamcon-board",
+        title: "Board Member & Organizer \u2013 Prompt2Pwn / NahamCon",
+        organization: "Prompt2Pwn (Zenity Labs & NahamSec)",
+        description: "Board member and organizer for Prompt2Pwn, a two-day live AI hacking event in Oakland with NahamCon as its conference track. Helping shape the talk track, the PWN2OWN-style AI agent competition, and the partner live hacking scope.",
+        sector: "Science & Technology",
+        date: "2026 \u2013 Present",
+        dateStart: "2026-01-01",
+        icon: "fas fa-skull",
+        year: "2026",
+        url: "https://p2p.nahamcon.com/",
+        type: "volunteering",
+        featured: true
+    },
     {
         id: "hackerone-us-south-ambassador",
         title: "Brand Ambassador, US South HackerOne Club",
