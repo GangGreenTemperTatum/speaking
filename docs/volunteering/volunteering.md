@@ -8,7 +8,9 @@
 **Sector:** Science & Technology
 
 Board member and organizer for Prompt2Pwn, a two-day live AI hacking event at the Oakland Marriott (Nov 20–21, 2026) with NahamCon as its conference track. Help shape the talk track, the PWN2OWN-style AI agent competition where researchers build agents against hardened applications, and the partner-supplied live hacking scope.
-[NahamCon 2026](https://p2p.nahamcon.com/) · [Prompt2Pwn](https://labs.zenity.io/prompt2pwn)
+![Prompt2Pwn — Zenity Labs x NahamCon](../conferences/nahamcon/2026/november/prompt2pwn/prompt2pwn-key-art.jpg)
+
+[NahamCon 2026](https://p2p.nahamcon.com/) · [Prompt2Pwn](https://labs.zenity.io/prompt2pwn) · [Case file](../conferences/nahamcon/2026/november/prompt2pwn/README.md)
 
 ---
 
