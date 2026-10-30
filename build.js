@@ -44,7 +44,8 @@ const conferenceOrgs = [
   { id: "offensiveaicon", subPaths: [{path: "2026/october", year: "2026"}] },
   { id: "unpromptedcon", subPaths: [{path: "2026/october", year: "2026"}] },
   { id: "aisecu", subPaths: [{path: "2026/november/ai-pen-testing-conference", year: "2026"}] },
-  { id: "hackerone", subPaths: [{path: "2026/november/security-report-webinar", year: "2026"}] }
+  { id: "hackerone", subPaths: [{path: "2026/november/security-report-webinar", year: "2026"}] },
+  { id: "nahamcon", subPaths: [{path: "2026/november/prompt2pwn", year: "2026", id: "nahamcon-prompt2pwn-2026", icon: "fas fa-skull"}] }
 ];
 
 // Map directory names to display names and icons
@@ -74,7 +75,8 @@ const contentMap = {
   "offensiveaicon": { name: "Offensive AI Conference", icon: "fas fa-robot" },
   "unpromptedcon": { name: "[un]prompted Conference", icon: "fas fa-user-secret" },
   "aisecu": { name: "AI Security University", icon: "fas fa-graduation-cap" },
-  "hackerone": { name: "HackerOne", icon: "fas fa-user-secret" }
+  "hackerone": { name: "HackerOne", icon: "fas fa-user-secret" },
+  "nahamcon": { name: "NahamCon", icon: "fas fa-skull" }
 };
 
 // Create conference entries
@@ -253,6 +255,8 @@ conferenceOrgs.forEach(org => {
         description = "AI Pen-Testing Conference — Panel: AI Red Teaming";
       } else if (org.id === 'hackerone') {
         description = "Webinar Panel — The Vulnerability Is Validated. The Clock Is Running. Now What? (10th Annual HackerOne Security Research Report)";
+      } else if (org.id === 'nahamcon') {
+        description = "Organizer & Board Member — Prompt2Pwn: two days of live AI hacking in Oakland, with NahamCon as the conference track";
       } else if (org.id === 'mlopscommunity') {
         if (subPath.year === '2024') {
           description = "AI in Production - MLOps Security and Privacy Panel";
