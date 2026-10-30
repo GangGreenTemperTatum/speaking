@@ -1297,6 +1297,27 @@ h3 {
     position: relative;
 }
 
+.vol-artifact {
+    display: block;
+    width: 100%;
+    margin: 0.75rem 0;
+    border: 3px solid var(--panel-border);
+    box-shadow: 4px 4px 0 var(--panel-border);
+}
+
+.vol-artifact img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.vol-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
 .volunteering-item .panel-content h3 {
     margin-bottom: 0.5rem;
     color: var(--primary);
