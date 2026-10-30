@@ -4,7 +4,6 @@ module.exports = {
     moduleFileExtensions: ['js', 'json'],
     collectCoverageFrom: [
         'docs/js/*.js',
-        '!docs/js/content-loader.js',
         '!docs/js/debug.js',
         '!docs/js/file-copier.js',
         '!docs/js/main.js',
