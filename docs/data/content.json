@@ -464,10 +464,11 @@
     {
       "id": "podcasts-critical_thinking_bug_bounty_podcast-2026",
       "name": "Critical Thinking - Bug Bounty Podcast",
+      "displayName": "Critical Thinking - Bug Bounty Podcast — Co-Host (Oct 2026–Present)",
       "path": "podcasts/critical_thinking_bug_bounty_podcast",
       "year": "2026",
-      "icon": "fas fa-brain",
-      "description": "HackerNotes Ep. 184 — Hackbots at Scale: Smaller Models, Bigger Signal"
+      "icon": "fas fa-microphone",
+      "description": "Co-Host (Oct 2026–Present) — Ads joined the show alongside Rhynorater and rez0, announced in Ep. 198."
     },
     {
       "id": "critical-thinking-bbp-ep188-2026",
@@ -484,6 +485,14 @@
       "year": "2026",
       "icon": "fas fa-brain",
       "description": "Ep. 197: 800 Bugs w/ DeepSeek + Local Model Hacks — local AI models, hardware optimization, and harness over model with rez0 and gr3pme"
+    },
+    {
+      "id": "critical-thinking-bbp-ep198-2026",
+      "name": "Critical Thinking - Bug Bounty Podcast",
+      "path": "podcasts/critical_thinking_bug_bounty_podcast",
+      "year": "2026",
+      "icon": "fas fa-ghost",
+      "description": "Ep. 198: Scariest Bugs of 2026 — Halloween Special — the episode where Ads was announced as a co-host of the podcast, swapping the year's spookiest bug stories with rez0, xssdoctor, and Rhynorater"
     },
     {
       "id": "podcasts-talkin_bout_infosec_news-2026",
