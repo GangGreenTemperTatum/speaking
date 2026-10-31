@@ -757,12 +757,12 @@ content.publications = publications;
 content.achievements = [
   {
     id: "hackerone-us-leaderboard-2026",
-    title: "HackerOne US BBP Leaderboard 2026 - #3",
+    title: "HackerOne US BBP Leaderboard 2026 - #1",
     organization: "HackerOne",
-    description: "Ranked #3 on the HackerOne US Country Leaderboard for 2026 in Bug Bounty Programs, Individuals category for Web Application assets.",
+    description: "Ranked #1 on the HackerOne US Country Leaderboard for 2026 (as of October 2026) in Bug Bounty Programs, Individuals category for Web Application assets — up from #3 in July 2026.",
     icon: "fas fa-trophy",
     year: "2026",
-    date: "2026-06-30",
+    date: "2026-10-31",
     type: "achievement",
     url: "https://hackerone.com/leaderboard/country?year=2026&country=US&assetType=WEB_APP&tab=bbp&userTypeTab=individual",
     localPath: "achievements/hackerone"
