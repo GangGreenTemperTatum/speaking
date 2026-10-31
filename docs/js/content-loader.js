@@ -645,9 +645,10 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             {
                 name: "Critical Thinking - Bug Bounty Podcast",
+                displayName: "Critical Thinking - Bug Bounty Podcast — Co-Host (Oct 2026–Present)",
                 year: "2026",
-                icon: "fas fa-brain",
-                description: "HackerNotes Ep. 184 — Hackbots at Scale: Smaller Models, Bigger Signal",
+                icon: "fas fa-microphone",
+                description: "Co-Host (Oct 2026–Present) — Ads joined the show alongside Rhynorater and rez0, announced in Ep. 198.",
                 path: "critical_thinking_bug_bounty_podcast"
             },
             {
@@ -668,7 +669,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 name: "Critical Thinking - Bug Bounty Podcast",
                 year: "2026",
                 icon: "fas fa-ghost",
-                description: "Ep. 198: Scariest Bugs of 2026 — Halloween Special, swapping the spookiest bug stories of the year with rez0, xssdoctor, and Rhynorater",
+                description: "Ep. 198: Scariest Bugs of 2026 — Halloween Special — the episode where Ads was announced as a co-host of the podcast, swapping the year's spookiest bug stories with rez0, xssdoctor, and Rhynorater",
                 path: "critical_thinking_bug_bounty_podcast"
             },
             {
