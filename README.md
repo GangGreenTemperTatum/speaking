@@ -20,7 +20,7 @@ Visit the [GitHub Pages site](https://ganggreentempertatum.github.io/speaking/) 
 ## Contents
 
 - **Conference Talks**: Presentations, slides, and materials from conference appearances
-- **Podcasts**: Information about podcast appearances with links to episodes
+- **Podcasts**: Co-host role on the [Critical Thinking - Bug Bounty Podcast](https://www.criticalthinkingpodcast.io/) (Oct 2026–Present), plus guest podcast appearances with links to episodes
 - **Publications**: Links to articles, papers, and other publications
 - **Television**: TV and video appearances related to AI/ML security
 - **CVEs**: Published CVE records from coordinated vulnerability disclosures — browse at [cves.html](https://ganggreentempertatum.github.io/speaking/cves.html)

@@ -320,9 +320,10 @@ const podcastPaths = [
   { path: 'podcasts/owasp/owasp-llm-apps-podcast', name: 'OWASP LLM Apps Podcast', icon: 'fas fa-shield-virus', year: '2025' },
   { path: 'podcasts/software_testing_and_quality_talks', name: 'Software Testing & Quality Talks', icon: 'fas fa-check-circle', year: '2024' },
   { path: 'podcasts/synack', name: 'Synack Podcast', icon: 'fas fa-bug', year: '2023' },
-  { path: 'podcasts/critical_thinking_bug_bounty_podcast', name: 'Critical Thinking - Bug Bounty Podcast', icon: 'fas fa-brain', year: '2026', description: 'HackerNotes Ep. 184 — Hackbots at Scale: Smaller Models, Bigger Signal' },
+  { path: 'podcasts/critical_thinking_bug_bounty_podcast', name: 'Critical Thinking - Bug Bounty Podcast', displayName: 'Critical Thinking - Bug Bounty Podcast — Co-Host (Oct 2026–Present)', icon: 'fas fa-microphone', year: '2026', description: 'Co-Host (Oct 2026–Present) — Ads joined the show alongside Rhynorater and rez0, announced in Ep. 198.' },
   { path: 'podcasts/critical_thinking_bug_bounty_podcast', name: 'Critical Thinking - Bug Bounty Podcast', icon: 'fas fa-brain', year: '2026', id: 'critical-thinking-bbp-ep188-2026', description: 'Ep. 188: DEFCON 34 Hotel Room Debrief — live from DEF CON with Gr3pme, BusFactor, and 7urb01' },
   { path: 'podcasts/critical_thinking_bug_bounty_podcast', name: 'Critical Thinking - Bug Bounty Podcast', icon: 'fas fa-brain', year: '2026', id: 'critical-thinking-bbp-ep197-2026', description: 'Ep. 197: 800 Bugs w/ DeepSeek + Local Model Hacks — local AI models, hardware optimization, and harness over model with rez0 and gr3pme' },
+  { path: 'podcasts/critical_thinking_bug_bounty_podcast', name: 'Critical Thinking - Bug Bounty Podcast', icon: 'fas fa-ghost', year: '2026', id: 'critical-thinking-bbp-ep198-2026', description: 'Ep. 198: Scariest Bugs of 2026 — Halloween Special — the episode where Ads was announced as a co-host of the podcast, swapping the year\'s spookiest bug stories with rez0, xssdoctor, and Rhynorater' },
   { path: 'podcasts/talkin_bout_infosec_news', name: "BHIS - Talkin' Bout Infosec News", icon: 'fas fa-broadcast-tower', year: '2026' },
   { path: 'podcasts/in_the_wild', name: 'In the Wild', icon: 'fas fa-crosshairs', year: '2026' }
 ];
@@ -351,6 +352,7 @@ podcastPaths.forEach(podcast => {
   content.podcasts.push({
     id: podcast.id || `${podcast.path.replace(/\//g, '-')}-${podcast.year}`,
     name: podcast.name,
+    ...(podcast.displayName ? { displayName: podcast.displayName } : {}),
     path: podcast.path,
     year: podcast.year,
     icon: podcast.icon,
