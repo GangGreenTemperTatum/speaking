@@ -665,6 +665,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 path: "critical_thinking_bug_bounty_podcast"
             },
             {
+                name: "Critical Thinking - Bug Bounty Podcast",
+                year: "2026",
+                icon: "fas fa-ghost",
+                description: "Ep. 198: Scariest Bugs of 2026 — Halloween Special, swapping the spookiest bug stories of the year with rez0, xssdoctor, and Rhynorater",
+                path: "critical_thinking_bug_bounty_podcast"
+            },
+            {
                 name: "BHIS - Talkin' Bout Infosec News",
                 year: "2026",
                 icon: "fas fa-broadcast-tower",

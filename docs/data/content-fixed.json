@@ -486,6 +486,14 @@
       "description": "Ep. 197: 800 Bugs w/ DeepSeek + Local Model Hacks — local AI models, hardware optimization, and harness over model with rez0 and gr3pme"
     },
     {
+      "id": "critical-thinking-bbp-ep198-2026",
+      "name": "Critical Thinking - Bug Bounty Podcast",
+      "path": "podcasts/critical_thinking_bug_bounty_podcast",
+      "year": "2026",
+      "icon": "fas fa-ghost",
+      "description": "Ep. 198: Scariest Bugs of 2026 — Halloween Special, swapping the spookiest bug stories of the year with rez0, xssdoctor, and Rhynorater"
+    },
+    {
       "id": "podcasts-talkin_bout_infosec_news-2026",
       "name": "BHIS - Talkin' Bout Infosec News",
       "path": "podcasts/talkin_bout_infosec_news",

@@ -1,5 +1,43 @@
 # [Critical Thinking - Bug Bounty Podcast](https://www.youtube.com/@criticalthinkingpodcast)
 
+## Ep. 198: Scariest Bugs of 2026 — Halloween Special 🎃 | [Episode Link](https://www.criticalthinkingpodcast.io/scariest-bugs-of-2026-halloween-special/)
+
+- **Episode:** Episode 198 — Scariest Bugs of 2026 (Halloween Special)
+- **Date:** October 31, 2026
+- **Hosts:** Rhynorater (Justin Gardner), rez0 (Joseph Thacker), xssdoctor (Jonathan Dunn)
+- **Guest:** Ads Dawson (0xmoose)
+- **Duration:** 1 hr 27 min 53 sec
+- **Abstract:**
+
+  A Halloween special: the CTBB crew is back with the spookiest bug stories they've had this year — government hacks, summoning global agents, low payouts and long triage times, and (possibly scariest of all) JD's technical issues. Ads joins Joseph Thacker, Jonathan Dunn, and Justin Gardner to swap horror stories from the field, from full auth bypasses and RCE sandboxes to hackbot nightmares.
+
+  Episode Timestamps
+
+  - **(00:00:00)** Introduction
+  - **(00:03:08)** Full Auth by Migration Endpoint & RCE — Sandbox, artifacts, & Blobs
+  - **(00:16:46)** Summoning a Global Agent & Preying on Vulnerable Chatbots
+  - **(00:27:25)** 3D Printer hacks via Tickets
+  - **(00:34:20)** Hacking Healthcare and Governments
+  - **(00:47:52)** Dispatcher RCE & the Tale of 3 Bugs
+  - **(01:01:05)** Pwning IoT Devices
+  - **(01:10:15)** Intuition Hacks & Scary Low Payouts
+  - **(01:18:25)** Hackbot Horror Stories
+
+- 📝 **HackerNotes (Ep. 198)** [Halloween Bug Stories, Shameful Sandboxes, Null Origin Frames, and SQLi to ASPX RCE](https://blog.criticalthinkingpodcast.io/p/hackernotes-ep-198-halloween-bug-stories-shameful-sandboxes-null-origin-frames-and-sqli-to-aspx-rce)
+- 🍿 **Watch on YouTube** [Scariest Bugs of 2026 - Halloween Special (Ep.198)](https://www.youtube.com/watch?v=cHK_Aq0USlw)
+- 🎧 **Listen on Spotify** [Ep. 198: Scariest Bugs of 2026 - Halloween Special](https://open.spotify.com/episode/5xpnZg0gGH0O3wy6CDPA10)
+- 🍎 **Listen on Apple Podcasts** [Ep. 198: Scariest Bugs of 2026 - Halloween Special](https://podcasts.apple.com/us/podcast/episode-198-scariest-bugs-of-2026-halloween-special/id1663945029?i=1000799037112)
+- 🎙️ **Podcast on Spotify (Show)** [Critical Thinking - Bug Bounty Podcast](https://open.spotify.com/show/4GiJnv8f4a4ZR6Jc6TQJ3k)
+- 🌐 **Episode Page (HTML)** [ctbb-ep198-scariest-bugs-of-2026-halloween-special.html](ctbb-ep198-scariest-bugs-of-2026-halloween-special.html)
+- 📺 **YouTube Page (HTML)** [ctbb-ep198-youtube.html](ctbb-ep198-youtube.html)
+- 🎧 **Spotify Page (HTML)** [ctbb-ep198-spotify.html](ctbb-ep198-spotify.html)
+
+![Critical Thinking Bug Bounty Podcast - Episode 198 "Scariest Bugs of 2026" thumbnail featuring Joseph Thacker, Jonathan Dunn, Ads Dawson, and Justin Gardner](ctbb-ep198-thumbnail.png)
+
+![Critical Thinking Bug Bounty Podcast - Episode 198 on YouTube](ctbb-ep198-youtube.png)
+
+----------------------------------------
+
 ## Ep. 197: 800 Bugs w/ DeepSeek + Local Model Hacks | [Episode Link](https://www.criticalthinkingpodcast.io/800-bugs-w-deepseek-local-model-hacks/)
 
 - **Episode:** Episode 197 — 800 Bugs w/ DeepSeek + Local Model Hacks
