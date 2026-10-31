@@ -890,6 +890,17 @@ const podcasts = [
         featured: true
     },
     {
+        id: "critical-thinking-bbp-ep198-2026",
+        name: "Critical Thinking - Bug Bounty Podcast",
+        year: "2026",
+        icon: "fas fa-ghost",
+        description: "Ep. 198: Scariest Bugs of 2026 — Halloween Special, swapping the spookiest bug stories of the year with rez0, xssdoctor, and Rhynorater",
+        path: "critical_thinking_bug_bounty_podcast",
+        type: "podcast",
+        date: "2026-10-31",
+        featured: true
+    },
+    {
         id: "bhis-talkin-bout-infosec-2026",
         name: "BHIS - Talkin' Bout Infosec News",
         year: "2026",
