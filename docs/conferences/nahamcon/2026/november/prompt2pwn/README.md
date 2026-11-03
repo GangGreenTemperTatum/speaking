@@ -58,14 +58,17 @@ Participants cover their own travel and accommodation; a hotel discount is provi
 - **Michael Cartsonis** — Application security / OWASP OASIS co-founder — *Saving open source one remediation at time*
 - **Roni Carta** — Lupin / Founder & CEO, Depi — *Running Supply Chain Attacks in the AI Era: C2, Package Poisoning and Backdoored AI Agents*
 - **Dylan Ayrey** — Co-founder & CEO, Truffle Security — *Stolen API Keys Fuel Model Distillation*
-- **Preben Ver Eecke** — Pentester / bug bounty hunter — *Talk title TBD*
+- **Preben Ver Eecke** — Pentester / bug bounty hunter — *Many Agents, One Surface*
 
 **Live podcast panel cohosts**
 
-- **Rhynorater**
-- **Rez0**
+- **Justin Gardner (Rhynorater)**
+- **Joseph Thacker (Rez0)**
+- **Ads Dawson (0xmoose)**
 
 ![NahamCon 2026 speaker lineup — keynotes and featured talks](nahamcon-prompt2pwn-2026-speakers.png)
+
+![Prompt2Pwn — Live Podcast Panel Cohosts: Justin Gardner (Rhynorater), Joseph Thacker (rez0), and Ads Dawson (0xmoose)](nahamcon-prompt2pwn-2026-podcast-panel.png)
 
 ### Partners & Sponsors
 
@@ -81,6 +84,7 @@ HackerOne, Vercel, Dropbox, Intigriti, Meta, HackingHub, ProjectDiscovery, Alter
 - **Prompt2Pwn event page:** [labs.zenity.io/prompt2pwn](https://labs.zenity.io/prompt2pwn)
 - **Attendance application:** [Apply for in-person access](https://forms.gle/x8YhgLnGis4F1FjB9)
 - **Local NahamCon page archive:** [nahamcon-prompt2pwn-2026-page.html](nahamcon-prompt2pwn-2026-page.html) · [full-page screenshot](nahamcon-prompt2pwn-2026-page.png)
+- **Local NahamCon page archive (lineup set, Nov 2 2026):** [nahamcon-prompt2pwn-2026-lineup-page.html](nahamcon-prompt2pwn-2026-lineup-page.html) · [live podcast panel screenshot](nahamcon-prompt2pwn-2026-podcast-panel.png)
 - **Local Prompt2Pwn page archive:** [prompt2pwn-zenity-labs-page.html](prompt2pwn-zenity-labs-page.html) · [full-page screenshot](prompt2pwn-zenity-labs-page.png)
 
-> **Status:** Upcoming. Organizing/board role for Prompt2Pwn and its NahamCon conference track. Talk times to be announced; local HTML archives and browser screenshots (NahamCon page and speaker lineup; Prompt2Pwn hero, schedule, tracks, and organizing team) saved.
+> **Status:** Upcoming. Organizing/board role for Prompt2Pwn and its NahamCon conference track — and a Live Podcast Panel Cohost alongside Rhynorater and rez0. The lineup is set and talk times are live (confirmed Nov 2, 2026). Local HTML archives and browser screenshots (NahamCon page and speaker lineup; Prompt2Pwn hero, schedule, tracks, and organizing team; live podcast panel) saved.

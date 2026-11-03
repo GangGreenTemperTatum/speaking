@@ -4,6 +4,21 @@
 
 Ads Dawson (0xmoose) is a **co-host** of the [Critical Thinking - Bug Bounty Podcast](https://www.criticalthinkingpodcast.io/), joining the show alongside Justin Gardner (Rhynorater) and Joseph Thacker (rez0). The move was announced during [Episode 198: Scariest Bugs of 2026 — Halloween Special](https://www.criticalthinkingpodcast.io/scariest-bugs-of-2026-halloween-special/) (Oct 31, 2026).
 
+### 🎤 Live Podcast Panel Co-Host — NahamCon 2026 (Prompt2Pwn)
+
+The co-host line-up is featured on the [NahamCon 2026 — Prompt2Pwn](https://p2p.nahamcon.com/) event page, where Ads Dawson (0xmoose) appears as a **Live Podcast Panel Cohost** alongside **Justin Gardner (Rhynorater)** and **Joseph Thacker (rez0)** — bringing the Critical Thinking crew to the stage live in Oakland and streamed worldwide.
+
+- **Event:** NahamCon 2026 — live at Prompt2Pwn (brought to you by NahamSec + /labs)
+- **Dates:** November 20–21, 2026
+- **Location:** Oakland, California + global stream (NahamSec [YouTube](https://www.youtube.com/@NahamSec) / Twitch)
+- **Role:** Live Podcast Panel Cohost (alongside Rhynorater & rez0)
+- **Event Page:** [p2p.nahamcon.com](https://p2p.nahamcon.com/)
+- **Event Page (HTML capture):** [nahamcon-2026-prompt2pwn-live-podcast-panel.html](nahamcon-2026-prompt2pwn-live-podcast-panel.html)
+
+![NahamCon 2026 Prompt2Pwn — Live Podcast Panel Cohosts: Justin Gardner (Rhynorater), Joseph Thacker (rez0), and Ads Dawson (0xmoose)](nahamcon-2026-prompt2pwn-panel.png)
+
+![NahamCon 2026 — Live at Prompt2Pwn, November 20–21, 2026, Oakland, California + worldwide stream](nahamcon-2026-prompt2pwn-hero.png)
+
 The episodes below document the journey from recurring guest to co-host and are retained for history. Going forward, individual guest-appearance episodes are no longer logged here — this entry now reflects the ongoing co-host role.
 
 ----------------------------------------
