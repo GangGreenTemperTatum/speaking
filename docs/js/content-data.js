@@ -1436,6 +1436,21 @@ const publications = [
 // Volunteering data
 const volunteering = [
     {
+        id: "v-caps-ncyte-instructor",
+        title: "Instructor – V-CAPS (Virtual Cybersecurity AP Course Supplemental)",
+        organization: "NCyTE Center",
+        description: "Selected by Bugcrowd as a top-tier security researcher to co-instruct V-CAPS — a 12-week, NSF-funded NCyTE program teaching high-school AP students real-world vulnerability discovery and AI security, alongside NahamSec (Ben Sadeghipour) and rye (Nathan Miranda).",
+        sector: "Science & Technology",
+        date: "Jan – Mar 2027",
+        dateStart: "2027-01-12",
+        icon: "fas fa-chalkboard-teacher",
+        year: "2027",
+        url: "https://www.ncyte.net/career-seekers/career-seeker-resources/virtual-cybersecurity-ap-course-supplemental",
+        localPath: "volunteering/v-caps-ncyte",
+        type: "volunteering",
+        featured: true
+    },
+    {
         id: "prompt2pwn-nahamcon-board",
         title: "Board Member & Organizer \u2013 Prompt2Pwn / NahamCon",
         organization: "Prompt2Pwn (Zenity Labs & NahamSec)",
