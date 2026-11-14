@@ -70,10 +70,18 @@ Ads's instruction anchors the program's AI differentiation: **Week 3** introduce
   - **Cohort 2:** Wednesdays, 5–7pm Pacific
   - Each cohort: 25 students, divided into teams of five
 
+### In the News — NSF Expansion Award (November 2026)
+
+NCyTE Center announced that Whatcom Community College was awarded a **$1.07 million supplemental grant from the National Science Foundation** to expand V-CAPS and bring AI and cybersecurity career opportunities to high-school students nationwide — the program Ads co-instructs.
+
+![NCyTE Center announces a $1.07M NSF supplemental grant to expand the V-CAPS program](ncyte-nsf-award-linkedin-post.png)
+
 ### Links
 
 - **Program page:** [ncyte.net — V-CAPS](https://www.ncyte.net/career-seekers/career-seeker-resources/virtual-cybersecurity-ap-course-supplemental)
 - **NCyTE Center:** [ncyte.net](https://www.ncyte.net/)
+- **NSF award announcement:** [NCyTE Center on LinkedIn](https://www.linkedin.com/posts/ncyte-whatcomcommunitycollege-nsf-share-7527053267835469824-_a2r/)
 - **Local page archive (HTML):** [v-caps-ncyte-page.html](v-caps-ncyte-page.html)
+- **Local announcement archive (HTML):** [ncyte-nsf-award-linkedin-post.html](ncyte-nsf-award-linkedin-post.html)
 
-> **Status:** Upcoming — 2027 cohort. Instructor role confirmed and listed on the NCyTE V-CAPS page alongside NahamSec and rye. Program funded by the U.S. National Science Foundation (NSF Grants #2054724 and #2600198). Local HTML archive and browser screenshots (About/badge, instructor card, 2027 schedule) saved.
+> **Status:** Upcoming — 2027 cohort. Instructor role confirmed and listed on the NCyTE V-CAPS page alongside NahamSec and rye. Program funded by the U.S. National Science Foundation (NSF Grants #2054724 and #2600198), with a **$1.07M NSF supplemental grant** announced in November 2026 to expand V-CAPS nationwide. Local HTML archives and browser screenshots (About/badge, instructor card, 2027 schedule, NSF award announcement) saved.
