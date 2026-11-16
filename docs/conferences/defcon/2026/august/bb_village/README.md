@@ -72,6 +72,15 @@
 
 ---
 
+### 🎥 Full Talk Recording
+
+The full DEF CON 34 Bug Bounty Village talk — *Exfil Everything: A Year of Stealing Data from AI Agents* by Ads Dawson and Mike Takahashi — is now live on the official Bug Bounty DEFCON channel.
+
+![Exfil Everything: A Year of Stealing Data from AI Agents — DEF CON 34 Bug Bounty Village talk (YouTube)](exfil-everything-defcon34-bbv-youtube.png)
+
+- **Watch:** [Exfil Everything: A Year of Stealing Data from AI Agents | DEF CON 34 | BBV Talk](https://www.youtube.com/watch?v=lKn6ptGaiPs) — Bug Bounty DEFCON (25:39)
+- **Local page archive (HTML):** [exfil-everything-defcon34-bbv-youtube.html](exfil-everything-defcon34-bbv-youtube.html)
+
 - 📄 **Slides (PDF)** [[EXTERNAL] BBV Defcon 34 - Exfil Everything_ A Year of Stealing Data from AI Agents - Ads n Tak.pdf](<[EXTERNAL] BBV Defcon 34 - Exfil Everything_ A Year of Stealing Data from AI Agents - Ads n Tak.pdf>)
 
 ![Exfil Everything - Bug Bounty Village DEF CON 34](signal-2026-08-09-17-52-27-185_002.jpg)
