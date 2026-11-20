@@ -1235,6 +1235,558 @@
       "icon": "fas fa-shield-halved",
       "type": "cve",
       "featured": true
+    },
+    {
+      "id": "cve-2026-123278",
+      "cveId": "CVE-2026-123278",
+      "title": "CVE-2026-123278 — JetBrains IntelliJ IDEA",
+      "organization": "JetBrains",
+      "product": "IntelliJ IDEA",
+      "description": "In JetBrains IntelliJ IDEA before 2026.3 code execution was possible via the unauthenticated JDBC worker RMI endpoint",
+      "reportContext": "HackerOne report #4073395: Missing Authentication in RemoteJdbcServer Enables Cross-User Native Code Execution.",
+      "researcher": "Ads Dawson",
+      "url": "cves.html?id=cve-2026-123278",
+      "reportUrl": "https://hackerone.com/reports/4073395",
+      "state": "PUBLISHED",
+      "year": "2026",
+      "date": "2026-11-06",
+      "dateReserved": "2026-11-05T18:38:12.611Z",
+      "datePublished": "2026-11-06T10:27:47.193Z",
+      "dateUpdated": "2026-11-07T04:55:15.727Z",
+      "affectedVersion": "before 2026.3",
+      "unaffectedFrom": "2026.3",
+      "cwe": "CWE-306",
+      "cvss": {
+        "version": "3.1",
+        "score": 6.7,
+        "severity": "MEDIUM",
+        "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "attackVector": "LOCAL",
+        "attackComplexity": "HIGH",
+        "privilegesRequired": "LOW",
+        "userInteraction": "REQUIRED",
+        "scope": "UNCHANGED",
+        "confidentiality": "HIGH",
+        "integrity": "HIGH",
+        "availability": "HIGH"
+      },
+      "cisaEnrichment": {
+        "exploitation": "none",
+        "automatable": "no",
+        "technicalImpact": "total",
+        "timestamp": "2026-11-06T00:00:00+00:00"
+      },
+      "references": [
+        {
+          "label": "CVE record",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-123278"
+        },
+        {
+          "label": "MITRE CVE JSON",
+          "url": "https://cveawg.mitre.org/api/cve/CVE-2026-123278"
+        },
+        {
+          "label": "JetBrains security advisories",
+          "url": "https://www.jetbrains.com/privacy-security/issues-fixed/"
+        },
+        {
+          "label": "Original HackerOne report",
+          "url": "https://hackerone.com/reports/4073395"
+        }
+      ],
+      "icon": "fas fa-shield-halved",
+      "type": "cve",
+      "featured": true
+    },
+    {
+      "id": "cve-2026-123277",
+      "cveId": "CVE-2026-123277",
+      "title": "CVE-2026-123277 — JetBrains CLion",
+      "organization": "JetBrains",
+      "product": "CLion",
+      "description": "In JetBrains CLion before 2026.3, 2026.2.4.1 missing authentication allowed local users to obtain the debug session environment on Linux",
+      "reportContext": "HackerOne report #4075607: An Unrelated Local User Can Impersonate CLion's LLDB Frontend and Steal the Developer's Debug Environment.",
+      "researcher": "Ads Dawson",
+      "url": "cves.html?id=cve-2026-123277",
+      "reportUrl": "https://hackerone.com/reports/4075607",
+      "state": "PUBLISHED",
+      "year": "2026",
+      "date": "2026-11-06",
+      "dateReserved": "2026-11-05T18:38:12.200Z",
+      "datePublished": "2026-11-06T10:27:46.617Z",
+      "dateUpdated": "2026-11-06T14:44:51.969Z",
+      "affectedVersion": "before 2026.3, 2026.2.4.1",
+      "unaffectedFrom": "2026.3, 2026.2.4.1",
+      "cwe": "CWE-306",
+      "cvss": {
+        "version": "3.1",
+        "score": 5,
+        "severity": "MEDIUM",
+        "vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:H/I:N/A:L",
+        "attackVector": "LOCAL",
+        "attackComplexity": "HIGH",
+        "privilegesRequired": "LOW",
+        "userInteraction": "REQUIRED",
+        "scope": "UNCHANGED",
+        "confidentiality": "HIGH",
+        "integrity": "NONE",
+        "availability": "LOW"
+      },
+      "cisaEnrichment": {
+        "exploitation": "none",
+        "automatable": "no",
+        "technicalImpact": "partial",
+        "timestamp": "2026-11-06T13:54:29.980644Z"
+      },
+      "references": [
+        {
+          "label": "CVE record",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-123277"
+        },
+        {
+          "label": "MITRE CVE JSON",
+          "url": "https://cveawg.mitre.org/api/cve/CVE-2026-123277"
+        },
+        {
+          "label": "JetBrains security advisories",
+          "url": "https://www.jetbrains.com/privacy-security/issues-fixed/"
+        },
+        {
+          "label": "Original HackerOne report",
+          "url": "https://hackerone.com/reports/4075607"
+        }
+      ],
+      "icon": "fas fa-shield-halved",
+      "type": "cve",
+      "featured": true
+    },
+    {
+      "id": "cve-2026-133094",
+      "cveId": "CVE-2026-133094",
+      "title": "CVE-2026-133094 — JetBrains TeamCity",
+      "organization": "JetBrains",
+      "product": "TeamCity",
+      "description": "In JetBrains TeamCity before 2026.2.2 missing authorization allowed project developers to read arbitrary HashiCorp Vault secrets",
+      "reportContext": "HackerOne report #4072987: Project Developer Can Inject Arbitrary Vault References and Exfiltrate Inherited Secrets.",
+      "researcher": "Ads Dawson",
+      "url": "cves.html?id=cve-2026-133094",
+      "reportUrl": "https://hackerone.com/reports/4072987",
+      "state": "PUBLISHED",
+      "year": "2026",
+      "date": "2026-11-19",
+      "dateReserved": "2026-11-19T12:07:47.317Z",
+      "datePublished": "2026-11-19T12:10:25.823Z",
+      "dateUpdated": "2026-11-19T12:10:25.823Z",
+      "affectedVersion": "before 2026.2.2",
+      "unaffectedFrom": "2026.2.2",
+      "cwe": "CWE-862",
+      "cvss": {
+        "version": "3.1",
+        "score": 7.7,
+        "severity": "HIGH",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+        "attackVector": "NETWORK",
+        "attackComplexity": "LOW",
+        "privilegesRequired": "LOW",
+        "userInteraction": "NONE",
+        "scope": "CHANGED",
+        "confidentiality": "HIGH",
+        "integrity": "NONE",
+        "availability": "NONE"
+      },
+      "references": [
+        {
+          "label": "CVE record",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-133094"
+        },
+        {
+          "label": "MITRE CVE JSON",
+          "url": "https://cveawg.mitre.org/api/cve/CVE-2026-133094"
+        },
+        {
+          "label": "JetBrains security advisories",
+          "url": "https://www.jetbrains.com/privacy-security/issues-fixed/"
+        },
+        {
+          "label": "Original HackerOne report",
+          "url": "https://hackerone.com/reports/4072987"
+        }
+      ],
+      "icon": "fas fa-shield-halved",
+      "type": "cve",
+      "featured": true
+    },
+    {
+      "id": "cve-2026-123305",
+      "cveId": "CVE-2026-123305",
+      "title": "CVE-2026-123305 — JetBrains IntelliJ IDEA",
+      "organization": "JetBrains",
+      "product": "IntelliJ IDEA",
+      "description": "In JetBrains IntelliJ IDEA before 2026.3 path traversal was possible via unpacking Dev Container archives from a remote host",
+      "reportContext": "HackerOne report #4070964: Path Traversal in Remote Docker Dev Container Archive Extraction Leads to Client RCE.",
+      "researcher": "Ads Dawson",
+      "url": "cves.html?id=cve-2026-123305",
+      "reportUrl": "https://hackerone.com/reports/4070964",
+      "state": "PUBLISHED",
+      "year": "2026",
+      "date": "2026-11-06",
+      "dateReserved": "2026-11-05T18:38:22.171Z",
+      "datePublished": "2026-11-06T10:27:59.463Z",
+      "dateUpdated": "2026-11-07T04:55:24.882Z",
+      "affectedVersion": "before 2026.3",
+      "unaffectedFrom": "2026.3",
+      "cwe": "CWE-23",
+      "cvss": {
+        "version": "3.1",
+        "score": 7.5,
+        "severity": "HIGH",
+        "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "attackVector": "NETWORK",
+        "attackComplexity": "HIGH",
+        "privilegesRequired": "NONE",
+        "userInteraction": "REQUIRED",
+        "scope": "UNCHANGED",
+        "confidentiality": "HIGH",
+        "integrity": "HIGH",
+        "availability": "HIGH"
+      },
+      "cisaEnrichment": {
+        "exploitation": "none",
+        "automatable": "no",
+        "technicalImpact": "total",
+        "timestamp": "2026-11-06T00:00:00+00:00"
+      },
+      "references": [
+        {
+          "label": "CVE record",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-123305"
+        },
+        {
+          "label": "MITRE CVE JSON",
+          "url": "https://cveawg.mitre.org/api/cve/CVE-2026-123305"
+        },
+        {
+          "label": "JetBrains security advisories",
+          "url": "https://www.jetbrains.com/privacy-security/issues-fixed/"
+        },
+        {
+          "label": "Original HackerOne report",
+          "url": "https://hackerone.com/reports/4070964"
+        }
+      ],
+      "icon": "fas fa-shield-halved",
+      "type": "cve",
+      "featured": true
+    },
+    {
+      "id": "cve-2026-123333",
+      "cveId": "CVE-2026-123333",
+      "title": "CVE-2026-123333 — JetBrains YouTrack",
+      "organization": "JetBrains",
+      "product": "YouTrack",
+      "description": "In JetBrains YouTrack before 2026.2.19562 sprint creation allowed moving issues from inaccessible projects between sprints",
+      "reportContext": "HackerOne report #3923509: Missing Authorization in Sprint Rollover Lets Board Editors Move Hidden Issues.",
+      "researcher": "Ads Dawson",
+      "url": "cves.html?id=cve-2026-123333",
+      "reportUrl": "https://hackerone.com/reports/3923509",
+      "state": "PUBLISHED",
+      "year": "2026",
+      "date": "2026-11-06",
+      "dateReserved": "2026-11-05T18:38:31.899Z",
+      "datePublished": "2026-11-06T10:28:10.719Z",
+      "dateUpdated": "2026-11-06T15:14:32.653Z",
+      "affectedVersion": "before 2026.2.19562",
+      "unaffectedFrom": "2026.2.19562",
+      "cwe": "CWE-863",
+      "cvss": {
+        "version": "3.1",
+        "score": 3.8,
+        "severity": "LOW",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:N",
+        "attackVector": "NETWORK",
+        "attackComplexity": "LOW",
+        "privilegesRequired": "HIGH",
+        "userInteraction": "NONE",
+        "scope": "UNCHANGED",
+        "confidentiality": "LOW",
+        "integrity": "LOW",
+        "availability": "NONE"
+      },
+      "cisaEnrichment": {
+        "exploitation": "none",
+        "automatable": "no",
+        "technicalImpact": "partial",
+        "timestamp": "2026-11-06T15:11:56.054602Z"
+      },
+      "references": [
+        {
+          "label": "CVE record",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-123333"
+        },
+        {
+          "label": "MITRE CVE JSON",
+          "url": "https://cveawg.mitre.org/api/cve/CVE-2026-123333"
+        },
+        {
+          "label": "JetBrains security advisories",
+          "url": "https://www.jetbrains.com/privacy-security/issues-fixed/"
+        },
+        {
+          "label": "Original HackerOne report",
+          "url": "https://hackerone.com/reports/3923509"
+        }
+      ],
+      "icon": "fas fa-shield-halved",
+      "type": "cve",
+      "featured": true
+    },
+    {
+      "id": "cve-2026-133261",
+      "cveId": "CVE-2026-133261",
+      "title": "CVE-2026-133261 — JetBrains YouTrack",
+      "organization": "JetBrains",
+      "product": "YouTrack",
+      "description": "In JetBrains YouTrack before 2026.2.19840 an HTML injection in email notifications was possible via issue descriptions",
+      "reportContext": "HackerOne report #3916634: HTML Injection in Email Notifications via Wiki Container Breakout Leading to Phishing.",
+      "researcher": "Ads Dawson",
+      "url": "cves.html?id=cve-2026-133261",
+      "reportUrl": "https://hackerone.com/reports/3916634",
+      "state": "PUBLISHED",
+      "year": "2026",
+      "date": "2026-11-19",
+      "dateReserved": "2026-11-19T15:43:11.068Z",
+      "datePublished": "2026-11-19T15:49:28.847Z",
+      "dateUpdated": "2026-11-19T16:48:47.658Z",
+      "affectedVersion": "before 2026.2.19840",
+      "unaffectedFrom": "2026.2.19840",
+      "cwe": "CWE-80",
+      "cvss": {
+        "version": "3.1",
+        "score": 5.4,
+        "severity": "MEDIUM",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+        "attackVector": "NETWORK",
+        "attackComplexity": "LOW",
+        "privilegesRequired": "LOW",
+        "userInteraction": "REQUIRED",
+        "scope": "CHANGED",
+        "confidentiality": "LOW",
+        "integrity": "LOW",
+        "availability": "NONE"
+      },
+      "cisaEnrichment": {
+        "exploitation": "none",
+        "automatable": "no",
+        "technicalImpact": "partial",
+        "timestamp": "2026-11-19T16:35:44.902718Z"
+      },
+      "references": [
+        {
+          "label": "CVE record",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-133261"
+        },
+        {
+          "label": "MITRE CVE JSON",
+          "url": "https://cveawg.mitre.org/api/cve/CVE-2026-133261"
+        },
+        {
+          "label": "JetBrains security advisories",
+          "url": "https://www.jetbrains.com/privacy-security/issues-fixed/"
+        },
+        {
+          "label": "Original HackerOne report",
+          "url": "https://hackerone.com/reports/3916634"
+        }
+      ],
+      "icon": "fas fa-shield-halved",
+      "type": "cve",
+      "featured": true
+    },
+    {
+      "id": "cve-2026-100262",
+      "cveId": "CVE-2026-100262",
+      "title": "CVE-2026-100262 — JetBrains YouTrack",
+      "organization": "JetBrains",
+      "product": "YouTrack",
+      "description": "In JetBrains YouTrack before 2026.2.18991 missing authorisation allowed users with read-only project access to overwrite project notification templates",
+      "reportContext": "HackerOne report #3914064: SSTI in Notification Template Preview via Freemarker Expression Evaluation Leading to PII Exfiltration.",
+      "researcher": "Ads Dawson",
+      "url": "cves.html?id=cve-2026-100262",
+      "reportUrl": "https://hackerone.com/reports/3914064",
+      "state": "PUBLISHED",
+      "year": "2026",
+      "date": "2026-09-30",
+      "dateReserved": "2026-09-25T17:02:05.517Z",
+      "datePublished": "2026-09-30T15:17:49.331Z",
+      "dateUpdated": "2026-09-30T15:48:39.786Z",
+      "affectedVersion": "before 2026.2.18991",
+      "unaffectedFrom": "2026.2.18991",
+      "cwe": "CWE-863",
+      "cvss": {
+        "version": "3.1",
+        "score": 7.6,
+        "severity": "HIGH",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:L",
+        "attackVector": "NETWORK",
+        "attackComplexity": "LOW",
+        "privilegesRequired": "LOW",
+        "userInteraction": "NONE",
+        "scope": "UNCHANGED",
+        "confidentiality": "LOW",
+        "integrity": "HIGH",
+        "availability": "LOW"
+      },
+      "cisaEnrichment": {
+        "exploitation": "none",
+        "automatable": "no",
+        "technicalImpact": "partial",
+        "timestamp": "2026-09-30T15:38:29.998536Z"
+      },
+      "references": [
+        {
+          "label": "CVE record",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-100262"
+        },
+        {
+          "label": "MITRE CVE JSON",
+          "url": "https://cveawg.mitre.org/api/cve/CVE-2026-100262"
+        },
+        {
+          "label": "JetBrains security advisories",
+          "url": "https://www.jetbrains.com/privacy-security/issues-fixed/"
+        },
+        {
+          "label": "Original HackerOne report",
+          "url": "https://hackerone.com/reports/3914064"
+        }
+      ],
+      "icon": "fas fa-shield-halved",
+      "type": "cve",
+      "featured": true
+    },
+    {
+      "id": "cve-2026-100263",
+      "cveId": "CVE-2026-100263",
+      "title": "CVE-2026-100263 — JetBrains YouTrack",
+      "organization": "JetBrains",
+      "product": "YouTrack",
+      "description": "In JetBrains YouTrack before 2026.2.18991 stored HTML injection via the User-Agent header was possible",
+      "reportContext": "HackerOne report #3913794: Unauthenticated Stored HTML Injection in Legacy Route for REST Audit Log Enables Administrator Tracking.",
+      "researcher": "Ads Dawson",
+      "url": "cves.html?id=cve-2026-100263",
+      "reportUrl": "https://hackerone.com/reports/3913794",
+      "state": "PUBLISHED",
+      "year": "2026",
+      "date": "2026-09-30",
+      "dateReserved": "2026-09-25T17:02:05.789Z",
+      "datePublished": "2026-09-30T15:17:49.717Z",
+      "dateUpdated": "2026-09-30T15:48:39.648Z",
+      "affectedVersion": "before 2026.2.18991",
+      "unaffectedFrom": "2026.2.18991",
+      "cwe": "CWE-79",
+      "cvss": {
+        "version": "3.1",
+        "score": 4.7,
+        "severity": "MEDIUM",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:N/A:N",
+        "attackVector": "NETWORK",
+        "attackComplexity": "LOW",
+        "privilegesRequired": "NONE",
+        "userInteraction": "REQUIRED",
+        "scope": "CHANGED",
+        "confidentiality": "LOW",
+        "integrity": "NONE",
+        "availability": "NONE"
+      },
+      "cisaEnrichment": {
+        "exploitation": "none",
+        "automatable": "no",
+        "technicalImpact": "partial",
+        "timestamp": "2026-09-30T15:35:06.223894Z"
+      },
+      "references": [
+        {
+          "label": "CVE record",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-100263"
+        },
+        {
+          "label": "MITRE CVE JSON",
+          "url": "https://cveawg.mitre.org/api/cve/CVE-2026-100263"
+        },
+        {
+          "label": "JetBrains security advisories",
+          "url": "https://www.jetbrains.com/privacy-security/issues-fixed/"
+        },
+        {
+          "label": "Original HackerOne report",
+          "url": "https://hackerone.com/reports/3913794"
+        }
+      ],
+      "icon": "fas fa-shield-halved",
+      "type": "cve",
+      "featured": true
+    },
+    {
+      "id": "cve-2026-100271",
+      "cveId": "CVE-2026-100271",
+      "title": "CVE-2026-100271 — JetBrains YouTrack",
+      "organization": "JetBrains",
+      "product": "YouTrack",
+      "description": "In JetBrains YouTrack before 2026.2.19197 missing authorisation on several endpoints allowed authenticated users to access information from other projects",
+      "reportContext": "HackerOne report #3913428: IDOR in Bundle APIs Exposes Restricted Project Roadmap Metadata.",
+      "researcher": "Ads Dawson",
+      "url": "cves.html?id=cve-2026-100271",
+      "reportUrl": "https://hackerone.com/reports/3913428",
+      "state": "PUBLISHED",
+      "year": "2026",
+      "date": "2026-09-30",
+      "dateReserved": "2026-09-25T17:02:08.509Z",
+      "datePublished": "2026-09-30T15:17:52.627Z",
+      "dateUpdated": "2026-09-30T15:48:38.509Z",
+      "affectedVersion": "before 2026.2.19197",
+      "unaffectedFrom": "2026.2.19197",
+      "cwe": "CWE-862",
+      "cvss": {
+        "version": "3.1",
+        "score": 2.7,
+        "severity": "LOW",
+        "vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:N/A:N",
+        "attackVector": "NETWORK",
+        "attackComplexity": "LOW",
+        "privilegesRequired": "HIGH",
+        "userInteraction": "NONE",
+        "scope": "UNCHANGED",
+        "confidentiality": "LOW",
+        "integrity": "NONE",
+        "availability": "NONE"
+      },
+      "cisaEnrichment": {
+        "exploitation": "none",
+        "automatable": "no",
+        "technicalImpact": "partial",
+        "timestamp": "2026-09-30T15:33:53.798980Z"
+      },
+      "references": [
+        {
+          "label": "CVE record",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2026-100271"
+        },
+        {
+          "label": "MITRE CVE JSON",
+          "url": "https://cveawg.mitre.org/api/cve/CVE-2026-100271"
+        },
+        {
+          "label": "JetBrains security advisories",
+          "url": "https://www.jetbrains.com/privacy-security/issues-fixed/"
+        },
+        {
+          "label": "Original HackerOne report",
+          "url": "https://hackerone.com/reports/3913428"
+        }
+      ],
+      "icon": "fas fa-shield-halved",
+      "type": "cve",
+      "featured": true
     }
   ]
 }

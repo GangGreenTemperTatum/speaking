@@ -203,9 +203,8 @@ test.describe('Doom Portfolio E2E Tests', () => {
 
     test('should render the CVE collection card and local detail link', async ({ page }) => {
         await page.locator('[data-tab="cves"]').evaluate(button => button.click());
-        const card = page.locator('.content-card').first();
+        const card = page.locator('.content-card[href="cves.html?id=cve-2026-86490"]');
         await expect(card).toBeVisible();
-        await expect(card).toHaveAttribute('href', 'cves.html?id=cve-2026-86490');
         await expect(card).toContainText('CVE-2026-86490');
     });
 
