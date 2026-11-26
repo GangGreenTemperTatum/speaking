@@ -5,6 +5,9 @@
 Icon
 ._*
 
+# Playwright reports
+*.playwright-report.*
+
 # powerpoint slides
 *.pptx
 
