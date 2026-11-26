@@ -1,0 +1,64 @@
+# Install once: pre-commit install --hook-type pre-commit --hook-type commit-msg
+# The same checks run in CI (secret-scan.yml scans server-side and on fork PRs).
+# Renovate keeps every `rev` below up to date (the `pre-commit` manager).
+default_install_hook_types: [pre-commit, commit-msg]
+repos:
+  - repo: https://github.com/compilerla/conventional-pre-commit
+    rev: v4.5.0
+    hooks:
+      - id: conventional-pre-commit
+        stages: [commit-msg]
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-case-conflict
+      - id: check-merge-conflict
+      - id: check-symlinks
+      # These two rewrite files. Keep them off the archived HTML page captures
+      # under docs/, whose byte-for-byte fidelity is the point of keeping them.
+      - id: end-of-file-fixer
+        exclude: ^docs/.*\.html?$
+      - id: trailing-whitespace
+        exclude: ^docs/.*\.html?$
+      - id: check-json
+      - id: check-yaml
+      - id: check-executables-have-shebangs
+      - id: detect-private-key
+
+  # Lint the GitHub Actions workflows (syntax, expression errors, shell in `run:`).
+  - repo: https://github.com/rhysd/actionlint
+    rev: v1.7.12
+    hooks:
+      - id: actionlint
+
+  # Audit the workflows for security issues (injection, unpinned actions, token scope).
+  - repo: https://github.com/zizmorcore/zizmor-pre-commit
+    rev: v1.33.1
+    hooks:
+      - id: zizmor
+
+  # Block commits that introduce verified secrets.
+  - repo: https://github.com/trufflesecurity/trufflehog
+    rev: v3.100.1
+    hooks:
+      - id: trufflehog
+
+  - repo: local
+    hooks:
+      # Every action must be pinned to a full commit SHA, not a tag. Human-readable
+      # report; zizmor's `unpinned-uses` audit is the broader backstop.
+      - id: check-pinned-actions
+        name: GitHub Actions pinned to a full commit SHA
+        language: python
+        entry: python .github/scripts/check_pinned_hash_dependencies.py
+        files: ^\.github/(workflows/.*\.ya?ml|actions/.*/action\.ya?ml)$
+
+      # The repository's testing gate (AGENTS.md): unit tests must pass before a commit
+      # that touches the site's code or data.
+      - id: unit-tests
+        name: jest unit tests
+        language: system
+        entry: npm test --silent
+        files: \.(js|json)$
+        pass_filenames: false

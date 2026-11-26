@@ -135,7 +135,7 @@ CVE records are stored in the `cves` array in `docs/js/content-data.js` and rend
 2. Install dependencies: `npm install`
 3. Build the content JSON: `npm run build`
 4. Start the local server: `npm start`
-5. Open your browser to http://localhost:8080
+5. Open your browser to http://localhost:8081
 
 ### Testing Locally
 
@@ -155,4 +155,3 @@ npx http-server -p 3000 --cors
 ## License
 
 Copyright © Ads Dawson. All rights reserved.
-
