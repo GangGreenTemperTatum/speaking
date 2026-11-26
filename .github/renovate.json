@@ -21,7 +21,8 @@
   },
   "enabledManagers": [
     "npm",
-    "github-actions"
+    "github-actions",
+    "pre-commit"
   ],
   "timezone": "America/New_York",
   "schedule": [

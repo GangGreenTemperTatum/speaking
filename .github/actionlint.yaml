@@ -1,0 +1,11 @@
+# actionlint configuration.
+#
+# Suppress one known false positive: actionlint (through v1.7.x) does not yet
+# understand GitHub's `$/<path>` self-repository action reference, which lets a
+# workflow use a local action at the commit it is running from with no checkout
+# and no ref. It is valid and documented, and pr-agent.yml relies on it.
+# https://docs.github.com/actions/sharing-automations/avoiding-duplication
+paths:
+  .github/workflows/pr-agent.yml:
+    ignore:
+      - 'specifying action "\$/.+" in invalid format because ref is missing'
