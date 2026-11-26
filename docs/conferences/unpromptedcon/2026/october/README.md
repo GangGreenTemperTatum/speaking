@@ -43,6 +43,15 @@
 
 ![StealthBench talk slide — "stelf"](stealthbench-stelf.jpg)
 
+### 🎥 Full Talk Recording
+
+The full [un]prompted 2 (2026) talk — *StealthBench: Can Autonomous Security Agents Do OPSEC Like An Experienced Operator?* by Ads Dawson and Adrian Wood — is now live on the official [un]prompted channel.
+
+![StealthBench talk recording at unprompted 2 2026 (YouTube)](stealthbench-unprompted-youtube.png)
+
+- **Watch:** [StealthBench — Adrian Wood & Ads Dawson, unprompted 2 2026](https://www.youtube.com/watch?v=jZo3bVHuYWA) — unprompted (24:26)
+- **Local page archive (HTML):** [stealthbench-unprompted-youtube.html](stealthbench-unprompted-youtube.html)
+
 - [Speaker announcements (PDF)](unpromptedcon-2026-speaker-announcements.pdf)
 - [StealthBench — 20-minute talk slides (PDF)](stealthbench-20-minute-talk.pdf)
 
