@@ -1,0 +1,9 @@
+name: pr-agent
+description: Run PR-Agent from its release image, pinned by digest.
+# This repository's Actions policy does not allow a workflow step to use a third-party image
+# directly. A local action is allowed, so this wraps the image.
+# Build provenance for this digest:
+#   gh attestation verify oci://index.docker.io/pragent/pr-agent@sha256:<digest> --repo The-PR-Agent/pr-agent
+runs:
+  using: docker
+  image: docker://pragent/pr-agent:0.50.0-github_action@sha256:548e894a88071180832b2f4233f734d0acd0db1a879e2fcbaa70bac8b8372ebe
