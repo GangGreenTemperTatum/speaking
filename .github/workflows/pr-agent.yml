@@ -1,0 +1,70 @@
+name: pr-agent
+# AI review of pull requests with PR-Agent (https://github.com/The-PR-Agent/pr-agent) through OpenRouter.
+#
+# Security model:
+# - Runs for pull requests from branches of this repository, and for slash commands
+#   (/review, /improve, /ask ...) the repository owner writes on a pull request.
+#   Nobody else can start a run, so nobody else can spend the API key.
+# - A pull request from a fork gets no automatic review: GitHub gives its run no secrets.
+#   The owner can comment /review on it. The review then covers whatever the fork's branch
+#   holds at that moment, and its text is shaped by content the fork's author controls:
+#   read it as untrusted.
+# - Never checks out or executes pull request code. PR-Agent reads the diff through the GitHub API,
+#   and the model has no tools.
+# - The token can read code and write to pull requests, nothing else.
+# - All settings live in this file. Files in the repository and command arguments cannot change
+#   the model endpoint. Never put pull request text (title, body, branch name) in `env`:
+#   PR-Agent reads every environment variable as a setting.
+on:
+  pull_request:
+    types: [opened, reopened, ready_for_review]
+  # Safe here: the job runs only for the owner's comments and never checks out or runs code.
+  issue_comment: # zizmor: ignore[dangerous-triggers]
+    types: [created]
+permissions: {}
+jobs:
+  review:
+    # OWNER is the account that owns this repository. Under an organization it would mean
+    # every organization owner.
+    if: >-
+      github.event.sender.type != 'Bot' && (
+        (github.event_name == 'pull_request'
+          && github.event.pull_request.head.repo.full_name == github.repository)
+        || (github.event_name == 'issue_comment'
+          && github.event.issue.pull_request
+          && github.event.comment.author_association == 'OWNER'
+          && startsWith(github.event.comment.body, '/'))
+      )
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read # read the diff
+      pull-requests: write # post the review
+    steps:
+      # A local action that wraps the PR-Agent image, pinned by digest. This repository's Actions
+      # policy does not allow a step to use a third-party image directly. `$/` reads the action
+      # from the commit the workflow runs at, so there is no checkout.
+      - uses: $/.github/actions/pr-agent
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          # Any OpenRouter model: set the repository variable PR_AGENT_MODEL to openrouter/<vendor>/<model>.
+          config.model: ${{ vars.PR_AGENT_MODEL || 'openrouter/moonshotai/kimi-k3.1-pro' }}
+          # Context window for a model this PR-Agent release has no built-in limit for. PR-Agent still
+          # sends at most config.max_model_tokens (32000) per request.
+          config.custom_model_max_tokens: "1048576"
+          config.fallback_models: "[]"
+          # Ignore .pr_agent.toml in this repository and in a pr-agent-settings repository.
+          config.use_repo_settings_file: "false"
+          config.use_global_settings_file: "false"
+          # On a new pull request: write its description, review it and suggest improvements.
+          # The description keeps the author's text and leaves the title alone.
+          github_action_config.auto_describe: "true"
+          github_action_config.auto_review: "true"
+          github_action_config.auto_improve: "true"
+          # Send the model the pull request only, not the issues it links to.
+          pr_reviewer.require_ticket_analysis_review: "false"
+          # Reactions and labels would need the wider `issues: write` permission.
+          config.reaction_on_start: ""
+          pr_reviewer.enable_review_labels_effort: "false"
+          pr_reviewer.enable_review_labels_security: "false"

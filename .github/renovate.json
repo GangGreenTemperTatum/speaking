@@ -64,6 +64,13 @@
       ],
       "automerge": true,
       "automergeType": "pr"
+    },
+    {
+      "description": "This image runs with the model API key: a person reads the release notes before it changes",
+      "matchPackageNames": [
+        "pragent/pr-agent"
+      ],
+      "automerge": false
     }
   ],
   "vulnerabilityAlerts": {
