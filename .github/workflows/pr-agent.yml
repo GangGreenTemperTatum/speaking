@@ -9,8 +9,8 @@ name: pr-agent
 #   The owner can comment /review on it. The review then covers whatever the fork's branch
 #   holds at that moment, and its text is shaped by content the fork's author controls:
 #   read it as untrusted.
-# - Never executes pull request code. The only checkout is the one-file local action that names
-#   the PR-Agent image. PR-Agent reads the diff through the GitHub API, and the model has no tools.
+# - Never checks out or executes pull request code. PR-Agent reads the diff through the GitHub API,
+#   and the model has no tools.
 # - The token can read code and write to pull requests, nothing else.
 # - All settings live in this file. Files in the repository and command arguments cannot change
 #   the model endpoint. Never put pull request text (title, body, branch name) in `env`:
@@ -18,8 +18,7 @@ name: pr-agent
 on:
   pull_request:
     types: [opened, reopened, ready_for_review]
-  # Safe here: the job runs only for the owner's comments, and for a comment the checkout is
-  # the default branch. No pull request code is run.
+  # Safe here: the job runs only for the owner's comments and never checks out or runs code.
   issue_comment: # zizmor: ignore[dangerous-triggers]
     types: [created]
 permissions: {}
@@ -42,14 +41,10 @@ jobs:
       contents: read # read the diff
       pull-requests: write # post the review
     steps:
-      # Fetch only the local action that wraps the PR-Agent image. Nothing fetched is executed:
-      # the action file names an image and has no script. On a pull request this is the pull
-      # request's copy, which only branches of this repository can reach (see the `if` above).
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          sparse-checkout: .github/actions/pr-agent
-          persist-credentials: false
-      - uses: ./.github/actions/pr-agent
+      # A local action that wraps the PR-Agent image, pinned by digest. This repository's Actions
+      # policy does not allow a step to use a third-party image directly. `$/` reads the action
+      # from the commit the workflow runs at, so there is no checkout.
+      - uses: $/.github/actions/pr-agent
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
