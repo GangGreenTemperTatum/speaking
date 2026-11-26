@@ -1,26 +1,7 @@
 # [StealthBench: Can Autonomous Security Agents Do OPSEC Like An Experienced Operator?](https://unpromptedcon.org/)
 ## [[un]promptedcon 2026](https://unpromptedcon.org/)
 
-```
-    _______________________________________________
-   |                                               |
-   |  > ACCESS GRANTED                             |
-   |  > LOADING StealthBench...                    |
-   |  > AUDITING 771 TRAJECTORIES...               |
-   |  > ██████████████████░░░░░░░░░░  53.8%       |
-   |  > SAFE-SUCCESS CEILING: 53.8%                |
-   |  > 8 MODELS EVALUATED                         |
-   |  > DEPLOYING OPSEC RUBRICS...                 |
-   |  > ETA: [un]promptedcon // October 2026       |
-   |_______________________________________________|
-          \   ^__^
-           \  (oo)\_______
-              (__)\       )\/\
-                  ||----w |
-                  ||     ||
-```
-
-## `// STATUS`
+## Talk
 
 - **Talk title:** "StealthBench: Can Autonomous Security Agents Do OPSEC Like An Experienced Operator?"
   - **Type:** Standard Session
@@ -50,7 +31,6 @@ The full [un]prompted 2 (2026) talk — *StealthBench: Can Autonomous Security A
 ![StealthBench talk recording at unprompted 2 2026 (YouTube)](stealthbench-unprompted-youtube.png)
 
 - **Watch:** [StealthBench — Adrian Wood & Ads Dawson, unprompted 2 2026](https://www.youtube.com/watch?v=jZo3bVHuYWA) — unprompted (24:26)
-- **Local page archive (HTML):** [stealthbench-unprompted-youtube.html](stealthbench-unprompted-youtube.html)
 
 - [Speaker announcements (PDF)](unpromptedcon-2026-speaker-announcements.pdf)
 - [StealthBench — 20-minute talk slides (PDF)](stealthbench-20-minute-talk.pdf)
