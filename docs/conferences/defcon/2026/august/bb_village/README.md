@@ -67,6 +67,14 @@ The full DEF CON 34 Bug Bounty Village talk — *Exfil Everything: A Year of Ste
 
 - 🎥 **NahamSec DEF CON Vlog:** [I Went to the World's Biggest Hacker Conference (DEFCON VLOG)](https://www.youtube.com/watch?v=4QQnW170C5g)
 
+### 🎥 Panel Recording
+
+The full DEF CON 34 Bug Bounty Village panel — *Bots, Bounties, & Bullshit: An Honest Panel on AI in Hacking*, moderated by Ben Sadeghipour with Ads Dawson on the panel — is now live on the official Bug Bounty DEFCON channel.
+
+![Bots, Bounties, and Bullshit: An Honest Panel on AI in Hacking — DEF CON 34 Bug Bounty Village panel (YouTube)](bots-bounties-bullshit-panel-defcon34-bbv-youtube.png)
+
+- **Watch:** [Bots, Bounties, & Bullshit: An Honest Panel on AI in Hacking | DEF CON 34 | BBV Panel](https://www.youtube.com/watch?v=yG7zUKj-cM8) — Bug Bounty DEFCON (1:10:42)
+
 ### NahamSec Photos - Bug Bounty Village
 
 ![Exfil Everything - Ads & Tak presenting on stage](day-2-nahamsec-photo.jpg)
